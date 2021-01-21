@@ -9,6 +9,7 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField] float loadSceneDelay = 2f;
     [SerializeField] AudioMixer mixer;
+    [SerializeField] float musicVolumeToFadeTo;
 
 
     public void LoadScene(string sceneName) {
@@ -17,7 +18,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadSceneWithDelay(string sceneName) {
         StartCoroutine("Delay", sceneName);
-        StartCoroutine(FadeMixerGroup.StartFade(mixer, "MusicVolume", loadSceneDelay, 0f));
+        StartCoroutine(FadeMixerGroup.StartFade(mixer, "MusicVolume", loadSceneDelay, musicVolumeToFadeTo));
     }
 
     IEnumerator Delay(string sceneName) {

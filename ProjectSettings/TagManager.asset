@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Player
+  - Ground
+  - Door
   - 
   - 
   - 
@@ -41,9 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 1203319905
+  - name: Background
+    uniqueID: 1621583783
     locked: 0
   - name: Menu Sparkles
     uniqueID: 3676934741
+    locked: 0
+  - name: Player
+    uniqueID: 1137731413
+    locked: 0
+  - name: UI
+    uniqueID: 1203319905
     locked: 0

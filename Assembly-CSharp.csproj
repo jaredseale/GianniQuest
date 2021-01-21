@@ -55,14 +55,16 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\MainMenuOptions.cs" />
+    <Compile Include="Assets\Scripts\FadeMixerGroup.cs" />
     <Compile Include="Assets\Scripts\SparkleController.cs" />
+    <Compile Include="Assets\Scripts\SetVolume.cs" />
+    <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MenuCinematic.cs" />
-    <Compile Include="Assets\Scripts\MainMenuOptions.cs" />
-    <Compile Include="Assets\Scripts\SetVolume.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
-    <Compile Include="Assets\Scripts\LevelLoader.cs" />
-    <Compile Include="Assets\Scripts\FadeMixerGroup.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Door.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
