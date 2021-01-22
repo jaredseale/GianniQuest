@@ -5,9 +5,9 @@ using UnityEngine;
 public class MenuCinematic : MonoBehaviour
 {
     [SerializeField] GameObject delayedTitles = null;
-    [SerializeField] float titleDelayTime = 2f;
+    [SerializeField] float titleDelayTime = 19.5f;
     [SerializeField] GameObject delayedButtons = null;
-    [SerializeField] float buttonDelayTime = 2f;
+    [SerializeField] float buttonDelayTime = 25.1f;
     
 
 

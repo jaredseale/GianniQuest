@@ -29,7 +29,8 @@ public class MainMenu : MonoBehaviour
     public void LoadMainGame() {
         audioSource.PlayOneShot(gameStartSound, gameStartSoundVolume);
         transition.SetTrigger("gameStart");
-        levelLoader.LoadSceneWithDelay("Wake Up Cutscene");
+        //levelLoader.LoadSceneWithDelay("Wake Up Cutscene");
+        levelLoader.LoadSceneWithDelay("Gianni's Room", true); //testing
     }
 
     public void DisplayOptions() {

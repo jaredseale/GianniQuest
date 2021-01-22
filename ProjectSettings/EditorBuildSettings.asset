@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wake Up Cutscene.unity
     guid: d8ecb5b8cd0899a49800094a5e5570ee
+  - enabled: 1
+    path: Assets/Scenes/Gianni's Room.unity
+    guid: 9b5426bc1e2d8b44ba927ee3ff34c0d3
   m_configObjects: {}

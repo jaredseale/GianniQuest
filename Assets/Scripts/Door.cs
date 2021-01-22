@@ -2,42 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Door : MonoBehaviour
 {
 
     [SerializeField] string sceneToLoad;
-    BoxCollider2D myCollider;
     LevelLoader levelLoader;
     AudioSource audioSource;
-    [SerializeField] GameObject arrow;
     [SerializeField] AudioClip doorOpenSFX;
     Player playerController;
-         
+    [SerializeField] Animator transition;
+    BoxCollider2D myCollider;
+
     void Start() {
-        myCollider = GetComponent<BoxCollider2D>();
         levelLoader = FindObjectOfType<LevelLoader>();
         audioSource = GetComponent<AudioSource>();
         playerController = FindObjectOfType<Player>();
+        myCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update() {
-        ArrowBounce();
         LoadNewScene();
     }
 
-    private void ArrowBounce() {
-        if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) {
-            arrow.SetActive(true);
-        } else {
-            arrow.SetActive(false);
-        }
-    }
-
     private void LoadNewScene() {
-        if (Input.GetKeyDown("up")) {
+        if (Input.GetButtonDown("Up") && myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) { //if pressed up and on top of loading zone
             playerController.canMove = false;
+            transition.SetTrigger("doorTransition");
             audioSource.PlayOneShot(doorOpenSFX);
-            levelLoader.LoadSceneWithDelay(sceneToLoad);
+            levelLoader.LoadSceneWithDelay(sceneToLoad, false);
         }
     }
 }

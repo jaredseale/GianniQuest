@@ -248,8 +248,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1621583783
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 396a990d71377ee49bb90637c27d8196, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -319,7 +319,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1621583783
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 9340bbc3a916bdc46989dd2ac877a58e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -374,8 +374,8 @@ PolygonCollider2D:
       - {x: 2.75, y: 0.55}
       - {x: 2.62, y: 0.55}
       - {x: 2.59, y: 0.52}
-      - {x: 2.59, y: 0.21}
-      - {x: -0.96999997, y: 0.26}
+      - {x: 2.6121325, y: 0.19340046}
+      - {x: -0.9976656, y: 0.19913529}
       - {x: -0.98999995, y: 0.42999998}
       - {x: -1.28, y: 0.56}
       - {x: -1.91, y: 0.63}
@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 1112073973}
   - component: {fileID: 1112073975}
   - component: {fileID: 1112073976}
+  - component: {fileID: 1112073978}
   - component: {fileID: 1112073977}
   m_Layer: 0
   m_Name: Door
@@ -446,7 +447,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1621583783
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 4bb67a12246e1dc4babf75c9b3b383b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -465,13 +466,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112073972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: -0.206, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.27867672, y: -0.18518516, z: 0}
+  m_LocalScale: {x: 0.89895713, y: 0.89895713, z: 0.89895713}
   m_Children:
   - {fileID: 2024012103}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1515312081}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1112073975
 BoxCollider2D:
@@ -512,8 +513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Wake Up Cutscene
-  arrow: {fileID: 2024012100}
   doorOpenSFX: {fileID: 8300000, guid: fe62d06401c98f3439d257645b28e48e, type: 3}
+  transition: {fileID: 1200607521}
 --- !u!82 &1112073977
 AudioSource:
   m_ObjectHideFlags: 0
@@ -610,6 +611,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1112073978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112073972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81693d1468829ba489c30fce131a7bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 2024012100}
 --- !u!1 &1194847414
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +685,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1137731413
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4569531191152347291, guid: ea9bdd0bc84f40345aa29638e29188eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -894,6 +908,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1200607521 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5693077231250991339, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
+  m_PrefabInstance: {fileID: 2079322057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1515312079
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,9 +967,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1621583783
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6f0ac9f003d1fee45afaaaa19da72a7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -979,6 +998,7 @@ Transform:
   - {fileID: 1683637020}
   - {fileID: 1032196204}
   - {fileID: 584221973}
+  - {fileID: 1112073974}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1267,7 +1287,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1361,7 +1381,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024012100
 GameObject:
@@ -1419,7 +1439,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1203319905
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 07067112ed69f2e4d8a1496140c3149b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1534,7 +1554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693077231250991337, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5693077231250991339, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e3ae4feda4b537749ac9fd0b9ede714e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
