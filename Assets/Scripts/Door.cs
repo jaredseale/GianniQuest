@@ -13,6 +13,8 @@ public class Door : MonoBehaviour
     Player playerController;
     [SerializeField] Animator transition;
     BoxCollider2D myCollider;
+    [SerializeField] bool fadeOutMusicOnLoad;
+    bool pauseCheck;
 
     void Start() {
         levelLoader = FindObjectOfType<LevelLoader>();
@@ -26,11 +28,13 @@ public class Door : MonoBehaviour
     }
 
     private void LoadNewScene() {
-        if (Input.GetButtonDown("Up") && myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) { //if pressed up and on top of loading zone
+        if (Input.GetButtonDown("Up") //if 1) pressed up and 2) on top of loading zone and 3) game not paused
+            && myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) 
+            && GameObject.Find("Game Manager").GetComponent<Pause>().gamePaused == false) {
             playerController.canMove = false;
             transition.SetTrigger("doorTransition");
             audioSource.PlayOneShot(doorOpenSFX);
-            levelLoader.LoadSceneWithDelay(sceneToLoad, false);
+            levelLoader.LoadSceneWithDelay(sceneToLoad, fadeOutMusicOnLoad);
         }
     }
 }

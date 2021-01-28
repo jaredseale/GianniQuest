@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class FadeMixerGroup
 {
-
+    //I copied this code from the internet and it works so I will leave it at that.
     public static IEnumerator StartFade(AudioMixer audioMixer, string exposedParam, float duration, float targetVolume) {
         float currentTime = 0;
         float currentVol;

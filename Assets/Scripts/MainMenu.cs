@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void LoadMainGame() {
+        PlayerPrefs.SetString("TimeOfDay", "Day");
         audioSource.PlayOneShot(gameStartSound, gameStartSoundVolume);
         transition.SetTrigger("gameStart");
         //levelLoader.LoadSceneWithDelay("Wake Up Cutscene");

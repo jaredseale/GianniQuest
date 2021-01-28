@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     }
 
     void Update() {
-        if (canMove) {
+        if (canMove) { //currently used by loading zones to prevent movement while loading is happening
             Run();
             Jump();
         } else {
