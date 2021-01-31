@@ -3285,9 +3285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayedTitles: {fileID: 505103827}
-  titleDelayTime: 1
+  titleDelayTime: 19.5
   delayedButtons: {fileID: 597728541}
-  buttonDelayTime: 1
+  buttonDelayTime: 25.1
 --- !u!4 &1694637719
 Transform:
   m_ObjectHideFlags: 0

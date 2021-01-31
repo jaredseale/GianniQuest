@@ -29,7 +29,7 @@ public class LevelLoader : MonoBehaviour
         if (musicFadeOut) { //this keeps the music going between scenes that use the same song
             StartCoroutine(FadeMixerGroup.StartFade(mixer, "MusicVolume", loadSceneDelay, musicVolumeToFadeTo));
         } else {
-            DontDestroyOnLoad(musicPlayer);
+            DontDestroyOnLoad(FindObjectOfType<MusicPlayer>());
         }
         
     }

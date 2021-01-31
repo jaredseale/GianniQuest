@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gianni's Room.unity
     guid: 9b5426bc1e2d8b44ba927ee3ff34c0d3
+  - enabled: 1
+    path: Assets/Scenes/House Hallway.unity
+    guid: 0f1d4d55414d31d4988e2edbab611668
   m_configObjects: {}
