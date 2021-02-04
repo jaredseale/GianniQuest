@@ -24,6 +24,12 @@ public class Player : MonoBehaviour
         facingRight = true;
         jumpAnimationCanBeEnded = false;
         canMove = true;
+
+        float spawnXPos = FindObjectOfType<SpawnPosition>().spawnPosition.x;
+        float spawnYPos = FindObjectOfType<SpawnPosition>().spawnPosition.y;
+        Vector2 playerPos = new Vector2(spawnXPos, spawnYPos);
+
+        gameObject.transform.position = playerPos;
     }
 
     void Update() {

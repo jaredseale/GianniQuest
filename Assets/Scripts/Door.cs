@@ -15,6 +15,7 @@ public class Door : MonoBehaviour
     BoxCollider2D myCollider;
     [SerializeField] bool fadeOutMusicOnLoad;
     bool pauseCheck;
+    [SerializeField] Vector2 nextSpawnPos;
 
     void Start() {
         levelLoader = FindObjectOfType<LevelLoader>();
@@ -32,6 +33,9 @@ public class Door : MonoBehaviour
             && myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) 
             && GameObject.Find("Game Manager").GetComponent<Pause>().gamePaused == false) {
             playerController.canMove = false;
+
+            FindObjectOfType<SpawnPosition>().setNextSpawn(nextSpawnPos.x, nextSpawnPos.y);
+
             transition.SetTrigger("doorTransition");
             audioSource.PlayOneShot(doorOpenSFX);
             levelLoader.LoadSceneWithDelay(sceneToLoad, fadeOutMusicOnLoad);
