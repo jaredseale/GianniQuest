@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public AudioClip textScrollSFX;
     public float speakerPitch = 1f;
     [SerializeField] bool currentlyTyping = false; //this variable allows the audio to stop playing when the text box is clicked through
+    [SerializeField] GameObject dialogueBox;
 
     void Start() {
         sentences = new Queue<string>();
@@ -30,6 +31,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartDialogue(Dialogue dialogue) {
+        dialogueBox.SetActive(true);
         animator.SetBool("isOpen", true);
         nameText.text = dialogue.name;
         sentences.Clear();
@@ -69,6 +71,12 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue() {
         animator.SetBool("isOpen", false);
         FindObjectOfType<Player>().canMove = true;
+        StartCoroutine(WaitForDialogueBoxToScrollOffscreen());
+    }
+
+    IEnumerator WaitForDialogueBoxToScrollOffscreen() {
+        yield return new WaitForSeconds(2f);
+        dialogueBox.SetActive(false);
     }
 
 }

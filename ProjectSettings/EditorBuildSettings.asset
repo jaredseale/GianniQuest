@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House Hallway.unity
     guid: 0f1d4d55414d31d4988e2edbab611668
+  - enabled: 1
+    path: Assets/Scenes/Sister's Room.unity
+    guid: 9ae1d72c468177248a753a3b83cb35e4
+  - enabled: 1
+    path: Assets/Scenes/Brother's Room.unity
+    guid: 95461a1deab3dcb4f8807d270854f51e
   m_configObjects: {}
