@@ -1414,6 +1414,10 @@ PrefabInstance:
       propertyPath: nextSpawnPos.y
       value: -1.343
       objectReference: {fileID: 0}
+    - target: {fileID: 8004013101066742285, guid: 9b55796e835dcf344a2710da3bb906e5, type: 3}
+      propertyPath: doorLoadSceneDelay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b55796e835dcf344a2710da3bb906e5, type: 3}
 --- !u!1001 &8137978234424602907

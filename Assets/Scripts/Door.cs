@@ -16,6 +16,7 @@ public class Door : MonoBehaviour
     [SerializeField] bool fadeOutMusicOnLoad;
     bool pauseCheck;
     [SerializeField] Vector2 nextSpawnPos;
+    [SerializeField] float doorLoadSceneDelay = 1f;
 
     void Start() {
         levelLoader = FindObjectOfType<LevelLoader>();
@@ -34,6 +35,7 @@ public class Door : MonoBehaviour
             && GameObject.Find("Game Manager").GetComponent<Pause>().gamePaused == false) {
             playerController.canMove = false;
 
+            levelLoader.loadSceneDelay = doorLoadSceneDelay;
             FindObjectOfType<SpawnPosition>().setNextSpawn(nextSpawnPos.x, nextSpawnPos.y);
 
             transition.SetTrigger("doorTransition");

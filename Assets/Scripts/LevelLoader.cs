@@ -8,7 +8,7 @@ using System;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] AudioMixer mixer;
-    [SerializeField] float loadSceneDelay = 2f;
+    public float loadSceneDelay = 2f;
     [SerializeField] float musicVolumeToFadeTo;
     [SerializeField] GameObject musicPlayer;
 
