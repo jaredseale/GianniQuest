@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {x: -0.95, y: -2.49}
+  overworldSpawnPosition: 
 --- !u!1 &511641066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,6 +1433,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 653633637}
     - target: {fileID: 1667325640156486594, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661850549067571067, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

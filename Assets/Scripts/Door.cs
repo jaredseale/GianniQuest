@@ -16,6 +16,7 @@ public class Door : MonoBehaviour
     [SerializeField] bool fadeOutMusicOnLoad;
     bool pauseCheck;
     [SerializeField] Vector2 nextSpawnPos;
+    [SerializeField] string overworldSpawnPos;
     [SerializeField] float doorLoadSceneDelay = 1f;
 
     void Start() {
@@ -37,6 +38,7 @@ public class Door : MonoBehaviour
 
             levelLoader.loadSceneDelay = doorLoadSceneDelay;
             FindObjectOfType<SpawnPosition>().setNextSpawn(nextSpawnPos.x, nextSpawnPos.y);
+            FindObjectOfType<SpawnPosition>().overworldSpawnPosition = overworldSpawnPos;
 
             transition.SetTrigger("doorTransition");
             audioSource.PlayOneShot(doorOpenSFX);

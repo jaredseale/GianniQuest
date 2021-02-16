@@ -39,6 +39,12 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f; //return player movement
         mixer.SetFloat("MusicEQ", 1f);
     }
+    public void ExitToMap() {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f; //return player movement
+        mixer.SetFloat("MusicEQ", 1f);
+        FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Overworld", true);
+    }
 
     public void PlayButtonHoverSound() {
         audioSource.PlayOneShot(buttonHoverSound, buttonHoverSoundVolume);
