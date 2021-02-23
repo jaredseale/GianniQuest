@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour
     [SerializeField] AudioClip buttonHoverSound = null;
     [SerializeField] float buttonHoverSoundVolume = 0.5f;
     public bool gamePaused = false;
+    public bool canPause = true;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] AudioMixer mixer;
     AudioSource audioSource;
@@ -23,7 +24,7 @@ public class Pause : MonoBehaviour
     }
 
     public void GamePause() {
-        if (Input.GetButtonDown("Pause") && gamePaused == false) {
+        if (Input.GetButtonDown("Pause") && gamePaused == false && canPause) {
             gamePaused = true;
             pauseMenu.SetActive(true);
             Time.timeScale = 0f; //prevent player movement
