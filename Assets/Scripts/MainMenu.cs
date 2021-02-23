@@ -27,10 +27,9 @@ public class MainMenu : MonoBehaviour
     }
 
     public void LoadMainGame() {
-        PlayerPrefs.SetString("TimeOfDay", "Day");
         audioSource.PlayOneShot(gameStartSound, gameStartSoundVolume);
         transition.SetTrigger("gameStart");
-        //levelLoader.LoadSceneWithDelay("Wake Up Cutscene");
+        //levelLoader.LoadSceneWithDelay("Wake Up Cutscene", true);
         levelLoader.LoadSceneWithDelay("Gianni's Room", true); //testing
     }
 
