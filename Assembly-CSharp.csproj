@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\OverworldPlayer.cs" />
+    <Compile Include="Assets\Scripts\OverworldInstructions.cs" />
     <Compile Include="Assets\Scripts\MainMenuOptions.cs" />
+    <Compile Include="Assets\Scripts\OverworldCamera.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -78,10 +80,10 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\OverworldInstructions.cs" />
-    <Compile Include="Assets\Scripts\OverworldCamera.cs" />
+    <Compile Include="Assets\Scripts\DialogueFetcher.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Dialogue\mom.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

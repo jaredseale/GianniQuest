@@ -182,6 +182,7 @@ public class OverworldPlayer : MonoBehaviour
                 case "V":
                     nextScene = "High School High";
                     spawnPositionString = "school";
+                    spawn.setNextSpawn(4.37f, -0.5f);
                     break;
 
                 case "W":

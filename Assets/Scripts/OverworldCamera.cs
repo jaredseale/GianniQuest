@@ -17,6 +17,27 @@ public class OverworldCamera : MonoBehaviour
     Vector3 saloonPos = new Vector3(-15f, 3f, -10f); //all Zs should be -10f
     float saloonZoom = 3.5f;
 
+    Vector3 schoolPos = new Vector3(-12f, -13f, -10f);
+    float schoolZoom = 3.5f;
+
+    Vector3 snicoPos = new Vector3(1f, -6.5f, -10f);
+    float snicoZoom = 3.5f;
+
+    Vector3 LCPPos = new Vector3(13f, -16f, -10f);
+    float LCPZoom = 3.5f;
+
+    Vector3 rickPos = new Vector3(38f, -19f, -10f);
+    float rickZoom = 3.5f;
+
+    Vector3 sewerPos = new Vector3(32f, -10f, -10f);
+    float sewerZoom = 3.5f;
+
+    Vector3 pizzaPos = new Vector3(27f, -4.5f, -10f);
+    float pizzaZoom = 3.5f;
+
+    Vector3 ascentPos = new Vector3(10f, 7f, -10f);
+    float ascentZoom = 8f;
+
     [SerializeField] Animator crossfade;
 
 
@@ -24,10 +45,45 @@ public class OverworldCamera : MonoBehaviour
         player = FindObjectOfType<OverworldPlayer>();
         startingPosString = player.spawnPositionString;
 
-        switch (startingPosString) { //gonna have to fill these out as i go
+        switch (startingPosString) {
             case ("saloon"):
                 cameraZoom = saloonZoom;
                 cameraPos = saloonPos;
+                break;
+
+            case ("school"):
+                cameraZoom = schoolZoom;
+                cameraPos = schoolPos;
+                break;
+
+            case ("snico"):
+                cameraZoom = snicoZoom;
+                cameraPos = snicoPos;
+                break;
+
+            case ("LCP"):
+                cameraZoom = LCPZoom;
+                cameraPos = LCPPos;
+                break;
+
+            case ("rick"):
+                cameraZoom = rickZoom;
+                cameraPos = rickPos;
+                break;
+
+            case ("sewer"):
+                cameraZoom = sewerZoom;
+                cameraPos = sewerPos;
+                break;
+
+            case ("pizza"):
+                cameraZoom = pizzaZoom;
+                cameraPos = pizzaPos;
+                break;
+
+            case ("ascent"):
+                cameraZoom = ascentZoom;
+                cameraPos = ascentPos;
                 break;
         }
 
@@ -52,13 +108,47 @@ public class OverworldCamera : MonoBehaviour
     }
 
     public void ZoomToNewLocation(string locationName) {
-        Debug.Log(zoomInTime);
         StopCoroutine("LerpCameraToNormalZoom");
 
         switch (locationName) {
-            case ("saloon"): //fill the rest of these out as you add them
+            case ("saloon"):
                 cameraZoom = saloonZoom;
                 cameraPos = saloonPos;
+                break;
+
+            case ("school"):
+                cameraZoom = schoolZoom;
+                cameraPos = schoolPos;
+                break;
+
+            case ("snico"):
+                cameraZoom = snicoZoom;
+                cameraPos = snicoPos;
+                break;
+
+            case ("LCP"):
+                cameraZoom = LCPZoom;
+                cameraPos = LCPPos;
+                break;
+
+            case ("rick"):
+                cameraZoom = rickZoom;
+                cameraPos = rickPos;
+                break;
+
+            case ("sewer"):
+                cameraZoom = sewerZoom;
+                cameraPos = sewerPos;
+                break;
+
+            case ("pizza"):
+                cameraZoom = pizzaZoom;
+                cameraPos = pizzaPos;
+                break;
+
+            case ("ascent"):
+                cameraZoom = ascentZoom;
+                cameraPos = ascentPos;
                 break;
         }
         

@@ -15,6 +15,7 @@ public class Pause : MonoBehaviour
     AudioSource audioSource;
     [SerializeField] GameObject viewOfField = null;
     [SerializeField] Toggle viewOfFieldToggle = null;
+    [SerializeField] Animator transition;
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
@@ -44,6 +45,7 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f; //return player movement
         mixer.SetFloat("MusicEQ", 1f);
+        transition.SetTrigger("doorTransition");
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Overworld", true);
     }
 
@@ -58,4 +60,5 @@ public class Pause : MonoBehaviour
             viewOfField.SetActive(false);
         }
     }
+
 }

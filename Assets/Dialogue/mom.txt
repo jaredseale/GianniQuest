@@ -1,0 +1,6 @@
+@initial
+Good morning my sweet little meatball!
+Your math teacher Mrs. Crimplet'n called and said you needed to swing by the school, apparently you have some overdue homework.
+If you manage to get it done, I'll give you a beautiful dollared bill.
+@test
+This is a test line.
