@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\SpawnPosition.cs" />
     <Compile Include="Assets\Scripts\FadeMixerGroup.cs" />
     <Compile Include="Assets\Scripts\SparkleController.cs" />
+    <Compile Include="Assets\Scripts\DialogueFetcher.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
@@ -80,7 +81,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\DialogueFetcher.cs" />
+    <Compile Include="Assets\Scripts\IntroCutscene.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />

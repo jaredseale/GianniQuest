@@ -27,10 +27,15 @@ public class MainMenu : MonoBehaviour
     }
 
     public void LoadMainGame() {
+        PlayerPrefs.SetInt("DisplayMenuCutsceneSkipText", 1);
         audioSource.PlayOneShot(gameStartSound, gameStartSoundVolume);
         transition.SetTrigger("gameStart");
-        //levelLoader.LoadSceneWithDelay("Wake Up Cutscene", true);
-        levelLoader.LoadSceneWithDelay("Gianni's Room", true); //testing
+        if (PlayerPrefs.GetString("IntroCutsceneStatus") == "Unwatched") {
+            PlayerPrefs.SetString("IntroCutsceneStatus", "Watched");
+            levelLoader.LoadSceneWithDelay("Wake Up Cutscene", true);
+        } else {
+            levelLoader.LoadSceneWithDelay("Gianni's Room", true);
+        }
     }
 
     public void DisplayOptions() {
