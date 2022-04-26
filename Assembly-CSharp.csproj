@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\DialogueFetcher.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
+    <Compile Include="Assets\Scripts\IntroCutscene.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\MapLocationText.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
@@ -81,7 +82,11 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\IntroCutscene.cs" />
+    <Compile Include="Assets\Scripts\DialogueScripts\Sister.cs" />
+    <Compile Include="Assets\Scripts\DialogueScripts\Brother.cs" />
+    <Compile Include="Assets\Scripts\DialogueScripts\Mom.cs" />
+    <Compile Include="Assets\Scripts\DialogueScripts\Dad.cs" />
+    <Compile Include="Assets\Scripts\DialogueScripts\Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
@@ -91,6 +96,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Concept Art\gianniquest date.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

@@ -576,6 +576,7 @@ GameObject:
   - component: {fileID: 1010695007}
   - component: {fileID: 1010695009}
   - component: {fileID: 1010695008}
+  - component: {fileID: 1010695010}
   m_Layer: 8
   m_Name: Sister
   m_TagString: Untagged
@@ -665,16 +666,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Sister
-    sentences:
-    - If you don't know what to do for dinner, I guess you could go get some pizza
-      or something.
-    - They're selling them for six bucks (dollars) over at Pizza Hell this week.
-    - Before you do that, though, I have a favor to ask.
-    - My friend has a massive crush on you and I kinda already set you up on a blind
-      date with her haha oops ;-P
-    - If you meet her at the new French restaurant down the street and she has a
-      nice time, I'll give you a buck (one dollar) to start you out.
-    - Don't mess this up :-)
+    sentences: []
+--- !u!114 &1010695010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010695004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a16abd24fbe3524f90f882696986c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue: {fileID: 1010695009}
 --- !u!1 &1043749748
 GameObject:
   m_ObjectHideFlags: 0

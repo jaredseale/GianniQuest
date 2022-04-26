@@ -6,13 +6,18 @@ public class Interactable : MonoBehaviour
 {
     BoxCollider2D myCollider;
     [SerializeField] GameObject arrow;
+    DialogueManager dialogueManager;
 
     private void Start() {
         myCollider = GetComponent<BoxCollider2D>();
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     void Update() {
         ArrowBounce();
+        if (dialogueManager.inDialogue) {
+            arrow.SetActive(false);
+        }
     }
 
     private void ArrowBounce() {

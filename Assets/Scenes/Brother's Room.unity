@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 1010695007}
   - component: {fileID: 1010695009}
   - component: {fileID: 1010695008}
+  - component: {fileID: 1010695010}
   m_Layer: 8
   m_Name: Brother
   m_TagString: Untagged
@@ -536,6 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1010695009}
   thisSpeakerPitch: 0.4
+  dialogueManager: {fileID: 0}
 --- !u!114 &1010695009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,10 +552,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Brother
-    sentences:
-    - ...thanks midnas_armpit44 for the gift sub to ecchiganondorf... oh hey Gianni.
-    - Everyone in the house said they needed to talk to you.
-    - ...uh...
+    sentences: []
+--- !u!114 &1010695010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010695004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698594e976de6994aa8d75486e0eb620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue: {fileID: 1010695009}
+  dialogueManager: {fileID: 0}
 --- !u!4 &1112073974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8004013101066742275, guid: 9b55796e835dcf344a2710da3bb906e5, type: 3}
@@ -579,6 +592,10 @@ PrefabInstance:
     - target: {fileID: 1311895798910984373, guid: bdf6bcc96405ee745ac6dc9c8fe59126, type: 3}
       propertyPath: m_Name
       value: Arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311895798910984373, guid: bdf6bcc96405ee745ac6dc9c8fe59126, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1311895798910984374, guid: bdf6bcc96405ee745ac6dc9c8fe59126, type: 3}
       propertyPath: m_LocalPosition.x

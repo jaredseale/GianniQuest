@@ -1784,6 +1784,7 @@ GameObject:
   - component: {fileID: 1327250780}
   - component: {fileID: 1327250781}
   - component: {fileID: 1327250782}
+  - component: {fileID: 1327250783}
   m_Layer: 12
   m_Name: Dad
   m_TagString: Untagged
@@ -1847,6 +1848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1327250781}
   thisSpeakerPitch: 0.3
+  dialogueManager: {fileID: 0}
 --- !u!114 &1327250781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1861,11 +1863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Dad
-    sentences:
-    - 'Ciao, mio bellissimo bambino. '
-    - Your work called in. They wantin' you to work a shift today, capisce?
-    - I bet they'll pay you a pretty penny or possibly a hundred if you do a good
-      job, hai capito?
+    sentences: []
 --- !u!114 &1327250782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,6 +1877,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 723901288}
+--- !u!114 &1327250783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327250777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f999f595fd79094197cc24f77650135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue: {fileID: 1327250781}
+  dialogueManager: {fileID: 0}
 --- !u!1 &1393662187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2481,7 @@ GameObject:
   - component: {fileID: 1630210839}
   - component: {fileID: 1630210840}
   - component: {fileID: 1630210841}
+  - component: {fileID: 1630210842}
   m_Layer: 12
   m_Name: Mom
   m_TagString: Untagged
@@ -2531,11 +2544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Mom
-    sentences:
-    - Good morning my sweet little meatball!
-    - Your math teacher Mrs. Crimplet'n called and said you needed to swing by the
-      school, apparently you have some overdue homework.
-    - If you manage to get it done, I'll give you a beautiful dollared bill.
+    sentences: []
 --- !u!114 &1630210840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2550,6 +2559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1630210839}
   thisSpeakerPitch: 1.5
+  dialogueManager: {fileID: 0}
 --- !u!114 &1630210841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2563,6 +2573,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 1575583341}
+--- !u!114 &1630210842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630210836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cf63147f475ba4d861ba77dd791dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue: {fileID: 1630210839}
+  dialogueManager: {fileID: 0}
 --- !u!1001 &1635470451
 PrefabInstance:
   m_ObjectHideFlags: 0
