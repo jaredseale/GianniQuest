@@ -2302,6 +2302,10 @@ PrefabInstance:
       propertyPath: overworldSpawnPos
       value: saloon
       objectReference: {fileID: 0}
+    - target: {fileID: 8004013101066742285, guid: 9b55796e835dcf344a2710da3bb906e5, type: 3}
+      propertyPath: doorOpenSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 7be885386f7a53f409963786b89679f2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b55796e835dcf344a2710da3bb906e5, type: 3}
 --- !u!4 &1527740848 stripped
