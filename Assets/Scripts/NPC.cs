@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
     [SerializeField] DialogueTrigger dialogueTrigger;
     [SerializeField] float thisSpeakerPitch = 1f;
     public DialogueManager dialogueManager;
+    public AudioClip voiceSFX;
 
     private void Start() {
         myCollider = GetComponent<BoxCollider2D>();

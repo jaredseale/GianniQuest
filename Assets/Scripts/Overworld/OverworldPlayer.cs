@@ -9,6 +9,7 @@ public class OverworldPlayer : MonoBehaviour
     public GameObject currentWaypoint;
     //public GameObject targetWaypoint;
     public GameObject spawnWaypoint;
+    public bool canEnter;
     [SerializeField] GameObject saloonWaypoint;
     [SerializeField] GameObject schoolWaypoint;
     [SerializeField] GameObject snicoWaypoint;
@@ -26,6 +27,7 @@ public class OverworldPlayer : MonoBehaviour
     public string spawnPositionString = "saloon";
     public bool playerInTransit;
     public bool playerOnMajorWaypoint;
+    public bool canMove; //for use in the overworld dialogue
 
     private void Awake() {
         spawn = FindObjectOfType<SpawnPosition>();
@@ -42,6 +44,7 @@ public class OverworldPlayer : MonoBehaviour
     void Start() {
         audioSource = GetComponent<AudioSource>();
         playerInTransit = false;
+        canMove = true;
         SetSpawnPosition();
     }
 
@@ -49,24 +52,27 @@ public class OverworldPlayer : MonoBehaviour
         Move();
         playerOnMajorWaypoint = PlayerIsOnMajorWaypoint();
         SetNextSceneToLoad();
+        FindObjectOfType<SpawnPosition>().overworldSpawnPosition = spawnPositionString;
         LoadNextScene();
     }
 
     private void Move() {
-        if (Input.GetButtonDown("Right") && currentWaypoint.GetComponent<OverworldWaypoints>().rightPoints.Count > 0 && !playerInTransit) {
-            StartCoroutine("MovePlayerToWaypoint", currentWaypoint.GetComponent<OverworldWaypoints>().rightPoints);
-        }
+        if (canMove) {
+            if (Input.GetButtonDown("Right") && currentWaypoint.GetComponent<OverworldWaypoints>().rightPoints.Count > 0 && !playerInTransit) {
+                StartCoroutine("MovePlayerToWaypoint", currentWaypoint.GetComponent<OverworldWaypoints>().rightPoints);
+            }
 
-        if (Input.GetButtonDown("Left") && currentWaypoint.GetComponent<OverworldWaypoints>().leftPoints.Count > 0 && !playerInTransit) {
-            StartCoroutine("MovePlayerToWaypoint", currentWaypoint.GetComponent<OverworldWaypoints>().leftPoints);
-        }
+            if (Input.GetButtonDown("Left") && currentWaypoint.GetComponent<OverworldWaypoints>().leftPoints.Count > 0 && !playerInTransit) {
+                StartCoroutine("MovePlayerToWaypoint", currentWaypoint.GetComponent<OverworldWaypoints>().leftPoints);
+            }
 
-        if (Input.GetButtonDown("Up") && currentWaypoint.GetComponent<OverworldWaypoints>().upPoints.Count > 0 && !playerInTransit) {
-            StartCoroutine("MovePlayerToWaypoint", currentWaypoint.GetComponent<OverworldWaypoints>().upPoints);
-        }
+            if (Input.GetButtonDown("Up") && currentWaypoint.GetComponent<OverworldWaypoints>().upPoints.Count > 0 && !playerInTransit) {
+                StartCoroutine("MovePlayerToWaypoint", currentWaypoint.GetComponent<OverworldWaypoints>().upPoints);
+            }
 
-        if (Input.GetButtonDown("Down") && currentWaypoint.GetComponent<OverworldWaypoints>().downPoints.Count > 0 && !playerInTransit) {
-            StartCoroutine("MovePlayerToWaypoint", currentWaypoint.GetComponent<OverworldWaypoints>().downPoints);
+            if (Input.GetButtonDown("Down") && currentWaypoint.GetComponent<OverworldWaypoints>().downPoints.Count > 0 && !playerInTransit) {
+                StartCoroutine("MovePlayerToWaypoint", currentWaypoint.GetComponent<OverworldWaypoints>().downPoints);
+            }
         }
     }
 
@@ -145,7 +151,7 @@ public class OverworldPlayer : MonoBehaviour
     void SetNextSceneToLoad() {
         if (!playerInTransit) {
             string playerLocation = currentWaypoint.gameObject.name;
-
+            canEnter = true;
             switch (playerLocation) {
 
                 case "A":
@@ -157,6 +163,9 @@ public class OverworldPlayer : MonoBehaviour
                 case "C":
                     nextScene = "Ethereal Ascent";
                     spawnPositionString = "ascent";
+                    if (PlayerPrefs.GetString("EtherealAscentEntry") != "Open") {
+                        canEnter = false;
+                    }
                     break;
 
                 case "J":
@@ -167,27 +176,42 @@ public class OverworldPlayer : MonoBehaviour
                 case "N":
                     nextScene = "The Sewers";
                     spawnPositionString = "sewer";
+                    if (PlayerPrefs.GetString("SewersEntry") != "Open") {
+                        canEnter = false;
+                    }
                     break;
 
                 case "S":
                     nextScene = "Rancid Rick's";
                     spawnPositionString = "rick";
+                    if (PlayerPrefs.GetString("RicksEntry") != "Open") {
+                        canEnter = false;
+                    }
                     break;
 
                 case "T":
                     nextScene = "Le Cul Puant";
                     spawnPositionString = "LCP";
+                    if (PlayerPrefs.GetString("LCPEntry") != "Open") {
+                        canEnter = false;
+                    }
                     break;
 
                 case "V":
                     nextScene = "High School High";
                     spawnPositionString = "school";
                     spawn.setNextSpawn(4.37f, -0.5f);
+                    if (PlayerPrefs.GetString("SchoolEntry") != "Open") {
+                        canEnter = false;
+                    }
                     break;
 
                 case "W":
                     nextScene = "SNICO";
                     spawnPositionString = "snico";
+                    if (PlayerPrefs.GetString("SNICOEntry") != "Open") {
+                        canEnter = false;
+                    }
                     break;
             }
         }
@@ -196,6 +220,10 @@ public class OverworldPlayer : MonoBehaviour
     void LoadNextScene() {
         if (!playerInTransit) {
             if (Input.GetButtonDown("Jump") && playerOnMajorWaypoint) {
+                if (!canEnter) {
+                    //do dialogue stuff here
+                    return;
+                }
                 playerInTransit = true;
                 audioSource.PlayOneShot(SM64sound);
                 FindObjectOfType<OverworldCamera>().ZoomToNewLocation(spawnPositionString);

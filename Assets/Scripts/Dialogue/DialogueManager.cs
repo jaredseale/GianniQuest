@@ -28,8 +28,8 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            currentlyTyping = false;
+        if (inDialogue && Input.GetMouseButtonDown(0)) {
+            SkipScroll();
         }
     }
 
@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        string sentence = sentences.Peek();
         StopAllCoroutines();
         currentlyTyping = true;
         StartCoroutine(TypeSentence(sentence));
@@ -65,11 +65,12 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
             audioSource.pitch = speakerPitch + Random.Range(-0.1f, 0.1f);
-            audioSource.PlayOneShot(textScrollSFX);
+            audioSource.PlayOneShot(dialogueTarget.GetComponent<NPC>().voiceSFX);
             mainText.text += letter;
             yield return new WaitForSeconds(0.03f);
 
         }
+        currentlyTyping = false;
     }
 
     void EndDialogue() {
@@ -84,6 +85,19 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         dialogueBox.SetActive(false);
         dialogueTarget = null;
+    }
+
+    void SkipScroll() {
+        if (!currentlyTyping) {
+            sentences.Dequeue();
+            DisplayNextSentence();
+        } else {
+            StopAllCoroutines();
+            mainText.text = sentences.Peek();
+            currentlyTyping = false;
+        }
+
+
     }
 
 }

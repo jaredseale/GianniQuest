@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
     <Compile Include="Assets\Scripts\IntroCutscene.cs" />
+    <Compile Include="Assets\Scripts\School\Test.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Dad.cs" />
     <Compile Include="Assets\Scripts\MapLocationText.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\House\TimeOfDay.cs" />
     <Compile Include="Assets\Scripts\Title Screen\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Teacher.cs" />
+    <Compile Include="Assets\Scripts\Dollar.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Title Screen\MenuCinematic.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
@@ -87,7 +89,8 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\School\Test.cs" />
+    <Compile Include="Assets\Scripts\Overworld\DollarCount.cs" />
+    <Compile Include="Assets\Scripts\Overworld\OverworldDialogue.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />

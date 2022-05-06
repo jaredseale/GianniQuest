@@ -651,7 +651,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1010695009}
-  thisSpeakerPitch: 0.7
+  thisSpeakerPitch: 1
+  dialogueManager: {fileID: 0}
+  voiceSFX: {fileID: 8300000, guid: 2e84ce1d6fee7f64db1ac324926e109a, type: 3}
 --- !u!114 &1010695009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogue: {fileID: 1010695009}
+  dialogueManager: {fileID: 0}
 --- !u!1 &1043749748
 GameObject:
   m_ObjectHideFlags: 0

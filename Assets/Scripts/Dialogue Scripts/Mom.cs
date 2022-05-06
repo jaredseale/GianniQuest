@@ -12,6 +12,10 @@ public class Mom : MonoBehaviour
         "Your math teacher, Mrs. Crimt'n, called and said you needed to swing by the school, apparently you have some overdue homework.",
         "If you manage to get it done, I'll give you a beautiful dollared bill as a reward."};
     string[] Init2 = new string[] { "Go on down to the school, my precious little rigatoni rascal!" };
+    string[] PreDollar = new string[] { "Welcome home! I heard from your teacher that you aced your homework!",
+        "Just like I promised, here is your singular dollar William (bill for short)."};
+    string[] PostDollar = new string[] { "Unfortunately, that was my last money, and I need to get back to tending the house bar.",
+        "I'm sure you can use your fully developed Gianni brain to find some other dollars!"};
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -20,6 +24,10 @@ public class Mom : MonoBehaviour
             currentDialogue.dialogue.sentences = Init;
         } else if (PlayerPrefs.GetString("MomDialogueState") == "Init2") {
             currentDialogue.dialogue.sentences = Init2;
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "PreDollar") {
+            currentDialogue.dialogue.sentences = PreDollar;
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "PostDollar") {
+            currentDialogue.dialogue.sentences = PostDollar;
         }
     }
 
@@ -36,6 +44,10 @@ public class Mom : MonoBehaviour
             currentDialogue.dialogue.sentences = Init;
         } else if (PlayerPrefs.GetString("MomDialogueState") == "Init2") {
             currentDialogue.dialogue.sentences = Init2;
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "PreDollar") {
+            currentDialogue.dialogue.sentences = PreDollar;
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "PostDollar") {
+            currentDialogue.dialogue.sentences = PostDollar;
         }
     }
 
@@ -43,7 +55,12 @@ public class Mom : MonoBehaviour
 
         if (PlayerPrefs.GetString("MomDialogueState") == "Init") {
             PlayerPrefs.SetString("MomDialogueState", "Init2");
-        }
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "PreDollar") {
+            Dollar myDollar = FindObjectOfType<Dollar>();
+            myDollar.CollectDollar();
+            PlayerPrefs.SetString("MomDialogueState", "PostDollar");
+            PlayerPrefs.SetString("SchoolEntry", "Done");
+        }   
 
     }
 

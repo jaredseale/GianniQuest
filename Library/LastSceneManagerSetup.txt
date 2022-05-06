@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/High School High.unity
+- path: Assets/Scenes/House Hallway.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

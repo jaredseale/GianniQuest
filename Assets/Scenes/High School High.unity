@@ -5790,7 +5790,7 @@ AudioSource:
   m_GameObject: {fileID: 1193110675}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8717204355028567090, guid: bc10036fb2189114cb34613bbf6a681f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.476
@@ -9358,8 +9358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1806685007}
-  thisSpeakerPitch: 1.2
+  thisSpeakerPitch: 1
   dialogueManager: {fileID: 0}
+  voiceSFX: {fileID: 8300000, guid: 0f99c3082d2327446ba2561ccbce85cc, type: 3}
 --- !u!1 &1817892793
 GameObject:
   m_ObjectHideFlags: 0
