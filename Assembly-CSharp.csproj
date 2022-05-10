@@ -57,8 +57,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Overworld\OverworldPlayer.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldInstructions.cs" />
-    <Compile Include="Assets\Scripts\Title Screen\MainMenuOptions.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\MainMenuOptions.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldCamera.cs" />
+    <Compile Include="Assets\Scripts\Overworld\DollarCount.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -66,7 +67,7 @@
     <Compile Include="Assets\Scripts\SpawnPosition.cs" />
     <Compile Include="Assets\Scripts\FadeMixerGroup.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Sister.cs" />
-    <Compile Include="Assets\Scripts\Title Screen\SparkleController.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\SparkleController.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueFetcher.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Mom.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
@@ -77,20 +78,19 @@
     <Compile Include="Assets\Scripts\Dialogue Scripts\Dad.cs" />
     <Compile Include="Assets\Scripts\MapLocationText.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Brother.cs" />
+    <Compile Include="Assets\Scripts\Overworld\OverworldDialogue.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\House\TimeOfDay.cs" />
-    <Compile Include="Assets\Scripts\Title Screen\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Teacher.cs" />
     <Compile Include="Assets\Scripts\Dollar.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\Title Screen\MenuCinematic.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\MenuCinematic.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldWaypoints.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Overworld\DollarCount.cs" />
-    <Compile Include="Assets\Scripts\Overworld\OverworldDialogue.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
