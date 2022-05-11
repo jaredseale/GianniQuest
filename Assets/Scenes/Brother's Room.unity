@@ -1569,9 +1569,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2328626990547341088, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 653633637}
+    - target: {fileID: 2328626990547341088, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitToMainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 4661850549067571067, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575072250422109594, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 653633637}
+    - target: {fileID: 5575072250422109594, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayButtonHoverSound
       objectReference: {fileID: 0}
     - target: {fileID: 6028547063787183957, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_RootOrder
@@ -1677,8 +1693,24 @@ PrefabInstance:
       propertyPath: gamePaused
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 1200607521}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: BypassReverbZones
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562379215707876813, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1621583783
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562379215707876813, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562379215707876819, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5562379215800720146, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
@@ -1692,6 +1724,18 @@ PrefabInstance:
     - target: {fileID: 5562379215800720147, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562379217572171387, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6555b71620bb6040a89b92d4834d908, type: 3}
+    - target: {fileID: 5562379217572171387, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1621583783
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562379217572171387, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}

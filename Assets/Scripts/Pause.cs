@@ -49,6 +49,16 @@ public class Pause : MonoBehaviour
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Overworld", true);
     }
 
+    public void ExitToMainMenu()
+    {
+        pauseMenu.SetActive(false);
+        Destroy(FindObjectOfType<SpawnPosition>().gameObject);
+        Time.timeScale = 1f; //return player movement
+        mixer.SetFloat("MusicEQ", 1f);
+        transition.SetTrigger("doorTransition");
+        FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Main Menu", true);
+    }
+
     public void PlayButtonHoverSound() {
         audioSource.PlayOneShot(buttonHoverSound, buttonHoverSoundVolume);
     }

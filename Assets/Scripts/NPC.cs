@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour
         Talk();
     }
     private void Talk() {
-        if (Input.GetButtonDown("Up") //if 1) pressed up and 2) on top of loading zone and 3) game not paused and 4) not already in dialogue
+        if (Input.GetButtonDown("Up") //if 1) pressed up and 2) not on top of loading zone and 3) game not paused and 4) not already in dialogue
             && myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))
             && GameObject.Find("Game Manager").GetComponent<Pause>().gamePaused == false
             && dialogueManager.inDialogue == false) {

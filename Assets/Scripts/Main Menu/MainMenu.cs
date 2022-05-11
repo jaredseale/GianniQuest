@@ -37,6 +37,10 @@ public class MainMenu : MonoBehaviour
     }
 
     public void LoadMainGame() {
+        if (!PlayerPrefs.HasKey("SaveExists"))
+        {
+            InitializeSave();
+        }
         PlayerPrefs.SetInt("DisplayMenuCutsceneSkipText", 1);
         audioSource.PlayOneShot(gameStartSound, gameStartSoundVolume);
         transition.SetTrigger("gameStart");
@@ -61,5 +65,28 @@ public class MainMenu : MonoBehaviour
         mixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat("MasterVolume"));
         mixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("SFXVolume"));
         mixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
+    }
+
+    public void InitializeSave()
+    {
+        PlayerPrefs.SetInt("SaveExists", 1);
+
+        PlayerPrefs.SetString("TimeOfDay", "Day");
+        PlayerPrefs.SetInt("OverworldInstructions", 0);
+        PlayerPrefs.SetString("IntroCutsceneStatus", "Unwatched");
+
+        PlayerPrefs.SetString("SisterDialogueState", "Init");
+        PlayerPrefs.SetString("MomDialogueState", "Init");
+        PlayerPrefs.SetString("BrotherDialogueState", "Init");
+        PlayerPrefs.SetString("DadDialogueState", "Init");
+        PlayerPrefs.SetString("TeacherDialogueState", "Init");
+
+        PlayerPrefs.SetInt("Dollars", 0);
+        PlayerPrefs.SetString("EtherealAscentEntry", "Closed");
+        PlayerPrefs.SetString("SewersEntry", "Closed");
+        PlayerPrefs.SetString("RicksEntry", "Closed");
+        PlayerPrefs.SetString("LCPEntry", "Open");
+        PlayerPrefs.SetString("SchoolEntry", "Open");
+        PlayerPrefs.SetString("SNICOEntry", "Open");
     }
 }
