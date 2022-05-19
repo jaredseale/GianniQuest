@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
+  m_Name: B18c
+  m_EditorClassIdentifier: 
+  dialogueText: It also raises an excellent question of whether the ego derives its
+    inherent sense of self worth from material possessions and social status...
+  characterName: Anousse
+  characterSprite: {fileID: 21300000, guid: 22ec77c2881845f439845ea20dfe1bc7, type: 3}
+  characterVoice: {fileID: 8300000, guid: 511cee8c8d2145d489226811bccea424, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 54d89c2e1ef473349aa829a857a3ccc0, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 576f5195cdd2b0343908c2baf55d1a82, type: 3}
+  SFX: {fileID: 0}
+  choices: []
+  executeMethodAfterDialogue: 
+  nextStates:
+  - {fileID: 11400000, guid: d58d5b8a46730134ab7a66a1c182b24b, type: 2}

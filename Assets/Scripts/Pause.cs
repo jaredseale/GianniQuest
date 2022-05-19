@@ -45,7 +45,7 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f; //return player movement
         mixer.SetFloat("MusicEQ", 1f);
-        transition.SetTrigger("doorTransition");
+        transition.SetTrigger("levelTransition");
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Overworld", true);
     }
 

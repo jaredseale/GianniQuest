@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+
+[CreateAssetMenu(menuName = "State")]
 public class State : ScriptableObject
 {
 
-    [TextArea(14, 10)][SerializeField] string textArea;
-    [TextArea(14, 1)][SerializeField] string characterName;
+    [TextArea(4, 10)] public string dialogueText;
+    [TextArea(1, 1)] public string characterName;
     public Sprite characterSprite;
+    public AudioClip characterVoice;
     public Sprite backgroundSprite;
     public AudioClip backgroundMusic;
-    public AudioClip backgroundSFX;
-    public AudioClip beginningSFX;
+    public AudioClip SFX;
     public string[] choices;
-    [SerializeField] State[] nextStates;
+    public string executeMethodAfterDialogue;
+    public State[] nextStates;
 
     void Start() {
 	

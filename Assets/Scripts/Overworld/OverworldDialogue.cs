@@ -39,6 +39,7 @@ public class OverworldDialogue : MonoBehaviour
         if (Input.GetButtonDown("Jump") && !inDialogue && sentences.Count > 0) {
             StartDialogue();
         }
+
         currentWaypoint = player.currentWaypoint.gameObject.name;
         GetCurrentScript();
     }
@@ -73,6 +74,10 @@ public class OverworldDialogue : MonoBehaviour
             audioSource.PlayOneShot(textScrollSFX);
             mainText.text += letter;
             yield return new WaitForSeconds(0.03f);
+
+            if (letter == '!' || letter == '.' || letter == ',' || letter == '?') {
+                yield return new WaitForSeconds(0.2f);
+            }
 
         }
         currentlyTyping = false;
@@ -137,7 +142,7 @@ public class OverworldDialogue : MonoBehaviour
 
                 case "T": //LCP
                     if (PlayerPrefs.GetString("LCPEntry") == "Done") {
-                        sentences.Enqueue(""); //finish this with whatever happens at the end of the LCP story
+                        sentences.Enqueue("There are a bunch of government looking people investigating the crashed spaceship. Probably best to keep your distance.");
                     }
                     break;
 

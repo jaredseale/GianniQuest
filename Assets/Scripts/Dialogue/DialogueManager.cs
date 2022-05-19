@@ -64,11 +64,15 @@ public class DialogueManager : MonoBehaviour
             if (!currentlyTyping) {
                 break;
             }
+
             audioSource.pitch = speakerPitch + Random.Range(-0.1f, 0.1f);
             audioSource.PlayOneShot(dialogueTarget.GetComponent<NPC>().voiceSFX);
             mainText.text += letter;
             yield return new WaitForSeconds(0.03f);
 
+            if (letter == '!' || letter == '.' || letter == ',' || letter == '?') {
+                yield return new WaitForSeconds(0.2f);
+            }
         }
         currentlyTyping = false;
     }

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Gianni's Room.unity
+- path: Assets/Scenes/LCP Scenes/Le Cul Puant Interior.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -190,7 +190,24 @@ public class OverworldPlayer : MonoBehaviour
                     break;
 
                 case "T":
-                    nextScene = "Le Cul Puant";
+                    switch (PlayerPrefs.GetString("DateProgress")) {
+                        case "Init":
+                            nextScene = "Le Cul Puant Exterior";
+                            break;
+                        case "Interior":
+                            nextScene = "Le Cul Puant Interior";
+                            break;
+                        case "Spaceship":
+                            nextScene = "Spaceship";
+                            break;
+                        case "End":
+                            nextScene = "Crashed Restaurant";
+                            break;
+                        default:
+                            Debug.Log("could not determine what scene to load");
+                            break;
+                    }
+
                     spawnPositionString = "LCP";
                     if (PlayerPrefs.GetString("LCPEntry") != "Open") {
                         canEnter = false;

@@ -88,5 +88,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString("LCPEntry", "Open");
         PlayerPrefs.SetString("SchoolEntry", "Open");
         PlayerPrefs.SetString("SNICOEntry", "Open");
+
+        PlayerPrefs.SetString("DateProgress", "Init");
     }
 }
