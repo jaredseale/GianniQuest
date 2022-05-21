@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: B29
   m_EditorClassIdentifier: 
-  dialogueText: Once again putting your innate deduction skills to the test, you
-    realize that the restaurant is rapidly ascending into the sky. As you struggle
-    to keep your footing, the waiter calmly approaches the two of you.
+  dialogueText: Once again putting your innate deduction skills to work, you realize
+    that the restaurant is rapidly ascending into the sky. As you struggle to keep
+    your footing, the waiter calmly approaches the two of you.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

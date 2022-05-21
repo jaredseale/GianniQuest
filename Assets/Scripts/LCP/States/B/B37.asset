@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: B37
   m_EditorClassIdentifier: 
-  dialogueText: I instantly declared our mission a success and thus began our long
-    return to Ghobbaguul. I can't wait to show you to our lead esthetician, they
-    will be so excited to emulate your forms!
+  dialogueText: I instantly declared our mission a success and thus initiated our
+    long return to Ghobbaguul. I can't wait to show you to our lead esthetician,
+    she will be so excited to emulate your forms for us all!
   characterName: Waiter
   characterSprite: {fileID: 21300000, guid: c82ab3b6ad16eb746ae74b73cc2fc3f7, type: 3}
   characterVoice: {fileID: 8300000, guid: 2f94d06c54043e141a1e219c4660f9b4, type: 3}

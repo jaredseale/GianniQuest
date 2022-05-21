@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LCP Scenes/Le Cul Puant Interior.unity
     guid: cf539cb79be1dd746aa36ca37ff6750a
+  - enabled: 1
+    path: Assets/Scenes/LCP Scenes/Spaceship.unity
+    guid: cc8d7d8b5890e0244b2952d04a49823a
+  - enabled: 1
+    path: Assets/Scenes/LCP Scenes/Crashed Exterior.unity
+    guid: 143e67e9b38ffe24aa8c69ce76f8a9dd
   m_configObjects: {}

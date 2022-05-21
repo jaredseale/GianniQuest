@@ -21,8 +21,8 @@ MonoBehaviour:
   backgroundMusic: {fileID: 8300000, guid: 442bd5ce8a70d4949a75952ce23e68f7, type: 3}
   SFX: {fileID: 0}
   choices:
-  - Perform a flying crane kick at the alien's torso
-  - Start winding up your fist like Donkey Kong
+  - Perform a flying crane kick at the alien's torso.
+  - Start winding up your fist like Donkey Kong.
   executeMethodAfterDialogue: 
   nextStates:
   - {fileID: 11400000, guid: 7e87ad3349989914fbc2e46b8ef9e5fc, type: 2}

@@ -118,7 +118,7 @@ public class OverworldDialogue : MonoBehaviour
 
                 case "C": //Ethereal Ascent
                     if (PlayerPrefs.GetString("EtherealAscentEntry") == "Closed") {
-                        sentences.Enqueue("A mystical barrier prevents you from entering this area. Upon closer inspection, it's a locked gate.");
+                        sentences.Enqueue("A mystical barrier prevents you from entering this area. Upon closer inspection, it's just a locked gate.");
                     } else if (PlayerPrefs.GetString("EtherealAscentEntry") == "Done") {
                         sentences.Enqueue("There's nary a penny to be gotten from this area anymore.");
                     }
@@ -142,7 +142,7 @@ public class OverworldDialogue : MonoBehaviour
 
                 case "T": //LCP
                     if (PlayerPrefs.GetString("LCPEntry") == "Done") {
-                        sentences.Enqueue("There are a bunch of government looking people investigating the crashed spaceship. Probably best to keep your distance.");
+                        sentences.Enqueue("There are a bunch of government type folks investigating the crashed spaceship. Probably best to keep your distance.");
                     }
                     break;
 

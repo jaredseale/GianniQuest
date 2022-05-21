@@ -201,7 +201,7 @@ public class OverworldPlayer : MonoBehaviour
                             nextScene = "Spaceship";
                             break;
                         case "End":
-                            nextScene = "Crashed Restaurant";
+                            nextScene = "Crashed Exterior";
                             break;
                         default:
                             Debug.Log("could not determine what scene to load");

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: B30
   m_EditorClassIdentifier: 
-  dialogueText: Ah, all apologies for putting on false pretenses, but this was the
-    best way we could think of to execute our grand plan!
+  dialogueText: Ah, all apologies for putting on such a spectacle, but this charade
+    was for the sake of our whole species!
   characterName: Waiter
   characterSprite: {fileID: 21300000, guid: a5b9107eda6787443a9d1861f2d1d3d3, type: 3}
   characterVoice: {fileID: 8300000, guid: 2f94d06c54043e141a1e219c4660f9b4, type: 3}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
+  m_Name: F3
+  m_EditorClassIdentifier: 
+  dialogueText: As if she'd been doing this her entire life, Anousse helms the spaceship,
+    flipping dozens of switches, turning hundreds of knobs, and giving you various
+    instructions of how to copilot the ship back home.
+  characterName: 
+  characterSprite: {fileID: 0}
+  characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: ed585e5625b4efd42832030d6384d6da, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 3b3c331f6ab7af14199a9eebb46946b4, type: 3}
+  SFX: {fileID: 0}
+  choices: []
+  executeMethodAfterDialogue: 
+  nextStates:
+  - {fileID: 11400000, guid: fc41d3f45f1e5384ab75d5a092c4f1f8, type: 2}

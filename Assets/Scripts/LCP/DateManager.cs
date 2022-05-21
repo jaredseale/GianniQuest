@@ -9,6 +9,8 @@ public class DateManager : MonoBehaviour
 {
     [SerializeField] State AState;
     [SerializeField] State BState;
+    [SerializeField] State CState;
+    [SerializeField] State GState;
     public State currentState;
 
     [SerializeField] string dialogue;
@@ -50,6 +52,7 @@ public class DateManager : MonoBehaviour
 
         Scene scene = SceneManager.GetActiveScene();
         pause = FindObjectOfType<Pause>();
+
         //you come in loading different scenes from the overworld based on your progress
         switch (scene.name) {
             case "Le Cul Puant Exterior":
@@ -57,6 +60,12 @@ public class DateManager : MonoBehaviour
                 break;
             case "Le Cul Puant Interior":
                 currentState = BState;
+                break;
+            case "Spaceship":
+                currentState = CState;
+                break;
+            case "Crashed Exterior":
+                currentState = GState;
                 break;
         } //fill out the rest of these with other checkpoints
 
@@ -223,6 +232,18 @@ public class DateManager : MonoBehaviour
                 LoadInterior();
                 break;
 
+            case "LoadSpaceship":
+                LoadSpaceship();
+                break;
+
+            case "LoadCrashedExterior":
+                LoadCrashedExterior();
+                break;
+
+            case "FinishLevel":
+                FinishLevel();
+                break;
+
             default:
                 break;
         }
@@ -262,8 +283,29 @@ public class DateManager : MonoBehaviour
 
     private void LoadInterior() {
         crossfade.SetTrigger("levelDone");
-        FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Le Cul Puant Interior", true);
         PlayerPrefs.SetString("DateProgress", "Interior");
+        FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Le Cul Puant Interior", true);
+        return;
+    }
+
+    private void LoadSpaceship() {
+        crossfade.SetTrigger("levelDone");
+        PlayerPrefs.SetString("DateProgress", "Spaceship");
+        FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Spaceship", true);
+        return;
+    }
+    private void LoadCrashedExterior() {
+        crossfade.SetTrigger("levelDone");
+        PlayerPrefs.SetString("DateProgress", "End");
+        PlayerPrefs.SetString("LCPSpriteState", "Crashed");
+        FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Crashed Exterior", true);
+        return;
+    }
+    private void FinishLevel() {
+        crossfade.SetTrigger("levelDone");
+        PlayerPrefs.SetString("SisterDialogueState", "PostDate");
+        PlayerPrefs.SetString("LCPEntry", "Done");
+        FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Overworld", true);
         return;
     }
 }

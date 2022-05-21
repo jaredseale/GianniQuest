@@ -16,6 +16,10 @@ public class Sister : MonoBehaviour
         "Don't mess this up :-)" };
     string[] Init2 = new string[] { "Did you already forget what I said...?",
         "If you go on a date with my friend, I'll give you a dollar for your pizza journey."};
+    string[] PostDate = new string[] { "Anousse sent me a text a few minutes ago saying that she had a pretty good time on the date.",
+        "So congratulations! And like I said, here's your pizza dollar I promised you :-D"};
+    string[] PostDollar = new string[] { "Sorry Gianni, but if you want another dollar, you're gonna have to go on another date, and there are no more in the game.",
+        "Huh? What am I talking about?"};
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -24,6 +28,10 @@ public class Sister : MonoBehaviour
             currentDialogue.dialogue.sentences = Init;
         } else if (PlayerPrefs.GetString("SisterDialogueState") == "Init2") {
             currentDialogue.dialogue.sentences = Init2;
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "PostDate") {
+            currentDialogue.dialogue.sentences = PostDate;
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "PostDollar") {
+            currentDialogue.dialogue.sentences = PostDollar;
         }
     }
 
@@ -40,6 +48,10 @@ public class Sister : MonoBehaviour
             currentDialogue.dialogue.sentences = Init;
         } else if (PlayerPrefs.GetString("SisterDialogueState") == "Init2") {
             currentDialogue.dialogue.sentences = Init2;
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "PostDate") {
+            currentDialogue.dialogue.sentences = PostDate;
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "PostDollar") {
+            currentDialogue.dialogue.sentences = PostDollar;
         }
     }
 
@@ -47,6 +59,10 @@ public class Sister : MonoBehaviour
 
         if (PlayerPrefs.GetString("SisterDialogueState") == "Init") {
             PlayerPrefs.SetString("SisterDialogueState", "Init2");
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "PostDate") {
+            Dollar myDollar = FindObjectOfType<Dollar>();
+            myDollar.CollectDollar();
+            PlayerPrefs.SetString("SisterDialogueState", "PostDollar");
         }
 
     }

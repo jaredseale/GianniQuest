@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: B38
   m_EditorClassIdentifier: 
-  dialogueText: You're abducting us because you're mad about being uggos? This seems
-    like such an inefficient way to solve that!
+  dialogueText: You're abducting us because you're mad about being uggos? This doesn't
+    seem like the best way to solve that!
   characterName: Anousse
-  characterSprite: {fileID: 21300000, guid: e565ee4261a9ada479dbc0ae449adc7a, type: 3}
+  characterSprite: {fileID: 21300000, guid: bf18e839c10564b4fbf33ce792ae1f69, type: 3}
   characterVoice: {fileID: 8300000, guid: 511cee8c8d2145d489226811bccea424, type: 3}
   backgroundSprite: {fileID: 21300000, guid: 54d89c2e1ef473349aa829a857a3ccc0, type: 3}
   backgroundMusic: {fileID: 8300000, guid: 442bd5ce8a70d4949a75952ce23e68f7, type: 3}

@@ -19,7 +19,7 @@ MonoBehaviour:
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}
   backgroundSprite: {fileID: 21300000, guid: 54d89c2e1ef473349aa829a857a3ccc0, type: 3}
   backgroundMusic: {fileID: 8300000, guid: 442bd5ce8a70d4949a75952ce23e68f7, type: 3}
-  SFX: {fileID: 0}
+  SFX: {fileID: 8300000, guid: a199d78df5c841744a3ea97eba8d83d3, type: 3}
   choices: []
   executeMethodAfterDialogue: 
   nextStates:

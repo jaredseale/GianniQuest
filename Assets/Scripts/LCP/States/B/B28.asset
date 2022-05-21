@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: You cease attempting to chew through the locks to offer an entirely
     unhelpful answer, but before you can get a word out, you witness the ground outside
-    of the restaurant fall below the building.
+    of the restaurant fall beneath the building.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

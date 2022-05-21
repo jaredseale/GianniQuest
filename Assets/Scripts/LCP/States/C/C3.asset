@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
+  m_Name: C3
+  m_EditorClassIdentifier: 
+  dialogueText: Ah, before I go, Ghobbaguul is approximately 478 lightyears from
+    your planet, so I do encourage you to get as comfortable as possible.
+  characterName: Waiter
+  characterSprite: {fileID: 21300000, guid: c82ab3b6ad16eb746ae74b73cc2fc3f7, type: 3}
+  characterVoice: {fileID: 8300000, guid: 2f94d06c54043e141a1e219c4660f9b4, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: ed585e5625b4efd42832030d6384d6da, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 3b3c331f6ab7af14199a9eebb46946b4, type: 3}
+  SFX: {fileID: 0}
+  choices: []
+  executeMethodAfterDialogue: 
+  nextStates:
+  - {fileID: 11400000, guid: e079a3f714679e742949501ee8e7b9ef, type: 2}

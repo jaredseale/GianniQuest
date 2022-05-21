@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: B35
   m_EditorClassIdentifier: 
   dialogueText: The waiter begins pulsating and gyrating and rotating and vibrating
-    and more verbs, steadily morphing his shape into a weird little yellow octopus
-    man.
+    and more verbs, steadily morphing his shape into a... weird yellow octopus fella?
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}
   backgroundSprite: {fileID: 21300000, guid: 54d89c2e1ef473349aa829a857a3ccc0, type: 3}
   backgroundMusic: {fileID: 8300000, guid: 442bd5ce8a70d4949a75952ce23e68f7, type: 3}
-  SFX: {fileID: 0}
+  SFX: {fileID: 8300000, guid: d42c749d824ea5743a5e6185280f567c, type: 3}
   choices: []
   executeMethodAfterDialogue: 
   nextStates:
