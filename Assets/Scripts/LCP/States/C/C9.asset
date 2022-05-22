@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C9
   m_EditorClassIdentifier: 
   dialogueText: Anousse takes the hairpin you dropped in her hand and expertly picks
-    the lock of the handcuffs. Once she is free, she picks the lock on the ones restraining
+    the lock of the handcuffs. Once she's free, she picks the lock on the ones restraining
     you as well.
   characterName: 
   characterSprite: {fileID: 0}

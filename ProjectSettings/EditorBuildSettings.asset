@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LCP Scenes/Crashed Exterior.unity
     guid: 143e67e9b38ffe24aa8c69ce76f8a9dd
+  - enabled: 1
+    path: Assets/Scenes/Pizza Hell.unity
+    guid: 6a27300c737d844468c8fcbff6b6d1ac
   m_configObjects: {}

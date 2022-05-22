@@ -171,6 +171,7 @@ public class OverworldPlayer : MonoBehaviour
                 case "J":
                     nextScene = "Pizza Hell";
                     spawnPositionString = "pizza";
+                    spawn.setNextSpawn(-7.87f, -3.77f);
                     break;
 
                 case "N":

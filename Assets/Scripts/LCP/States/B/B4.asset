@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueText: Ever the gentleman, you employ your refined sense of etiquette and
     pull Anousse's chair out for her. As you retake your own seat, you notice that
     you pulled hers out several feet too far, and you wait patiently for her to adjust
-    it on her own.
+    it back.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

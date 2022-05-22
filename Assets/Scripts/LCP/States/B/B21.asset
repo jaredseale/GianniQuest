@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: B21
   m_EditorClassIdentifier: 
-  dialogueText: And I'll have a Dr. Cardboard!
+  dialogueText: And I'll have a Dr Cardboard!
   characterName: Anousse
   characterSprite: {fileID: 21300000, guid: e565ee4261a9ada479dbc0ae449adc7a, type: 3}
   characterVoice: {fileID: 8300000, guid: 511cee8c8d2145d489226811bccea424, type: 3}

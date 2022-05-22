@@ -67,7 +67,7 @@ public class DateManager : MonoBehaviour
             case "Crashed Exterior":
                 currentState = GState;
                 break;
-        } //fill out the rest of these with other checkpoints
+        }
 
         LoadNextState();
     }
@@ -141,7 +141,7 @@ public class DateManager : MonoBehaviour
 
         //if there is a change between this and the previous state
         if (musicChange) {
-            myMusic.clip = currentState.backgroundMusic; //come back here and adjust for fade out and whatnot
+            myMusic.clip = currentState.backgroundMusic;
             myMusic.Play();
         }
 

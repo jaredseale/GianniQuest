@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: B18f
   m_EditorClassIdentifier: 
   dialogueText: (this goes on for another 20 minutes)
-  characterName: Anousse
+  characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}
   backgroundSprite: {fileID: 21300000, guid: 54d89c2e1ef473349aa829a857a3ccc0, type: 3}
