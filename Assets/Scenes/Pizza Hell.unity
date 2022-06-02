@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Sister
+    name: Pizza Guy
     sentences: []
 --- !u!114 &1010695010
 MonoBehaviour:

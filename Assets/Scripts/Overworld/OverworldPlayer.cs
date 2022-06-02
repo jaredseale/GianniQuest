@@ -243,6 +243,7 @@ public class OverworldPlayer : MonoBehaviour
                     return;
                 }
                 playerInTransit = true;
+                FindObjectOfType<Pause>().canPause = false;
                 audioSource.PlayOneShot(SM64sound);
                 FindObjectOfType<OverworldCamera>().ZoomToNewLocation(spawnPositionString);
                 LevelLoader levelLoader = FindObjectOfType<LevelLoader>();

@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Dialogue Scripts\Dad.cs" />
     <Compile Include="Assets\Scripts\MapLocationText.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Brother.cs" />
+    <Compile Include="Assets\Scripts\Dialogue Scripts\PizzaGuy.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldDialogue.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\House\TimeOfDay.cs" />
@@ -90,7 +91,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Dialogue Scripts\PizzaGuy.cs" />
+    <Compile Include="Assets\Scripts\SNICO\OrderManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
