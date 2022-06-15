@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\House\TimeOfDay.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\SNICO\OrderManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Teacher.cs" />
     <Compile Include="Assets\Scripts\Dollar.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
@@ -91,7 +92,8 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\SNICO\OrderManager.cs" />
+    <Compile Include="Assets\Scripts\SNICO\OrderState.cs" />
+    <Compile Include="Assets\Scripts\SNICO\OrderDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />

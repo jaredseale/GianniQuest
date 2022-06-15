@@ -18,14 +18,4 @@ public class State : ScriptableObject
     public string[] choices;
     public string executeMethodAfterDialogue;
     public State[] nextStates;
-
-    void Start() {
-	
-        
-    }
-
-    void Update() {
-	
-        
-    }
 }

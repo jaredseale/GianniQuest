@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class OrderManager : MonoBehaviour
 {
     public List<List<string>> currentOrder;
+
+    [SerializeField] OrderState[] orderStateArray;
+    int orderStateArrayIndex;
+    [SerializeField] OrderState currentOrderState;
 
     [SerializeField] TextMeshProUGUI receiptText;
 
@@ -60,8 +65,15 @@ public class OrderManager : MonoBehaviour
     GameObject[] friesButtons;
     GameObject[] drinksButtons;
 
+    OrderDictionary orderDictionary;
+    bool inProgressOrder;
+    public int health;
 
     void Start() {
+
+        orderDictionary = GetComponent<OrderDictionary>();
+
+        orderStateArrayIndex = 0; //come back here later and initialize this based on checkpoints
 
         currentOrder = new List<List<string>>();
 
@@ -78,6 +90,9 @@ public class OrderManager : MonoBehaviour
             drinksMountoniousDewButton, drinksBepisButton, drinksSmallButton, drinksMediumButton, drinksLargeButton, drinksDietButton};
 
         receiptText.SetText("");
+        inProgressOrder = false;
+        health = 80;
+
     }
 
     void Update() {
@@ -219,7 +234,7 @@ public class OrderManager : MonoBehaviour
         }
 
         for (int x = 0; x < currentOrder.Count; x++) {
-            formattedReceipt = formattedReceipt + currentOrder[x][0] + "\n";
+            formattedReceipt = formattedReceipt + (x + 1) + ". " + currentOrder[x][0] + "\n";
 
             for (int i = 1; i < currentOrder[x].Count; i++) {
                 formattedReceipt = formattedReceipt + "    " + currentOrder[x][i] + "\n";
@@ -232,20 +247,100 @@ public class OrderManager : MonoBehaviour
 
     }
 
-    public void CheckOrder() {
-        /* the idea here is that this will check to see if the current order has all of the contents of the correct order
-         * the ordering should not matter
-         * 
-         * look at the first element in the correct order list
-         * see if currentOrder contains that element
-         * if not, fail and do the failure methods, then return
-         * if so, remove that element from the currentOrder list
-         * 
-         * repeat until the final item is checked from the correct order
-         * then check if currentOrder.Count == 0
-         * if it does, pass
-         * if not, fail
-         */
+    public void BeginOrder() {
+        Debug.Log("Beginning order " + (orderStateArrayIndex + 1));
+        currentOrderState = orderStateArray[orderStateArrayIndex];
+        inProgressOrder = true;
+        ClearOrder();
+    }
+
+    public void ClearOrder() {
+        currentOrder.Clear();
+        UpdateReceiptScreen();
+    }
+
+    public void CompleteOrder() {
+        if (inProgressOrder) {
+            if (CheckOrder() == true) {
+                Debug.Log("Order was correct!");
+                health += 5;
+                if (health > 100) {
+                    health = 100;
+                }
+            } else {
+                Debug.Log("Order was NOT correct!");
+                health -= 20;
+                if (health < 0) {
+                    health = 0;
+                }
+            }
+
+            Debug.Log("Health is now " + health);
+            ClearOrder();
+            orderStateArrayIndex++;
+            inProgressOrder = false;
+        }
+    }
+
+    public bool CheckOrder() {
+        // build the comparer for comparing the inner lists
+        var innerComparer = new ListComparer<string>();
+
+        // ensure the lists have the same number of items
+        if (currentOrder.Count != orderDictionary.OrderDetails(currentOrderState.orderNumber).Count) {
+            return false;
+        }
+
+        foreach (var order in orderDictionary.OrderDetails(currentOrderState.orderNumber)) {
+            // if an inner list doesn't also exist in testOrder2
+            // then return false
+            if (!currentOrder.Contains(order, innerComparer)) {
+                return false;
+            }
+        }
+        // all lists were found, so return true
+        return true;
+    }
+
+    public class ListComparer<TItem> : IEqualityComparer<IList<TItem>>
+    {
+        private readonly IEqualityComparer<TItem> _itemComparer;
+
+        public ListComparer()
+            : this(EqualityComparer<TItem>.Default) {
+
+        }
+
+        public ListComparer(IEqualityComparer<TItem> itemComparer) {
+            _itemComparer = itemComparer;
+        }
+
+        // Determine if the two lists have the same content
+        public bool Equals(IList<TItem> x, IList<TItem> y) {
+            if (Object.ReferenceEquals(x, y)) {
+                return true;
+            } else if (x is null != y is null) {
+                return false;
+            } else if (x is null && y is null) {
+                return true;
+            }
+
+            return x.SequenceEqual(y, _itemComparer);
+        }
+
+        // Generate a hashcode from the individual items of the list
+        // this is dependent on the order of the items
+        // ({A,B} will produce a different value to {B,A})
+        public int GetHashCode(IList<TItem> obj) {
+            unchecked {
+                int hashCode = 63949;
+                foreach (var item in obj) {
+                    hashCode += _itemComparer.GetHashCode(item);
+                    hashCode *= 13;
+                }
+                return hashCode;
+            }
+        }
     }
 
 }
