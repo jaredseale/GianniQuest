@@ -7,8 +7,14 @@ using System.Linq;
 
 public class OrderManager : MonoBehaviour
 {
+    public int TEMPORARY_TESTING_STARTING_INDEX = 0;
+
     public List<List<string>> currentOrder;
 
+    [SerializeField] Image healthBar;
+    [SerializeField] Animator carAnimator;
+    [SerializeField] SpriteRenderer carSprite;
+    [SerializeField] AudioSource carAudio;
     [SerializeField] OrderState[] orderStateArray;
     int orderStateArrayIndex;
     [SerializeField] OrderState currentOrderState;
@@ -68,12 +74,13 @@ public class OrderManager : MonoBehaviour
     OrderDictionary orderDictionary;
     bool inProgressOrder;
     public int health;
+    AudioSource voiceAudio;
 
     void Start() {
 
         orderDictionary = GetComponent<OrderDictionary>();
 
-        orderStateArrayIndex = 0; //come back here later and initialize this based on checkpoints
+        orderStateArrayIndex = TEMPORARY_TESTING_STARTING_INDEX; //come back here later and initialize this based on checkpoints
 
         currentOrder = new List<List<string>>();
 
@@ -91,11 +98,17 @@ public class OrderManager : MonoBehaviour
 
         receiptText.SetText("");
         inProgressOrder = false;
+
         health = 80;
+        healthBar.fillAmount = (health / 100f);
+
+        voiceAudio = GetComponent<AudioSource>();
 
     }
 
     void Update() {
+
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (health / 100f), Time.deltaTime);
 
     }
 
@@ -247,11 +260,37 @@ public class OrderManager : MonoBehaviour
 
     }
 
-    public void BeginOrder() {
-        Debug.Log("Beginning order " + (orderStateArrayIndex + 1));
-        currentOrderState = orderStateArray[orderStateArrayIndex];
-        inProgressOrder = true;
-        ClearOrder();
+    public void BeginOrder() { //this is the Next Customer button
+        if (!inProgressOrder) {
+            Debug.Log("Beginning order " + (orderStateArrayIndex + 1));
+            currentOrderState = orderStateArray[orderStateArrayIndex];
+            inProgressOrder = true;
+            ClearOrder();
+            carSprite.sprite = currentOrderState.vehicleSprite;
+            carAnimator.SetTrigger("carEnter");
+            carAudio.pitch = Random.Range(0.7f, 1.3f); //give the sounds some variety
+            carAudio.panStereo = 1f;
+            carAudio.Play();
+            StartCoroutine("CarAudioPanStart");
+            StartCoroutine("DelayedOrderAudio");
+        }
+    }
+
+    IEnumerator DelayedOrderAudio() {
+        voiceAudio.Stop();
+        yield return new WaitForSeconds(3f);
+        voiceAudio.PlayOneShot(currentOrderState.orderAudio);
+    }
+
+    public void RepeatOrder() {
+        if (inProgressOrder) {
+            health -= 3;
+            if (health < 0) {
+                health = 0;
+            }
+            voiceAudio.Stop();
+            voiceAudio.PlayOneShot(currentOrderState.orderAudio);
+        }
     }
 
     public void ClearOrder() {
@@ -261,6 +300,7 @@ public class OrderManager : MonoBehaviour
 
     public void CompleteOrder() {
         if (inProgressOrder) {
+            voiceAudio.Stop();
             if (CheckOrder() == true) {
                 Debug.Log("Order was correct!");
                 health += 5;
@@ -277,8 +317,15 @@ public class OrderManager : MonoBehaviour
 
             Debug.Log("Health is now " + health);
             ClearOrder();
+            carAnimator.SetTrigger("carExit");
+            carAudio.Play();
+            StartCoroutine("CarAudioPanEnd");
             orderStateArrayIndex++;
             inProgressOrder = false;
+        }
+
+        if (currentOrderState.methodToExecuteAfterOrder != "") {
+            //put stuff here
         }
     }
 
@@ -340,6 +387,28 @@ public class OrderManager : MonoBehaviour
                 }
                 return hashCode;
             }
+        }
+    }
+
+    IEnumerator CarAudioPanStart() {
+        float totalTime = 3;
+        float currentTime = 0;
+
+        while (carAudio.panStereo > -0.15f) {
+            currentTime += Time.deltaTime;
+            carAudio.panStereo = Mathf.Lerp(1f, -0.2f, currentTime / totalTime);
+            yield return null;
+        }
+    }
+
+    IEnumerator CarAudioPanEnd() {
+        float totalTime = 3;
+        float currentTime = 0;
+
+        while (carAudio.panStereo > -0.95f) {
+            currentTime += Time.deltaTime;
+            carAudio.panStereo = Mathf.Lerp(-0.2f, -1f, currentTime / totalTime);
+            yield return null;
         }
     }
 
