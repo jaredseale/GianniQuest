@@ -7,11 +7,12 @@ using System.Linq;
 
 public class OrderManager : MonoBehaviour
 {
-    public int TEMPORARY_TESTING_STARTING_INDEX = 0;
+    public int TEMPORARY_TESTING_STARTING_ORDER = 5;
 
     public List<List<string>> currentOrder;
 
     [SerializeField] Image healthBar;
+    [SerializeField] Animator healthBarAnimator;
     [SerializeField] Animator carAnimator;
     [SerializeField] SpriteRenderer carSprite;
     [SerializeField] AudioSource carAudio;
@@ -80,7 +81,7 @@ public class OrderManager : MonoBehaviour
 
         orderDictionary = GetComponent<OrderDictionary>();
 
-        orderStateArrayIndex = TEMPORARY_TESTING_STARTING_INDEX; //come back here later and initialize this based on checkpoints
+        orderStateArrayIndex = TEMPORARY_TESTING_STARTING_ORDER - 1; //come back here later and initialize this based on checkpoints
 
         currentOrder = new List<List<string>>();
 
@@ -107,9 +108,7 @@ public class OrderManager : MonoBehaviour
     }
 
     void Update() {
-
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (health / 100f), Time.deltaTime);
-
     }
 
     public void ShowBurgerMenu() {
@@ -303,18 +302,21 @@ public class OrderManager : MonoBehaviour
             voiceAudio.Stop();
             if (CheckOrder() == true) {
                 Debug.Log("Order was correct!");
+                healthBarAnimator.SetTrigger("healthUp");
                 health += 5;
                 if (health > 100) {
                     health = 100;
                 }
             } else {
                 Debug.Log("Order was NOT correct!");
+                healthBarAnimator.SetTrigger("healthDown");
                 health -= 20;
                 if (health < 0) {
                     health = 0;
                 }
             }
 
+            StopCoroutine("DelayedOrderAudio");
             Debug.Log("Health is now " + health);
             ClearOrder();
             carAnimator.SetTrigger("carExit");

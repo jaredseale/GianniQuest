@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: B15
   m_EditorClassIdentifier: 
-  dialogueText: I've been really into this sweatgunk band named Crustloaf lately.
+  dialogueText: I've been really into this sweatfunk band named Crust*Loaf lately.
     Who's your favorite band?
   characterName: Anousse
   characterSprite: {fileID: 21300000, guid: 874f74e834956f548a9d8d6daa4f1a88, type: 3}

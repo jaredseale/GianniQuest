@@ -4319,8 +4319,8 @@ RectTransform:
   - {fileID: 318826208}
   - {fileID: 1534492142}
   - {fileID: 828403857}
-  - {fileID: 634779918}
   - {fileID: 401893080}
+  - {fileID: 634779918}
   m_Father: {fileID: 1647817024}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4543,7 +4543,7 @@ RectTransform:
   - {fileID: 1391071176}
   - {fileID: 1619094053}
   m_Father: {fileID: 390383903}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6808,7 +6808,7 @@ RectTransform:
   - {fileID: 560308126}
   - {fileID: 385405783}
   m_Father: {fileID: 390383903}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12194,7 +12194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 17.525534, y: 0.000043069245}
+  m_AnchoredPosition: {x: -0.00022315979, y: 0.000043069245}
   m_SizeDelta: {x: -17.525757, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1091027144
@@ -14261,6 +14261,7 @@ GameObject:
   - component: {fileID: 1251350953}
   - component: {fileID: 1251350955}
   - component: {fileID: 1251350954}
+  - component: {fileID: 1251350956}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -14325,6 +14326,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251350952}
   m_CullTransparentMesh: 0
+--- !u!95 &1251350956
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251350952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 445cc23428ce89c46b0482889e3d3d06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1254385554
 GameObject:
   m_ObjectHideFlags: 0
@@ -16356,7 +16376,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1459950009}
   m_HandleRect: {fileID: 1459950008}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -17630,8 +17650,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d4ed7a5926f7b459e0b96adaf23341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TEMPORARY_TESTING_STARTING_INDEX: 0
+  TEMPORARY_TESTING_STARTING_ORDER: 17
   healthBar: {fileID: 1251350954}
+  healthBarAnimator: {fileID: 1251350956}
   carAnimator: {fileID: 666113426}
   carSprite: {fileID: 666113425}
   carAudio: {fileID: 666113428}
@@ -17742,7 +17763,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8717204355028567090, guid: bc10036fb2189114cb34613bbf6a681f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.695
   m_Pitch: 1
   Loop: 0
   Mute: 0
