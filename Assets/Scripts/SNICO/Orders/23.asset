@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 23
   m_EditorClassIdentifier: 
   orderNumber: 23
-  vehicleSprite: {fileID: 0}
-  orderAudio: {fileID: 0}
+  vehicleSprite: {fileID: 21300000, guid: 604174daaa737da4e9ac82e03c17c21c, type: 3}
+  orderAudio: {fileID: 8300000, guid: 7c433a42090a50b4ea4dccddd51608d2, type: 3}
   methodToExecuteAfterOrder: 

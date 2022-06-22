@@ -7627,7 +7627,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.4, y: 3.41}
+  m_Size: {x: 15, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7660,7 +7660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666113424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.76, y: -1.42, z: 419.93842}
+  m_LocalPosition: {x: -12.76, y: -1.42, z: 419.9384}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17650,12 +17650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d4ed7a5926f7b459e0b96adaf23341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TEMPORARY_TESTING_STARTING_ORDER: 17
-  healthBar: {fileID: 1251350954}
-  healthBarAnimator: {fileID: 1251350956}
-  carAnimator: {fileID: 666113426}
-  carSprite: {fileID: 666113425}
-  carAudio: {fileID: 666113428}
+  TEMPORARY_TESTING_STARTING_ORDER: 25
+  currentOrderState: {fileID: 0}
   orderStateArray:
   - {fileID: 11400000, guid: e2de995c0148a384da8d9f655c24a2e1, type: 2}
   - {fileID: 11400000, guid: 3330cd9220bd63c43804b96cc7d8442f, type: 2}
@@ -17682,8 +17678,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d22f1f5b3f858cc4d986f9a5c0ccfaee, type: 2}
   - {fileID: 11400000, guid: 4249011538cdc9f42b9fadfdb87591da, type: 2}
   - {fileID: 11400000, guid: aaa13596e85292448b4c3f9a9d3f80d9, type: 2}
-  currentOrderState: {fileID: 0}
+  health: 0
+  healthBar: {fileID: 1251350954}
+  healthBarAnimator: {fileID: 1251350956}
+  carAnimator: {fileID: 666113426}
+  carSprite: {fileID: 666113425}
+  carAudio: {fileID: 666113428}
+  slideWhistleDown: {fileID: 8300000, guid: a005cec24ed85054da8d24d02044248f, type: 3}
+  slideWhistleUp: {fileID: 8300000, guid: 409a5dc82b0321049a73006379deadd7, type: 3}
   receiptText: {fileID: 1091027144}
+  receiptScroll: {fileID: 1533927816}
   rootMenu: {fileID: 656371703}
   burgerMenu: {fileID: 1514371701}
   hotDogMenu: {fileID: 230965592}
@@ -17724,7 +17728,6 @@ MonoBehaviour:
   drinksMediumButton: {fileID: 1077448085}
   drinksLargeButton: {fileID: 1276914968}
   drinksDietButton: {fileID: 475077633}
-  health: 0
 --- !u!4 &1588044412
 Transform:
   m_ObjectHideFlags: 0

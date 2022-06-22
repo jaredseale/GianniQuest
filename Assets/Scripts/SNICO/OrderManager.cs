@@ -11,22 +11,32 @@ public class OrderManager : MonoBehaviour
 
     public List<List<string>> currentOrder;
 
+    [SerializeField] OrderState currentOrderState;
+    [SerializeField] OrderState[] orderStateArray;
+    int orderStateArrayIndex;
+
+    [Space(30)]
+
+    public int health;
     [SerializeField] Image healthBar;
     [SerializeField] Animator healthBarAnimator;
     [SerializeField] Animator carAnimator;
     [SerializeField] SpriteRenderer carSprite;
     [SerializeField] AudioSource carAudio;
-    [SerializeField] OrderState[] orderStateArray;
-    int orderStateArrayIndex;
-    [SerializeField] OrderState currentOrderState;
-
+    [SerializeField] AudioClip slideWhistleDown;
+    [SerializeField] AudioClip slideWhistleUp;
     [SerializeField] TextMeshProUGUI receiptText;
+    [SerializeField] Scrollbar receiptScroll;
+
+    [Space(30)]
 
     [SerializeField] GameObject rootMenu;
     [SerializeField] GameObject burgerMenu;
     [SerializeField] GameObject hotDogMenu;
     [SerializeField] GameObject friesMenu;
     [SerializeField] GameObject drinksMenu;
+
+    [Space(30)]
 
     [SerializeField] GameObject burgerBunsButton;
     [SerializeField] GameObject burgerSinglePattyButton;
@@ -40,6 +50,8 @@ public class OrderManager : MonoBehaviour
     [SerializeField] GameObject burgerMustardButton;
     [SerializeField] GameObject burgerMayoButton;
 
+    [Space(30)]
+
     [SerializeField] GameObject hotDogBunButton;
     [SerializeField] GameObject hotDogWienerButton;
     [SerializeField] GameObject hotDogLettuceButton;
@@ -50,11 +62,15 @@ public class OrderManager : MonoBehaviour
     [SerializeField] GameObject hotDogMustardButton;
     [SerializeField] GameObject hotDogMayoButton;
 
+    [Space(30)]
+
     [SerializeField] GameObject friesSaltButton;
     [SerializeField] GameObject friesCheeseButton;
     [SerializeField] GameObject friesSmallButton;
     [SerializeField] GameObject friesMediumButton;
     [SerializeField] GameObject friesLargeButton;
+
+    [Space(30)]
 
     [SerializeField] GameObject drinksWorterButton;
     [SerializeField] GameObject drinksSprightButton;
@@ -67,6 +83,8 @@ public class OrderManager : MonoBehaviour
     [SerializeField] GameObject drinksLargeButton;
     [SerializeField] GameObject drinksDietButton;
 
+    [Space(30)]
+
     GameObject[] burgerButtons;
     GameObject[] hotDogButtons;
     GameObject[] friesButtons;
@@ -74,7 +92,6 @@ public class OrderManager : MonoBehaviour
 
     OrderDictionary orderDictionary;
     bool inProgressOrder;
-    public int health;
     AudioSource voiceAudio;
 
     void Start() {
@@ -256,7 +273,22 @@ public class OrderManager : MonoBehaviour
         }
         
         receiptText.SetText(formattedReceipt);
+        StartCoroutine("ScrollToBottom");
 
+    }
+
+    IEnumerator ScrollToBottom() {
+        float totalTime = 1;
+        float currentTime = 0;
+
+        while (receiptScroll.value > 0f) {
+            currentTime += Time.deltaTime;
+            receiptScroll.value = Mathf.Lerp(1f, 0f, currentTime / totalTime);
+            yield return null;
+        }
+
+        receiptScroll.value = 0f;
+        
     }
 
     public void BeginOrder() { //this is the Next Customer button
@@ -265,11 +297,21 @@ public class OrderManager : MonoBehaviour
             currentOrderState = orderStateArray[orderStateArrayIndex];
             inProgressOrder = true;
             ClearOrder();
+
             carSprite.sprite = currentOrderState.vehicleSprite;
-            carAnimator.SetTrigger("carEnter");
-            carAudio.pitch = Random.Range(0.7f, 1.3f); //give the sounds some variety
+            if (orderStateArrayIndex == 20) { //toes 2nd order
+                carAnimator.SetTrigger("balloonEnter");
+                carAudio.PlayOneShot(slideWhistleDown);
+            } else if (orderStateArrayIndex == 24) { //sheriff's 2nd order
+                carAnimator.SetTrigger("finalOrderEnter");
+                StartCoroutine("FinalOrderCarAudio");
+            } else {
+                carAnimator.SetTrigger("carEnter");
+                carAudio.pitch = Random.Range(0.7f, 1.3f); //give the sounds some variety
+                carAudio.Play();
+            }
+
             carAudio.panStereo = 1f;
-            carAudio.Play();
             StartCoroutine("CarAudioPanStart");
             StartCoroutine("DelayedOrderAudio");
         }
@@ -277,8 +319,20 @@ public class OrderManager : MonoBehaviour
 
     IEnumerator DelayedOrderAudio() {
         voiceAudio.Stop();
-        yield return new WaitForSeconds(3f);
+        if (orderStateArrayIndex == 24) { //if it's the final order
+            yield return new WaitForSeconds(7f);
+        } else {
+            yield return new WaitForSeconds(3f);
+        }
         voiceAudio.PlayOneShot(currentOrderState.orderAudio);
+    }
+
+    IEnumerator FinalOrderCarAudio() {
+        carAudio.pitch = Random.Range(0.7f, 1.3f);
+        carAudio.Play();
+        yield return new WaitForSeconds(4f);
+        carAudio.pitch = Random.Range(0.7f, 1.3f);
+        carAudio.Play();
     }
 
     public void RepeatOrder() {
@@ -316,11 +370,24 @@ public class OrderManager : MonoBehaviour
                 }
             }
 
+            StopCoroutine("ScrollToBottom");
             StopCoroutine("DelayedOrderAudio");
+            StopCoroutine("FinalOrderCarAudio");
+
             Debug.Log("Health is now " + health);
             ClearOrder();
-            carAnimator.SetTrigger("carExit");
-            carAudio.Play();
+
+            if (orderStateArrayIndex == 20) { //toes 2nd order
+                carAnimator.SetTrigger("balloonExit");
+                carAudio.PlayOneShot(slideWhistleUp);
+            } else if (orderStateArrayIndex == 24) { //sheriff's 2nd order
+                carAnimator.SetTrigger("finalOrderExit");
+                carAudio.Play();
+            } else {
+                carAnimator.SetTrigger("carExit");
+                carAudio.Play();
+            }
+            
             StartCoroutine("CarAudioPanEnd");
             orderStateArrayIndex++;
             inProgressOrder = false;
