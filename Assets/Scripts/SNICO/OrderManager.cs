@@ -30,6 +30,9 @@ public class OrderManager : MonoBehaviour
 
     [Space(30)]
 
+    [SerializeField] Button nextCustomerButton;
+    [SerializeField] Button repeatOrderButton;
+    [SerializeField] Button completeOrderButton;
     [SerializeField] GameObject rootMenu;
     [SerializeField] GameObject burgerMenu;
     [SerializeField] GameObject hotDogMenu;
@@ -121,6 +124,9 @@ public class OrderManager : MonoBehaviour
         healthBar.fillAmount = (health / 100f);
 
         voiceAudio = GetComponent<AudioSource>();
+
+        repeatOrderButton.interactable = false;
+        completeOrderButton.interactable = false;
 
     }
 
@@ -293,12 +299,14 @@ public class OrderManager : MonoBehaviour
 
     public void BeginOrder() { //this is the Next Customer button
         if (!inProgressOrder) {
-            Debug.Log("Beginning order " + (orderStateArrayIndex + 1));
             currentOrderState = orderStateArray[orderStateArrayIndex];
             inProgressOrder = true;
             ClearOrder();
 
+            nextCustomerButton.interactable = false;
+
             carSprite.sprite = currentOrderState.vehicleSprite;
+
             if (orderStateArrayIndex == 20) { //toes 2nd order
                 carAnimator.SetTrigger("balloonEnter");
                 carAudio.PlayOneShot(slideWhistleDown);
@@ -314,6 +322,9 @@ public class OrderManager : MonoBehaviour
             carAudio.panStereo = 1f;
             StartCoroutine("CarAudioPanStart");
             StartCoroutine("DelayedOrderAudio");
+
+            repeatOrderButton.interactable = true;
+            completeOrderButton.interactable = true;
         }
     }
 
@@ -374,7 +385,6 @@ public class OrderManager : MonoBehaviour
             StopCoroutine("DelayedOrderAudio");
             StopCoroutine("FinalOrderCarAudio");
 
-            Debug.Log("Health is now " + health);
             ClearOrder();
 
             if (orderStateArrayIndex == 20) { //toes 2nd order
@@ -391,6 +401,9 @@ public class OrderManager : MonoBehaviour
             StartCoroutine("CarAudioPanEnd");
             orderStateArrayIndex++;
             inProgressOrder = false;
+
+            repeatOrderButton.interactable = false;
+            completeOrderButton.interactable = false;
         }
 
         if (currentOrderState.methodToExecuteAfterOrder != "") {
@@ -478,6 +491,9 @@ public class OrderManager : MonoBehaviour
             currentTime += Time.deltaTime;
             carAudio.panStereo = Mathf.Lerp(-0.2f, -1f, currentTime / totalTime);
             yield return null;
+        }
+        if (orderStateArrayIndex != 24) {
+            nextCustomerButton.interactable = true;
         }
     }
 

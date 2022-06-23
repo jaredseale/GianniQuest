@@ -63,6 +63,21 @@ public class OrderDictionary : MonoBehaviour
                 };
                 break;
 
+            case 8:
+                order = new List<List<string>> {
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"}
+                };
+                break;
+
             case 9:
                 order = new List<List<string>> {
                     new List<string> {"Hot Dog", "Bun", "Wiener", "Ketchup", "Mayo"},
@@ -75,6 +90,15 @@ public class OrderDictionary : MonoBehaviour
                 order = new List<List<string>> {
                     new List<string> {"Burger", "Buns", "Double Patty", "Cheese", "Lettuce", "Onions", "Pickles", "Bacon", "Ketchup", "Mayo"},
                     new List<string> {"Drink", "Dr. Cardboard", "Small"}
+                };
+                break;
+
+            case 11:
+                order = new List<List<string>> {
+                    new List<string> {"Hot Dog", "Bun", "Wiener", "Chili", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Lettuce", "Ketchup"},
+                    new List<string> {"Fries", "Salt", "Large"},
+                    new List<string> {"Drink", "Mountonious Dew", "Large"}
                 };
                 break;
 
@@ -96,6 +120,14 @@ public class OrderDictionary : MonoBehaviour
                     new List<string> {"Drink", "Mountonious Dew", "Medium"},
                     new List<string> {"Burger", "Buns", "Double Patty", "Cheese", "Lettuce", "Onions", "Bacon", "Ketchup"},
                     new List<string> {"Fries", "Salt", "Medium"}
+                };
+                break;
+
+            case 19:
+                order = new List<List<string>> {
+                    new List<string> {"Hot Dog", "Bun", "Wiener", "Relish", "Mayo"},
+                    new List<string> {"Fries", "Large"},
+                    new List<string> {"Drink", "Kong Kola", "Medium", "Diet"}
                 };
                 break;
 
