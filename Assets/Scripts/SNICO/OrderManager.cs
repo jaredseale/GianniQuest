@@ -32,6 +32,7 @@ public class OrderManager : MonoBehaviour
 
     [SerializeField] Button nextCustomerButton;
     [SerializeField] Button repeatOrderButton;
+    [SerializeField] Button clearOrderButton;
     [SerializeField] Button completeOrderButton;
     [SerializeField] GameObject rootMenu;
     [SerializeField] GameObject burgerMenu;
@@ -132,6 +133,12 @@ public class OrderManager : MonoBehaviour
 
     void Update() {
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (health / 100f), Time.deltaTime);
+
+        if (currentOrder.Count > 0) {
+            clearOrderButton.interactable = true;
+        } else {
+            clearOrderButton.interactable = false;
+        }
     }
 
     public void ShowBurgerMenu() {
@@ -255,8 +262,7 @@ public class OrderManager : MonoBehaviour
                 currentOrder[currentOrder.Count - 1].Add(thing.name);
             }
         }
-
-        UpdateReceiptScreen();
+            UpdateReceiptScreen();
     }
 
     public void UpdateReceiptScreen() {
@@ -322,9 +328,6 @@ public class OrderManager : MonoBehaviour
             carAudio.panStereo = 1f;
             StartCoroutine("CarAudioPanStart");
             StartCoroutine("DelayedOrderAudio");
-
-            repeatOrderButton.interactable = true;
-            completeOrderButton.interactable = true;
         }
     }
 
@@ -336,6 +339,8 @@ public class OrderManager : MonoBehaviour
             yield return new WaitForSeconds(3f);
         }
         voiceAudio.PlayOneShot(currentOrderState.orderAudio);
+        repeatOrderButton.interactable = true;
+        completeOrderButton.interactable = true;
     }
 
     IEnumerator FinalOrderCarAudio() {

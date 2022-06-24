@@ -12,8 +12,8 @@ public class OrderDictionary : MonoBehaviour
         switch (orderNumber) {
 
             case 1:
-                order = new List<List<string>> { 
-                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"}, 
+                order = new List<List<string>> {
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
                 };
                 break;
 
@@ -102,8 +102,36 @@ public class OrderDictionary : MonoBehaviour
                 };
                 break;
 
+            case 12:
+                order = new List<List<string>> {
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Ketchup", "Mustard", "Mayo"},
+                    new List<string> {"Fries", "Salt", "Small"},
+                    new List<string> {"Drink", "Kong Kola", "Small", "Diet"},
+                };
+                break;
+
+            case 13:
+                order = new List<List<string>> {
+                    new List<string> {"Drink", "Bepis", "Medium"},
+                    new List<string> {"Drink", "Bepis", "Medium"},
+                    new List<string> {"Drink", "Bepis", "Medium"},
+                    new List<string> {"Drink", "Dr. Cardboard", "Large"},
+                    new List<string> {"Drink", "Worter", "Small"}
+                };
+                break;
+
+            case 14:
+                order = new List<List<string>> {
+                    new List<string> {"Hot Dog", "Bun", "Wiener", "Lettuce", "Sauer Kraut", "Chili", "Relish", "Ketchup", "Mustard", "Mayo"},
+                    new List<string> {"Fries", "Salt", "Cheese", "Large"},
+                    new List<string> {"Drink", "Worter", "Medium", "Diet"}
+                };
+                break;
+
             case 15:
-                order = new List<List<string>> {};
+                order = new List<List<string>> {
+                    new List<string> {"Hot Dog", "Wiener"}
+                };
                 break;
 
             case 16:

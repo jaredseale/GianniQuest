@@ -9,8 +9,7 @@ public class LucySpawn : MonoBehaviour
     void Start() {
         Vector2 spawnPos = spawnPositions[Random.Range(0, spawnPositions.Length)];
 
-
-        if (spawnPos.y > -2f) { //if lucy spawns higher than the floor, make her appear behind gianni
+        if (spawnPos.y > -2.5f) { //if lucy spawns higher than the floor, make her appear behind gianni
             GetComponent<SpriteRenderer>().sortingLayerName = "Background";
         }
 
