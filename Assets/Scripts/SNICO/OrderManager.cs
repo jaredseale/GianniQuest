@@ -290,12 +290,16 @@ public class OrderManager : MonoBehaviour
     }
 
     IEnumerator ScrollToBottom() {
-        float totalTime = 1;
-        float currentTime = 0;
+        yield return new WaitForSeconds(.05f); //this lets it realize its new value before it starts scrolling
+
+        float totalTime = 0.5f;
+        float currentTime = 0f;
+        float currentValue = receiptScroll.value;
 
         while (receiptScroll.value > 0f) {
+            
             currentTime += Time.deltaTime;
-            receiptScroll.value = Mathf.Lerp(1f, 0f, currentTime / totalTime);
+            receiptScroll.value = Mathf.Lerp(currentValue, 0f, currentTime / totalTime);
             yield return null;
         }
 
@@ -497,7 +501,7 @@ public class OrderManager : MonoBehaviour
             carAudio.panStereo = Mathf.Lerp(-0.2f, -1f, currentTime / totalTime);
             yield return null;
         }
-        if (orderStateArrayIndex != 24) {
+        if (orderStateArrayIndex <= orderStateArray.Length - 1) {
             nextCustomerButton.interactable = true;
         }
     }

@@ -151,6 +151,21 @@ public class OrderDictionary : MonoBehaviour
                 };
                 break;
 
+            case 18:
+                order = new List<List<string>> {
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Burger", "Buns", "Single Patty", "Cheese", "Lettuce", "Ketchup"},
+                    new List<string> {"Hot Dog", "Bun", "Wiener", "Ketchup"},
+                    new List<string> {"Hot Dog", "Bun", "Wiener", "Ketchup"},
+                    new List<string> {"Fries", "Salt", "Small"},
+                    new List<string> {"Fries", "Salt", "Small"},
+                    new List<string> {"Fries", "Salt", "Small"},
+                    new List<string> {"Drink", "Worter", "Medium"},
+                    new List<string> {"Drink", "Spright", "Medium"}
+                };
+                break;
+
             case 19:
                 order = new List<List<string>> {
                     new List<string> {"Hot Dog", "Bun", "Wiener", "Relish", "Mayo"},

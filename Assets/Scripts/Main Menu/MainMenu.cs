@@ -91,5 +91,7 @@ public class MainMenu : MonoBehaviour
 
         PlayerPrefs.SetString("DateProgress", "Init");
         PlayerPrefs.SetString("LCPSpriteState", "Normal");
+
+        PlayerPrefs.SetString("SNICOTutorialState", "Incomplete");
     }
 }
