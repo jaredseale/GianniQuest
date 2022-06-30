@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SNICO.unity
     guid: eabeab1ad9862814fa6484f5d3507b31
+  - enabled: 1
+    path: Assets/Scenes/Intermission.unity
+    guid: 4c0bc84f0c5f42d42a564e33540e6f30
   m_configObjects: {}

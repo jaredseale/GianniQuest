@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dollar : MonoBehaviour
 {
@@ -32,11 +33,6 @@ public class Dollar : MonoBehaviour
         StartCoroutine("DelayedText");
         myPlayer.canMove = false;
         PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
-
-        if (PlayerPrefs.GetInt("Dollars") >= 3) {
-            PlayerPrefs.SetString("TimeOfDay", "Night");
-        }
-
     }
 
     IEnumerator DelayedText() {
@@ -48,6 +44,10 @@ public class Dollar : MonoBehaviour
     }
 
     IEnumerator PutAwayDollar() {
+        if (PlayerPrefs.GetInt("Dollars") == 3) {
+            StartCoroutine("StartIntermission");
+        }
+
         dollar.GetComponent<Animator>().SetTrigger("CollectDollar");
         yield return new WaitForSeconds(3f);
         dollar.SetActive(false);
@@ -66,6 +66,11 @@ public class Dollar : MonoBehaviour
                 dollarCutsceneState = 1;
             }
         }
+    }
+
+    IEnumerator StartIntermission() {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Intermission");
     }
 
 }

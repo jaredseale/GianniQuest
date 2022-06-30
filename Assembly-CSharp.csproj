@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Dialogue Scripts\Mom.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
+    <Compile Include="Assets\Scripts\SNICO\SNICOTutorial.cs" />
     <Compile Include="Assets\Scripts\IntroCutscene.cs" />
     <Compile Include="Assets\Scripts\School\Test.cs" />
     <Compile Include="Assets\Scripts\LCP\State.cs" />
@@ -94,7 +95,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\SNICO\SNICOTutorial.cs" />
+    <Compile Include="Assets\Scripts\Intermission.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />

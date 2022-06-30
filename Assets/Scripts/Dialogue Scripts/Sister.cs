@@ -20,6 +20,8 @@ public class Sister : MonoBehaviour
         "So congratulations! And like I said, here's your pizza dollar I promised you :-D"};
     string[] PostDollar = new string[] { "Sorry Gianni, but if you want another dollar, you're gonna have to go on another date, and there are no more in the game.",
         "Huh? What am I talking about?"};
+    string[] Night = new string[] { "It's getting pretty late and this belly o' mine is rumblin' and tumblin'.",
+        "Are you close to being able to afford a pizza yet?"};
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -32,6 +34,8 @@ public class Sister : MonoBehaviour
             currentDialogue.dialogue.sentences = PostDate;
         } else if (PlayerPrefs.GetString("SisterDialogueState") == "PostDollar") {
             currentDialogue.dialogue.sentences = PostDollar;
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "Night") {
+            currentDialogue.dialogue.sentences = Night;
         }
     }
 
@@ -52,6 +56,8 @@ public class Sister : MonoBehaviour
             currentDialogue.dialogue.sentences = PostDate;
         } else if (PlayerPrefs.GetString("SisterDialogueState") == "PostDollar") {
             currentDialogue.dialogue.sentences = PostDollar;
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "Night") {
+            currentDialogue.dialogue.sentences = Night;
         }
     }
 

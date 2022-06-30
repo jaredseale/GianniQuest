@@ -7,8 +7,6 @@ using System.Linq;
 
 public class OrderManager : MonoBehaviour
 {
-    public int TEMPORARY_TESTING_STARTING_ORDER = 5;
-
     public List<List<string>> currentOrder;
 
     [SerializeField] OrderState currentOrderState;
@@ -27,9 +25,14 @@ public class OrderManager : MonoBehaviour
     [SerializeField] AudioClip slideWhistleUp;
     [SerializeField] TextMeshProUGUI receiptText;
     [SerializeField] Scrollbar receiptScroll;
+    [SerializeField] GameObject loseScreen;
+    [SerializeField] AudioClip loseSFX;
+    [SerializeField] GameObject winScreen;
+    [SerializeField] AudioClip winSFX;
 
     [Space(30)]
 
+    [SerializeField] Button infoButton;
     [SerializeField] Button nextCustomerButton;
     [SerializeField] Button repeatOrderButton;
     [SerializeField] Button clearOrderButton;
@@ -102,7 +105,11 @@ public class OrderManager : MonoBehaviour
 
         orderDictionary = GetComponent<OrderDictionary>();
 
-        orderStateArrayIndex = TEMPORARY_TESTING_STARTING_ORDER - 1; //come back here later and initialize this based on checkpoints
+        if (PlayerPrefs.GetString("SNICOProgress") == "FailedAfterCheckpoint") {
+            orderStateArrayIndex = 10;
+        } else {
+            orderStateArrayIndex = 0;
+        }
 
         currentOrder = new List<List<string>>();
 
@@ -388,6 +395,7 @@ public class OrderManager : MonoBehaviour
                 if (health < 0) {
                     health = 0;
                 }
+
             }
 
             StopCoroutine("ScrollToBottom");
@@ -396,27 +404,46 @@ public class OrderManager : MonoBehaviour
 
             ClearOrder();
 
+            repeatOrderButton.interactable = false;
+            completeOrderButton.interactable = false;
+
+            StartCoroutine("CarAudioPanEnd");
+            inProgressOrder = false;
+
             if (orderStateArrayIndex == 20) { //toes 2nd order
                 carAnimator.SetTrigger("balloonExit");
                 carAudio.PlayOneShot(slideWhistleUp);
-            } else if (orderStateArrayIndex == 24) { //sheriff's 2nd order
+            } else if (orderStateArrayIndex == 24 && health > 0) { //win sequence!!!
+                infoButton.interactable = false;
                 carAnimator.SetTrigger("finalOrderExit");
                 carAudio.Play();
+                PlayerPrefs.SetString("SNICOProgress", "Complete");
+                PlayerPrefs.SetString("SNICOEntry", "Done");
+                PlayerPrefs.SetString("DadDialogueState", "PreDollar");
+                winScreen.SetActive(true);
+                voiceAudio.PlayOneShot(winSFX);
             } else {
                 carAnimator.SetTrigger("carExit");
                 carAudio.Play();
             }
-            
-            StartCoroutine("CarAudioPanEnd");
+
+            if (health <= 0) { //lose sequence
+                infoButton.interactable = false;
+                voiceAudio.PlayOneShot(loseSFX);
+                loseScreen.SetActive(true);
+                if (orderStateArrayIndex < 10) {
+                    PlayerPrefs.SetString("SNICOProgress", "FailedBeforeCheckpoint");
+                } else {
+                    PlayerPrefs.SetString("SNICOProgress", "FailedAfterCheckpoint");
+                }
+
+                PlayerPrefs.SetString("DadDialogueState", "FailedSNICO");
+
+                return;
+            }
+
             orderStateArrayIndex++;
-            inProgressOrder = false;
 
-            repeatOrderButton.interactable = false;
-            completeOrderButton.interactable = false;
-        }
-
-        if (currentOrderState.methodToExecuteAfterOrder != "") {
-            //put stuff here
         }
     }
 
@@ -502,7 +529,9 @@ public class OrderManager : MonoBehaviour
             yield return null;
         }
         if (orderStateArrayIndex <= orderStateArray.Length - 1) {
-            nextCustomerButton.interactable = true;
+            if (health > 0) {
+                nextCustomerButton.interactable = true;
+            }
         }
     }
 

@@ -16,6 +16,8 @@ public class Mom : MonoBehaviour
         "Just like I promised, here is your singular dollar William (bill for short)."};
     string[] PostDollar = new string[] { "Unfortunately, that was my last money, and I need to get back to tending the house bar.",
         "I'm sure you can use your fully developed Gianni brain to find some other dollars!"};
+    string[] Night = new string[] { "Are you having such a good time today, Gianni?",
+        "Don't forget, it's your turn to get dinner tonight, so don't dilly dally too long on that!"};
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -28,6 +30,8 @@ public class Mom : MonoBehaviour
             currentDialogue.dialogue.sentences = PreDollar;
         } else if (PlayerPrefs.GetString("MomDialogueState") == "PostDollar") {
             currentDialogue.dialogue.sentences = PostDollar;
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "Night") {
+            currentDialogue.dialogue.sentences = Night;
         }
     }
 
@@ -48,6 +52,8 @@ public class Mom : MonoBehaviour
             currentDialogue.dialogue.sentences = PreDollar;
         } else if (PlayerPrefs.GetString("MomDialogueState") == "PostDollar") {
             currentDialogue.dialogue.sentences = PostDollar;
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "Night") {
+            currentDialogue.dialogue.sentences = Night;
         }
     }
 
