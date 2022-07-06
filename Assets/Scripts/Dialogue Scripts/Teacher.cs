@@ -9,13 +9,13 @@ public class Teacher : MonoBehaviour
     public DialogueManager dialogueManager;
     [SerializeField] GameObject testOnDesk;
 
-    string[] Init = new string[] { "Gianni, I am so excited to be here on this Beautiful Saturday Afternoon!",
+    string[] Init = new string[] { "Gianni, I am so excited to be here at school on this wonderful Christmas Eve!",
         "It seems that you're late on one of your assignments this week.",
         "If you can briskly fill our your worksheet I've placed on your desk, we can both go home!"};
     string[] Init2 = new string[] { "Go have a look at the worksheet on your desk and then talk to me once you've finished it." };
     string[] TestWrong = new string[] { "Hmmm... it doesn't look like your answer is quite right. Go have another look." };
     string[] TestDone = new string[] { "Wowee! Wow! Yes! Yes!!! You're done! Congratulations!!! Wow! Woo hoo! Yes! You can leave now!",
-        "(Press tab to pause and you can exit to the overworld from there.)",
+        "(Press TAB to pause and you can exit to the overworld from there.)",
         "(This is me, Jared, telling you this, not the teacher. Diagesis!)"};
 
     private void Start() {

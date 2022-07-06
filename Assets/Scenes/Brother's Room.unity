@@ -1569,6 +1569,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1667325640156486595, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2328626990547341088, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1589,9 +1593,37 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButtonHoverSound
       objectReference: {fileID: 0}
+    - target: {fileID: 5757487885910224864, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757487885910224864, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10786164
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757487885910224864, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Color.b
+      value: 0.13207549
+      objectReference: {fileID: 0}
     - target: {fileID: 6028547063787183957, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096701053929896506, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055656593869356670, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055656593869356670, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Color.g
+      value: 0.19215688
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055656593869356670, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Color.b
+      value: 0.23529413
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
@@ -2015,7 +2047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8004013101066742285, guid: 9b55796e835dcf344a2710da3bb906e5, type: 3}
       propertyPath: nextSpawnPos.y
-      value: -1.34
+      value: -1.915
       objectReference: {fileID: 0}
     - target: {fileID: 8004013101066742285, guid: 9b55796e835dcf344a2710da3bb906e5, type: 3}
       propertyPath: doorLoadSceneDelay

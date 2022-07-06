@@ -91,11 +91,12 @@
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MenuCinematic.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
+    <Compile Include="Assets\Scripts\Intermission.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldWaypoints.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Intermission.cs" />
+    <Compile Include="Assets\Scripts\House\Ornament.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />

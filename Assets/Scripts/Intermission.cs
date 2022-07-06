@@ -17,6 +17,7 @@ public class Intermission : MonoBehaviour
         PlayerPrefs.SetString("BrotherDialogueState", "Night");
         PlayerPrefs.SetString("MomDialogueState", "Night");
         PlayerPrefs.SetString("DadDialogueState", "Night");
+        PlayerPrefs.SetString("RicksEntry", "Open");
         StartCoroutine("Delay");
     }
 

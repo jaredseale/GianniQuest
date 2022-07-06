@@ -13,6 +13,10 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
+    void Start() {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void Update() {
         if (destroyable) {
             Destroy(gameObject);

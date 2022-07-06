@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intermission.unity
     guid: 4c0bc84f0c5f42d42a564e33540e6f30
+  - enabled: 1
+    path: Assets/Scenes/Rancid Rick's.unity
+    guid: f1f8ffb5fb86a9a44b897b72e17bfcb8
   m_configObjects: {}

@@ -8,8 +8,9 @@ public class Sister : MonoBehaviour
     public DialogueTrigger currentDialogue;
     public DialogueManager dialogueManager;
 
-    string[] Init = new string[] {"If you don't know what to do for dinner, I guess you could go get some pizza or something.",
-        "They're selling them for six bucks (dollars) over at Pizza Hell this week.",
+    string[] Init = new string[] {"Sounds like you forgot it was your turn to make Christmas Eve dinner this year, huh?",
+        "It's probably too late now to make anything, you could probably go grab a pizza or something really quick.",
+        "I heard they're selling them for cheap over at Pizza Hell this week, you should go check that out.",
         "Before you do that, though, I have a favor to ask.",
         "My friend has a massive crush on you and I kinda already set you up on a blind date with her haha oops ;-P",
         "If you meet her at the new French restaurant down the street and she has a nice time, I'll give you a buck (one dollar) to start you out.",

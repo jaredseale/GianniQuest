@@ -8,7 +8,7 @@ public class Dad : MonoBehaviour
     public DialogueTrigger currentDialogue;
     public DialogueManager dialogueManager;
 
-    string[] Init = new string[] { "Ciao, mio bellissimo bambino.",
+    string[] Init = new string[] { "Buona vigilia di Natale, mio bellissimo bambino.",
         "Your work called. They wanted to remind you that you're scheduled for a shift today, capisce?",
         "I bet they'll pay you a pretty penny or possibly a hundred if you do a good job, hai capito?"};
     string[] Init2 = new string[] { "Oi, hurry down to the restaurant, you're burning daylight, compaesano." };

@@ -157,7 +157,7 @@ public class OverworldPlayer : MonoBehaviour
                 case "A":
                     nextScene = "House Hallway";
                     spawnPositionString = "saloon";
-                    spawn.setNextSpawn(13.33f, -1.34f);
+                    spawn.setNextSpawn(13.33f, -1.91f);
                     break;
 
                 case "C":
@@ -188,6 +188,7 @@ public class OverworldPlayer : MonoBehaviour
                     if (PlayerPrefs.GetString("RicksEntry") != "Open") {
                         canEnter = false;
                     }
+                    spawn.setNextSpawn(13.33f, -1.91f);
                     break;
 
                 case "T":

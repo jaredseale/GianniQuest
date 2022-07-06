@@ -30906,7 +30906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1261158405
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32573,6 +32573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1993275566}
   - component: {fileID: 1993275567}
+  - component: {fileID: 1993275568}
   m_Layer: 0
   m_Name: pizza hell
   m_TagString: Untagged
@@ -32645,6 +32646,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1993275568
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993275565}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdf00ec7adad345439ac353a4983bdcc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2019519918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6096701053929896506, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
