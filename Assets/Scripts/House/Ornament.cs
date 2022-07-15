@@ -23,8 +23,8 @@ public class Ornament : MonoBehaviour
     }
 
     void ChangeColor() {
-        newR = Random.Range(0f, 1f);
-        newG = Random.Range(0f, 1f);
-        newB = Random.Range(0f, 1f);
+        newR = Random.Range(0f, .9f);
+        newG = Random.Range(0f, .9f);
+        newB = Random.Range(0f, .9f);
     }
 }

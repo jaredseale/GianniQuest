@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\SNICO\OrderDictionary.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Dad.cs" />
     <Compile Include="Assets\Scripts\MapLocationText.cs" />
+    <Compile Include="Assets\Scripts\Overworld\RancidRicksAnim.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Brother.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\PizzaGuy.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldDialogue.cs" />
@@ -97,7 +98,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Overworld\RancidRicksAnim.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\LampSwing.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />

@@ -188,7 +188,7 @@ public class OverworldPlayer : MonoBehaviour
                     if (PlayerPrefs.GetString("RicksEntry") != "Open") {
                         canEnter = false;
                     }
-                    spawn.setNextSpawn(13.33f, -1.91f);
+                    spawn.setNextSpawn(25.27f, -3.69f);
                     break;
 
                 case "T":

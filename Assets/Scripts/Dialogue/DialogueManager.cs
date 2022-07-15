@@ -21,8 +21,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject dialogueBox;
     public GameObject dialogueTarget;
     public bool inDialogue;
+    Pause myPause;
 
     void Start() {
+        myPause = FindObjectOfType<Pause>();
         sentences = new Queue<string>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -34,6 +36,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartDialogue(Dialogue dialogue) {
+        myPause.canPause = false;
         inDialogue = true;
         dialogueBox.SetActive(true);
         animator.SetBool("isOpen", true);
@@ -82,6 +85,7 @@ public class DialogueManager : MonoBehaviour
         FindObjectOfType<Player>().canMove = true;
         actionTrigger = true;
         inDialogue = false;
+        myPause.canPause = true;
         StartCoroutine(WaitForDialogueBoxToScrollOffscreen());
     }
 
