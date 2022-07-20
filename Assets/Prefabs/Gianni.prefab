@@ -31,10 +31,10 @@ GameObject:
   - component: {fileID: 7014651134096138485}
   - component: {fileID: 7014651134096138491}
   - component: {fileID: 7014651134096138488}
-  - component: {fileID: 7014651134096138489}
   - component: {fileID: 7014651134096138494}
   - component: {fileID: 7014651134096138495}
   - component: {fileID: 7014651134096138492}
+  - component: {fileID: 716671492}
   m_Layer: 9
   m_Name: Gianni
   m_TagString: Untagged
@@ -148,22 +148,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &7014651134096138489
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7014651134096138484}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.006601046}
-  m_Size: {x: 0.17166668, y: 0.308314}
-  m_Direction: 0
 --- !u!114 &7014651134096138494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +288,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &716671492
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7014651134096138484}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0050850064}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.34}
+    newSize: {x: 0.17166667, y: 0.33}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.3092098}
+  m_EdgeRadius: 0
 --- !u!1001 &106409495
 PrefabInstance:
   m_ObjectHideFlags: 0

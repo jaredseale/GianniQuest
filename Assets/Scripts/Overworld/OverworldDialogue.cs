@@ -118,9 +118,9 @@ public class OverworldDialogue : MonoBehaviour
 
                 case "C": //Ethereal Ascent
                     if (PlayerPrefs.GetString("EtherealAscentEntry") == "Closed") {
-                        sentences.Enqueue("A mystical barrier prevents you from entering this area. Upon closer inspection, it's just a locked gate.");
+                        sentences.Enqueue("A mystical barrier prevents you from entering this area. Upon closer inspection, it's just a blue, locked gate.");
                     } else if (PlayerPrefs.GetString("EtherealAscentEntry") == "Done") {
-                        sentences.Enqueue("There's nary a penny to be gotten from this area anymore.");
+                        sentences.Enqueue("Santa's long gone. It might be worth checking out what that key you found goes to.");
                     }
                     break;
 

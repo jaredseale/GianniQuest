@@ -94,5 +94,8 @@ public class MainMenu : MonoBehaviour
 
         PlayerPrefs.SetString("SNICOTutorialState", "Incomplete");
         PlayerPrefs.SetString("SNICOProgress", "Unstarted");
+
+        PlayerPrefs.SetString("LairryDialogueState", "Init");
+        PlayerPrefs.SetString("RicksKey", "Uncollected");
     }
 }

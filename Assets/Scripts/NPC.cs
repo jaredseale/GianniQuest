@@ -9,8 +9,10 @@ public class NPC : MonoBehaviour
     Player playerController;
     [SerializeField] DialogueTrigger dialogueTrigger;
     [SerializeField] float thisSpeakerPitch = 1f;
+    public float textSpeed = 1f;
     public DialogueManager dialogueManager;
     public AudioClip voiceSFX;
+    
 
     private void Start() {
         myCollider = GetComponent<BoxCollider2D>();

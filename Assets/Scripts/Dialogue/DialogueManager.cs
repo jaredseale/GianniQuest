@@ -63,6 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence) {
         mainText.text = "";
+        float textSpeed = dialogueTarget.GetComponent<NPC>().textSpeed;
         foreach (char letter in sentence.ToCharArray()) {
             if (!currentlyTyping) {
                 break;
@@ -71,10 +72,10 @@ public class DialogueManager : MonoBehaviour
             audioSource.pitch = speakerPitch + Random.Range(-0.1f, 0.1f);
             audioSource.PlayOneShot(dialogueTarget.GetComponent<NPC>().voiceSFX);
             mainText.text += letter;
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(0.03f / textSpeed);
 
             if (letter == '!' || letter == '.' || letter == ',' || letter == '?') {
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.2f / textSpeed);
             }
         }
         currentlyTyping = false;

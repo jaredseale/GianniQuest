@@ -185,7 +185,7 @@ public class OverworldPlayer : MonoBehaviour
                 case "S":
                     nextScene = "Rancid Rick's";
                     spawnPositionString = "rick";
-                    if (PlayerPrefs.GetString("RicksEntry") != "Open") {
+                    if (PlayerPrefs.GetString("RicksEntry") != "Open") { //and key is collected
                         canEnter = false;
                     }
                     spawn.setNextSpawn(25.27f, -3.69f);
