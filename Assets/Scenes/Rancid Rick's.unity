@@ -7541,6 +7541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDialogue: {fileID: 1052291606}
   dialogueManager: {fileID: 0}
+  keyJingle: {fileID: 8300000, guid: 86990a8c1bb6c034bbf4cedd87c7885a, type: 3}
 --- !u!1 &1061458133
 GameObject:
   m_ObjectHideFlags: 0
