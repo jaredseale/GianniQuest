@@ -7,6 +7,8 @@ public class Lairry : MonoBehaviour
 
     public DialogueTrigger currentDialogue;
     public DialogueManager dialogueManager;
+    [SerializeField] Animator myAnim;
+    [SerializeField] LevelLoader levelLoader;
 
     string[] Init = new string[] {"Yo have you ever heard of Smirsauce? It's this gnarly new cocktail I just invented like several seconds ago.",
         "Basically pretty much what you do is mix together some soy sauce and vodka and slurp it down. Everyone's talking about it!",
@@ -41,7 +43,9 @@ public class Lairry : MonoBehaviour
             if (PlayerPrefs.GetString("LairryDialogueState") == "Init") {
                 PlayerPrefs.SetString("LairryDialogueState", "BeforeContest");
             } else if (PlayerPrefs.GetString("LairryDialogueState") == "BeforeContest") {
-                //load game scene
+                myAnim.SetTrigger("doorTransition");
+                levelLoader.loadSceneDelay = 2f;
+                levelLoader.LoadSceneWithDelay("Drinking Game", false);
             } else if (PlayerPrefs.GetString("LairryDialogueState") == "LostContest") {
                 PlayerPrefs.SetString("LairryDialogueState", "BeforeContest");
             } else if (PlayerPrefs.GetString("LairryDialogueState") == "WonContest") {

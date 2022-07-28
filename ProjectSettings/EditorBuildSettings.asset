@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Intermission.unity
     guid: 4c0bc84f0c5f42d42a564e33540e6f30
   - enabled: 1
-    path: Assets/Scenes/Rancid Rick's.unity
+    path: Assets/Scenes/Rancid Rick's Scene/Rancid Rick's.unity
     guid: f1f8ffb5fb86a9a44b897b72e17bfcb8
+  - enabled: 1
+    path: Assets/Scenes/Rancid Rick's Scene/Drinking Game.unity
+    guid: 5d5fe366a5aa9ca43ae17f44a5f21f57
   m_configObjects: {}

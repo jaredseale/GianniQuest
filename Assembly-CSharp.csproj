@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Overworld\OverworldInstructions.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderState.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenuOptions.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\SplashScreen.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldCamera.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Lairry.cs" />
     <Compile Include="Assets\Scripts\Overworld\DollarCount.cs" />
@@ -101,7 +102,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\SplashScreen.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkingGameManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
