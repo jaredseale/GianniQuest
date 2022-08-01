@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\SpawnPosition.cs" />
     <Compile Include="Assets\Scripts\FadeMixerGroup.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Sister.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkingGameManager.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SparkleController.cs" />
     <Compile Include="Assets\Scripts\Overworld\LCPStatus.cs" />
     <Compile Include="Assets\Scripts\LCP\DateManager.cs" />
@@ -102,7 +103,8 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkingGameManager.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\Drink.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\ShotGlass.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />

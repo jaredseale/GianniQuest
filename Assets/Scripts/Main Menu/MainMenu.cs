@@ -97,5 +97,6 @@ public class MainMenu : MonoBehaviour
 
         PlayerPrefs.SetString("LairryDialogueState", "Init");
         PlayerPrefs.SetString("RicksKey", "Uncollected");
+        PlayerPrefs.SetInt("DrinkingGameTries", 0);
     }
 }
