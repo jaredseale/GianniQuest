@@ -23,26 +23,29 @@ public class Drink : MonoBehaviour
     }
 
     void OnMouseUpAsButton() {
-        if (myDrinkingGameManager.selectedObject == "none") {
-            if (this.gameObject.name == "Soy Sauce") {
-                if (myShotGlass.shotGlassState == "full" || myShotGlass.shotGlassState == "Soy Sauce") {
-                    gameSFX.PlayOneShot(buzzer);
-                    return;
+        if (myDrinkingGameManager.inGame == true) {
+            if (myDrinkingGameManager.selectedObject == "none") {
+                if (this.gameObject.name == "Soy Sauce") {
+                    if (myShotGlass.shotGlassState == "full" || myShotGlass.shotGlassState == "Soy Sauce") {
+                        gameSFX.PlayOneShot(buzzer);
+                        return;
+                    }
+
+                    myDrinkingGameManager.heldSoySauce.SetActive(true);
+                    gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                } else if (this.gameObject.name == "Vodka") {
+                    if (myShotGlass.shotGlassState == "full" || myShotGlass.shotGlassState == "Vodka") {
+                        gameSFX.PlayOneShot(buzzer);
+                        return;
+                    }
+
+                    myDrinkingGameManager.heldVodka.SetActive(true);
+                    gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 }
 
-                myDrinkingGameManager.heldSoySauce.SetActive(true);
-                gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            } else if (this.gameObject.name == "Vodka") {
-                if (myShotGlass.shotGlassState == "full" || myShotGlass.shotGlassState == "Vodka") {
-                    gameSFX.PlayOneShot(buzzer);
-                    return;
-                }
-
-                myDrinkingGameManager.heldVodka.SetActive(true);
-                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                myDrinkingGameManager.selectedObject = this.gameObject.name;
+                myDrinkingGameManager.tutorialState += 1;
             }
-
-            myDrinkingGameManager.selectedObject = this.gameObject.name;
         }
     }
 }

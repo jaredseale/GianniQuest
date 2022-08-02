@@ -40,51 +40,56 @@ public class ShotGlass : MonoBehaviour
 
         gameSFX.PlayOneShot(glug);
         myDrinkingGameManager.IncreaseGianniScore();
+        myDrinkingGameManager.tutorialState = 1;
 
         drinkButton.SetActive(false);
     }
 
     void OnMouseUpAsButton() {
-        
-        myDrinkingGameManager.heldVodka.SetActive(false);
-        myDrinkingGameManager.heldSoySauce.SetActive(false);
 
-        if (myDrinkingGameManager.selectedObject == "none" && shotGlassState == "full") {
-            myDrinkingGameManager.selectedObject = this.gameObject.name;
-            myDrinkingGameManager.shotGlass.GetComponent<SpriteRenderer>().enabled = false;
-            myDrinkingGameManager.heldShotGlass.SetActive(true);
-            shotGlassSprite.sprite = shotGlassEmpty;
+        if (myDrinkingGameManager.inGame == true) {
+            myDrinkingGameManager.heldVodka.SetActive(false);
+            myDrinkingGameManager.heldSoySauce.SetActive(false);
 
-            drinkButton.SetActive(true);
-        } else if (myDrinkingGameManager.selectedObject == "Vodka" && shotGlassState == "empty") {
-            gameSFX.PlayOneShot(drinkPour);
-            shotGlassSprite.sprite = shotGlassVodka;
-            shotGlassState = "Vodka";
-            myDrinkingGameManager.vodkaBottle.GetComponent<SpriteRenderer>().enabled = true;
-            myDrinkingGameManager.selectedObject = "none";
-        } else if (myDrinkingGameManager.selectedObject == "Soy Sauce" && shotGlassState == "empty") {
-            gameSFX.PlayOneShot(drinkPour);
-            shotGlassSprite.sprite = shotGlassSoySauce;
-            shotGlassState = "Soy Sauce";
-            myDrinkingGameManager.soySauceBottle.GetComponent<SpriteRenderer>().enabled = true;
-            myDrinkingGameManager.selectedObject = "none";
-        } else if (myDrinkingGameManager.selectedObject == "Vodka" && shotGlassState == "Soy Sauce") {
-            gameSFX.PlayOneShot(drinkPour);
-            shotGlassSprite.sprite = shotGlassFull;
-            shotGlassState = "full";
-            myDrinkingGameManager.vodkaBottle.GetComponent<SpriteRenderer>().enabled = true;
-            myDrinkingGameManager.selectedObject = "none";
-        } else if (myDrinkingGameManager.selectedObject == "Soy Sauce" && shotGlassState == "Vodka") {
-            gameSFX.PlayOneShot(drinkPour);
-            shotGlassSprite.sprite = shotGlassFull;
-            shotGlassState = "full";
-            myDrinkingGameManager.soySauceBottle.GetComponent<SpriteRenderer>().enabled = true;
-            myDrinkingGameManager.selectedObject = "none";
-        } else if (myDrinkingGameManager.selectedObject == "Shot Glass") {
-            return;
-        } else {
-            gameSFX.PlayOneShot(buzzer);
-            myDrinkingGameManager.selectedObject = "none";
+            if (myDrinkingGameManager.selectedObject == "none" && shotGlassState == "full") {
+                myDrinkingGameManager.selectedObject = this.gameObject.name;
+                myDrinkingGameManager.shotGlass.GetComponent<SpriteRenderer>().enabled = false;
+                myDrinkingGameManager.heldShotGlass.SetActive(true);
+                shotGlassSprite.sprite = shotGlassEmpty;
+                drinkButton.SetActive(true);
+            } else if (myDrinkingGameManager.selectedObject == "Vodka" && shotGlassState == "empty") {
+                gameSFX.PlayOneShot(drinkPour);
+                shotGlassSprite.sprite = shotGlassVodka;
+                shotGlassState = "Vodka";
+                myDrinkingGameManager.vodkaBottle.GetComponent<SpriteRenderer>().enabled = true;
+                myDrinkingGameManager.selectedObject = "none";
+            } else if (myDrinkingGameManager.selectedObject == "Soy Sauce" && shotGlassState == "empty") {
+                gameSFX.PlayOneShot(drinkPour);
+                shotGlassSprite.sprite = shotGlassSoySauce;
+                shotGlassState = "Soy Sauce";
+                myDrinkingGameManager.soySauceBottle.GetComponent<SpriteRenderer>().enabled = true;
+                myDrinkingGameManager.selectedObject = "none";
+            } else if (myDrinkingGameManager.selectedObject == "Vodka" && shotGlassState == "Soy Sauce") {
+                gameSFX.PlayOneShot(drinkPour);
+                shotGlassSprite.sprite = shotGlassFull;
+                shotGlassState = "full";
+                myDrinkingGameManager.vodkaBottle.GetComponent<SpriteRenderer>().enabled = true;
+                myDrinkingGameManager.selectedObject = "none";
+            } else if (myDrinkingGameManager.selectedObject == "Soy Sauce" && shotGlassState == "Vodka") {
+                gameSFX.PlayOneShot(drinkPour);
+                shotGlassSprite.sprite = shotGlassFull;
+                shotGlassState = "full";
+                myDrinkingGameManager.soySauceBottle.GetComponent<SpriteRenderer>().enabled = true;
+                myDrinkingGameManager.selectedObject = "none";
+            } else if (myDrinkingGameManager.selectedObject == "Shot Glass") {
+                return;
+            } else {
+                gameSFX.PlayOneShot(buzzer);
+                myDrinkingGameManager.selectedObject = "none";
+                return;
+            }
+
+            myDrinkingGameManager.tutorialState += 1;
         }
     }
 }
