@@ -16,6 +16,7 @@ public class ShotGlass : MonoBehaviour
     DrinkingGameManager myDrinkingGameManager;
     public string shotGlassState;
     [SerializeField] GameObject drinkButton;
+    public bool randomizeDrinkButtonPos;
     [SerializeField] AudioSource gameSFX;
     [SerializeField] AudioClip buzzer;
     [SerializeField] AudioClip glug;
@@ -25,6 +26,7 @@ public class ShotGlass : MonoBehaviour
         myCollider = GetComponent<BoxCollider2D>();
         myDrinkingGameManager = FindObjectOfType<DrinkingGameManager>();
         shotGlassState = "empty";
+        randomizeDrinkButtonPos = false;
     }
 
     void Update() {
@@ -45,7 +47,7 @@ public class ShotGlass : MonoBehaviour
         drinkButton.SetActive(false);
     }
 
-    void OnMouseUpAsButton() {
+    void OnMouseDown() {
 
         if (myDrinkingGameManager.inGame == true) {
             myDrinkingGameManager.heldVodka.SetActive(false);
@@ -56,6 +58,11 @@ public class ShotGlass : MonoBehaviour
                 myDrinkingGameManager.shotGlass.GetComponent<SpriteRenderer>().enabled = false;
                 myDrinkingGameManager.heldShotGlass.SetActive(true);
                 shotGlassSprite.sprite = shotGlassEmpty;
+
+                if (randomizeDrinkButtonPos) {
+                    SetDrinkButtonPosition();
+                }
+
                 drinkButton.SetActive(true);
             } else if (myDrinkingGameManager.selectedObject == "Vodka" && shotGlassState == "empty") {
                 gameSFX.PlayOneShot(drinkPour);
@@ -91,5 +98,22 @@ public class ShotGlass : MonoBehaviour
 
             myDrinkingGameManager.tutorialState += 1;
         }
+    }
+
+    private void SetDrinkButtonPosition() {
+
+        float randX = Random.Range(-550f, 550f) * 0.01f; //the 0.01f is to compensate for the canvas scaling
+        float randY = Random.Range(-350f, 350f) * 0.01f;
+
+        int flipChance = Random.Range(1, 10); //10% chance to be backwards
+
+        drinkButton.transform.position = new Vector2(randX, randY);
+
+        if (flipChance == 1) {
+            drinkButton.transform.localScale = new Vector3(-4f, 4, 4);
+        } else {
+            drinkButton.transform.localScale = new Vector3(4f, 4, 4);
+        }
+
     }
 }

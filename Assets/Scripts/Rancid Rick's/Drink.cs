@@ -22,7 +22,7 @@ public class Drink : MonoBehaviour
         
     }
 
-    void OnMouseUpAsButton() {
+    void OnMouseDown() {
         if (myDrinkingGameManager.inGame == true) {
             if (myDrinkingGameManager.selectedObject == "none") {
                 if (this.gameObject.name == "Soy Sauce") {

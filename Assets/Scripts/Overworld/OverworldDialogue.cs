@@ -119,8 +119,6 @@ public class OverworldDialogue : MonoBehaviour
                 case "C": //Ethereal Ascent
                     if (PlayerPrefs.GetString("EtherealAscentEntry") == "Closed") {
                         sentences.Enqueue("A mystical barrier prevents you from entering this area. Upon closer inspection, it's just a blue, locked gate.");
-                    } else if (PlayerPrefs.GetString("EtherealAscentEntry") == "Done") {
-                        sentences.Enqueue("Santa's long gone. It might be worth checking out what that key you found goes to.");
                     }
                     break;
 
@@ -135,8 +133,6 @@ public class OverworldDialogue : MonoBehaviour
                 case "S": //Rancid Rick's
                     if (PlayerPrefs.GetString("RicksEntry") == "Closed") {
                         sentences.Enqueue("It looks closed. There's a sign on the door that reads \"OPEN AT NIGHT\".");
-                    } else if (PlayerPrefs.GetString("RicksEntry") == "Done") {
-                        sentences.Enqueue("You should probably do other things than indulge your newfound affinity for Smirsauce.");
                     }
                     break;
 

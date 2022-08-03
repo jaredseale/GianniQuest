@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Overworld\LCPStatus.cs" />
     <Compile Include="Assets\Scripts\LCP\DateManager.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\RicksKey.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\Drink.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Mom.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
@@ -97,14 +98,14 @@
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\LampSwing.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MenuCinematic.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\ShotGlass.cs" />
     <Compile Include="Assets\Scripts\Intermission.cs" />
     <Compile Include="Assets\Scripts\House\Ornament.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldWaypoints.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\Drink.cs" />
-    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\ShotGlass.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkBounce.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
@@ -113,6 +114,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\Shaders\ChromaKeyShader.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Concept Art\gianniquest date.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
