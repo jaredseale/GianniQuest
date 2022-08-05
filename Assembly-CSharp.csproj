@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkBounce.cs" />
     <Compile Include="Assets\Scripts\House\LucySpawn.cs" />
     <Compile Include="Assets\Scripts\SpawnPosition.cs" />
     <Compile Include="Assets\Scripts\FadeMixerGroup.cs" />
@@ -78,7 +79,7 @@
     <Compile Include="Assets\Scripts\SetVolume.cs" />
     <Compile Include="Assets\Scripts\SNICO\SNICOTutorial.cs" />
     <Compile Include="Assets\Scripts\IntroCutscene.cs" />
-    <Compile Include="Assets\Scripts\School\Test.cs" />
+    <Compile Include="Assets\Scripts\School\MathTest.cs" />
     <Compile Include="Assets\Scripts\LCP\State.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderDictionary.cs" />
@@ -105,7 +106,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkBounce.cs" />
+    <Compile Include="Assets\Scripts\School\EnglishTest.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
