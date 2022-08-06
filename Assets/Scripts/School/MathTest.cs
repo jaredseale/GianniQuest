@@ -15,13 +15,10 @@ public class MathTest : MonoBehaviour
     Pause pauser;
     [SerializeField] TMP_InputField answerTextField;
     public int answer;
+    [SerializeField] GameObject interactableArrow;
 
 
     void Start() {
-        if (PlayerPrefs.GetString("TeacherDialogueState") == "Init2") {
-            GetComponent<Interactable>().enabled = true;
-        }
-
         myCollider = GetComponent<BoxCollider2D>();
         playerController = FindObjectOfType<Player>();
         myAudio = GetComponent<AudioSource>();
@@ -31,6 +28,15 @@ public class MathTest : MonoBehaviour
     }
     void Update() {
         OpenTest();
+
+        if (PlayerPrefs.GetString("TeacherDialogueState") == "Init2" ||
+                PlayerPrefs.GetString("TeacherDialogueState") == "MathTestWrong" ||
+                PlayerPrefs.GetString("TeacherDialogueState") == "EnglishTestWrong") {
+            GetComponent<Interactable>().enabled = true;
+        } else {
+            GetComponent<Interactable>().enabled = false;
+            interactableArrow.SetActive(false);
+        }
     }
 
     void OpenTest() {
@@ -38,7 +44,7 @@ public class MathTest : MonoBehaviour
             && myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))
             && GameObject.Find("Game Manager").GetComponent<Pause>().gamePaused == false
             && testActive == false
-            && (PlayerPrefs.GetString("TeacherDialogueState") != "Init" || PlayerPrefs.GetString("TeacherDialogueState") != "LevelComplete")) {
+            && (PlayerPrefs.GetString("TeacherDialogueState") != "Init" && PlayerPrefs.GetString("TeacherDialogueState") != "LevelComplete")) {
 
             playerController.canMove = false;
             myAnimator.SetTrigger("StartTest");

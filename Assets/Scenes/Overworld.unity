@@ -31601,6 +31601,18 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 938696092214856368, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 938696092214856369, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 938696092214856369, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 938696092214856371, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
