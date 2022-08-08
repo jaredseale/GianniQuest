@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\IntroCutscene.cs" />
     <Compile Include="Assets\Scripts\School\MathTest.cs" />
     <Compile Include="Assets\Scripts\LCP\State.cs" />
+    <Compile Include="Assets\Scripts\School\EnglishTest.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderDictionary.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Dad.cs" />
@@ -106,7 +107,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\School\EnglishTest.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\DataManagement.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />

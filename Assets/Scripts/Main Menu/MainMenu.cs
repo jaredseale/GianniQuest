@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] float gameStartSoundVolume = 0.5f;
     AudioSource audioSource;
     [SerializeField] GameObject optionsWindow = null;
+    [SerializeField] GameObject dataWindow = null;
     [SerializeField] GameObject mainButtons = null;
     LevelLoader levelLoader;
     [SerializeField] Animator transition;
@@ -55,6 +56,11 @@ public class MainMenu : MonoBehaviour
     public void DisplayOptions() {
         mainButtons.SetActive(false);
         optionsWindow.SetActive(true);
+    }
+
+    public void DisplayDataManagement() {
+        mainButtons.SetActive(false);
+        dataWindow.SetActive(true);
     }
 
     public void PlayButtonHoverSound() {

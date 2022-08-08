@@ -42,13 +42,14 @@ public class MenuCinematic : MonoBehaviour
     }
 
     void StopIntroCutscene() {
+            StopAllCoroutines();
             cameraAnimator.enabled = false;
             camera.transform.position = new Vector3(0f, 0f, -10f);
             camera.orthographicSize = 5f;
             delayedButtons.SetActive(true);
             delayedTitles.SetActive(true);
             audioSource.Stop();
-            audioSource.time = 25.5f;
+            audioSource.time = 25.3f;
             audioSource.Play();
             cutsceneSkipped = true;
             skipText.SetActive(false);

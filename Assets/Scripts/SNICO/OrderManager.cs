@@ -100,6 +100,8 @@ public class OrderManager : MonoBehaviour
     OrderDictionary orderDictionary;
     bool inProgressOrder;
     AudioSource voiceAudio;
+    [SerializeField] AudioSource myAudioSource;
+    [SerializeField] AudioClip buttonClickSound;
 
     void Start() {
 
@@ -533,6 +535,11 @@ public class OrderManager : MonoBehaviour
                 nextCustomerButton.interactable = true;
             }
         }
+    }
+
+    public void PlayButtonClickSound() {
+        myAudioSource.pitch = 0.9f + Random.Range(-0.1f, 0.1f);
+        myAudioSource.PlayOneShot(buttonClickSound);
     }
 
 }
