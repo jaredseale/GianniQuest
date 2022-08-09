@@ -3485,7 +3485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153699818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.0690613, y: -1.3429999, z: 0}
+  m_LocalPosition: {x: -7.0638523, y: -1.3429999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 652228711}
@@ -4703,6 +4703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1327250781}
   thisSpeakerPitch: 1.2
+  textSpeed: 1
   dialogueManager: {fileID: 0}
   voiceSFX: {fileID: 8300000, guid: 49ae98cf8ad02004b969208565c9c117, type: 3}
 --- !u!114 &1327250781
@@ -5182,6 +5183,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 706151064}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: locationTitle
+      value: 
+      objectReference: {fileID: 7844266728471101932}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_Volume
       value: 0.194
@@ -5912,6 +5917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1630210839}
   thisSpeakerPitch: 1.5
+  textSpeed: 1
   dialogueManager: {fileID: 0}
   voiceSFX: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}
 --- !u!114 &1630210841
@@ -7008,7 +7014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954418383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.506941, y: -0.00000011920929, z: -10}
+  m_LocalPosition: {x: -8.51215, y: -0.00000011920929, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153699820}
@@ -8338,6 +8344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+--- !u!1 &7844266728471101932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7844266728945253443, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+  m_PrefabInstance: {fileID: 7844266728471101931}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9130519571600300928
 PrefabInstance:
   m_ObjectHideFlags: 0

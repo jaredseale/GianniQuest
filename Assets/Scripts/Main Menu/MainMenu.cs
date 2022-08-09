@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
 
@@ -16,6 +17,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject optionsWindow = null;
     [SerializeField] GameObject dataWindow = null;
     [SerializeField] GameObject mainButtons = null;
+    [SerializeField] Button dataManagementButton;
+    [SerializeField] GameObject title;
     LevelLoader levelLoader;
     [SerializeField] Animator transition;
     [SerializeField] TextMeshProUGUI startText;
@@ -27,8 +30,10 @@ public class MainMenu : MonoBehaviour
         levelLoader = FindObjectOfType<LevelLoader>();
         if (PlayerPrefs.GetString("IntroCutsceneStatus") == "Watched") {
             startText.SetText("continue your journey");
+            dataManagementButton.interactable = true;
         } else {
             startText.SetText("begin your journey");
+            dataManagementButton.interactable = false;
         }
     }
 
@@ -45,7 +50,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("DisplayMenuCutsceneSkipText", 1);
         audioSource.PlayOneShot(gameStartSound, gameStartSoundVolume);
         transition.SetTrigger("gameStart");
-        if (PlayerPrefs.GetString("IntroCutsceneStatus") == "Unwatched") {
+        if (PlayerPrefs.GetString("IntroCutsceneStatus") != "Watched") {
             PlayerPrefs.SetString("IntroCutsceneStatus", "Watched");
             levelLoader.LoadSceneWithDelay("Wake Up Cutscene", true);
         } else {
@@ -60,6 +65,7 @@ public class MainMenu : MonoBehaviour
 
     public void DisplayDataManagement() {
         mainButtons.SetActive(false);
+        title.SetActive(false);
         dataWindow.SetActive(true);
     }
 
@@ -88,6 +94,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString("TeacherDialogueState", "Init");
 
         PlayerPrefs.SetInt("Dollars", 0);
+
         PlayerPrefs.SetString("EtherealAscentEntry", "Closed");
         PlayerPrefs.SetString("SewersEntry", "Closed");
         PlayerPrefs.SetString("RicksEntry", "Closed");
@@ -104,5 +111,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString("LairryDialogueState", "Init");
         PlayerPrefs.SetString("RicksKey", "Uncollected");
         PlayerPrefs.SetInt("DrinkingGameTries", 0);
+
+        PlayerPrefs.SetString("PizzaGuyState", "Init");
     }
 }

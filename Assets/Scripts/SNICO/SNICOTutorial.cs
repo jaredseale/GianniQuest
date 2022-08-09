@@ -9,6 +9,7 @@ public class SNICOTutorial : MonoBehaviour
     [SerializeField] GameObject[] tutorialScreens;
     [SerializeField] Button infoButton;
     int currentScreenIndex;
+    public bool tutorialActive;
 
     void Start() {
         if (PlayerPrefs.GetString("SNICOTutorialState") == "Incomplete") {
@@ -17,10 +18,13 @@ public class SNICOTutorial : MonoBehaviour
     }
 
     public void StartTutorial() {
-        PlayerPrefs.SetString("SNICOTutorialState", "Complete");
-        infoButton.GetComponent<Animator>().SetTrigger("stopFlashing");
-        tutorialScreens[0].SetActive(true);
-        currentScreenIndex = 0;
+        if (tutorialActive == false) {
+            PlayerPrefs.SetString("SNICOTutorialState", "Complete");
+            infoButton.GetComponent<Animator>().SetTrigger("stopFlashing");
+            tutorialScreens[0].SetActive(true);
+            currentScreenIndex = 0;
+            tutorialActive = true;
+        }
     }
 
     public void NextScreen() {
@@ -37,6 +41,7 @@ public class SNICOTutorial : MonoBehaviour
 
     public void CloseTutorial() {
         tutorialScreens[currentScreenIndex].SetActive(false);
+        tutorialActive = false;
     }
 
 }

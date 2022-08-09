@@ -1921,6 +1921,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 706151064}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: locationTitle
+      value: 
+      objectReference: {fileID: 7844266728471101932}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_Volume
       value: 0.194
@@ -3573,3 +3577,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+--- !u!1 &7844266728471101932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7844266728945253443, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+  m_PrefabInstance: {fileID: 7844266728471101931}
+  m_PrefabAsset: {fileID: 0}

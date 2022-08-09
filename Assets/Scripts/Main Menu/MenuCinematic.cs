@@ -39,7 +39,7 @@ public class MenuCinematic : MonoBehaviour
             if (holdTimer < 0f && cutsceneSkipped == false) {
                 StopIntroCutscene();
             }
-    }
+        }
 
     void StopIntroCutscene() {
             StopAllCoroutines();

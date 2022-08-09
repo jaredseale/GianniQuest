@@ -1424,6 +1424,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1200607521}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: locationTitle
+      value: 
+      objectReference: {fileID: 1884031636404286395}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: BypassReverbZones
       value: 1

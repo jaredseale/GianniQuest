@@ -1083,6 +1083,7 @@ MonoBehaviour:
   AState: {fileID: 0}
   BState: {fileID: 0}
   CState: {fileID: 11400000, guid: fdf3512b50d32dc4d84d2482e6c97602, type: 2}
+  GState: {fileID: 0}
   currentState: {fileID: 0}
   dialogue: 
   dialogueText: {fileID: 283515596}
@@ -2079,6 +2080,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 706151064}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: locationTitle
+      value: 
+      objectReference: {fileID: 534642088}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_Volume
       value: 0.194

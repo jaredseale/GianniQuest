@@ -1105,6 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1010695009}
   thisSpeakerPitch: 1
+  textSpeed: 1
   dialogueManager: {fileID: 0}
   voiceSFX: {fileID: 8300000, guid: 2e84ce1d6fee7f64db1ac324926e109a, type: 3}
 --- !u!114 &1010695009
@@ -2512,6 +2513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+--- !u!1 &1959430564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7844266728945253443, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+  m_PrefabInstance: {fileID: 1959430563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1993962353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149126959942, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
@@ -2929,6 +2935,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1200607521}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: locationTitle
+      value: 
+      objectReference: {fileID: 1959430564}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: BypassReverbZones
       value: 1

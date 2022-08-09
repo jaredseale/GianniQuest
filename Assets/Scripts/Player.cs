@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     AudioSource audioSource;
     [SerializeField] AudioClip jumpSound;
     public bool canMove;
+    public bool isOnGround; //used for interacting with things
 
     void Start() {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -41,7 +42,13 @@ public class Player : MonoBehaviour
             playerAnimator.SetBool("RunningRight", false);
             playerAnimator.SetBool("RunningLeft", false);
         }
-        
+
+        if (playerFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+            isOnGround = true;
+        } else {
+            isOnGround = false;
+        }
+
     }
 
     public void Run() {
@@ -72,7 +79,7 @@ public class Player : MonoBehaviour
 
     public void Jump() {
 
-        if (!playerFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+        if (!isOnGround) {
             return;
         }
 

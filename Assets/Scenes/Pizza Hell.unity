@@ -144,6 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 73088332}
   - component: {fileID: 73088333}
+  - component: {fileID: 73088334}
   m_Layer: 10
   m_Name: Display
   m_TagString: Untagged
@@ -176,9 +177,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 3.811053, y: -1.3967711}
+  m_Offset: {x: 3.811053, y: -0.735759}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -189,8 +190,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.7618413, y: 1.5623243}
+  m_Size: {x: 7.7618413, y: 0.24029976}
   m_EdgeRadius: 0
+--- !u!251 &73088334
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73088331}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 175
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!114 &151989781 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1402089518590331775, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
@@ -901,7 +921,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08400035, y: -1.590452}
+  m_Offset: {x: 0.02840048, y: -1.1765463}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -912,7 +932,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.7278194, y: 3.438048}
+  m_Size: {x: 1.7386044, y: 2.6102371}
   m_EdgeRadius: 0
 --- !u!114 &1010695007
 MonoBehaviour:
@@ -941,6 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1010695009}
   thisSpeakerPitch: 1
+  textSpeed: 1
   dialogueManager: {fileID: 0}
   voiceSFX: {fileID: 8300000, guid: 8e18c82ae1efadf49aedca9e98a06455, type: 3}
 --- !u!114 &1010695009
@@ -2055,6 +2076,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+--- !u!1 &1959430564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7844266728945253443, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+  m_PrefabInstance: {fileID: 1959430563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1993962353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149126959942, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
@@ -2151,6 +2177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2099570103}
   - component: {fileID: 2099570104}
+  - component: {fileID: 2099570105}
   m_Layer: 10
   m_Name: Counter
   m_TagString: Untagged
@@ -2183,9 +2210,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -2.8920274, y: -3.13195}
+  m_Offset: {x: -2.8920274, y: -1.8161035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2196,8 +2223,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.294751, y: 2.833624}
+  m_Size: {x: 6.294751, y: 0.20193064}
   m_EdgeRadius: 0
+--- !u!251 &2099570105
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099570102}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 175
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &938696092526323833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2565,6 +2611,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1200607521}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: locationTitle
+      value: 
+      objectReference: {fileID: 1959430564}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: BypassReverbZones
       value: 1
@@ -2735,6 +2785,18 @@ PrefabInstance:
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014651134096138494, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: jumpSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014651134096138495, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00088012964
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014651134096138495, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.14400856
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
