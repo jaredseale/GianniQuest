@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DataManagement : MonoBehaviour
 {
     [SerializeField] Animator crossfade;
     [SerializeField] GameObject mainButtons;
     [SerializeField] GameObject dataMenu;
-    [SerializeField] GameObject title;
+    [SerializeField] TextMeshProUGUI titleText;
     [SerializeField] GameObject levelSkipGroup;
     [SerializeField] GameObject backToMenuButton;
     [SerializeField] GameObject resetSaveButton;
@@ -30,6 +31,32 @@ public class DataManagement : MonoBehaviour
     [SerializeField] GameObject EALabel;
     [SerializeField] GameObject SewersLabel;
 
+    private void Start() {
+        if (PlayerPrefs.GetInt("SchoolDataManagement") == 0) {
+            HSHToggle.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("SNICODataManagement") == 0) {
+            SNICOToggle.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("LCPDataManagement") == 0) {
+            LCPToggle.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("RicksDataManagement") == 0) {
+            RicksToggle.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("EADataManagement") == 0) {
+            EAToggle.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("SewersDataManagement") == 0) {
+            SewersToggle.interactable = false;
+        }
+    }
+
     public void Update() {
         if (HSHToggle.isOn && SNICOToggle.isOn && LCPToggle.isOn) {
             RicksLabel.SetActive(true);
@@ -46,7 +73,7 @@ public class DataManagement : MonoBehaviour
 
     public void BackToMainButtons() {
         mainButtons.SetActive(true);
-        title.SetActive(true);
+        titleText.SetText("GianniQuest");
         dataMenu.SetActive(false);
     }
 
@@ -70,6 +97,77 @@ public class DataManagement : MonoBehaviour
         PlayerPrefs.DeleteKey("PlayerName");
         PlayerPrefs.SetInt("DisplayMenuCutsceneSkipText", 0);
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Splash Screen", true);
+    }
+
+    public void CompleteSchool() {
+        PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
+        PlayerPrefs.SetString("SchoolEntry", "Done");
+        PlayerPrefs.SetString("MomDialogueState", "PostDollar");
+        PlayerPrefs.SetInt("SchoolDataManagement", 0);
+
+        if (PlayerPrefs.GetInt("Dollars") == 3) {
+            ChangeToNightState();
+        }
+
+        HSHToggle.interactable = false;
+    }
+
+    public void CompleteSNICO() {
+        PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
+        PlayerPrefs.SetString("SNICOEntry", "Done");
+        PlayerPrefs.SetString("DadDialogueState", "PostDollar");
+        PlayerPrefs.SetInt("SNICODataManagement", 0);
+
+        if (PlayerPrefs.GetInt("Dollars") == 3) {
+            ChangeToNightState();
+        }
+
+        SNICOToggle.interactable = false;
+    }
+
+    public void CompleteLCP() {
+        PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
+        PlayerPrefs.SetString("LCPEntry", "Done");
+        PlayerPrefs.SetString("LCPSpriteState", "Crashed");
+        PlayerPrefs.SetString("SisterDialogueState", "PostDollar");
+        PlayerPrefs.SetInt("LCPDataManagement", 0);
+
+        if (PlayerPrefs.GetInt("Dollars") == 3) {
+            ChangeToNightState();
+        }
+
+        LCPToggle.interactable = false;
+    }
+
+    void ChangeToNightState() {
+        PlayerPrefs.SetString("TimeOfDay", "Night");
+        PlayerPrefs.SetString("SisterDialogueState", "Night");
+        PlayerPrefs.SetString("BrotherDialogueState", "Night");
+        PlayerPrefs.SetString("MomDialogueState", "Night");
+        PlayerPrefs.SetString("DadDialogueState", "Night");
+        PlayerPrefs.SetString("RicksEntry", "Open");
+    }
+
+    public void CompleteRicks() {
+        PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
+        PlayerPrefs.SetString("LairryDialogueState", "PostDollar");
+        PlayerPrefs.SetInt("RicksDataManagement", 0);
+
+        RicksToggle.interactable = false;
+    }
+
+    public void CompleteEA() {
+        //need to make sure key is collected
+        //santa is gone
+        //toys are collected
+        //increase dollar
+    }
+
+    public void CompleteSewers() {
+        //close ricks, EA, sewers
+        //increase dollar
+        //give gianni all the equipment(?)
+        
     }
 
 }

@@ -66,6 +66,7 @@ public class Mom : MonoBehaviour
             myDollar.CollectDollar();
             PlayerPrefs.SetString("MomDialogueState", "PostDollar");
             PlayerPrefs.SetString("SchoolEntry", "Done");
+            PlayerPrefs.SetInt("SchoolDataManagement", 0);
         }   
 
     }

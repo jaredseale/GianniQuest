@@ -67,6 +67,7 @@ public class Dad : MonoBehaviour
             Dollar myDollar = FindObjectOfType<Dollar>();
             myDollar.CollectDollar();
             PlayerPrefs.SetString("DadDialogueState", "PostDollar");
+            PlayerPrefs.SetInt("SNICODataManagement", 0);
         }
 
     }

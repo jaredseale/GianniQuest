@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Pause : MonoBehaviour
 {
     [SerializeField] AudioClip buttonHoverSound = null;
-    [SerializeField] float buttonHoverSoundVolume = 0.5f;
     public bool gamePaused = false;
     public bool canPause = true;
     [SerializeField] GameObject pauseMenu;
@@ -47,6 +46,7 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f; //return player movement
         mixer.SetFloat("MusicEQ", 1f);
+        FindObjectOfType<LevelLoader>().loadSceneDelay = 4f;
         transition.SetTrigger("levelTransition");
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Overworld", true);
     }
@@ -55,13 +55,13 @@ public class Pause : MonoBehaviour
     {
         ClosePauseMenu();
         Destroy(FindObjectOfType<SpawnPosition>().gameObject);
-        Time.timeScale = 1f; //return player movement
         transition.SetTrigger("levelTransition");
+        FindObjectOfType<LevelLoader>().loadSceneDelay = 4f;
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Main Menu", true);
     }
 
     public void PlayButtonHoverSound() {
-        audioSource.PlayOneShot(buttonHoverSound, buttonHoverSoundVolume);
+        audioSource.PlayOneShot(buttonHoverSound);
     }
 
     public void ToggleField() {

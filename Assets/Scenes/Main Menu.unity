@@ -380,6 +380,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 389070671}
+        m_TargetAssemblyTypeName: DataManagement, Assembly-CSharp
+        m_MethodName: CompleteSchool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &13272270
 GameObject:
@@ -729,7 +741,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonHoverSound: {fileID: 8300000, guid: d1aa94851fff6384db08d0f4d76bc57f, type: 3}
   gameStartSound: {fileID: 8300000, guid: 55c17ca0729a9294687c9e57131918b3, type: 3}
-  buttonHoverSoundVolume: 0.2
   gameStartSoundVolume: 0.5
   optionsWindow: {fileID: 1343999934}
   dataWindow: {fileID: 389070669}
@@ -738,6 +749,7 @@ MonoBehaviour:
   title: {fileID: 505103827}
   transition: {fileID: 1100889094}
   startText: {fileID: 823508131}
+  titleText: {fileID: 1954016825}
   mixer: {fileID: 24100000, guid: bc10036fb2189114cb34613bbf6a681f, type: 2}
 --- !u!4 &83699678
 Transform:
@@ -765,7 +777,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8717204355028567090, guid: bc10036fb2189114cb34613bbf6a681f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.298
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1285,6 +1297,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 389070671}
+        m_TargetAssemblyTypeName: DataManagement, Assembly-CSharp
+        m_MethodName: CompleteSewers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &261323544
 GameObject:
@@ -1532,6 +1556,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 389070671}
+        m_TargetAssemblyTypeName: DataManagement, Assembly-CSharp
+        m_MethodName: CompleteSNICO
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &342750875
 GameObject:
@@ -1619,6 +1655,18 @@ MonoBehaviour:
       - m_Target: {fileID: 83699677}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: PlayButtonHoverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 389070671}
+        m_TargetAssemblyTypeName: DataManagement, Assembly-CSharp
+        m_MethodName: CompleteEA
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1835,7 +1883,7 @@ MonoBehaviour:
   crossfade: {fileID: 1100889094}
   mainButtons: {fileID: 597728541}
   dataMenu: {fileID: 389070669}
-  title: {fileID: 505103827}
+  titleText: {fileID: 1954016825}
   levelSkipGroup: {fileID: 742738336}
   backToMenuButton: {fileID: 2133376871}
   resetSaveButton: {fileID: 4876353}
@@ -1935,6 +1983,18 @@ MonoBehaviour:
       - m_Target: {fileID: 83699677}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: PlayButtonHoverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 389070671}
+        m_TargetAssemblyTypeName: DataManagement, Assembly-CSharp
+        m_MethodName: CompleteRicks
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7965,6 +8025,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 389070671}
+        m_TargetAssemblyTypeName: DataManagement, Assembly-CSharp
+        m_MethodName: CompleteLCP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1744043505
 GameObject:
@@ -9914,7 +9986,6 @@ GameObject:
   - component: {fileID: 2137114939}
   - component: {fileID: 2137114938}
   - component: {fileID: 2137114937}
-  - component: {fileID: 2137114936}
   m_Layer: 5
   m_Name: Start Game Button
   m_TagString: Untagged
@@ -9942,35 +10013,6 @@ RectTransform:
   m_AnchoredPosition: {x: 287.4, y: 129}
   m_SizeDelta: {x: 819.0419, y: 80.194885}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2137114936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137114934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 83699677}
-          m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-          m_MethodName: PlayButtonHoverSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &2137114937
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -298,6 +298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ef4b3204691d1b4cad8ab17c6ccadc2, type: 3}
+--- !u!1 &625154410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7844266728945253443, guid: 192c3f112da2af844835c81b2174d207, type: 3}
+  m_PrefabInstance: {fileID: 1207370249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &653633637 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
@@ -1427,7 +1432,7 @@ PrefabInstance:
     - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: locationTitle
       value: 
-      objectReference: {fileID: 1884031636404286395}
+      objectReference: {fileID: 625154410}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: BypassReverbZones
       value: 1

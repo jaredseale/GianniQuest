@@ -52,6 +52,7 @@ public class Lairry : MonoBehaviour
                 Dollar myDollar = FindObjectOfType<Dollar>();
                 myDollar.CollectDollar();
                 PlayerPrefs.SetString("LairryDialogueState", "PostDollar");
+                PlayerPrefs.SetInt("RicksDataManagement", 0);
             }
 
         }

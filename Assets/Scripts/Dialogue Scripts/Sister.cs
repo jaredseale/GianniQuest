@@ -70,6 +70,7 @@ public class Sister : MonoBehaviour
             Dollar myDollar = FindObjectOfType<Dollar>();
             myDollar.CollectDollar();
             PlayerPrefs.SetString("SisterDialogueState", "PostDollar");
+            PlayerPrefs.SetInt("LCPDataManagement", 0);
         }
 
     }

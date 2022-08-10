@@ -30,7 +30,6 @@ public class IntroCutscene : MonoBehaviour
                 StopAllCoroutines();
                 transition.SetTrigger("gameStart");
                 levelLoader.LoadSceneWithDelay("Gianni's Room", true);
-                Debug.Log("test");
             }
         }
     }

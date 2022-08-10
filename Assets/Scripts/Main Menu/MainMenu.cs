@@ -11,7 +11,6 @@ public class MainMenu : MonoBehaviour
     
     [SerializeField] AudioClip buttonHoverSound = null;
     [SerializeField] AudioClip gameStartSound = null;
-    [SerializeField] float buttonHoverSoundVolume = 0.5f;
     [SerializeField] float gameStartSoundVolume = 0.5f;
     AudioSource audioSource;
     [SerializeField] GameObject optionsWindow = null;
@@ -22,6 +21,7 @@ public class MainMenu : MonoBehaviour
     LevelLoader levelLoader;
     [SerializeField] Animator transition;
     [SerializeField] TextMeshProUGUI startText;
+    [SerializeField] TextMeshProUGUI titleText;
     [SerializeField] AudioMixer mixer;
 
     void Start() {
@@ -65,12 +65,12 @@ public class MainMenu : MonoBehaviour
 
     public void DisplayDataManagement() {
         mainButtons.SetActive(false);
-        title.SetActive(false);
+        titleText.SetText("");
         dataWindow.SetActive(true);
     }
 
     public void PlayButtonHoverSound() {
-        audioSource.PlayOneShot(buttonHoverSound, buttonHoverSoundVolume);
+        audioSource.PlayOneShot(buttonHoverSound);
     }
 
     private void InitializeVolumes() {
@@ -82,6 +82,13 @@ public class MainMenu : MonoBehaviour
     public void InitializeSave()
     {
         PlayerPrefs.SetInt("SaveExists", 1);
+
+        PlayerPrefs.SetInt("SchoolDataManagement", 1);
+        PlayerPrefs.SetInt("SNICODataManagement", 1);
+        PlayerPrefs.SetInt("LCPDataManagement", 1);
+        PlayerPrefs.SetInt("RicksDataManagement", 1);
+        PlayerPrefs.SetInt("EADataManagement", 1);
+        PlayerPrefs.SetInt("SewersDataManagement", 1);
 
         PlayerPrefs.SetString("TimeOfDay", "Day");
         PlayerPrefs.SetInt("OverworldInstructions", 0);
