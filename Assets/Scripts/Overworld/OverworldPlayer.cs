@@ -52,7 +52,9 @@ public class OverworldPlayer : MonoBehaviour
         Move();
         playerOnMajorWaypoint = PlayerIsOnMajorWaypoint();
         SetNextSceneToLoad();
-        FindObjectOfType<SpawnPosition>().overworldSpawnPosition = spawnPositionString;
+        if (FindObjectOfType<SpawnPosition>()) {
+            FindObjectOfType<SpawnPosition>().overworldSpawnPosition = spawnPositionString;
+        }
         LoadNextScene();
     }
 

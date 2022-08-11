@@ -54,7 +54,6 @@ public class Lairry : MonoBehaviour
                 PlayerPrefs.SetString("LairryDialogueState", "PostDollar");
                 PlayerPrefs.SetInt("RicksDataManagement", 0);
             }
-
         }
     }
 

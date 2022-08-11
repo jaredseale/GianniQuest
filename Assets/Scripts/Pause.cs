@@ -44,6 +44,9 @@ public class Pause : MonoBehaviour
     }
     public void ExitToMap() {
         pauseMenu.SetActive(false);
+        if (FindObjectOfType<Player>()) {
+            FindObjectOfType<Player>().canMove = false;
+        }
         Time.timeScale = 1f; //return player movement
         mixer.SetFloat("MusicEQ", 1f);
         FindObjectOfType<LevelLoader>().loadSceneDelay = 4f;
@@ -54,6 +57,13 @@ public class Pause : MonoBehaviour
     public void ExitToMainMenu()
     {
         ClosePauseMenu();
+        if (FindObjectOfType<Player>()) {
+            FindObjectOfType<Player>().canMove = false;
+        }
+
+        if (FindObjectOfType<OverworldPlayer>()) {
+            FindObjectOfType<OverworldPlayer>().canMove = false;
+        }
         Destroy(FindObjectOfType<SpawnPosition>().gameObject);
         transition.SetTrigger("levelTransition");
         FindObjectOfType<LevelLoader>().loadSceneDelay = 4f;

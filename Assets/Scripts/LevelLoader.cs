@@ -24,6 +24,9 @@ public class LevelLoader : MonoBehaviour
     //}
 
     public void LoadSceneWithDelay(string sceneName, bool musicFadeOut) {
+        if (FindObjectOfType<Pause>()) {
+            FindObjectOfType<Pause>().canPause = false;
+        }
         destroyMusicPlayer = musicFadeOut;
         StartCoroutine("Delay", sceneName);
 

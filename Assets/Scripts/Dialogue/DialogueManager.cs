@@ -91,7 +91,9 @@ public class DialogueManager : MonoBehaviour
     }
 
     IEnumerator WaitForDialogueBoxToScrollOffscreen() {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.05f);
+        actionTrigger = false; //this is a bit hacky but it fixes a bug where talking to NPCs will let the action trigger remain active
+        yield return new WaitForSeconds(0.95f);
         dialogueBox.SetActive(false);
         dialogueTarget = null;
     }

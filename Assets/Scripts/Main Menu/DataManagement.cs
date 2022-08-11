@@ -44,8 +44,16 @@ public class DataManagement : MonoBehaviour
             LCPToggle.interactable = false;
         }
 
-        if (PlayerPrefs.GetInt("RicksDataManagement") == 0) {
+        if (PlayerPrefs.GetInt("SchoolDataManagement") == 0
+            && PlayerPrefs.GetInt("SNICODataManagement") == 0
+            && PlayerPrefs.GetInt("LCPDataManagement") == 0) {
+            RicksLabel.SetActive(true);
+            }
+
+        if (PlayerPrefs.GetInt("RicksDataManagement") == 0 
+            && PlayerPrefs.GetString("RicksKey") == "Collected") {
             RicksToggle.interactable = false;
+            EALabel.SetActive(true);
         }
 
         if (PlayerPrefs.GetInt("EADataManagement") == 0) {
@@ -152,6 +160,7 @@ public class DataManagement : MonoBehaviour
         PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
         PlayerPrefs.SetString("LairryDialogueState", "PostDollar");
         PlayerPrefs.SetInt("RicksDataManagement", 0);
+        PlayerPrefs.SetString("RicksKey", "Collected");
 
         RicksToggle.interactable = false;
     }

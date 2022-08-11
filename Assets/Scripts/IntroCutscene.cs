@@ -41,6 +41,6 @@ public class IntroCutscene : MonoBehaviour
 
     IEnumerator LoadDelay() {
         yield return new WaitForSeconds(18.0f);
-        levelLoader.LoadSceneWithDelay("Gianni's Room", false);
+        levelLoader.LoadSceneWithDelay("Gianni's Room", true);
     }
 }
