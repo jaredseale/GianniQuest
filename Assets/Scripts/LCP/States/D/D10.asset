@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: D10
   m_EditorClassIdentifier: 
-  dialogueText: Jeez, whatever their native language is sounds absolutely wretched...
-    They seem distracted though. Let's go for a two pronged attack!
+  dialogueText: Ugh, their native language sounds absolutely wretched... They seem
+    distracted though. Let's go for a two pronged attack!
   characterName: Anousse
   characterSprite: {fileID: 21300000, guid: 8e5f80c0e1a052f4da37b8741821187e, type: 3}
   characterVoice: {fileID: 8300000, guid: 511cee8c8d2145d489226811bccea424, type: 3}

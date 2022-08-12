@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: C7
   m_EditorClassIdentifier: 
-  dialogueText: You lean forward with your head and use your teeth to wriggle out
-    the single bobby pin that somehow is holding her entire ponytail up. Don't think
+  dialogueText: You lean your head forward and use your teeth to wriggle out the
+    single bobby pin that somehow is holding her entire ponytail up. Don't think
     about it too much.
   characterName: 
   characterSprite: {fileID: 0}

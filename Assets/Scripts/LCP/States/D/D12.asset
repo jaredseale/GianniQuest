@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: Your clenched fist flies through the air with the strength of a magnificent
     great ape. Once the punch connects, Smornstein majestically explodes into millions
-    of strips of alien flesh, splattering over the floors and walls, and coating
-    the three of you in alien goo.
+    of flecks of alien flesh, splattering all over the floors and walls and coating
+    the three of you in thick alien goo.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

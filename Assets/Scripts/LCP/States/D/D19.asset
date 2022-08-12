@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: D19
   m_EditorClassIdentifier: 
   dialogueText: The waiter's question is immediately interrupted by Anousse taking
-    off her shoe and flinging it at him. Her sneaker makes a glancing blow off of
-    his left arm, prompting the rest of his body to shatter like a meaty snow globe.
+    off her shoe and curveballing it at him. Her sneaker makes a glancing blow off
+    of his left arm, prompting the rest of his body to shatter like a meaty snow
+    globe.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

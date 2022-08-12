@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: B1
   m_EditorClassIdentifier: 
-  dialogueText: The waiter guides you to a table that your sister must have reserved
-    for you earlier this afternoon. Just before you take your seat, you spot a bodacious
+  dialogueText: The waiter guides you to a table that your sister reserved for you
+    earlier in the afternoon. Just before you take your seat, you spot a bodacious
     babe walking to the table.
   characterName: 
   characterSprite: {fileID: 0}
@@ -25,4 +25,3 @@ MonoBehaviour:
   executeMethodAfterDialogue: 
   nextStates:
   - {fileID: 11400000, guid: 199838a5634f30247bc9a3eef5c3a804, type: 2}
-  initialState: 1

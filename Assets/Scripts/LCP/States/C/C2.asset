@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: C2
   m_EditorClassIdentifier: 
   dialogueText: Ough and Smornstein handcuff you and Anousse to a bar on the back
-    wall and leave the room through a corridor to your right. The waiter begins to
-    leave, but stops just short of the exit.
+    wall and leave the room through a corridor to your right. The waiter leaves,
+    stopping just short of the exit.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

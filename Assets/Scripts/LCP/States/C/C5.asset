@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: C5
   m_EditorClassIdentifier: 
-  dialogueText: Looking pleased with himself, the waiter exits to the corridor on
-    your left, leaving you and Anousse alone in what appears to be the place you're
-    going to spend the next trillion or so years of your lives.
+  dialogueText: Looking pleased as punch, the waiter exits to the corridor on your
+    left, leaving you and Anousse alone in what appears to be the place you're going
+    to spend the next trillion or so years of your lives.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

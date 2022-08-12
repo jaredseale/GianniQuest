@@ -11,11 +11,11 @@ public class Teacher : MonoBehaviour
     [SerializeField] GameObject mathTestOnDesk;
 
     string[] Init = new string[] { "Gianni, I am so excited to be here at school on this wonderful Christmas Eve!",
-        "It seems that you're late on a couple of your assignments this week.",
+        "It seems that you're late on a couple of your assignments this semester.",
         "If you can briskly fill one (1) of the exams I've placed on the desks, we can both go home!"};
     string[] Init2 = new string[] { "Go have a look at one of the exams on the desks and talk to me again after you've filled one out." };
     string[] MathTestWrong = new string[] { "Hmmm... it doesn't look like your answer for the math exam is quite right. Go have another try, or try your English exam." };
-    string[] MathTestDone = new string[] { "Wowee! Wow! Yes! Yes!!! You're done! Congratulations!!! Wow! Woo hoo! Yes! I can leave now! I mean you can leave now!",
+    string[] MathTestDone = new string[] { "Wowee! Wow! Yes! Yes!!! You're done! You aced the math test! Congratulations!!! Wow! Woo hoo! Yes! I can leave now! I mean you can leave now!",
         "(Reminder, you can press TAB to pause and exit to the overworld from there.)",
         "(This is me, Jared, telling you this, not the teacher. Diagesis!)"};
     string[] EnglishTestWrong = new string[] { "Hmmm... it looks like you may have left a word or two blank on your English exam. Go see if you can fix that." };

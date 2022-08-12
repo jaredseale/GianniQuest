@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: E10
   m_EditorClassIdentifier: 
-  dialogueText: Upon the shoe making contact with him, the waiter bursts into billions
-    of pieces of alien blood and alien guts. Alien bones, too. His sheer lack of
-    durability frankly astounds you as you fall to the floor, no longer in the waiter's
-    clutches.
+  dialogueText: The instant the shoe makes contact with him, the waiter bursts into
+    billions of pieces of alien blood and alien guts. Alien bones, too. His sheer
+    lack of durability frankly astounds you as you fall to the floor, no longer in
+    the waiter's clutches.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

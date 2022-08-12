@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: D16
   m_EditorClassIdentifier: 
-  dialogueText: Ignoring Anousse's critical misunderstanding of the previous events,
+  dialogueText: Ignoring Anousse's critical misunderstanding of the preceding events,
     you leave the room with her and head down the opposite corridor.
   characterName: 
   characterSprite: {fileID: 0}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: E6
   m_EditorClassIdentifier: 
   dialogueText: You rush into the room and start dodge rolling across the floor.
-    Almost instantly, you accidentally trip over both of your legs at the same time.
+    Almost instantly, you trip over both of your legs at the same time.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

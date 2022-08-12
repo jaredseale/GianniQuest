@@ -87,7 +87,9 @@ public class EnglishTest : MonoBehaviour
 
         if (PlayerPrefs.GetString("TeacherDialogueState") == "Init2" ||
                 PlayerPrefs.GetString("TeacherDialogueState") == "MathTestWrong" ||
-                PlayerPrefs.GetString("TeacherDialogueState") == "EnglishTestWrong") {
+                PlayerPrefs.GetString("TeacherDialogueState") == "EnglishTestWrong" ||
+                PlayerPrefs.GetString("TeacherDialogueState") == "MathTestDone" ||
+                PlayerPrefs.GetString("TeacherDialogueState") == "EnglishTestDone") {
             GetComponent<Interactable>().enabled = true;
         } else {
             GetComponent<Interactable>().enabled = false;

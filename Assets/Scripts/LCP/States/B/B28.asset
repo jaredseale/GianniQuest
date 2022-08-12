@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: B28
   m_EditorClassIdentifier: 
   dialogueText: You cease attempting to chew through the locks to offer an entirely
-    unhelpful answer, but before you can get a word out, you witness the ground outside
+    unhelpful answer. Before you can get a word out, you witness the ground outside
     of the restaurant fall beneath the building.
   characterName: 
   characterSprite: {fileID: 0}

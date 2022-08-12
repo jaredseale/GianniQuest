@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: B26
   m_EditorClassIdentifier: 
   dialogueText: ...When all of a sudden the floor beneath you starts to rumble. You
-    and Anousse make a break for the entrance, but when you get to the doors, they're
-    tightly locked.
+    and Anousse quickly make a break for the entrance, but when you get to the doors,
+    they're tightly locked.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}
