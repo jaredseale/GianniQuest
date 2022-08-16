@@ -25,27 +25,31 @@ public class MapLocationText : MonoBehaviour
         switch (playerLocation) {
 
             case "A":
-                locationName.text = "Home House";
+                locationName.text = "Le Cul Puant";
+
+                if (PlayerPrefs.GetString("DateProgress") == "End") {
+                    locationName.text = "GBGL-XX1";
+                }
                 break;
 
-            case "C":
-                locationName.text = "Ethereal Ascent";
-                break;
-
-            case "J":
+            case "C1":
                 locationName.text = "Pizza Hell";
                 break;
 
-            case "N":
-                locationName.text = "The Sewers";
-                break;
-
-            case "S":
+            case "J":
                 locationName.text = "Rancid Rick's";
                 break;
 
+            case "N4":
+                locationName.text = "Ethereal Ascent";
+                break;
+
+            case "S":
+                locationName.text = "Home House";
+                break;
+
             case "T":
-                locationName.text = "Le Cul Puant";
+                locationName.text = "The Sewers";
                 break;
 
             case "V":

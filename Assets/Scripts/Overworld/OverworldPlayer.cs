@@ -103,9 +103,9 @@ public class OverworldPlayer : MonoBehaviour
 
     private bool PlayerIsOnMajorWaypoint() { //prevents the player from loading into a scene from a crossroads or on top of a mid-waypoint
         if (currentWaypoint.name == "A" ||
-            currentWaypoint.name == "C" ||
+            currentWaypoint.name == "C1" ||
             currentWaypoint.name == "J" ||
-            currentWaypoint.name == "N" ||
+            currentWaypoint.name == "N4" ||
             currentWaypoint.name == "S" ||
             currentWaypoint.name == "T" ||
             currentWaypoint.name == "V" ||
@@ -156,13 +156,13 @@ public class OverworldPlayer : MonoBehaviour
             canEnter = true;
             switch (playerLocation) {
 
-                case "A":
+                case "S":
                     nextScene = "House Hallway";
                     spawnPositionString = "saloon";
                     spawn.setNextSpawn(13.33f, -1.91f);
                     break;
 
-                case "C":
+                case "N4":
                     nextScene = "Ethereal Ascent";
                     spawnPositionString = "ascent";
                     if (PlayerPrefs.GetString("EtherealAscentEntry") != "Open") {
@@ -170,13 +170,13 @@ public class OverworldPlayer : MonoBehaviour
                     }
                     break;
 
-                case "J":
+                case "C1":
                     nextScene = "Pizza Hell";
                     spawnPositionString = "pizza";
                     spawn.setNextSpawn(-7.87f, -3.77f);
                     break;
 
-                case "N":
+                case "T":
                     nextScene = "The Sewers";
                     spawnPositionString = "sewer";
                     if (PlayerPrefs.GetString("SewersEntry") != "Open") {
@@ -184,7 +184,7 @@ public class OverworldPlayer : MonoBehaviour
                     }
                     break;
 
-                case "S":
+                case "J":
                     nextScene = "Rancid Rick's";
                     spawnPositionString = "rick";
                     if (PlayerPrefs.GetString("RicksEntry") != "Open") {
@@ -193,7 +193,7 @@ public class OverworldPlayer : MonoBehaviour
                     spawn.setNextSpawn(25.27f, -3.69f);
                     break;
 
-                case "T":
+                case "A":
                     switch (PlayerPrefs.GetString("DateProgress")) {
                         case "Init":
                             nextScene = "Le Cul Puant Exterior";

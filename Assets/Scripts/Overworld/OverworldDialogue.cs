@@ -116,13 +116,13 @@ public class OverworldDialogue : MonoBehaviour
             sentences.Clear();
             switch (currentWaypoint) {
 
-                case "C": //Ethereal Ascent
+                case "N4": //Ethereal Ascent
                     if (PlayerPrefs.GetString("EtherealAscentEntry") == "Closed") {
                         sentences.Enqueue("A mystical barrier prevents you from entering this area. Upon closer inspection, it's just a blue, locked gate.");
                     }
                     break;
 
-                case "N": //The Sewers
+                case "T": //The Sewers
                     if (PlayerPrefs.GetString("SewersEntry") == "Closed") {
                         sentences.Enqueue("The manhole cover is closed with a lock. Despite your best efforts, you can't seem to chew through it.");
                     } else if (PlayerPrefs.GetString("SewersEntry") == "Done") {
@@ -130,13 +130,13 @@ public class OverworldDialogue : MonoBehaviour
                     }
                     break;
 
-                case "S": //Rancid Rick's
+                case "J": //Rancid Rick's
                     if (PlayerPrefs.GetString("RicksEntry") == "Closed") {
                         sentences.Enqueue("It looks closed. There's a sign on the door that reads \"OPEN AT NIGHT\".");
                     }
                     break;
 
-                case "T": //LCP
+                case "A": //LCP
                     if (PlayerPrefs.GetString("LCPEntry") == "Done") {
                         sentences.Enqueue("There are a bunch of government type folks investigating the crashed spaceship. Probably best to keep your distance.");
                     }

@@ -14,7 +14,7 @@ public class OverworldCamera : MonoBehaviour
     [SerializeField] float cameraZoom;
     [SerializeField] Vector3 cameraPos;
 
-    Vector3 saloonPos = new Vector3(-15f, 3f, -10f); //all Zs should be -10f
+    Vector3 saloonPos = new Vector3(38f, -19f, -10f); //all Zs should be -10f
     float saloonZoom = 3.5f;
 
     Vector3 schoolPos = new Vector3(-12f, -13f, -10f);
@@ -23,20 +23,20 @@ public class OverworldCamera : MonoBehaviour
     Vector3 snicoPos = new Vector3(1f, -6.5f, -10f);
     float snicoZoom = 3.5f;
 
-    Vector3 LCPPos = new Vector3(13f, -16f, -10f);
+    Vector3 LCPPos = new Vector3(-15f, 3f, -10f);
     float LCPZoom = 3.5f;
 
-    Vector3 rickPos = new Vector3(38f, -19f, -10f);
+    Vector3 rickPos = new Vector3(27f, -4.5f, -10f);
     float rickZoom = 3.5f;
 
-    Vector3 sewerPos = new Vector3(32f, -10f, -10f);
+    Vector3 sewerPos = new Vector3(13f, -16f, -10f);
     float sewerZoom = 3.5f;
 
-    Vector3 pizzaPos = new Vector3(27f, -4.5f, -10f);
-    float pizzaZoom = 3.5f;
+    Vector3 pizzaPos = new Vector3(11f, 9f, -10f);
+    float pizzaZoom = 5f;
 
-    Vector3 ascentPos = new Vector3(10f, 7f, -10f);
-    float ascentZoom = 8f;
+    Vector3 ascentPos = new Vector3(37f, 7f, -10f);
+    float ascentZoom = 6f;
 
     [SerializeField] Animator crossfade;
 
