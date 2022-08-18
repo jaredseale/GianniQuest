@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Dollar.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\LampSwing.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\DataManagement.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MenuCinematic.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\ShotGlass.cs" />
@@ -107,7 +108,8 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\DataManagement.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\EAMusicManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogue Scripts\Santa.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
