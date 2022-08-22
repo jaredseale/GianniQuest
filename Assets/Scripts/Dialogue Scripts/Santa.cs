@@ -9,10 +9,11 @@ public class Santa : MonoBehaviour
     public DialogueManager dialogueManager;
 
     string[] Init = new string[] {"Ho ho ho, my dear Gianni, what a Christmas disaster!",
-        "Here I am, flying through the air in this winter wonderland you call Arizona, when one of my reindeer gets sick and careens us into a telephone pole.",
+        "Here I am, flying through the air in this wintery Arizonan wonderland when one of my reindeer gets sick and careens us into a tree.",
         "My magical bag got caught on a transformer and ripped, and I lost some of my gifts for all you good boys and girls out there.",
-        "I don't suppose you would mind lending me a hand while I tend to my reindeer?",
-        "I took inventory a short while ago, and I believe I'm missing twenty presents."};
+        "These old bones of mine aren't what they used to be, believe you me. I don't suppose you would mind lending me a hand while I tend to my reindeer?",
+        "I took inventory a short while ago, and I seem to be missing twenty presents.",
+        "You know, I actually think I see one up there and to the right. See if you can grab that!"};
     string[] Init2 = new string[] { "I'm still missing a few of the presents I dropped. Have a look around and see if you can spot any." };
     string[] PreDollar = new string[] { "Ho ho ho, thank you so much, Gianni! That looks like everything that fell out of my bag.",
         "Although on second thought, this rusty key doesn't seem to belong to me. I'll let you keep that one.",

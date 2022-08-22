@@ -79,11 +79,12 @@ public class Player : MonoBehaviour
 
     public void Jump() {
 
-        if (!isOnGround) {
-            return;
-        }
-
         if (Input.GetButtonDown("Jump")) {
+
+            if (!isOnGround) {
+                return;
+            }
+
             audioSource.PlayOneShot(jumpSound);
             StartCoroutine("JumpAnimationResetDelay");
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
@@ -95,6 +96,11 @@ public class Player : MonoBehaviour
                 playerAnimator.SetBool("JumpingLeft", true);
             }
 
+        }
+
+        if (Input.GetButtonUp("Jump")) {
+            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed / 3f);
+            playerRigidbody.velocity -= jumpVelocityToAdd;
         }
     }
 

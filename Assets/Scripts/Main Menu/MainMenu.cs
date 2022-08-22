@@ -119,6 +119,8 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString("RicksKey", "Uncollected");
         PlayerPrefs.SetInt("DrinkingGameTries", 0);
 
+        PlayerPrefs.SetString("SantaDialogueState", "Init");
+
         PlayerPrefs.SetString("PizzaGuyState", "Init");
     }
 }
