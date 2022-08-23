@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Dialogue Scripts\Mom.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
+    <Compile Include="Assets\Scripts\Dialogue Scripts\Santa.cs" />
     <Compile Include="Assets\Scripts\SNICO\SNICOTutorial.cs" />
     <Compile Include="Assets\Scripts\IntroCutscene.cs" />
     <Compile Include="Assets\Scripts\School\MathTest.cs" />
@@ -104,12 +105,13 @@
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\ShotGlass.cs" />
     <Compile Include="Assets\Scripts\Intermission.cs" />
     <Compile Include="Assets\Scripts\House\Ornament.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\EAMusicManager.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldWaypoints.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Ethereal Ascent\EAMusicManager.cs" />
-    <Compile Include="Assets\Scripts\Dialogue Scripts\Santa.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\EACollectible.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\EAManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
