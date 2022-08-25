@@ -29,7 +29,7 @@ public class EACollectible : MonoBehaviour
 
             myEAManager.itemCount += 1;
             myEAManager.itemCollectionText.text = itemDescription;
-            myEAManager.itemCollectionIcon = itemSprite;
+            myEAManager.itemCollectionIcon.sprite = itemSprite.sprite;
             myEAManager.ItemCollectionSlideIn();
             myEAManager.GetComponent<AudioSource>().Play();
             Destroy(gameObject);
