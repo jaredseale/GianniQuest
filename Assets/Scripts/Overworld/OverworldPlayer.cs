@@ -168,6 +168,7 @@ public class OverworldPlayer : MonoBehaviour
                     if (PlayerPrefs.GetString("EtherealAscentEntry") != "Open") {
                         canEnter = false;
                     }
+                    spawn.setNextSpawn(8.52f, 1.23f);
                     break;
 
                 case "C1":

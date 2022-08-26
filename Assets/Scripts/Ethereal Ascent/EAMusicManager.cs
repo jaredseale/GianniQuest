@@ -13,9 +13,9 @@ public class EAMusicManager : MonoBehaviour
 
     float track2Threshold = 21f; //these will obviously need to be adjusted as the level is developed
     float track3Threshold = 55f;
-    float track4Threshold = 80f;
-    float track5Threshold = 100f;
-    float track6Threshold = 120f;
+    float track4Threshold = 91f;
+    float track5Threshold = 129f;
+    float track6Threshold = 150f;
 
     float fadeTimer = 4f;
 
