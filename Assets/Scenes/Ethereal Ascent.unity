@@ -13009,6 +13009,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7276592, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &174712737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174712738}
+  m_Layer: 8
+  m_Name: Clouds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &174712738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174712737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1702964131}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &179546244
 GameObject:
   m_ObjectHideFlags: 0
@@ -14074,7 +14104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &250603155
 MonoBehaviour:
@@ -14094,6 +14124,8 @@ MonoBehaviour:
   itemCollectionIcon: {fileID: 1345269210}
   itemCollectionText: {fileID: 1241263572}
   itemCollectionBox: {fileID: 498911276}
+  cloudSpawner: {fileID: 2004263361502816822, guid: 53a8fff2f56d384409ff4682cee022e0, type: 3}
+  cloud: {fileID: 4002970736531373906, guid: bb123fd192bdf17499fb363ef73138b2, type: 3}
 --- !u!82 &250603156
 AudioSource:
   m_ObjectHideFlags: 0
@@ -72672,7 +72704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2083337905996763716, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2083337905996763716, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -78477,6 +78509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1780676051}
+  - {fileID: 174712738}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -107009,7 +107042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cce13243d978d4ca65931dfc4b610e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPosition: {x: 15, y: 89}
+  spawnPosition: {x: 8, y: 1}
   overworldSpawnPosition: 
 --- !u!4 &3572552056097677290
 Transform:
