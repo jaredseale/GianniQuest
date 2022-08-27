@@ -50369,7 +50369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519826218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804143911}
@@ -67731,7 +67731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693077231240375136, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5693077231240375138, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
       propertyPath: musicPlayer
