@@ -23,7 +23,7 @@ public class EAManager : MonoBehaviour
         itemCount = 0;
 
         for (int i = 0; i < 200; i += 1) {
-            Instantiate(cloudSpawner, new Vector3(-60f, (float) i, -5f), Quaternion.identity, gameObject.transform);
+            Instantiate(cloudSpawner, new Vector3(-70f, (float) i, -5f), Quaternion.identity, gameObject.transform);
         }
 
         InitialCloudPlacement();
