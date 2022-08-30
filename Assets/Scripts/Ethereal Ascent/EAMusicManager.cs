@@ -32,8 +32,10 @@ public class EAMusicManager : MonoBehaviour
     }
 
     void Update() {
-        FadeInMusic();
-        FadeOutMusic();
+        if (FindObjectOfType<EAManager>().itemCount < 20) {
+            FadeInMusic();
+            FadeOutMusic();
+        }
     }
 
     void FadeInMusic() {
@@ -56,7 +58,7 @@ public class EAMusicManager : MonoBehaviour
 
         if (track6.volume <= .001f && myPlayer.transform.position.y > track6Threshold) {
             StartCoroutine(FadeInTrack(track6));
-        }
+        } 
 
     }
 
@@ -80,7 +82,7 @@ public class EAMusicManager : MonoBehaviour
 
         if (track6.volume >= .999f && myPlayer.transform.position.y < track6Threshold) {
             StartCoroutine(FadeOutTrack(track6));
-        }
+        } 
 
     }
 
@@ -110,5 +112,13 @@ public class EAMusicManager : MonoBehaviour
             yield return null;
         }
         yield break;
+    }
+
+    public void FadeInAll() {
+        StartCoroutine(FadeInTrack(track2));
+        StartCoroutine(FadeInTrack(track3));
+        StartCoroutine(FadeInTrack(track4));
+        StartCoroutine(FadeInTrack(track5));
+        StartCoroutine(FadeInTrack(track6));
     }
 }

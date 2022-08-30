@@ -14,7 +14,8 @@ public class EAManager : MonoBehaviour
     [SerializeField] Animator itemCollectionBox;
     [SerializeField] GameObject cloudSpawner;
     [SerializeField] GameObject cloud;
-     
+    [SerializeField] GameObject[] stars;
+
     void Start() {
         if (PlayerPrefs.GetString("SantaDialogueState") == "Init2" || PlayerPrefs.GetString("SantaDialogueState") == "PreDollar") {
             itemCounter.GetComponent<Animator>().SetTrigger("itemCounterSlide");
@@ -27,6 +28,7 @@ public class EAManager : MonoBehaviour
         }
 
         InitialCloudPlacement();
+        InitialStarPlacement();
 
     }
 
@@ -46,8 +48,21 @@ public class EAManager : MonoBehaviour
     private void InitialCloudPlacement() {
         for (int i = 0; i < 150; i++) {
             float xVal = Random.Range(-60f, 65f);
-            float yVal = Random.Range(-5f, 100f);
+            float yVal = Random.Range(-5f, 120f);
             Instantiate(cloud, new Vector3(xVal, yVal, 0f), Quaternion.identity, gameObject.transform);
+        }
+
+        for (int i = 0; i < 50; i++) {
+            float xVal = Random.Range(-60f, 65f);
+            float yVal = Random.Range(120f, 200f); //come back and adjust this once i have final max y value
+            Instantiate(cloud, new Vector3(xVal, yVal, 0f), Quaternion.identity, gameObject.transform);
+        }
+    }
+    private void InitialStarPlacement() {
+        for (int i = 0; i < 300; i++) {
+            float xVal = Random.Range(-60f, 70f);
+            float yVal = Random.Range(130f, 160f); //adjust these once you have every in its final place
+            Instantiate(stars[Random.Range(0, 3)], new Vector3(xVal, yVal, 0f), Quaternion.identity, gameObject.transform);
         }
     }
 }

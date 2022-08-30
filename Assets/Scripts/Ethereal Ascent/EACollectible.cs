@@ -25,13 +25,20 @@ public class EACollectible : MonoBehaviour
         if (Input.GetButtonDown("Up") //if 1) pressed up and 2) not on top of loading zone and 3) game not paused and 4) not already in dialogue and 5) is not in the air
             && myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))
             && GameObject.Find("Game Manager").GetComponent<Pause>().gamePaused == false
-            && playerController.isOnGround) {
+            && playerController.isOnGround
+            && myEAManager.itemCount < 20) {
 
             myEAManager.itemCount += 1;
             myEAManager.itemCollectionText.text = itemDescription;
             myEAManager.itemCollectionIcon.sprite = itemSprite.sprite;
             myEAManager.ItemCollectionSlideIn();
             myEAManager.GetComponent<AudioSource>().Play();
+
+            if (myEAManager.itemCount == 20) {
+                FindObjectOfType<EAMusicManager>().FadeInAll();
+                PlayerPrefs.SetString("SantaDialogueState", "PreDollar");
+            }
+
             Destroy(gameObject);
         }
         
