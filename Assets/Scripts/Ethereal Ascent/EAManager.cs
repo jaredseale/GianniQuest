@@ -15,10 +15,15 @@ public class EAManager : MonoBehaviour
     [SerializeField] GameObject cloudSpawner;
     [SerializeField] GameObject cloud;
     [SerializeField] GameObject[] stars;
+    [SerializeField] GameObject itemGroup;
 
     void Start() {
         if (PlayerPrefs.GetString("SantaDialogueState") == "Init2" || PlayerPrefs.GetString("SantaDialogueState") == "PreDollar") {
             itemCounter.GetComponent<Animator>().SetTrigger("itemCounterSlide");
+        }
+
+        if (PlayerPrefs.GetString("SantaDialogueState") == "PreDollar" || PlayerPrefs.GetString("SantaDialogueState") == "PostDollar") {
+            DespawnItems();
         }
 
         itemCount = 0;
@@ -64,5 +69,9 @@ public class EAManager : MonoBehaviour
             float yVal = Random.Range(130f, 160f); //adjust these once you have every in its final place
             Instantiate(stars[Random.Range(0, 3)], new Vector3(xVal, yVal, 0f), Quaternion.identity, gameObject.transform);
         }
+    }
+
+    private void DespawnItems() {
+        itemGroup.SetActive(false);
     }
 }

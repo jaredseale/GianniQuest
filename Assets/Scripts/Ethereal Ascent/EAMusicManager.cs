@@ -15,7 +15,7 @@ public class EAMusicManager : MonoBehaviour
     float track3Threshold = 55f;
     float track4Threshold = 91f;
     float track5Threshold = 129f;
-    float track6Threshold = 150f;
+    float track6Threshold = 200f;
 
     float fadeTimer = 4f;
 
@@ -89,7 +89,7 @@ public class EAMusicManager : MonoBehaviour
     IEnumerator FadeInTrack(AudioSource track) {
         float currentTime = 0;
         float currentVol = track.volume;
-        float targetValue = 1f;
+        float targetValue = 0.8f;
 
         while (currentTime < fadeTimer) {
             currentTime += Time.deltaTime;
