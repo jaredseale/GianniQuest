@@ -28,7 +28,7 @@ public class EAManager : MonoBehaviour
 
         itemCount = 0;
 
-        for (int i = 0; i < 200; i += 1) {
+        for (int i = 0; i < 140; i += 1) {
             Instantiate(cloudSpawner, new Vector3(-70f, (float) i, -5f), Quaternion.identity, gameObject.transform);
         }
 
@@ -53,20 +53,20 @@ public class EAManager : MonoBehaviour
     private void InitialCloudPlacement() {
         for (int i = 0; i < 150; i++) {
             float xVal = Random.Range(-60f, 65f);
-            float yVal = Random.Range(-5f, 120f);
+            float yVal = Random.Range(-5f, 100f);
             Instantiate(cloud, new Vector3(xVal, yVal, 0f), Quaternion.identity, gameObject.transform);
         }
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 25; i++) {
             float xVal = Random.Range(-60f, 65f);
-            float yVal = Random.Range(120f, 200f); //come back and adjust this once i have final max y value
+            float yVal = Random.Range(100f, 140f); //come back and adjust this once i have final max y value
             Instantiate(cloud, new Vector3(xVal, yVal, 0f), Quaternion.identity, gameObject.transform);
         }
     }
     private void InitialStarPlacement() {
-        for (int i = 0; i < 300; i++) {
+        for (int i = 0; i < 400; i++) {
             float xVal = Random.Range(-60f, 70f);
-            float yVal = Random.Range(130f, 160f); //adjust these once you have every in its final place
+            float yVal = Random.Range(130f, 200f); //adjust these once you have every in its final place
             Instantiate(stars[Random.Range(0, 3)], new Vector3(xVal, yVal, 0f), Quaternion.identity, gameObject.transform);
         }
     }

@@ -15,9 +15,10 @@ public class EAMusicManager : MonoBehaviour
     float track3Threshold = 55f;
     float track4Threshold = 91f;
     float track5Threshold = 129f;
-    float track6Threshold = 200f;
+    float track6Threshold = 164f;
 
     float fadeTimer = 4f;
+    float maxVolume = 0.8f;
 
     Player myPlayer;
 
@@ -64,23 +65,23 @@ public class EAMusicManager : MonoBehaviour
 
     void FadeOutMusic() {
 
-        if (track2.volume >= .999f && myPlayer.transform.position.y < track2Threshold) {
+        if (track2.volume >= maxVolume - 0.001f && myPlayer.transform.position.y < track2Threshold) {
             StartCoroutine(FadeOutTrack(track2));
         }
 
-        if (track3.volume >= .999f && myPlayer.transform.position.y < track3Threshold) {
+        if (track3.volume >= maxVolume - 0.001f && myPlayer.transform.position.y < track3Threshold) {
             StartCoroutine(FadeOutTrack(track3));
         }
 
-        if (track4.volume >= .999f && myPlayer.transform.position.y < track4Threshold) {
+        if (track4.volume >= maxVolume - 0.001f && myPlayer.transform.position.y < track4Threshold) {
             StartCoroutine(FadeOutTrack(track4));
         }
 
-        if (track5.volume >= .999f && myPlayer.transform.position.y < track5Threshold) {
+        if (track5.volume >= maxVolume - 0.001f && myPlayer.transform.position.y < track5Threshold) {
             StartCoroutine(FadeOutTrack(track5));
         }
 
-        if (track6.volume >= .999f && myPlayer.transform.position.y < track6Threshold) {
+        if (track6.volume >= maxVolume - 0.001f && myPlayer.transform.position.y < track6Threshold) {
             StartCoroutine(FadeOutTrack(track6));
         } 
 

@@ -54,10 +54,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Overworld\OverworldPlayer.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldInstructions.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\Parallax.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderState.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenuOptions.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SplashScreen.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldCamera.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\StarField.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Lairry.cs" />
     <Compile Include="Assets\Scripts\Overworld\DollarCount.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
@@ -107,6 +109,7 @@
     <Compile Include="Assets\Scripts\Main Menu\MenuCinematic.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\ShotGlass.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\Intermission.cs" />
     <Compile Include="Assets\Scripts\House\Ornament.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\EAMusicManager.cs" />
@@ -114,9 +117,9 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Ethereal Ascent\Parallax.cs" />
-    <Compile Include="Assets\Scripts\Ethereal Ascent\StarField.cs" />
-    <Compile Include="Assets\Scripts\Ethereal Ascent\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\UFOSpawner.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\RightToLeftUFO.cs" />
+    <Compile Include="Assets\Scripts\Ethereal Ascent\LeftToRightUFO.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Dialogue\mom.txt" />
