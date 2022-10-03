@@ -124,7 +124,7 @@ public class OverworldDialogue : MonoBehaviour
 
                 case "T": //The Sewers
                     if (PlayerPrefs.GetString("SewersEntry") == "Closed") {
-                        sentences.Enqueue("The manhole cover is closed with a lock. Despite your best efforts, you can't seem to chew through it.");
+                        sentences.Enqueue("The rusty manhole cover is closed with a lock. Despite your best efforts, you can't seem to chew through it. Perhaps a rusty key of some sort might be what you need.");
                     } else if (PlayerPrefs.GetString("SewersEntry") == "Done") {
                         sentences.Enqueue("You get the overwhelming sensation that you've explored everything here.");
                     }

@@ -50,14 +50,14 @@ public class DataManagement : MonoBehaviour
             RicksLabel.SetActive(true);
             }
 
-        if (PlayerPrefs.GetInt("RicksDataManagement") == 0 
-            && PlayerPrefs.GetString("RicksKey") == "Collected") {
+        if (PlayerPrefs.GetInt("RicksDataManagement") == 0) {
             RicksToggle.interactable = false;
             EALabel.SetActive(true);
         }
 
         if (PlayerPrefs.GetInt("EADataManagement") == 0) {
             EAToggle.interactable = false;
+            SewersLabel.SetActive(true);
         }
 
         if (PlayerPrefs.GetInt("SewersDataManagement") == 0) {
@@ -160,16 +160,20 @@ public class DataManagement : MonoBehaviour
         PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
         PlayerPrefs.SetString("LairryDialogueState", "PostDollar");
         PlayerPrefs.SetInt("RicksDataManagement", 0);
-        PlayerPrefs.SetString("RicksKey", "Collected");
+        PlayerPrefs.SetString("EtherealAscentEntry", "Open");
+
 
         RicksToggle.interactable = false;
     }
 
     public void CompleteEA() {
-        //need to make sure key is collected
-        //santa is gone
-        //toys are collected
-        //increase dollar
+        PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
+        PlayerPrefs.SetString("SantaDialogueState", "PostDollar");
+        PlayerPrefs.SetInt("EADataManagement", 0);
+        PlayerPrefs.SetString("RicksKey", "Collected");
+        PlayerPrefs.SetString("SewersEntry", "Open");
+
+        EAToggle.interactable = false;
     }
 
     public void CompleteSewers() {

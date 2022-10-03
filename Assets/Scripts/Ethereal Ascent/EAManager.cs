@@ -17,6 +17,12 @@ public class EAManager : MonoBehaviour
     [SerializeField] GameObject[] stars;
     [SerializeField] GameObject itemGroup;
 
+    [Space(30)]
+
+    [SerializeField] GameObject santaObject;
+    [SerializeField] GameObject reindeerObject;
+    [SerializeField] GameObject noteObject;
+
     void Start() {
         if (PlayerPrefs.GetString("SantaDialogueState") == "Init2" || PlayerPrefs.GetString("SantaDialogueState") == "PreDollar") {
             itemCounter.GetComponent<Animator>().SetTrigger("itemCounterSlide");
@@ -26,6 +32,11 @@ public class EAManager : MonoBehaviour
             DespawnItems();
         }
 
+        if (PlayerPrefs.GetString("SantaDialogueState") == "PostDollar") {
+            santaObject.SetActive(false);
+            reindeerObject.SetActive(false);
+            noteObject.SetActive(true);
+        }
         itemCount = 0;
 
         for (int i = 0; i < 140; i += 1) {
