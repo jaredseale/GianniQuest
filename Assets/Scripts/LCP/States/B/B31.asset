@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: B31
   m_EditorClassIdentifier: 
-  dialogueText: Our species? Who are you? What's going on? You'll pay for ruining
-    my GianniDate!
+  dialogueText: '"Our" species? Who are you? What''s going on? You''ll pay for ruining
+    my GianniDate!'
   characterName: Anousse
   characterSprite: {fileID: 21300000, guid: 1e72603ae32b4894f9b75a38db628dbf, type: 3}
   characterVoice: {fileID: 8300000, guid: 511cee8c8d2145d489226811bccea424, type: 3}

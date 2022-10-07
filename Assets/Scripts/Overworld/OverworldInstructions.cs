@@ -9,7 +9,7 @@ public class OverworldInstructions : MonoBehaviour
 
     private void Awake() {
         if (PlayerPrefs.GetInt("OverworldInstructions") == 1) {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -19,15 +19,19 @@ public class OverworldInstructions : MonoBehaviour
         myAnim = GetComponent<Animator>();
     }
 
-    public void Close() {
-        PlayerPrefs.SetInt("OverworldInstructions", 1);
-        pauseMenu.canPause = true;
-        StartCoroutine("CloseInstructions");
+
+    public void Open() {
+        gameObject.SetActive(true);
+    
     }
 
-    IEnumerator CloseInstructions() {
+    public void Close() {
+        PlayerPrefs.SetInt("OverworldInstructions", 1);
         myAnim.SetTrigger("CloseInstructions");
-        yield return new WaitForSeconds(2f);
-        Destroy(gameObject);
+        pauseMenu.canPause = true;
+    }
+
+    public void HideInstructions() {
+        gameObject.SetActive(false);
     }
 }

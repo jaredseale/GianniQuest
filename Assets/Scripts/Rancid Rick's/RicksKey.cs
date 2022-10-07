@@ -30,6 +30,7 @@ public class RicksKey : MonoBehaviour
 
         void PlayAction() {
             PlayerPrefs.SetString("RicksKey", "Collected");
+            PlayerPrefs.SetString("EtherealAscentEntry", "Open");
             dialogueManager.GetComponent<AudioSource>().PlayOneShot(keyJingle);
             Destroy(gameObject);
         }

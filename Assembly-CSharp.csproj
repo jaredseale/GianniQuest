@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Ethereal Ascent\Cloud.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\CloudSpawner.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
+    <Compile Include="Assets\Scripts\Sewers\PressableButton.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Santa.cs" />
     <Compile Include="Assets\Scripts\SNICO\SNICOTutorial.cs" />
     <Compile Include="Assets\Scripts\IntroCutscene.cs" />
@@ -120,10 +121,8 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Sewers\PressableButton.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Dialogue\mom.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

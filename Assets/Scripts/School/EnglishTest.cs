@@ -168,6 +168,7 @@ public class EnglishTest : MonoBehaviour
     public void BeginReadingEssay() {
         readingEssay = true;
         pauser.canPause = false;
+        FindObjectOfType<DialogueManager>().inDialogue = true;
         FindObjectOfType<Player>().canMove = false;
         essayAnimator.SetTrigger("StartTest");
         sentences.Clear();
@@ -184,6 +185,7 @@ public class EnglishTest : MonoBehaviour
         FindObjectOfType<Player>().canMove = true;
         readingEssay = false;
         pauser.canPause = true;
+        FindObjectOfType<DialogueManager>().inDialogue = false;
         PlayerPrefs.SetString("TeacherDialogueState", "PostEssay");
     }
 

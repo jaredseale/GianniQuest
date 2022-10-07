@@ -3598,7 +3598,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153699818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.0638523, y: -1.3429999, z: 0}
+  m_LocalPosition: {x: -7.0607605, y: -1.3429999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 652228711}
@@ -6088,10 +6088,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1630210839}
-  thisSpeakerPitch: 1.5
+  thisSpeakerPitch: 1
   textSpeed: 1
   dialogueManager: {fileID: 0}
-  voiceSFX: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}
+  voiceSFX: {fileID: 8300000, guid: aef23b4d0b1116a40b65e7caf19fbb64, type: 3}
 --- !u!114 &1630210841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7333,7 +7333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954418383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.51215, y: -0.00000011920929, z: -10}
+  m_LocalPosition: {x: -8.515242, y: -0.00000011920929, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153699820}

@@ -160,13 +160,12 @@ public class DataManagement : MonoBehaviour
         PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
         PlayerPrefs.SetString("LairryDialogueState", "PostDollar");
         PlayerPrefs.SetInt("RicksDataManagement", 0);
-        PlayerPrefs.SetString("EtherealAscentEntry", "Open");
-
 
         RicksToggle.interactable = false;
     }
 
     public void CompleteEA() {
+        PlayerPrefs.SetString("EtherealAscentEntry", "Open");
         PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
         PlayerPrefs.SetString("SantaDialogueState", "PostDollar");
         PlayerPrefs.SetInt("EADataManagement", 0);

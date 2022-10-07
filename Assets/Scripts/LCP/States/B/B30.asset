@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: B30
   m_EditorClassIdentifier: 
   dialogueText: Ah, all apologies for putting on such a spectacle, but this charade
-    was truly for the sake of our whole species!
+    truly was for the sake of our whole species!
   characterName: Waiter
   characterSprite: {fileID: 21300000, guid: a5b9107eda6787443a9d1861f2d1d3d3, type: 3}
   characterVoice: {fileID: 8300000, guid: 2f94d06c54043e141a1e219c4660f9b4, type: 3}

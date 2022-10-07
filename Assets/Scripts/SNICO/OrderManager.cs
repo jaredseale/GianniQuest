@@ -9,6 +9,7 @@ public class OrderManager : MonoBehaviour
 {
     public List<List<string>> currentOrder;
 
+    [SerializeField] TextMeshProUGUI orderNumberText;
     [SerializeField] OrderState currentOrderState;
     [SerializeField] OrderState[] orderStateArray;
     int orderStateArrayIndex;
@@ -105,10 +106,13 @@ public class OrderManager : MonoBehaviour
 
     void Start() {
 
+        orderNumberText.text = "00";
+
         orderDictionary = GetComponent<OrderDictionary>();
 
         if (PlayerPrefs.GetString("SNICOProgress") == "FailedAfterCheckpoint") {
             orderStateArrayIndex = 10;
+            orderNumberText.text = "11";
         } else {
             orderStateArrayIndex = 0;
         }
@@ -338,6 +342,12 @@ public class OrderManager : MonoBehaviour
                 carAudio.Play();
             }
 
+            orderNumberText.text = (orderStateArrayIndex + 1).ToString();
+
+            if (orderStateArrayIndex + 1 < 10) {
+                orderNumberText.text = "0" + (orderStateArrayIndex + 1).ToString();
+            }
+
             carAudio.panStereo = 1f;
             StartCoroutine("CarAudioPanStart");
             StartCoroutine("DelayedOrderAudio");
@@ -423,6 +433,7 @@ public class OrderManager : MonoBehaviour
                 PlayerPrefs.SetString("SNICOEntry", "Done");
                 PlayerPrefs.SetString("DadDialogueState", "PreDollar");
                 winScreen.SetActive(true);
+                orderNumberText.text = "GG";
                 voiceAudio.PlayOneShot(winSFX);
             } else {
                 carAnimator.SetTrigger("carExit");
@@ -445,7 +456,6 @@ public class OrderManager : MonoBehaviour
             }
 
             orderStateArrayIndex++;
-
         }
     }
 

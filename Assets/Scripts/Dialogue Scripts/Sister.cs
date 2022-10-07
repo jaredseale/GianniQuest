@@ -9,11 +9,11 @@ public class Sister : MonoBehaviour
     public DialogueManager dialogueManager;
 
     string[] Init = new string[] {"Sounds like you forgot it was your turn to make Christmas Eve dinner this year, huh?",
-        "It's probably too late now to make anything, you could probably go grab a pizza or something really quick.",
-        "I heard they're selling them for cheap over at Pizza Hell this week, you should go check that out.",
+        "It's probably too late now to cook anything, you could probably go grab a pizza or something really quick.",
+        "I heard they're doing some kind of discount promotion over at Pizza Hell this week, you should go check that out.",
         "Before you do that, though, I have a favor to ask.",
-        "My friend has a massive crush on you and I kinda already set you up on a blind date with her haha oops ;-P",
-        "If you meet her at the new French restaurant down the street and she has a nice time, I'll give you a buck (one dollar) to start you out.",
+        "My friend has a massive crush on you and I kinda already set you up on a blind date with her hehe oops ;-P",
+        "I know it's kinda last minute, but if you meet her at the new French restaurant down the street and she has a nice time, I'll give you a buck (one dollar) to start you out.",
         "Don't mess this up :-)" };
     string[] Init2 = new string[] { "Did you already forget what I said...?",
         "If you go on a date with my friend, I'll give you a dollar for your pizza journey."};
