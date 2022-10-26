@@ -12,7 +12,7 @@ public class EAMusicManager : MonoBehaviour
     [SerializeField] AudioSource track6;
 
     float track2Threshold = 21f; //these will obviously need to be adjusted as the level is developed
-    float track3Threshold = 55f;
+    float track3Threshold = 62f;
     float track4Threshold = 91f;
     float track5Threshold = 129f;
     float track6Threshold = 164f;

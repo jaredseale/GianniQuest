@@ -8,7 +8,12 @@ public class PressableButton : MonoBehaviour
     public bool isTimed;
     public bool isPressed = false;
 
-    public GameObject correspondingDoor;
+    [SerializeField] GameObject correspondingDoor;
+    [SerializeField] Vector3 doorStartPos;
+    [SerializeField] Vector3 doorEndPos;
+    [SerializeField] float openSpeed;
+    [SerializeField] float closeSpeed;
+
 
     [SerializeField] Sprite pressedButtonSprite;
     [SerializeField] Sprite unpressedButtonSprite;
@@ -23,17 +28,51 @@ public class PressableButton : MonoBehaviour
         myAnim = GetComponent<Animator>();
         myAudio = GetComponent<AudioSource>();
         mySprite = GetComponent<SpriteRenderer>();
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        isPressed = true;
-        myAudio.Play();
-        mySprite.sprite = pressedButtonSprite;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision) {
         isPressed = false;
-        mySprite.sprite = unpressedButtonSprite;
     }
+
+
+    private void Update() {
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("PlayerFeet"))) {
+            if (isPressed == false) {
+                isPressed = true;
+                myAudio.Play();
+                mySprite.sprite = pressedButtonSprite;
+                StopAllCoroutines();
+                StartCoroutine(OpenDoor());
+            }
+        } else {
+            if (isPressed == true) {
+                isPressed = false;
+                mySprite.sprite = unpressedButtonSprite;
+                StopAllCoroutines();
+                StartCoroutine(CloseDoor());
+            }
+        }
+    }
+
+    IEnumerator OpenDoor() {
+        Vector3 startPosition = correspondingDoor.transform.position;
+        float time = 0f;
+
+        while (correspondingDoor.transform.position != doorEndPos) {
+            correspondingDoor.transform.position = Vector3.Lerp(startPosition, doorEndPos, (time / Vector3.Distance(startPosition, doorEndPos)) * openSpeed);
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    IEnumerator CloseDoor() {
+        Vector3 startPosition = correspondingDoor.transform.position;
+        float time = 0f;
+
+        while (correspondingDoor.transform.position != doorStartPos) {
+            correspondingDoor.transform.position = Vector3.Lerp(startPosition, doorStartPos, (time / Vector3.Distance(startPosition, doorStartPos)) * closeSpeed);
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
+
 
 }

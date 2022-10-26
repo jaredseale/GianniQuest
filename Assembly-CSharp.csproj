@@ -66,7 +66,7 @@
     <Compile Include="Assets\Scripts\Overworld\DollarCount.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkBounce.cs" />
     <Compile Include="Assets\Scripts\House\LucySpawn.cs" />
     <Compile Include="Assets\Scripts\SpawnPosition.cs" />
@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\Overworld\OverworldWaypoints.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
+    <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
