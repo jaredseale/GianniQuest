@@ -119,6 +119,8 @@ public class OverworldDialogue : MonoBehaviour
                 case "N4": //Ethereal Ascent
                     if (PlayerPrefs.GetString("EtherealAscentEntry") == "Closed") {
                         sentences.Enqueue("A mystical barrier prevents you from entering this area. Upon closer inspection, it's just a blue, locked gate.");
+                    } else if (PlayerPrefs.GetString("EtherealAscentEntry") == "Done") {
+                        sentences.Enqueue("I (Jared Seale, famous game developer) promise you there's nothing left to explore here.");
                     }
                     break;
 

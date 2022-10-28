@@ -546,7 +546,7 @@ GameObject:
   - component: {fileID: 1283726021}
   - component: {fileID: 1283726020}
   m_Layer: 8
-  m_Name: Basketball
+  m_Name: Stu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,8 +667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -388.841, y: -268.9291}
-  m_SizeDelta: {x: 366.0647, y: 663.57153}
+  m_AnchoredPosition: {x: -390.255, y: -268.685}
+  m_SizeDelta: {x: -153.74829, y: 191.17035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &1359176495
 VideoPlayer:
