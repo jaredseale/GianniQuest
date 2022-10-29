@@ -15,6 +15,7 @@ public class EggBreak : MonoBehaviour
     BoxCollider2D topOfEgg;
     Animator myAnim;
     AudioSource myAudio;
+    Player myPlayer;
     [SerializeField] ParticleSystem particles;
     [SerializeField] GameObject bird;
     [SerializeField] Animator eggGlowAnim;
@@ -24,6 +25,32 @@ public class EggBreak : MonoBehaviour
         topOfEgg = GetComponent<BoxCollider2D>();
         myAnim = GetComponent<Animator>();
         myAudio = GetComponent<AudioSource>();
+        myPlayer = FindObjectOfType<Player>();
+
+        if (yellowEgg && PlayerPrefs.GetInt("BrokeYellowEgg") == 1) {
+            Destroy(gameObject);
+        }
+
+        if (greenEgg && PlayerPrefs.GetInt("BrokeGreenEgg") == 1) {
+            Destroy(gameObject);
+        }
+
+        if (redEgg && PlayerPrefs.GetInt("BrokeRedEgg") == 1) {
+            Destroy(gameObject);
+        }
+
+        /*if (blueEgg && PlayerPrefs.GetInt("BrokeBlueEgg") == 1) {
+            Destroy(gameObject);
+        }*/
+
+        if (orangeEgg && PlayerPrefs.GetInt("BrokeOrangeEgg") == 1) {
+            Destroy(gameObject);
+        }
+
+        if (purpleEgg && PlayerPrefs.GetInt("BrokePurpleEgg") == 1) {
+            Destroy(gameObject);
+        }
+
     }
 
     void Update() {
@@ -34,6 +61,9 @@ public class EggBreak : MonoBehaviour
             eggGlowAnim.SetTrigger("breakEgg");
             myAudio.Play();
             bird.SetActive(true);
+
+            //bounce off the egg when you jump on it
+            myPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(myPlayer.GetComponent<Rigidbody2D>().velocity.x, 10f);
 
             if (yellowEgg) {
                 PlayerPrefs.SetInt("BrokeYellowEgg", 1);
