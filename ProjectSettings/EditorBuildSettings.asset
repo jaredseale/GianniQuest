@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ethereal Ascent.unity
     guid: 4f08d18a213be8a478a75482fe476dfa
+  - enabled: 1
+    path: Assets/Scenes/Sewers/Sewers 1.unity
+    guid: da32182e7d5b09c48be203ba9ebacfea
   m_configObjects: {}

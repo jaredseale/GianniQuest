@@ -104,9 +104,11 @@
     <Compile Include="Assets\Scripts\House\TimeOfDay.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderManager.cs" />
+    <Compile Include="Assets\Scripts\Sewers\BirdHatch.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Teacher.cs" />
     <Compile Include="Assets\Scripts\Dollar.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Sewers\EggBreak.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\LampSwing.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\UFOSpawner.cs" />
     <Compile Include="Assets\Scripts\Main Menu\DataManagement.cs" />
@@ -122,8 +124,7 @@
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Sewers\EggBreak.cs" />
-    <Compile Include="Assets\Scripts\Sewers\BirdHatch.cs" />
+    <Compile Include="Assets\Scripts\Sewers\SewersMusicManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
