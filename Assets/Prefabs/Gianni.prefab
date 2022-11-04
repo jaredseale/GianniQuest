@@ -63,7 +63,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00027078763, y: -0.16143863}
+  m_Offset: {x: 0.00067299604, y: -0.16143863}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -74,7 +74,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16008484, y: 0.036931008}
+  m_Size: {x: 0.14801863, y: 0.036931008}
   m_EdgeRadius: 0
 --- !u!1 &7014651134096138484
 GameObject:
@@ -226,6 +226,8 @@ MonoBehaviour:
   canMove: 0
   isOnGround: 0
   gianniClone: {fileID: 3300334536645839389, guid: 299be5cd092ce2540b73bab525d244e8, type: 3}
+  canDoubleJump: 0
+  randall: {fileID: 8398514271217464611, guid: 775cc1b829778ac48bcf446fd1a267a8, type: 3}
 --- !u!82 &7014651134096138492
 AudioSource:
   m_ObjectHideFlags: 0

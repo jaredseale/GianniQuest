@@ -39,9 +39,9 @@ public class EggBreak : MonoBehaviour
             Destroy(gameObject);
         }
 
-        /*if (blueEgg && PlayerPrefs.GetInt("BrokeBlueEgg") == 1) {
+        if (blueEgg && PlayerPrefs.GetInt("BrokeBlueEgg") == 1) {
             Destroy(gameObject);
-        }*/
+        }
 
         if (orangeEgg && PlayerPrefs.GetInt("BrokeOrangeEgg") == 1) {
             Destroy(gameObject);

@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     public bool canMove;
     public bool isOnGround; //used for interacting with things
     [SerializeField] GameObject gianniClone;
+    bool hasDoubleJump;
+    public bool canDoubleJump;
+    [SerializeField] GameObject randall;
+
 
     void Start() {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -25,6 +29,14 @@ public class Player : MonoBehaviour
         facingRight = true;
         jumpAnimationCanBeEnded = false;
         canMove = true;
+
+        if (PlayerPrefs.GetInt("HasDoubleJump") == 1) {
+            hasDoubleJump = true;
+            canDoubleJump = true;
+        } else {
+            hasDoubleJump = false;
+            canDoubleJump = false;
+        }
 
         float spawnXPos = FindObjectOfType<SpawnPosition>().spawnPosition.x;
         float spawnYPos = FindObjectOfType<SpawnPosition>().spawnPosition.y;
@@ -45,8 +57,16 @@ public class Player : MonoBehaviour
 
         if (playerFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
             isOnGround = true;
+            if (hasDoubleJump) {
+                canDoubleJump = true; //resets double jump
+            }
+            
         } else {
             isOnGround = false;
+        }
+
+        if (PlayerPrefs.GetInt("HasDoubleJump") == 1) { //for when you get the item
+            hasDoubleJump = true;
         }
 
         SpawnClone();
@@ -83,19 +103,32 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump")) {
 
-            if (!isOnGround) {
+            if (!isOnGround && !hasDoubleJump && !canDoubleJump) {
+                return;
+            } else if (!isOnGround && hasDoubleJump && !canDoubleJump) { //if already double jumped
                 return;
             }
 
             audioSource.PlayOneShot(jumpSound);
             StartCoroutine("JumpAnimationResetDelay");
-            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
-            playerRigidbody.velocity += jumpVelocityToAdd;
+            //Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
+            //playerRigidbody.velocity += jumpVelocityToAdd;
+
+            if (!isOnGround) {
+                playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, jumpSpeed / 1.2f); //little less jump height in the air
+            } else {
+                playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, jumpSpeed);
+            }
 
             if (facingRight) {
                 playerAnimator.SetBool("JumpingRight", true);
             } else {
                 playerAnimator.SetBool("JumpingLeft", true);
+            }
+
+            if (hasDoubleJump && !isOnGround) {
+                Instantiate(randall, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 1.7f, gameObject.transform.position.z), Quaternion.identity);
+                canDoubleJump = false;
             }
 
         }

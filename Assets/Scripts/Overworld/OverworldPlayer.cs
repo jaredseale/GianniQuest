@@ -178,11 +178,12 @@ public class OverworldPlayer : MonoBehaviour
                     break;
 
                 case "T":
-                    nextScene = "The Sewers";
+                    nextScene = "Sewers 1";
                     spawnPositionString = "sewer";
                     if (PlayerPrefs.GetString("SewersEntry") != "Open") {
                         canEnter = false;
                     }
+                    spawn.setNextSpawn(0.43f, 23f);
                     break;
 
                 case "J":
