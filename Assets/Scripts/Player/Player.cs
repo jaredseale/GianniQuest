@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    Rigidbody2D playerRigidbody;
+    public Rigidbody2D playerRigidbody;
     Animator playerAnimator;
     [SerializeField] BoxCollider2D playerFeet;
     [SerializeField] float moveSpeed = 5f;
@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     bool hasDoubleJump;
     public bool canDoubleJump;
     [SerializeField] GameObject randall;
+    public bool takingDamage;
+    public float iframeTime = 0.5f;
 
 
     void Start() {
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
         facingRight = true;
         jumpAnimationCanBeEnded = false;
         canMove = true;
+        takingDamage = false;
 
         if (PlayerPrefs.GetInt("HasDoubleJump") == 1) {
             hasDoubleJump = true;
@@ -89,8 +92,11 @@ public class Player : MonoBehaviour
             facingRight = false;
         }
 
-        Vector2 playerVelocity = new Vector2(controlThrow * moveSpeed, playerRigidbody.velocity.y);
-        playerRigidbody.velocity = playerVelocity;
+        if (!takingDamage) {
+            Vector2 playerVelocity = new Vector2(controlThrow * moveSpeed, playerRigidbody.velocity.y);
+            playerRigidbody.velocity = playerVelocity;
+        }
+        
 
         bool playerIsRunningRight = playerRigidbody.velocity.x > 0.5f;
         playerAnimator.SetBool("RunningRight", playerIsRunningRight);
@@ -145,6 +151,16 @@ public class Player : MonoBehaviour
     IEnumerator JumpAnimationResetDelay() {
         yield return new WaitForSeconds(0.35f);
         jumpAnimationCanBeEnded = true;
+    }
+
+    public void Hurt() {
+        StartCoroutine(IFrames());
+    }
+
+    public IEnumerator IFrames() {
+        takingDamage = true;
+        yield return new WaitForSeconds(iframeTime);
+        takingDamage = false;
     }
 
     public void SpawnClone() {

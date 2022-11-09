@@ -131,6 +131,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString("SantaDialogueState", "Init");
 
         //sewers state
+        PlayerPrefs.SetInt("HasDoubleJump", 0);
         PlayerPrefs.SetInt("HasCloner", 0);
 
         PlayerPrefs.SetInt("BrokeYellowEgg", 0);

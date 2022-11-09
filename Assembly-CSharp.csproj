@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Sewers\LightGates.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkBounce.cs" />
     <Compile Include="Assets\Scripts\House\LucySpawn.cs" />
     <Compile Include="Assets\Scripts\SpawnPosition.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Scripts\Ethereal Ascent\CloudSpawner.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
     <Compile Include="Assets\Scripts\Sewers\PressableButton.cs" />
+    <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Santa.cs" />
     <Compile Include="Assets\Scripts\SNICO\SNICOTutorial.cs" />
     <Compile Include="Assets\Scripts\IntroCutscene.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Assets\Scripts\School\EnglishTest.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderDictionary.cs" />
+    <Compile Include="Assets\Scripts\Sewers\SewersMusicManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Dad.cs" />
     <Compile Include="Assets\Scripts\MapLocationText.cs" />
     <Compile Include="Assets\Scripts\Overworld\RancidRicksAnim.cs" />
@@ -124,9 +127,7 @@
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Sewers\SewersMusicManager.cs" />
-    <Compile Include="Assets\Scripts\Sewers\Randall.cs" />
-    <Compile Include="Assets\Scripts\Sewers\LightGates.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Enemies\Keke.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -704,6 +705,9 @@
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -752,6 +756,9 @@
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+    </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
@@ -772,12 +779,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
