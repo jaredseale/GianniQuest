@@ -75,9 +75,9 @@ public class EAManager : MonoBehaviour
         }
     }
     private void InitialStarPlacement() {
-        for (int i = 0; i < 400; i++) {
+        for (int i = 0; i < 800; i++) {
             float xVal = Random.Range(-60f, 70f);
-            float yVal = Random.Range(130f, 200f); //adjust these once you have every in its final place
+            float yVal = Random.Range(130f, 270f); //adjust these once you have every in its final place
             Instantiate(stars[Random.Range(0, 3)], new Vector3(xVal, yVal, 0f), Quaternion.identity, gameObject.transform);
         }
     }

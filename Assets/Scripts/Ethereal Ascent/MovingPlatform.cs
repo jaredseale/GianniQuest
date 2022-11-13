@@ -10,11 +10,15 @@ public class MovingPlatform : MonoBehaviour
     public int speed;
     private Vector3 startPosition;
     private Vector3 endPosition;
+    public Player myPlayer;
+    BoxCollider2D myCollider;
 
     void Start() {
         startPosition = platformPathStart.transform.position;
         endPosition = platformPathEnd.transform.position;
         StartCoroutine(Vector3LerpCoroutine(gameObject, endPosition, speed));
+        myPlayer = FindObjectOfType<Player>();
+        myCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update() {
@@ -24,6 +28,14 @@ public class MovingPlatform : MonoBehaviour
         if (transform.position == startPosition) {
             StartCoroutine(Vector3LerpCoroutine(gameObject, endPosition, speed));
         }
+
+        /*if (myCollider.IsTouchingLayers(LayerMask.GetMask("PlayerFeet")) && myPlayer.playerRigidbody.velocity.y <= 0f) {
+            Debug.Log("it's happenin");
+            myPlayer.transform.SetParent(gameObject.transform, true);
+        } else {
+            myPlayer.transform.parent = null;
+        }*/
+
     }
 
     IEnumerator Vector3LerpCoroutine(GameObject obj, Vector3 target, float speed) {
@@ -38,7 +50,9 @@ public class MovingPlatform : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col) {
-        col.gameObject.transform.SetParent(gameObject.transform, true);
+        if (col.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0f) {
+            col.gameObject.transform.SetParent(gameObject.transform, true);
+        }
     }
 
     void OnCollisionExit2D(Collision2D col) {

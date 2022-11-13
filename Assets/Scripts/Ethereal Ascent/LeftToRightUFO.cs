@@ -46,8 +46,9 @@ public class LeftToRightUFO : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col) {
-        Debug.Log("test");
-        col.gameObject.transform.SetParent(gameObject.transform, true);
+        if (col.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0f) {
+            col.gameObject.transform.SetParent(gameObject.transform, true);
+        }
     }
 
     void OnCollisionExit2D(Collision2D col) {
