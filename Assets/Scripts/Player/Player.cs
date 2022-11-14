@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 
     public Rigidbody2D playerRigidbody;
+    [SerializeField] SpriteRenderer playerSprite;
     Animator playerAnimator;
     [SerializeField] BoxCollider2D playerFeet;
     [SerializeField] float moveSpeed = 5f;
@@ -14,6 +15,7 @@ public class Player : MonoBehaviour
     public bool jumpAnimationCanBeEnded;
     AudioSource audioSource;
     [SerializeField] AudioClip jumpSound;
+    [SerializeField] AudioClip hurtSound;
     public bool canMove;
     public bool isOnGround; //used for interacting with things
     [SerializeField] GameObject gianniClone;
@@ -154,13 +156,25 @@ public class Player : MonoBehaviour
     }
 
     public void Hurt() {
+        audioSource.PlayOneShot(hurtSound);
         StartCoroutine(IFrames());
+        StartCoroutine(DamageBlink());
     }
 
     public IEnumerator IFrames() {
         takingDamage = true;
         yield return new WaitForSeconds(iframeTime);
         takingDamage = false;
+    }
+
+    public IEnumerator DamageBlink() {
+        float blinkSpeed = 5f;
+        for (float i = 0; i < blinkSpeed; i++) {
+            playerSprite.color = new Color(1f, 1f, 1f, 0f);
+            yield return new WaitForSeconds(iframeTime / blinkSpeed / 2f);
+            playerSprite.color = new Color(1f, 1f, 1f, 1f);
+            yield return new WaitForSeconds(iframeTime / blinkSpeed / 2f);
+        }
     }
 
     public void SpawnClone() {

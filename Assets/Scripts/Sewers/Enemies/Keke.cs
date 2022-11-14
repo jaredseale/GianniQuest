@@ -47,7 +47,12 @@ public class Keke : MonoBehaviour
         }
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) {
-            myPlayer.Hurt();
+
+            if (!myPlayer.takingDamage) { //only hurt if out of iframes
+                myPlayer.Hurt();
+                FindObjectOfType<PlayerHealth>().HurtPlayer(1);
+            }
+            
             Vector2 playerVelo = myPlayer.GetComponent<Rigidbody2D>().velocity;
             if (myPlayer.transform.position.x > gameObject.transform.position.x) { //bounce gianni the other way depending on where he is to the enemy
                 myPlayer.playerRigidbody.velocity = new Vector2(10f, 12f);

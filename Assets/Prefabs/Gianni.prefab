@@ -218,12 +218,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 0}
+  playerSprite: {fileID: 7014651134096138485}
   playerFeet: {fileID: 8296402037502823496}
   moveSpeed: 10
   jumpSpeed: 22
   facingRight: 0
   jumpAnimationCanBeEnded: 0
   jumpSound: {fileID: 8300000, guid: 250470c89154e9e41abd05e10682a2f2, type: 3}
+  hurtSound: {fileID: 8300000, guid: 55c656407306fad4dad0478bb5754651, type: 3}
   canMove: 0
   isOnGround: 0
   gianniClone: {fileID: 3300334536645839389, guid: 299be5cd092ce2540b73bab525d244e8, type: 3}
