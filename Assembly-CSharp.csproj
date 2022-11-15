@@ -104,12 +104,14 @@
     <Compile Include="Assets\Scripts\Dialogue Scripts\PizzaGuy.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldDialogue.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Enemies\Bat.cs" />
     <Compile Include="Assets\Scripts\House\TimeOfDay.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderManager.cs" />
     <Compile Include="Assets\Scripts\Sewers\BirdHatch.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Teacher.cs" />
     <Compile Include="Assets\Scripts\Dollar.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Enemies\Keke.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Sewers\EggBreak.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\LampSwing.cs" />
@@ -120,6 +122,8 @@
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\ShotGlass.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\Intermission.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\LetterBoxer\LetterBoxer.cs" />
     <Compile Include="Assets\Scripts\House\Ornament.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\EAMusicManager.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldWaypoints.cs" />
@@ -127,10 +131,8 @@
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Sewers\Enemies\Keke.cs" />
-    <Compile Include="Assets\LetterBoxer\LetterBoxer.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\Sewers\Enemies\Bat.cs" />
+    <Compile Include="Assets\Scripts\House\TreeGifts.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Bomb.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public bool canMove;
     public bool isOnGround; //used for interacting with things
     [SerializeField] GameObject gianniClone;
+    [SerializeField] GameObject bomb;
     bool hasDoubleJump;
     public bool canDoubleJump;
     [SerializeField] GameObject randall;
@@ -75,7 +76,7 @@ public class Player : MonoBehaviour
         }
 
         SpawnClone();
-
+        SetBomb();
     }
 
     public void Run() {
@@ -88,10 +89,12 @@ public class Player : MonoBehaviour
         float controlThrow = Input.GetAxisRaw("Horizontal");
 
         //to determine the direction the player should be facing in the jump animation
-        if (controlThrow > 0.5f) {
-            facingRight = true;
-        } else if (controlThrow < -0.5f) {
-            facingRight = false;
+        if (playerFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+            if (controlThrow > 0.5f) {
+                facingRight = true;
+            } else if (controlThrow < -0.5f) {
+                facingRight = false;
+            } 
         }
 
         if (!takingDamage) {
@@ -185,6 +188,14 @@ public class Player : MonoBehaviour
                     Destroy(clone);
                 }
                 Instantiate(gianniClone, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+            }
+        }
+    }
+
+    public void SetBomb() {
+        if (Input.GetKeyDown("e") || Input.GetKeyDown("c")) {
+            if (canMove && PlayerPrefs.GetInt("HasBomb") == 1 && FindObjectOfType<Bomb>() == null) {
+                Instantiate(bomb, gameObject.transform.position, Quaternion.identity);
             }
         }
     }

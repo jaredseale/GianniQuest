@@ -46,10 +46,15 @@ public class Bat : MonoBehaviour
     }
 
     private void Update() {
+
+        //
+        // player jump damage
+        //
+
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("PlayerFeet")) && myPlayer.playerRigidbody.velocity.y < 0f) {
             batHealth -= 1;
 
-            if (batHealth == 0) {
+            if (batHealth <= 0) {
                 BatDie();
             } else {
                 StartCoroutine(HurtBat());
@@ -58,6 +63,24 @@ public class Bat : MonoBehaviour
             //bounce off the enemy when you jump on it
             myPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(myPlayer.GetComponent<Rigidbody2D>().velocity.x, 15f);
         }
+
+        //
+        // bomb damage
+        //
+
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("Explosion"))) {
+            batHealth -= 2;
+
+            if (batHealth <= 0) {
+                BatDie();
+            } else {
+                StartCoroutine(HurtBat());
+            }
+        }
+
+        //
+        //gun damage
+        //
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) { //hurt the player
 
@@ -93,7 +116,6 @@ public class Bat : MonoBehaviour
 
         foreach (var waypoint in waypoints) {
             while ((bat.transform.position - waypoint).sqrMagnitude > 0.001f) {
-                Debug.Log("moving to waypoint: " + waypoint);
                 bat.transform.position = Vector3.MoveTowards(
                           bat.transform.position,
                           waypoint,
