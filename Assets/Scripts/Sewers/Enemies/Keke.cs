@@ -25,7 +25,6 @@ public class Keke : MonoBehaviour
         myAudio = GetComponent<AudioSource>();
         myPlayer = FindObjectOfType<Player>();
 
-
         startPosition = startPoint.transform.position;
         endPosition = endPoint.transform.position;
 
@@ -61,6 +60,10 @@ public class Keke : MonoBehaviour
         //
         // gun damage
         //
+
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("Bullet"))) {
+            KekeDie();
+        }
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) {
 
@@ -110,8 +113,8 @@ public class Keke : MonoBehaviour
     }
 
     void KekeDie() {
-        StopAllCoroutines();
         myCollider.enabled = false;
+        StopAllCoroutines();
         myAnim.SetTrigger("kekeDie");
         myAudio.Play();
         StartCoroutine(TimeOut());
@@ -121,5 +124,4 @@ public class Keke : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
-
 }

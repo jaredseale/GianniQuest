@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Sprite fullHeart;
     [SerializeField] Sprite halfHeart;
     [SerializeField] Sprite emptyHeart;
+    Animator myAnim;
 
     private void Awake() { //keeps health going through rooms
         if (FindObjectsOfType(GetType()).Length > 1) {
@@ -18,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start() {
         DontDestroyOnLoad(gameObject);
+        myAnim = GetComponent<Animator>();
 
         health = 6; //full health on entry into the sewers
     }
@@ -54,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void HurtPlayer(int hurtAmount) {
+        myAnim.SetTrigger("shakeHealth"); 
         health -= hurtAmount;
 
         if (health < 0) {

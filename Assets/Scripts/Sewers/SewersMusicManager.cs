@@ -8,9 +8,10 @@ public class SewersMusicManager : MonoBehaviour
     public AudioSource fullTrack;
     public AudioSource loopTrack;
 
+    public int beat = 0;
+
     void Start() {
-	    
-        
+        StartCoroutine(BeatTracker());
     }
 
     void Update() {
@@ -19,5 +20,15 @@ public class SewersMusicManager : MonoBehaviour
             loopTrack.gameObject.SetActive(true);
         }
         
+    }
+
+    IEnumerator BeatTracker() {
+        while (true) {
+            yield return new WaitForSecondsRealtime(5f);
+            beat++;
+            if (beat > 4) {
+                beat = 1;
+            }
+        }
     }
 }

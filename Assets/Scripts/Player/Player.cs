@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 
     public Rigidbody2D playerRigidbody;
+    Pause pause;
     [SerializeField] SpriteRenderer playerSprite;
     Animator playerAnimator;
     [SerializeField] BoxCollider2D playerFeet;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        pause = FindObjectOfType<Pause>();
         facingRight = true;
         jumpAnimationCanBeEnded = false;
         canMove = true;
@@ -52,9 +54,11 @@ public class Player : MonoBehaviour
     }
 
     void Update() {
-        if (canMove && GameObject.Find("Game Manager").GetComponent<Pause>().gamePaused == false) { //currently used by loading zones to prevent movement while loading is happening
+        if (canMove && pause.gamePaused == false) { //currently used by loading zones to prevent movement while loading is happening
             Run();
             Jump();
+            SpawnClone();
+            SetBomb();
         } else {
             playerRigidbody.velocity = new Vector2(0f, 0f);
             playerAnimator.SetBool("RunningRight", false);
@@ -71,12 +75,9 @@ public class Player : MonoBehaviour
             isOnGround = false;
         }
 
-        if (PlayerPrefs.GetInt("HasDoubleJump") == 1) { //for when you get the item
+        if (PlayerPrefs.GetInt("HasDoubleJump") == 1) { //for the moment when you get the cloud
             hasDoubleJump = true;
         }
-
-        SpawnClone();
-        SetBomb();
     }
 
     public void Run() {

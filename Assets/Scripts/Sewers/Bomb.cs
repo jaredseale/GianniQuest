@@ -35,7 +35,6 @@ public class Bomb : MonoBehaviour
                 FindObjectOfType<PlayerHealth>().HurtPlayer(2);
             }
 
-            Vector2 playerVelo = myPlayer.GetComponent<Rigidbody2D>().velocity;
             if (myPlayer.transform.position.x > parentObject.transform.position.x) { //bounce gianni the other way depending on where he is to the enemy
                 myPlayer.playerRigidbody.velocity = new Vector2(10f, 12f);
             } else {

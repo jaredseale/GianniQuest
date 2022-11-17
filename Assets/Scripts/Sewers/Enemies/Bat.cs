@@ -18,7 +18,6 @@ public class Bat : MonoBehaviour
     [SerializeField] GameObject mySprite;
 
     public bool attacking;
-
     public int batHealth = 2;
 
     BoxCollider2D myCollider;
@@ -52,13 +51,7 @@ public class Bat : MonoBehaviour
         //
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("PlayerFeet")) && myPlayer.playerRigidbody.velocity.y < 0f) {
-            batHealth -= 1;
-
-            if (batHealth <= 0) {
-                BatDie();
-            } else {
-                StartCoroutine(HurtBat());
-            }
+            TakeDamage(1);
 
             //bounce off the enemy when you jump on it
             myPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(myPlayer.GetComponent<Rigidbody2D>().velocity.x, 15f);
@@ -69,18 +62,16 @@ public class Bat : MonoBehaviour
         //
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("Explosion"))) {
-            batHealth -= 2;
-
-            if (batHealth <= 0) {
-                BatDie();
-            } else {
-                StartCoroutine(HurtBat());
-            }
+            TakeDamage(2);
         }
 
         //
         //gun damage
         //
+
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("Bullet"))) {
+            TakeDamage(1);
+        }
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) { //hurt the player
 
@@ -138,11 +129,20 @@ public class Bat : MonoBehaviour
         }
     }
 
+    void TakeDamage(int damage) {
+        batHealth -= damage;
+
+        if (batHealth <= 0) {
+            BatDie();
+        } else {
+            StartCoroutine(HurtBat());
+        }
+    }
 
     void BatDie() {
         myAudio.enabled = false;
-        StopAllCoroutines();
         myCollider.enabled = false;
+        StopAllCoroutines();
         myAnim.SetTrigger("die");
         bat.GetComponent<AudioSource>().PlayOneShot(dieSFX);
         StartCoroutine(TimeOut());
@@ -159,6 +159,13 @@ public class Bat : MonoBehaviour
         myCollider.enabled = false;
         yield return new WaitForSeconds(0.5f);
         myCollider.enabled = true;
-        myAnim.SetTrigger("beginAttack");
+
+        if (attacking) {
+            myAnim.SetTrigger("beginAttack");
+        } else {
+            myAnim.SetTrigger("returnToIdle");
+        }
+
+        yield return null;
     }
 }
