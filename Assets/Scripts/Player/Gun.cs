@@ -41,16 +41,18 @@ public class Gun : MonoBehaviour
 
     void Update() {
         if (player.facingRight == true) {
-            gameObject.transform.position = new Vector3(Mathf.Abs(xPos) + player.transform.position.x, gameObject.transform.position.y);
+            //the random looking xPos offsets are necessary because of the rotations I think
+            //note to self: never have a non symmetrical player sprite ever again it makes shit too hard lol
+            gameObject.transform.position = new Vector3(Mathf.Abs(xPos + 0.2f) + player.transform.position.x, gameObject.transform.position.y);
             gameObject.transform.rotation = Quaternion.Euler(0f, 0f, -45f);
             gameObject.transform.localScale = new Vector3(-xScale, gameObject.transform.localScale.y);
         } else {
-            gameObject.transform.position = new Vector3(-xPos + player.transform.position.x, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector3(-xPos - 0.9f + player.transform.position.x, gameObject.transform.position.y);
             gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 45f);
             gameObject.transform.localScale = new Vector3(Mathf.Abs(xScale), gameObject.transform.localScale.y);
         }
 
-        if (Input.GetMouseButton(1) && !pause.gamePaused) {
+        if (Input.GetMouseButton(1) && player.canMove) {
             mySprite.enabled = true;
             if (shootOffCooldown) {
                 shootOffCooldown = false;
@@ -71,7 +73,6 @@ public class Gun : MonoBehaviour
                 
             }
         }
-
     }
 
     /*private void PlayerRecoil(string direction) { //this does not work the way i want it to

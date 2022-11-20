@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
     }
 
     IEnumerator DestroyNextFrame() {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForEndOfFrame();
         Destroy(gameObject);
     }
 

@@ -16,9 +16,11 @@ public class Pause : MonoBehaviour
     [SerializeField] Toggle viewOfFieldToggle = null;
     [SerializeField] Animator transition;
     [SerializeField] GameObject locationTitle;
+    Player player;
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
+        player = FindObjectOfType<Player>();
     }
     void Update() {
         GamePause();
@@ -30,6 +32,7 @@ public class Pause : MonoBehaviour
             pauseMenu.SetActive(true);
             locationTitle.SetActive(false);
             Time.timeScale = 0f; //prevent player movement
+            player.canMove = false;
             mixer.SetFloat("MusicEQ", 0.05f); //gives the underwater effect
         } else if (Input.GetButtonDown("Pause") && gamePaused == true) {
             ClosePauseMenu();
@@ -40,6 +43,7 @@ public class Pause : MonoBehaviour
         gamePaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f; //return player movement
+        player.canMove = true;
         mixer.SetFloat("MusicEQ", 1f);
     }
     public void ExitToMap() {
@@ -47,7 +51,7 @@ public class Pause : MonoBehaviour
         if (FindObjectOfType<Player>()) {
             FindObjectOfType<Player>().canMove = false;
         }
-        Time.timeScale = 1f; //return player movement
+        Time.timeScale = 1f;
         mixer.SetFloat("MusicEQ", 1f);
         FindObjectOfType<LevelLoader>().loadSceneDelay = 4f;
         transition.SetTrigger("levelTransition");
