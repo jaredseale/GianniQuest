@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: dcee42b9e132e9042bdce909174591f0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3215455555218717797
+    second: glimback_death_0
+  - first:
+      213: -2445250646484067698
+    second: glimback_death_1
+  - first:
+      213: 6698653855488318133
+    second: glimback_death_2
+  - first:
+      213: 1420322178536584423
+    second: glimback_death_3
+  - first:
+      213: 4537217620847830704
+    second: glimback_death_4
+  - first:
+      213: -8983292751813062225
+    second: glimback_death_5
+  - first:
+      213: -3529350567135992411
+    second: glimback_death_6
+  - first:
+      213: 4549933131393758410
+    second: glimback_death_7
+  - first:
+      213: 1959169735790363367
+    second: glimback_death_8
+  - first:
+      213: -1250282618252475074
+    second: glimback_death_9
+  - first:
+      213: 812689330741367565
+    second: glimback_death_10
+  - first:
+      213: -8880854358404274874
+    second: glimback_death_11
+  - first:
+      213: -8727399030301979694
+    second: glimback_death_12
+  - first:
+      213: -5797807711086714769
+    second: glimback_death_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +74,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +83,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 85
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,9 +115,306 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: glimback_death_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 236
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c3edf8ac79f9c20800000000000000
+      internalID: 3215455555218717797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_1
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 193
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ad5851e79b01ed0800000000000000
+      internalID: -2445250646484067698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_2
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 214
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba9ea9c03666fc50800000000000000
+      internalID: 6698653855488318133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_3
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 0
+        width: 220
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e438460f7ff5b310800000000000000
+      internalID: 1420322178536584423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_4
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 0
+        width: 221
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6274f036f67fe30800000000000000
+      internalID: 4537217620847830704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_5
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 0
+        width: 222
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa157d676dee45380800000000000000
+      internalID: -8983292751813062225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_6
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 0
+        width: 219
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a52906cb5a350fc0800000000000000
+      internalID: -3529350567135992411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 176
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac47180931c942f30800000000000000
+      internalID: 4549933131393758410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_8
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 173
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e20b7c9e7e503b10800000000000000
+      internalID: 1959169735790363367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_9
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 0
+        width: 221
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35473e359a16aee0800000000000000
+      internalID: -1250282618252475074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_10
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 0
+        width: 220
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03d697f3a0474b00800000000000000
+      internalID: 812689330741367565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_11
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 0
+        width: 219
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6456559830ed0c480800000000000000
+      internalID: -8880854358404274874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glimback_death_12
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 0
+        width: 219
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db03c952dc02e680800000000000000
+      internalID: -8727399030301979694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
