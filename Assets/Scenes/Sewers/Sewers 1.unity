@@ -79488,6 +79488,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1474840414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1089245337324549171, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+  m_PrefabInstance: {fileID: 1519555106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1482876794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3759692911912271891, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
@@ -79588,6 +79593,10 @@ PrefabInstance:
       propertyPath: controlsMenu
       value: 
       objectReference: {fileID: 1772103201}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: mapControls
+      value: 
+      objectReference: {fileID: 1474840414}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_Volume
       value: 0.194
@@ -79668,6 +79677,10 @@ PrefabInstance:
     - target: {fileID: 189444346422355532, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 296087628311214373, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 604958795666680319, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -148426,7 +148439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7844266728945253443, guid: 192c3f112da2af844835c81b2174d207, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 192c3f112da2af844835c81b2174d207, type: 3}

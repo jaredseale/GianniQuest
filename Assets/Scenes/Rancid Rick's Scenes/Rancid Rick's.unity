@@ -8605,6 +8605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f20d534008824d84ebc11bb87eff6d69, type: 3}
+--- !u!1 &1298154100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1089245337324549171, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+  m_PrefabInstance: {fileID: 1519555106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1307538560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9747,6 +9752,10 @@ PrefabInstance:
       propertyPath: gunControls
       value: 
       objectReference: {fileID: 1614616375}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: mapControls
+      value: 
+      objectReference: {fileID: 1298154100}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_Volume
       value: 0.194

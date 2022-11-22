@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Pause : MonoBehaviour
     [SerializeField] GameObject clonerControls;
     [SerializeField] GameObject bombControls;
     [SerializeField] GameObject gunControls;
+    [SerializeField] GameObject mapControls;
 
 
     private void Start() {
@@ -109,16 +111,22 @@ public class Pause : MonoBehaviour
             clonerControls.SetActive(true);
         }
 
-        if (PlayerPrefs.GetInt("HasBomb") == 0) {
+        if (PlayerPrefs.GetInt("HasBomb") == 0 || !SceneManager.GetActiveScene().name.Contains("Sewers")) {
             bombControls.SetActive(false);
         } else {
             bombControls.SetActive(true);
         }
 
-        if (PlayerPrefs.GetInt("HasGun") == 0) {
+        if (PlayerPrefs.GetInt("HasGun") == 0 || !SceneManager.GetActiveScene().name.Contains("Sewers")) {
             gunControls.SetActive(false);
         } else {
             gunControls.SetActive(true);
+        }
+
+        if (!SceneManager.GetActiveScene().name.Contains("Sewers")) {
+            mapControls.SetActive(false);
+        } else {
+            mapControls.SetActive(true);
         }
     }
 

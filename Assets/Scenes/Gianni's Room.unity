@@ -412,6 +412,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8004013101066742275, guid: 9b55796e835dcf344a2710da3bb906e5, type: 3}
   m_PrefabInstance: {fileID: 8004013102111591669}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1117079183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1089245337324549171, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+  m_PrefabInstance: {fileID: 938696092526323833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1200607521 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5693077231250991339, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
@@ -1741,6 +1746,10 @@ PrefabInstance:
       propertyPath: gunControls
       value: 
       objectReference: {fileID: 1574906635}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: mapControls
+      value: 
+      objectReference: {fileID: 1117079183}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: BypassReverbZones
       value: 1

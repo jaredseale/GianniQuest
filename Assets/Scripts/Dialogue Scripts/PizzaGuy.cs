@@ -8,12 +8,12 @@ public class PizzaGuy : MonoBehaviour
     public DialogueTrigger currentDialogue;
     public DialogueManager dialogueManager;
 
-    string[] Init = new string[] {"Happy holidays and welcome to Pizza Hell, where the lakes of fire are hot and the pizzas are even hotter.",
+    string[] Init = new string[] {"Happy holidays and welcome to Pizza Hell, home of the sinfully delicious, brimstone-fired Inferno Deep Dish.",
         "If you want one of our fresh 'zas, it's going to run you around six dollars. Actually, it is going to run you exactly six dollars. To the cent.",
         "It looks like you don't quite have enough dough on you. Come back when you can afford the dough. Do you get the joke there.",
         "Also, in case you forgot, you can press TAB to leave. Our door is only one-way thanks to budget cuts."};
-    string[] HasMoney = new string[] {"Hey little man, welcome back to Pizza Hell. You look like you have just enough money for a premium pie.",
-        "Here you go, one no cheese pepperoni spinach bacon ranch pineapple crab meat cucumber stuffed crust deep dish deep fried honey baked wood fired pizza." };
+    string[] HasMoney = new string[] {"Hey little man, welcome back to Pizza Hell. You look like you have just enough money for a premium slice, or eight.",
+        "One Purgaterrific Pie, coming right up!" };
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
