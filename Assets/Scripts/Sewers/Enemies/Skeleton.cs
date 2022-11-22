@@ -25,6 +25,8 @@ public class Skeleton : MonoBehaviour
     [SerializeField] BoxCollider2D aggroZone;
     [SerializeField] GameObject arrow;
     [SerializeField] GameObject arrowSpawnPos;
+    public bool isGraySkeleton;
+    public bool isPatrollingSkeleton;
     public float arrowSpeed = 12;
     [SerializeField] AudioSource myAudio;
     Player myPlayer;
@@ -32,19 +34,21 @@ public class Skeleton : MonoBehaviour
     void Start() {
         myPlayer = FindObjectOfType<Player>();
 
-        startPosition = startPoint.transform.position;
-        endPosition = endPoint.transform.position;
+        if (isPatrollingSkeleton) {
+            startPosition = startPoint.transform.position;
+            endPosition = endPoint.transform.position;
 
-        myAnim.SetTrigger("startWalking"); //i don't know why this fixes the animation issue but it does
+            myAnim.SetTrigger("startWalking"); //i don't know why this fixes the animation issue but it does
 
-        if (endPosition.x < startPosition.x) { //flip the sprite if it's walking to the left
-            mySprite.transform.localScale = new Vector3(-mySprite.transform.localScale.x, 1f, 1f);
+            if (endPosition.x < startPosition.x) { //flip the sprite if it's walking to the left
+                mySprite.transform.localScale = new Vector3(-mySprite.transform.localScale.x, 1f, 1f);
+            }
+
+            idling = true;
+            attacking = false;
+
+            StartCoroutine(IdleTime());
         }
-
-        idling = true;
-        attacking = false;
-
-        StartCoroutine(IdleTime());
     }
 
     private void Update() {
@@ -145,7 +149,12 @@ public class Skeleton : MonoBehaviour
         GameObject spawnedArrow = Instantiate(arrow, arrowSpawnPos.transform.position, Quaternion.identity);
         SpriteRenderer arrowSprite = spawnedArrow.GetComponentInChildren<SpriteRenderer>();
         arrowSprite.transform.localScale = new Vector3(skeleton.transform.localScale.x, 1f, 1f);
-        spawnedArrow.GetComponent<Rigidbody2D>().velocity = new Vector2(arrowSpeed * skeleton.transform.localScale.x, 0f);
+        if (!isGraySkeleton) {
+            spawnedArrow.GetComponent<Rigidbody2D>().velocity = new Vector2(arrowSpeed * skeleton.transform.localScale.x, 0f);
+        } else { //gray skeleton shoots faster arrows
+            spawnedArrow.GetComponent<Rigidbody2D>().velocity = new Vector2(arrowSpeed * skeleton.transform.localScale.x * 1.5f, 0f);
+        }
+
     }
 
     public void EndAttack() { //driven by anim
@@ -157,8 +166,10 @@ public class Skeleton : MonoBehaviour
         if (aggroZone.IsTouchingLayers(LayerMask.GetMask("Player"))) {
             Attack();
         } else {
-            myAnim.SetTrigger("startWalking");
-            StartCoroutine(Vector3LerpCoroutine(skeleton, endPosition, speed));
+            if (isPatrollingSkeleton) {
+                myAnim.SetTrigger("startWalking");
+                StartCoroutine(Vector3LerpCoroutine(skeleton, endPosition, speed));
+            }
         }
         
     }

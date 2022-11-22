@@ -225,6 +225,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 9.02}
   m_EdgeRadius: 0
+--- !u!1 &551059901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 296087628311214373, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+  m_PrefabInstance: {fileID: 938696092526323833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &560001562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,6 +319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eadf7591d5b667a44bc552963191a446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &710378531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1836829720366465741, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+  m_PrefabInstance: {fileID: 938696092526323833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1032196202
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +543,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6050736742562696851, guid: f0ce7ada51bd2a24ea5124ef3f87e37c, type: 3}
   m_PrefabInstance: {fileID: 6050736741341729381}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1270212911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2035994529357173814, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+  m_PrefabInstance: {fileID: 938696092526323833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1283726018
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +753,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359176493}
   m_CullTransparentMesh: 0
+--- !u!1 &1454149453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3759692911912271891, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+  m_PrefabInstance: {fileID: 938696092526323833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1515312079
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +848,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1574906635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6187459316923326371, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+  m_PrefabInstance: {fileID: 938696092526323833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1683637019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1387,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 653633637}
+    - target: {fileID: 189444346422355532, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 604958795666680319, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 653633637}
+    - target: {fileID: 604958795666680319, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayButtonHoverSound
+      objectReference: {fileID: 0}
     - target: {fileID: 938696092214856368, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1462,6 +1499,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1181768554370593567, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 653633637}
+    - target: {fileID: 1181768554370593567, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayButtonHoverSound
+      objectReference: {fileID: 0}
     - target: {fileID: 1667325638469481188, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
@@ -1554,6 +1599,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4999021630122773428, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 653633637}
+    - target: {fileID: 4999021630122773428, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayControls
+      objectReference: {fileID: 0}
     - target: {fileID: 5575072250422109594, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1561,6 +1614,14 @@ PrefabInstance:
     - target: {fileID: 5575072250422109594, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButtonHoverSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696412543155671713, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 653633637}
+    - target: {fileID: 5696412543155671713, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMainPauseMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
@@ -1660,6 +1721,26 @@ PrefabInstance:
       propertyPath: locationTitle
       value: 
       objectReference: {fileID: 625154410}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: controlsMenu
+      value: 
+      objectReference: {fileID: 551059901}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: doubleJumpControls
+      value: 
+      objectReference: {fileID: 1454149453}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: clonerControls
+      value: 
+      objectReference: {fileID: 1270212911}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: bombControls
+      value: 
+      objectReference: {fileID: 710378531}
+    - target: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
+      propertyPath: gunControls
+      value: 
+      objectReference: {fileID: 1574906635}
     - target: {fileID: 2083337905996763718, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: BypassReverbZones
       value: 1

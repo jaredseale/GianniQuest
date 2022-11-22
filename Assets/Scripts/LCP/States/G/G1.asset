@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d391ab8640e909e4fa4bbf4cddfad159, type: 3}
   m_Name: G1
   m_EditorClassIdentifier: 
-  dialogueText: The two of you stand outside in the summer heat, looking at the crashed
-    spaceship and reflecting on your accomplishments in both new romance and extraterrestrial
-    combat.
+  dialogueText: The two of you stand outside in the bitter winter heat, looking at
+    the crashed spaceship and reflecting on your accomplishments in both new romance
+    and extraterrestrial combat.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

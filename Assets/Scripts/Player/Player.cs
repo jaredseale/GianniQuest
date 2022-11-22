@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject randall;
     public bool takingDamage;
     public float iframeTime = 0.5f;
+    [SerializeField] SewersDeathManager deathManager;
+    public bool inLoadingZone;
 
 
     void Start() {
@@ -37,6 +40,7 @@ public class Player : MonoBehaviour
         jumpAnimationCanBeEnded = false;
         canMove = true;
         takingDamage = false;
+        inLoadingZone = false;
 
         if (PlayerPrefs.GetInt("HasDoubleJump") == 1) {
             hasDoubleJump = true;
@@ -98,7 +102,7 @@ public class Player : MonoBehaviour
             } 
         }
 
-        if (!takingDamage) {
+        if (!takingDamage && !inLoadingZone) {
             Vector2 playerVelocity = new Vector2(controlThrow * moveSpeed, playerRigidbody.velocity.y);
             playerRigidbody.velocity = playerVelocity;
         }
@@ -195,7 +199,8 @@ public class Player : MonoBehaviour
 
     public void SetBomb() {
         if (Input.GetKeyDown("e") || Input.GetKeyDown("c")) {
-            if (canMove && PlayerPrefs.GetInt("HasBomb") == 1 && FindObjectOfType<Bomb>() == null) {
+            if (canMove && PlayerPrefs.GetInt("HasBomb") == 1 && FindObjectOfType<Bomb>() == null 
+                && SceneManager.GetActiveScene().name.Contains("Sewers")) {
                 Instantiate(bomb, gameObject.transform.position, Quaternion.identity);
             }
         }

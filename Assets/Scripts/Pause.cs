@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour
     public bool gamePaused = false;
     public bool canPause = true;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject controlsMenu;
     [SerializeField] AudioMixer mixer;
     AudioSource audioSource;
     [SerializeField] GameObject viewOfField = null;
@@ -17,6 +18,12 @@ public class Pause : MonoBehaviour
     [SerializeField] Animator transition;
     [SerializeField] GameObject locationTitle;
     Player player;
+
+    [SerializeField] GameObject doubleJumpControls;
+    [SerializeField] GameObject clonerControls;
+    [SerializeField] GameObject bombControls;
+    [SerializeField] GameObject gunControls;
+
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
@@ -34,9 +41,9 @@ public class Pause : MonoBehaviour
             Time.timeScale = 0f; //prevent player movement
             player.canMove = false;
             mixer.SetFloat("MusicEQ", 0.05f); //gives the underwater effect
-        } else if (Input.GetButtonDown("Pause") && gamePaused == true) {
+        } /*else if (Input.GetButtonDown("Pause") && gamePaused == true && controlsMenu.activeSelf == false) {
             ClosePauseMenu();
-        }
+        }*/
     }
 
     public void ClosePauseMenu() {
@@ -84,6 +91,40 @@ public class Pause : MonoBehaviour
         } else {
             viewOfField.SetActive(false);
         }
+    }
+
+    public void DisplayControls() {
+        pauseMenu.SetActive(false);
+        controlsMenu.SetActive(true);
+
+        if (PlayerPrefs.GetInt("HasDoubleJump") == 0) {
+            doubleJumpControls.SetActive(false);
+        } else {
+            doubleJumpControls.SetActive(true);
+        }
+
+        if (PlayerPrefs.GetInt("HasCloner") == 0) {
+            clonerControls.SetActive(false);
+        } else {
+            clonerControls.SetActive(true);
+        }
+
+        if (PlayerPrefs.GetInt("HasBomb") == 0) {
+            bombControls.SetActive(false);
+        } else {
+            bombControls.SetActive(true);
+        }
+
+        if (PlayerPrefs.GetInt("HasGun") == 0) {
+            gunControls.SetActive(false);
+        } else {
+            gunControls.SetActive(true);
+        }
+    }
+
+    public void ReturnToMainPauseMenu() {
+        controlsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
     }
 
 }

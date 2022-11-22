@@ -19,10 +19,6 @@ public class LevelLoader : MonoBehaviour
     }
 
 
-    //public void LoadScene(string sceneName, bool musicFadeOut) {
-    //    SceneManager.LoadScene(sceneName);
-    //}
-
     public void LoadSceneWithDelay(string sceneName, bool musicFadeOut) {
         if (FindObjectOfType<Pause>()) {
             FindObjectOfType<Pause>().canPause = false;
@@ -43,6 +39,11 @@ public class LevelLoader : MonoBehaviour
 
         if (destroyMusicPlayer) {
             FindObjectOfType<MusicPlayer>().destroyable = true;
+            if (FindObjectOfType<SewersMusicManager>() != null) {
+                SewersMusicManager sewersMusic = FindObjectOfType<SewersMusicManager>();
+                sewersMusic.destroyable = true;
+            }
+            
         }
         yield return new WaitForSeconds(0.1f); //this lets the music player destroy itself before the next scene is loaded
 

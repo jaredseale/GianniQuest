@@ -5,6 +5,8 @@ using UnityEngine;
 public class Keke : MonoBehaviour
 {
 
+    public bool isRedKeke;
+    [SerializeField] GameObject healthDrop;
     public GameObject startPoint;
     public GameObject endPoint;
     public int speed;
@@ -113,6 +115,9 @@ public class Keke : MonoBehaviour
     }
 
     void KekeDie() {
+        if (isRedKeke) {
+            Instantiate(healthDrop, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1f, 0f), Quaternion.identity);
+        }
         myCollider.enabled = false;
         StopAllCoroutines();
         myAnim.SetTrigger("kekeDie");

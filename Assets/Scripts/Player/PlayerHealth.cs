@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Sprite emptyHeart;
     Animator myAnim;
 
-    private void Awake() { //keeps health going through rooms
+    private void Awake() { //keeps health going through sewer rooms
         if (FindObjectsOfType(GetType()).Length > 1) {
             Destroy(gameObject);
         }
@@ -22,10 +23,43 @@ public class PlayerHealth : MonoBehaviour
         myAnim = GetComponent<Animator>();
 
         health = 6; //full health on entry into the sewers
+        UpdateHealth();
     }
 
     private void Update() {
+        if (!SceneManager.GetActiveScene().name.Contains("Sewers")) {
+            Destroy(gameObject);
+        }
+    }
 
+    public void HurtPlayer(int hurtAmount) {
+        myAnim.SetTrigger("shakeHealth"); 
+        health -= hurtAmount;
+
+        UpdateHealth();
+
+        if (health < 0) {
+            health = 0;
+        }
+
+        if (health <= 0) {
+            //die
+            FindObjectOfType<SewersDeathManager>().PlayerDie();
+            Destroy(gameObject); //forces it to come back upon respawning
+        }
+    }
+
+    public void HealPlayer(int healAmount) {
+        health += healAmount;
+
+        UpdateHealth();
+
+        if (health > 6) {
+            health = 6;
+        }
+    }
+
+    private void UpdateHealth() {
         foreach (SpriteRenderer heart in hearts) {
             heart.sprite = emptyHeart;
         }
@@ -52,27 +86,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (health >= 6) {
             hearts[2].sprite = fullHeart;
-        }
-    }
-
-    public void HurtPlayer(int hurtAmount) {
-        myAnim.SetTrigger("shakeHealth"); 
-        health -= hurtAmount;
-
-        if (health < 0) {
-            health = 0;
-        }
-
-        if (health == 0) {
-            //die
-        }
-    }
-
-    public void HealPlayer(int healAmount) {
-        health += healAmount;
-
-        if (health > 6) {
-            health = 6;
         }
     }
 }
