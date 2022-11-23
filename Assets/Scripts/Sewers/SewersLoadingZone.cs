@@ -34,16 +34,17 @@ public class SewersLoadingZone : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) {
 
             pause.canPause = false;
-            player.inLoadingZone = true;
             FindObjectOfType<SpawnPosition>().setNextSpawn(nextScenePos.x, nextScenePos.y);
+            player.inLoadingZone = true;
 
             switch (direction) {
-                case "left":
-                    playerVelo = new Vector2(-8f, -10f);
-                    break;
 
                 case "right":
                     playerVelo = new Vector2(8f, -10f);
+                    break;
+
+                case "left":
+                    playerVelo = new Vector2(-8f, -10f);
                     break;
 
                 case "up":
@@ -59,6 +60,7 @@ public class SewersLoadingZone : MonoBehaviour
                     break;
             }
 
+            
             PlayerPrefs.SetInt("SewersLocationDisplay", 0); //hides the location display when moving between sewer rooms
             crossfade.GetComponent<Animator>().SetTrigger("doorTransition");
             levelLoader.loadSceneDelay = 1;

@@ -34158,7 +34158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -37743,6 +37743,8 @@ MonoBehaviour:
   ascentWaypoint: {fileID: 708272488}
   nextScene: 
   SM64sound: {fileID: 8300000, guid: 5106d36afcf6f6344bae53932d52762c, type: 3}
+  dollars: {fileID: 1622731685}
+  helpButton: {fileID: 509943372}
   spawnPositionString: saloon
   playerInTransit: 0
   playerOnMajorWaypoint: 0

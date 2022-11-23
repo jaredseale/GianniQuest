@@ -24,6 +24,9 @@ public class OverworldPlayer : MonoBehaviour
     AudioSource audioSource;
     [SerializeField] AudioClip SM64sound;
 
+    [SerializeField] GameObject dollars;
+    [SerializeField] GameObject helpButton;
+
     public string spawnPositionString = "saloon";
     public bool playerInTransit;
     public bool playerOnMajorWaypoint;
@@ -251,6 +254,10 @@ public class OverworldPlayer : MonoBehaviour
                 FindObjectOfType<Pause>().canPause = false;
                 audioSource.PlayOneShot(SM64sound);
                 FindObjectOfType<OverworldCamera>().ZoomToNewLocation(spawnPositionString);
+
+                dollars.SetActive(false);
+                helpButton.SetActive(false);
+
                 LevelLoader levelLoader = FindObjectOfType<LevelLoader>();
                 levelLoader.LoadSceneWithDelay(nextScene, true);
             }
