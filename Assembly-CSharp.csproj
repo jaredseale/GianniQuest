@@ -143,6 +143,7 @@
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Sewers\SewersLadder.cs" />
     <Compile Include="Assets\Scripts\Sewers\SewersLocationDisplay.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Enemies\DeathField.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

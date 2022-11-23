@@ -40,14 +40,15 @@ public class Gun : MonoBehaviour
     }
 
     void Update() {
+
         if (player.facingRight == true) {
             //the random looking xPos offsets are necessary because of the rotations I think
             //note to self: never have a non symmetrical player sprite ever again it makes shit too hard and code too ugly lol
-            gameObject.transform.position = new Vector3(Mathf.Abs(xPos + 0.2f) + player.transform.position.x, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector3(Mathf.Abs(xPos + 0.1f) + player.transform.position.x, gameObject.transform.position.y);
             gameObject.transform.rotation = Quaternion.Euler(0f, 0f, -45f);
             gameObject.transform.localScale = new Vector3(-xScale, gameObject.transform.localScale.y);
         } else {
-            gameObject.transform.position = new Vector3(-xPos - 0.9f + player.transform.position.x, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector3(-xPos - 0.1f + player.transform.position.x, gameObject.transform.position.y);
             gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 45f);
             gameObject.transform.localScale = new Vector3(Mathf.Abs(xScale), gameObject.transform.localScale.y);
         }

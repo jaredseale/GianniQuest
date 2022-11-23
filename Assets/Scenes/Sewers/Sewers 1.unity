@@ -74217,56 +74217,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 938696092214856371, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
   m_PrefabInstance: {fileID: 1519555106}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1300549680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1300549681}
-  - component: {fileID: 1300549682}
-  m_Layer: 9
-  m_Name: Death Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1300549681
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300549680}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 774006907}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1300549682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300549680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a51daad2f7a3694ab7a9fcca651f9a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerAudio: {fileID: 2057549680}
-  deathSFX: {fileID: 8300000, guid: bb4992d817b886b4ba646cbf1408562d, type: 3}
-  playerRB: {fileID: 2057549682}
-  playerCollider: {fileID: 2057549679}
-  playerSprite: {fileID: 2057549684}
-  cmCamera: {fileID: 1153699819}
-  crossfade: {fileID: 706151064}
 --- !u!1 &1327831922
 GameObject:
   m_ObjectHideFlags: 0
@@ -127728,6 +127678,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4390642813660716230, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 2057549680}
+    - target: {fileID: 4390642813660716230, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: playerRB
+      value: 
+      objectReference: {fileID: 2057549682}
+    - target: {fileID: 4390642813660716230, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 2057549679}
+    - target: {fileID: 4390642813660716230, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 2057549684}
+    - target: {fileID: 4390642813660716230, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: cmCamera
+      value: 
+      objectReference: {fileID: 1153699819}
+    - target: {fileID: 4390642813660716230, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: crossfade
+      value: 
+      objectReference: {fileID: 706151064}
     - target: {fileID: 7014651134096138484, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_Name
       value: Gianni
@@ -127775,10 +127749,6 @@ PrefabInstance:
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7195792879660237887, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}

@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Sprite halfHeart;
     [SerializeField] Sprite emptyHeart;
     Animator myAnim;
+    Canvas canvas = null;
 
     private void Awake() { //keeps health going through sewer rooms
         if (FindObjectsOfType(GetType()).Length > 1) {
@@ -21,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     void Start() {
         DontDestroyOnLoad(gameObject);
         myAnim = GetComponent<Animator>();
+        canvas = GetComponent<Canvas>();
 
         health = 6; //full health on entry into the sewers
         UpdateHealth();
@@ -29,6 +31,10 @@ public class PlayerHealth : MonoBehaviour
     private void Update() {
         if (!SceneManager.GetActiveScene().name.Contains("Sewers")) {
             Destroy(gameObject);
+        }
+
+        if (canvas.worldCamera == null) { //this re-hooks up the health to the screen when the current scene is reloaded
+            canvas.worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         }
     }
 
