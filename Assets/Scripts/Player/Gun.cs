@@ -31,6 +31,7 @@ public class Gun : MonoBehaviour
         pause = FindObjectOfType<Pause>();
 
         xPos = gameObject.transform.position.x;
+        Debug.Log(xPos);
         xScale = gameObject.transform.localScale.x;
         mySprite = GetComponent<SpriteRenderer>();
         mySprite.enabled = false;

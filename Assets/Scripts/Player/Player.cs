@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
 
     public void Jump() {
 
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump") && !inLoadingZone) {
 
             if (!isOnGround && !hasDoubleJump && !canDoubleJump) {
                 return;

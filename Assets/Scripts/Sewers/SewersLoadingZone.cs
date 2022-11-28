@@ -12,14 +12,18 @@ public class SewersLoadingZone : MonoBehaviour
     [SerializeField] GameObject crossfade;
     Player player = null;
     Pause pause = null;
-    Vector2 playerVelo;
+    public Vector2 playerVelo;
     LevelLoader levelLoader;
-
+    public bool isEnteringRoom;
+    SewersLoadingZone[] areaLoadingZones;
 
     void Start() {
         player = FindObjectOfType<Player>();
         pause = FindObjectOfType<Pause>();
         levelLoader = FindObjectOfType<LevelLoader>();
+        isEnteringRoom = true;
+        areaLoadingZones = FindObjectsOfType<SewersLoadingZone>();
+        StartCoroutine(EnterRoomFailsafe());
     }
 
     void Update() {
@@ -31,24 +35,33 @@ public class SewersLoadingZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
 
-        if (other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("Player") && !isEnteringRoom) {
 
             pause.canPause = false;
             FindObjectOfType<SpawnPosition>().setNextSpawn(nextScenePos.x, nextScenePos.y);
+            
             player.inLoadingZone = true;
 
             switch (direction) {
 
                 case "right":
-                    playerVelo = new Vector2(8f, -10f);
+                    foreach (SewersLoadingZone loadingZone in areaLoadingZones) { //all these foreaches solve a problem where
+                                                                                  //other loading zones in the same scene were
+                                                                                  //affecting the playerVelo as well
+                        loadingZone.playerVelo = new Vector2(8f, -10f);
+                    }
                     break;
 
                 case "left":
-                    playerVelo = new Vector2(-8f, -10f);
+                    foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
+                        loadingZone.playerVelo = new Vector2(-8f, -10f);
+                    }
                     break;
 
                 case "up":
-                    playerVelo = new Vector2(0f, 8f);
+                    foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
+                        loadingZone.playerVelo = new Vector2(0f, 8f);
+                    }
                     break;
 
                 case "down":
@@ -56,7 +69,7 @@ public class SewersLoadingZone : MonoBehaviour
                     break;
 
                 default:
-                    Debug.Log("think you typed in the direction wrong my guy");
+                    Debug.Log("think you typoed the direction my guy");
                     break;
             }
 
@@ -67,5 +80,41 @@ public class SewersLoadingZone : MonoBehaviour
             levelLoader.LoadSceneWithDelay(sceneToLoad, false);
 
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Player")) {
+            player.inLoadingZone = false;
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f); //stops the player
+            isEnteringRoom = false;
+        }
+    }
+
+    IEnumerator EnterRoomFailsafe() {
+        yield return new WaitForSeconds(0.05f); //DON'T USE WAITFORENDOFFRAME IT SUCKS
+
+        if (GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player"))) {
+            player.inLoadingZone = true;
+            switch (direction) {
+                case "right":
+                    foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
+                        loadingZone.playerVelo = new Vector2(-8f, -10f);
+                    }
+                    break;
+
+                case "left":
+                    foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
+                        loadingZone.playerVelo = new Vector2(8f, -10f);
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        //this will solve the case where the player is starting from the first room and has no other way to trigger the bool false
+        yield return new WaitForSeconds(2f);
+        isEnteringRoom = false;
     }
 }

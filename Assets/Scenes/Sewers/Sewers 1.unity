@@ -38581,6 +38581,8 @@ MonoBehaviour:
   sceneToLoad: Sewers 8
   nextScenePos: {x: 20.94, y: -0.75}
   crossfade: {fileID: 2073640050}
+  playerVelo: {x: 0, y: 0}
+  isEnteringRoom: 0
 --- !u!61 &744113692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74382,7 +74384,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.8749607, y: -2.9604692}
+  m_Offset: {x: -4.56956, y: -2.9604692}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -74393,7 +74395,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.7499204, y: 6.9209385}
+  m_Size: {x: 10.139118, y: 6.9209385}
   m_EdgeRadius: 0
 --- !u!114 &1332325995
 MonoBehaviour:
@@ -74409,8 +74411,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: left
   sceneToLoad: Sewers 2
-  nextScenePos: {x: 20.94, y: -0.75}
+  nextScenePos: {x: 24.24, y: -0.75}
   crossfade: {fileID: 2073640050}
+  playerVelo: {x: 0, y: 0}
+  isEnteringRoom: 0
 --- !u!1 &1335804984
 GameObject:
   m_ObjectHideFlags: 0
