@@ -524,6 +524,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3cb544b8d0140e245ad587b7662afe72, type: 3}
   - {fileID: 8300000, guid: 0f96ce6481e4eb041981c4a97ba264b9, type: 3}
   - {fileID: 8300000, guid: 54ea87d016634a44b92b924af46cba92, type: 3}
+  gunShot: {fileID: 8300000, guid: 20d882e839891534aab936c87b98bea3, type: 3}
 --- !u!82 &7195792879660237887
 AudioSource:
   m_ObjectHideFlags: 0
@@ -536,7 +537,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8717204355028567090, guid: bc10036fb2189114cb34613bbf6a681f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8721e1ec7b04e3948b51c9db4c659683, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

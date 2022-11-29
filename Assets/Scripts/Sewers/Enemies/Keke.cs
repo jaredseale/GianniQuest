@@ -36,7 +36,8 @@ public class Keke : MonoBehaviour
             mySprite.transform.localScale = new Vector3(-mySprite.transform.localScale.x, 1f, 1f);
         }
 
-        StartCoroutine(IdleTime());
+        //StartCoroutine(IdleTime());
+        StartCoroutine(Vector3LerpCoroutine(gameObject, endPosition, speed));
     }
 
     private void Update() {
@@ -126,7 +127,7 @@ public class Keke : MonoBehaviour
     }
 
     IEnumerator TimeOut() {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }
 }

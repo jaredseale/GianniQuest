@@ -132,10 +132,13 @@ public class MainMenu : MonoBehaviour
 
         //sewers state
         PlayerPrefs.SetInt("SewersLocationDisplay", 1);
+
         PlayerPrefs.SetInt("HasDoubleJump", 0);
         PlayerPrefs.SetInt("HasCloner", 0);
         PlayerPrefs.SetInt("HasBomb", 0);
         PlayerPrefs.SetInt("HasGun", 0);
+
+        PlayerPrefs.SetInt("Room3Gate", 0);
 
         PlayerPrefs.SetInt("BrokeYellowEgg", 0);
         PlayerPrefs.SetInt("BrokeGreenEgg", 0);

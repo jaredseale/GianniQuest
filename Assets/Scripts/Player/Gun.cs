@@ -18,6 +18,7 @@ public class Gun : MonoBehaviour
     int lastBulletNumber = 0;
 
     [SerializeField] AudioClip[] gunNotes;
+    [SerializeField] AudioClip gunShot;
     SewersMusicManager sewerMusic;
     Pause pause;
 
@@ -26,12 +27,13 @@ public class Gun : MonoBehaviour
             gameObject.SetActive(false);
         }
 
+        gameObject.transform.SetParent(null); //detaches it from the player to hopefully prevent issues
+
         player = FindObjectOfType<Player>();
         sewerMusic = FindObjectOfType<SewersMusicManager>();
         pause = FindObjectOfType<Pause>();
 
-        xPos = gameObject.transform.position.x;
-        Debug.Log(xPos);
+        //xPos = player.transform.position.x;
         xScale = gameObject.transform.localScale.x;
         mySprite = GetComponent<SpriteRenderer>();
         mySprite.enabled = false;
@@ -43,13 +45,12 @@ public class Gun : MonoBehaviour
     void Update() {
 
         if (player.facingRight == true) {
-            //the random looking xPos offsets are necessary because of the rotations I think
             //note to self: never have a non symmetrical player sprite ever again it makes shit too hard and code too ugly lol
-            gameObject.transform.position = new Vector3(Mathf.Abs(xPos + 0.1f) + player.transform.position.x, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector3(player.transform.position.x + 0.3f, player.transform.position.y - 0.2f);
             gameObject.transform.rotation = Quaternion.Euler(0f, 0f, -45f);
             gameObject.transform.localScale = new Vector3(-xScale, gameObject.transform.localScale.y);
         } else {
-            gameObject.transform.position = new Vector3(-xPos - 0.1f + player.transform.position.x, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector3(player.transform.position.x - 0.3f, player.transform.position.y - 0.2f);
             gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 45f);
             gameObject.transform.localScale = new Vector3(Mathf.Abs(xScale), gameObject.transform.localScale.y);
         }
@@ -72,7 +73,6 @@ public class Gun : MonoBehaviour
                 }
 
                 PlayGunshot();
-                
             }
         }
     }
@@ -107,7 +107,7 @@ public class Gun : MonoBehaviour
     }
 
     private void PlayGunshot() {
-        if (sewerMusic.beat == 1) {
+        /*if (sewerMusic.beat == 1) { //if i ever decide i like the musical gun better
             myAudio.PlayOneShot(gunNotes[0]);
         } else if (sewerMusic.beat == 2) {
             myAudio.PlayOneShot(gunNotes[1]);
@@ -115,6 +115,10 @@ public class Gun : MonoBehaviour
             myAudio.PlayOneShot(gunNotes[2]);
         } else if (sewerMusic.beat == 4) {
             myAudio.PlayOneShot(gunNotes[3]);
-        }
+        }*/
+
+        myAudio.pitch = Random.Range(0.9f, 1.3f);
+        myAudio.PlayOneShot(gunShot);
+
     }
 }
