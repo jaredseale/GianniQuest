@@ -95,6 +95,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString("TimeOfDay", "Day");
         PlayerPrefs.SetInt("OverworldInstructions", 0);
         PlayerPrefs.SetString("IntroCutsceneStatus", "Unwatched");
+        PlayerPrefs.SetInt("DisplayMenuCutsceneSkipText", 0);
         PlayerPrefs.SetInt("Dollars", 0);
 
         //house dialogue
@@ -139,6 +140,8 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("HasGun", 0);
 
         PlayerPrefs.SetInt("Room3Gate", 0);
+        PlayerPrefs.SetInt("Room5Button", 0);
+        PlayerPrefs.SetInt("Room5WestWall", 0);
 
         PlayerPrefs.SetInt("BrokeYellowEgg", 0);
         PlayerPrefs.SetInt("BrokeGreenEgg", 0);

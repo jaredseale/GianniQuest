@@ -12,7 +12,7 @@ public class SewersLoadingZone : MonoBehaviour
     [SerializeField] GameObject crossfade;
     Player player = null;
     Pause pause = null;
-    public Vector2 playerVelo;
+    Vector2 playerVelo;
     LevelLoader levelLoader;
     public bool isEnteringRoom;
     SewersLoadingZone[] areaLoadingZones;
@@ -22,7 +22,10 @@ public class SewersLoadingZone : MonoBehaviour
         pause = FindObjectOfType<Pause>();
         levelLoader = FindObjectOfType<LevelLoader>();
         isEnteringRoom = true;
+
+
         areaLoadingZones = FindObjectsOfType<SewersLoadingZone>();
+
         StartCoroutine(EnterRoomFailsafe());
     }
 
@@ -60,12 +63,14 @@ public class SewersLoadingZone : MonoBehaviour
 
                 case "up":
                     foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
-                        loadingZone.playerVelo = new Vector2(0f, 8f);
+                        loadingZone.playerVelo = new Vector2(0f, 10f);
                     }
                     break;
 
                 case "down":
-                    //let gravity do the job baby
+                    foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
+                        loadingZone.playerVelo = new Vector2(0f, -18f);
+                    }
                     break;
 
                 default:
@@ -85,7 +90,10 @@ public class SewersLoadingZone : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
             player.inLoadingZone = false;
-            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f); //stops the player
+            if (direction != "down") {
+                player.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -20f); //stops the player's x, keeps falling speed
+            }
+            
             isEnteringRoom = false;
         }
     }
@@ -108,13 +116,19 @@ public class SewersLoadingZone : MonoBehaviour
                     }
                     break;
 
+                case "up":
+                    foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
+                        loadingZone.playerVelo = new Vector2(0f, -20f);
+                    }
+                    break;
+
                 default:
                     break;
             }
         }
 
         //this will solve the case where the player is starting from the first room and has no other way to trigger the bool false
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         isEnteringRoom = false;
     }
 }

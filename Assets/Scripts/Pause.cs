@@ -81,6 +81,8 @@ public class Pause : MonoBehaviour
         transition.SetTrigger("levelTransition");
         FindObjectOfType<LevelLoader>().loadSceneDelay = 4f;
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Main Menu", true);
+
+        PlayerPrefs.SetInt("SewersLocationDisplay", 1);
     }
 
     public void PlayButtonHoverSound() {

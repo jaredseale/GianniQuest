@@ -186,6 +186,7 @@ public class OverworldPlayer : MonoBehaviour
                     if (PlayerPrefs.GetString("SewersEntry") != "Open") {
                         canEnter = false;
                     }
+                    PlayerPrefs.SetInt("Room5Button", 0); //prevents a softlock in the case the player exits the game before breaking the yellow egg
                     spawn.setNextSpawn(0.43f, 23f);
                     break;
 
