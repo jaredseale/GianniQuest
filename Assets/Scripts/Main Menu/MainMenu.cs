@@ -142,6 +142,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("Room3Gate", 0);
         PlayerPrefs.SetInt("Room5Button", 0);
         PlayerPrefs.SetInt("Room5WestWall", 0);
+        PlayerPrefs.SetInt("Room5EastWall", 0);
 
         PlayerPrefs.SetInt("BrokeYellowEgg", 0);
         PlayerPrefs.SetInt("BrokeGreenEgg", 0);

@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (canvas.worldCamera == null) { //this re-hooks up the health to the screen when the current scene is reloaded
+        if (canvas.worldCamera == null && SceneManager.GetActiveScene().name != "Overworld") { //this re-hooks up the health to the screen when the current scene is reloaded
             canvas.worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         }
     }

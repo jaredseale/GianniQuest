@@ -10303,6 +10303,7 @@ MonoBehaviour:
   nextScenePos: {x: -7.78, y: -7.75}
   crossfade: {fileID: 2073640050}
   isEnteringRoom: 0
+  goingFromOutsideToInside: 0
 --- !u!61 &846480482
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11558,6 +11559,7 @@ MonoBehaviour:
   nextScenePos: {x: -27.81, y: 1.27}
   crossfade: {fileID: 2073640050}
   isEnteringRoom: 0
+  goingFromOutsideToInside: 0
 --- !u!1 &1335804984
 GameObject:
   m_ObjectHideFlags: 0
@@ -11963,11 +11965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562379215800720147, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.071
+      value: -5.61
       objectReference: {fileID: 0}
     - target: {fileID: 5562379215800720147, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.69
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 5562379215800720147, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_LocalScale.x

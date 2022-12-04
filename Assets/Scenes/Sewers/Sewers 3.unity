@@ -15639,6 +15639,8 @@ MonoBehaviour:
   sceneToLoad: Sewers 4
   nextScenePos: {x: 25.74, y: -0.75}
   crossfade: {fileID: 2073640050}
+  isEnteringRoom: 0
+  goingFromOutsideToInside: 0
 --- !u!61 &766224814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17548,6 +17550,8 @@ MonoBehaviour:
   sceneToLoad: Sewers 2
   nextScenePos: {x: -30, y: 0.26}
   crossfade: {fileID: 2073640050}
+  isEnteringRoom: 0
+  goingFromOutsideToInside: 0
 --- !u!1 &1335804984
 GameObject:
   m_ObjectHideFlags: 0
@@ -17958,11 +17962,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562379215800720147, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.071
+      value: -9.03
       objectReference: {fileID: 0}
     - target: {fileID: 5562379215800720147, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.69
+      value: 7.11
       objectReference: {fileID: 0}
     - target: {fileID: 5562379215800720147, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
       propertyPath: m_LocalScale.x

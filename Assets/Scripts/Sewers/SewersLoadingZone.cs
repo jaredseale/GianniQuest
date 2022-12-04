@@ -16,6 +16,7 @@ public class SewersLoadingZone : MonoBehaviour
     LevelLoader levelLoader;
     public bool isEnteringRoom;
     SewersLoadingZone[] areaLoadingZones;
+    public bool goingFromOutsideToInside;
 
     void Start() {
         player = FindObjectOfType<Player>();
@@ -78,12 +79,19 @@ public class SewersLoadingZone : MonoBehaviour
                     break;
             }
 
+            if (!goingFromOutsideToInside) {
+                PlayerPrefs.SetInt("SewersLocationDisplay", 0); //hides the location display when moving between sewer rooms
+            }
             
-            PlayerPrefs.SetInt("SewersLocationDisplay", 0); //hides the location display when moving between sewer rooms
             crossfade.GetComponent<Animator>().SetTrigger("doorTransition");
-            levelLoader.loadSceneDelay = 1;
-            levelLoader.LoadSceneWithDelay(sceneToLoad, false);
 
+            if (goingFromOutsideToInside) {
+                levelLoader.loadSceneDelay = 4;
+                levelLoader.LoadSceneWithDelay(sceneToLoad, true);
+            } else {
+                levelLoader.loadSceneDelay = 1;
+                levelLoader.LoadSceneWithDelay(sceneToLoad, false);
+            }
         }
     }
 

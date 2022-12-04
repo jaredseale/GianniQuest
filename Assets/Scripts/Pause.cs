@@ -26,6 +26,8 @@ public class Pause : MonoBehaviour
     [SerializeField] GameObject gunControls;
     [SerializeField] GameObject mapControls;
 
+    //DISABLE BEFORE RELEASE
+    private bool debugMode = true;
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
@@ -33,6 +35,10 @@ public class Pause : MonoBehaviour
     }
     void Update() {
         GamePause();
+
+        if (Input.GetKey(KeyCode.Tab) && Input.GetKeyDown(KeyCode.P)) {
+            SewersStateReset();
+        }
     }
 
     public void GamePause() {
@@ -41,7 +47,11 @@ public class Pause : MonoBehaviour
             pauseMenu.SetActive(true);
             locationTitle.SetActive(false);
             Time.timeScale = 0f; //prevent player movement
-            player.canMove = false;
+
+            if (player != null) { //prevents an error on the overworld
+                player.canMove = false;
+            }
+
             mixer.SetFloat("MusicEQ", 0.05f); //gives the underwater effect
         } /*else if (Input.GetButtonDown("Pause") && gamePaused == true && controlsMenu.activeSelf == false) {
             ClosePauseMenu();
@@ -52,7 +62,11 @@ public class Pause : MonoBehaviour
         gamePaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f; //return player movement
-        player.canMove = true;
+
+        if (player != null) { //prevents an error on the overworld
+            player.canMove = true;
+        }
+        
         mixer.SetFloat("MusicEQ", 1f);
     }
     public void ExitToMap() {
@@ -135,6 +149,27 @@ public class Pause : MonoBehaviour
     public void ReturnToMainPauseMenu() {
         controlsMenu.SetActive(false);
         pauseMenu.SetActive(true);
+    }
+
+    private void SewersStateReset() {
+        PlayerPrefs.SetInt("SewersLocationDisplay", 1);
+
+        PlayerPrefs.SetInt("HasDoubleJump", 0);
+        PlayerPrefs.SetInt("HasCloner", 0);
+        PlayerPrefs.SetInt("HasBomb", 0);
+        PlayerPrefs.SetInt("HasGun", 0);
+
+        PlayerPrefs.SetInt("Room3Gate", 0);
+        PlayerPrefs.SetInt("Room5Button", 0);
+        PlayerPrefs.SetInt("Room5WestWall", 0);
+        PlayerPrefs.SetInt("Room5EastWall", 0);
+
+        PlayerPrefs.SetInt("BrokeYellowEgg", 0);
+        PlayerPrefs.SetInt("BrokeGreenEgg", 0);
+        PlayerPrefs.SetInt("BrokeRedEgg", 0);
+        PlayerPrefs.SetInt("BrokeBlueEgg", 0);
+        PlayerPrefs.SetInt("BrokeOrangeEgg", 0);
+        PlayerPrefs.SetInt("BrokePurpleEgg", 0);
     }
 
 }

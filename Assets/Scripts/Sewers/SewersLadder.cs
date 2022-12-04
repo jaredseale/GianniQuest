@@ -48,7 +48,7 @@ public class SewersLadder : MonoBehaviour
 
             PlayerPrefs.SetInt("SewersLocationDisplay", 1); //sets the location text for the sewers to show the next time you enter
 
-            transition.SetTrigger("levelTransition");
+            transition.SetTrigger("doorTransition");
             audioSource.PlayOneShot(doorOpenSFX);
             levelLoader.LoadSceneWithDelay(sceneToLoad, fadeOutMusicOnLoad);
         }
