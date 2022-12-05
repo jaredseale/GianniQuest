@@ -183,7 +183,7 @@ public class Skeleton : MonoBehaviour
     }
 
     IEnumerator TimeOut() {
-        yield return new WaitForSeconds(3f);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }

@@ -147,6 +147,7 @@
     <Compile Include="Assets\Scripts\Sewers\EnemyDeathTriggerGate.cs" />
     <Compile Include="Assets\Scripts\Sewers\PermanentButton.cs" />
     <Compile Include="Assets\Scripts\Sewers\DestructibleWall.cs" />
+    <Compile Include="Assets\Scripts\Dialogue Scripts\Randy.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -579,6 +579,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1332325993}
+  - {fileID: 1031833502}
   - {fileID: 744113690}
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -18730,7 +18731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 192082691}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &744113691
 MonoBehaviour:
@@ -18746,8 +18747,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: right
   sceneToLoad: Sewers 8
-  nextScenePos: {x: 20.94, y: -0.75}
+  nextScenePos: {x: -38, y: 19}
   crossfade: {fileID: 2073640050}
+  isEnteringRoom: 0
+  goingFromOutsideToInside: 0
 --- !u!61 &744113692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19746,6 +19749,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6485128670555313931, guid: bf24779f54fc939449e6bfbb2afb9e36, type: 3}
   m_PrefabInstance: {fileID: 6485128671305855747}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031833501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031833502}
+  - component: {fileID: 1031833504}
+  - component: {fileID: 1031833503}
+  m_Layer: 0
+  m_Name: Room 7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031833502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031833501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.74, y: 8.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 192082691}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1031833503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031833501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af1e3fc43ad07e4496d6a86c71ec0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: left
+  sceneToLoad: Sewers 7
+  nextScenePos: {x: 34.07, y: -6.76}
+  crossfade: {fileID: 2073640050}
+  isEnteringRoom: 0
+  goingFromOutsideToInside: 0
+--- !u!61 &1031833504
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031833501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.56956, y: -2.4495068}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.139118, y: 5.8990135}
+  m_EdgeRadius: 0
 --- !u!4 &1040824299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8142709599515099388, guid: bf50de15867862343b4aec41e1e15630, type: 3}
@@ -29555,7 +29634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153699818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 14.011765, y: 0.0000009536743, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 652228711}
@@ -34853,6 +34932,8 @@ MonoBehaviour:
   sceneToLoad: Sewers 2
   nextScenePos: {x: 24.24, y: -0.75}
   crossfade: {fileID: 2073640050}
+  isEnteringRoom: 0
+  goingFromOutsideToInside: 0
 --- !u!1 &1335804984
 GameObject:
   m_ObjectHideFlags: 0
@@ -78524,11 +78605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.52
+      value: 22.24
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55
+      value: -6.77
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -78647,7 +78728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954418383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4642371, y: 0.62099785, z: -10}
+  m_LocalPosition: {x: 8.172472, y: -5.599003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153699820}

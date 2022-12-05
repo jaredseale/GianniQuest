@@ -35,6 +35,10 @@ public class DeathField : MonoBehaviour
     }
 
     IEnumerator ReloadScene() {
+        if (SceneManager.GetActiveScene().name == "Sewers 8") {
+            FindObjectOfType<SpawnPosition>().spawnPosition = new Vector2(-22.54f, 12.27f);
+        }
+
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(currentScene.name);
     }

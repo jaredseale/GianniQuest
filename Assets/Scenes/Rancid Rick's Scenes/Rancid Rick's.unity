@@ -6985,7 +6985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    name: Ethereal Key
     sentences: []
 --- !u!114 &1052291607
 MonoBehaviour:

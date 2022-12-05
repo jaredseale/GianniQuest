@@ -139,7 +139,7 @@ public class Pause : MonoBehaviour
             gunControls.SetActive(true);
         }
 
-        if (!SceneManager.GetActiveScene().name.Contains("Sewers")) {
+        if (!SceneManager.GetActiveScene().name.Contains("Sewers") || PlayerPrefs.GetInt("HasDoubleJump") == 0) {
             mapControls.SetActive(false);
         } else {
             mapControls.SetActive(true);
@@ -163,6 +163,7 @@ public class Pause : MonoBehaviour
         PlayerPrefs.SetInt("Room5Button", 0);
         PlayerPrefs.SetInt("Room5WestWall", 0);
         PlayerPrefs.SetInt("Room5EastWall", 0);
+        PlayerPrefs.SetInt("Room8Gate", 0);
 
         PlayerPrefs.SetInt("BrokeYellowEgg", 0);
         PlayerPrefs.SetInt("BrokeGreenEgg", 0);
