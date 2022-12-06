@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Ethereal Ascent\LeftToRightUFO.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenuOptions.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SplashScreen.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Enemies\DeathField.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldCamera.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\StarField.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Lairry.cs" />
@@ -98,12 +99,16 @@
     <Compile Include="Assets\Scripts\Ethereal Ascent\EACollectible.cs" />
     <Compile Include="Assets\Scripts\LCP\State.cs" />
     <Compile Include="Assets\Scripts\School\EnglishTest.cs" />
+    <Compile Include="Assets\Scripts\Sewers\SewersLocationDisplay.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
+    <Compile Include="Assets\Scripts\Sewers\EnemyDeathTriggerGate.cs" />
     <Compile Include="Assets\Scripts\Sewers\Enemies\SkeletonArrow.cs" />
+    <Compile Include="Assets\Scripts\Sewers\PermanentButton.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderDictionary.cs" />
     <Compile Include="Assets\Scripts\Sewers\SewersMusicManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Dad.cs" />
     <Compile Include="Assets\Scripts\MapLocationText.cs" />
+    <Compile Include="Assets\Scripts\Sewers\SewersLadder.cs" />
     <Compile Include="Assets\Scripts\Overworld\RancidRicksAnim.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Brother.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\PizzaGuy.cs" />
@@ -128,10 +133,12 @@
     <Compile Include="Assets\Scripts\Sewers\SewersLoadingZone.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\ShotGlass.cs" />
+    <Compile Include="Assets\Scripts\Sewers\DestructibleWall.cs" />
     <Compile Include="Assets\Scripts\Player\SewersDeathManager.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\Intermission.cs" />
     <Compile Include="Assets\Scripts\House\TreeGifts.cs" />
+    <Compile Include="Assets\Scripts\Dialogue Scripts\Randy.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\LetterBoxer\LetterBoxer.cs" />
     <Compile Include="Assets\Scripts\House\Ornament.cs" />
@@ -141,13 +148,7 @@
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Sewers\SewersLadder.cs" />
-    <Compile Include="Assets\Scripts\Sewers\SewersLocationDisplay.cs" />
-    <Compile Include="Assets\Scripts\Sewers\Enemies\DeathField.cs" />
-    <Compile Include="Assets\Scripts\Sewers\EnemyDeathTriggerGate.cs" />
-    <Compile Include="Assets\Scripts\Sewers\PermanentButton.cs" />
-    <Compile Include="Assets\Scripts\Sewers\DestructibleWall.cs" />
-    <Compile Include="Assets\Scripts\Dialogue Scripts\Randy.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\GreenLight.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

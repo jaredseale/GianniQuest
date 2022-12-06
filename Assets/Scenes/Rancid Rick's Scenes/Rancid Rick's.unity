@@ -7534,7 +7534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153699818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.957388, y: -3.69, z: 0}
+  m_LocalPosition: {x: -6.9787483, y: 5.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 652228711}
@@ -7646,6 +7646,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee991575530b5d4fb9d5da39b2f389d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1172999221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5693077231250991337, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
+  m_PrefabInstance: {fileID: 1172999219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1188889283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9130519570641823819, guid: f20d534008824d84ebc11bb87eff6d69, type: 3}
@@ -11349,6 +11354,7 @@ Transform:
   - {fileID: 1283880814}
   - {fileID: 1943086889}
   - {fileID: 1052291604}
+  - {fileID: 1755720245260526830}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13723,10 +13729,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1871919090}
-  - component: {fileID: 1871919092}
   - component: {fileID: 1871919091}
   m_Layer: 8
-  m_Name: Skylight
+  m_Name: Egg Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13756,28 +13761,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1871919089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00cc7a0c5259d5346beffb8fdcc131f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a6d3f709a2de3d439a67854e55dcaae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1871919092
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871919089}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ffc0dc4a92ac7004eb213619d8e30f95, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1872085102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13889,11 +13875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.27
+      value: -24.34
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.69
+      value: 5.81
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14192,7 +14178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954418383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.312613, y: 0, z: -10}
+  m_LocalPosition: {x: -17.361252, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153699820}
@@ -15213,6 +15199,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9130519570641823819, guid: f20d534008824d84ebc11bb87eff6d69, type: 3}
   m_PrefabInstance: {fileID: 342495763}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1755720245260526828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755720245260526831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af1e3fc43ad07e4496d6a86c71ec0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: up
+  sceneToLoad: Ricks Roof
+  nextScenePos: {x: -1.26, y: -14.07}
+  crossfade: {fileID: 1172999221}
+  isEnteringRoom: 0
+  goingFromOutsideToInside: 0
+--- !u!61 &1755720245260526829
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755720245260526831}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.2196236, y: -0.91336584}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5075417, y: 2.8267317}
+  m_EdgeRadius: 0
+--- !u!4 &1755720245260526830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755720245260526831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.19, y: 9.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1702964131}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1755720245260526831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755720245260526830}
+  - component: {fileID: 1755720245260526829}
+  - component: {fileID: 1755720245260526828}
+  m_Layer: 0
+  m_Name: Loading Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &2898184260949526507
 PrefabInstance:
   m_ObjectHideFlags: 0

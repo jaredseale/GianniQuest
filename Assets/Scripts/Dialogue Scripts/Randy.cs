@@ -9,9 +9,9 @@ public class Randy : MonoBehaviour
     public DialogueManager dialogueManager;
     Animator myAnim;
 
-    string[] Init = new string[] {"Holy moly little guy, you really just saved my bacon.",
-        "I musta made a wrong turn on my way to my spin class or something.",
-        "One moment I'm wandering through the city pipes, next thing I know, this arbitrary assortment of video game enemies captures me and tosses me in this little cage.",
+    string[] Init = new string[] {"Holy moly little guy, you really saved my bacon out there.",
+        "I was taking a shortcut through these sewers on my way back from Rick's and I musta made a wrong turn somewhere.",
+        "Next thing I know, this arbitrary assortment of goons captures me and tosses me in this little cage.",
         "I guess I owe ya one. Anything to get out of helping my rotten stepson with his Spanish homework.",
         "Yo quiero blow my brains out, know what I'm saying?",
         "Anyways, hows about I follow you around and give you any boosts you need to get around this place?",

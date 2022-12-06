@@ -152,6 +152,8 @@ public class Pause : MonoBehaviour
     }
 
     private void SewersStateReset() {
+        PlayerPrefs.SetString("EtherealAscentEntry", "Open");
+
         PlayerPrefs.SetInt("SewersLocationDisplay", 1);
 
         PlayerPrefs.SetInt("HasDoubleJump", 0);

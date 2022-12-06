@@ -6,25 +6,53 @@ public class Ornament : MonoBehaviour
 {
 
     SpriteRenderer ornamentColor;
-    float newR = 0f;
-    float newG = 0f;
-    float newB = 0f;
-    Color lerpedColor;
+
+    List<Vector3> colors = new List<Vector3>() { 
+        new Vector3(1f, 0f, 0f), //red
+        new Vector3(1f, 0.5f, 0f), //orange
+        new Vector3(1f, 1f, 0f), //yellow
+        new Vector3(0.5f, 1f, 0f), //yellow green
+        new Vector3(0f, 1f, 0f), //green
+        new Vector3(0f, 1f, 0.5f), //aqua
+        new Vector3(0f, 1f, 1f), //cyan
+        new Vector3(0f, 0.5f, 1f), //light blue
+        new Vector3(0f, 0f, 1f), //blue
+        new Vector3(0.5f, 0f, 1f), //purple
+        new Vector3(1f, 0f, 1f), //magenta
+        new Vector3(1f, 0f, 0.5f) //hot pink
+    };
+
+    float speed = 2f;
 
     void Start() {
         ornamentColor = this.GetComponent<SpriteRenderer>();
-        float randomInterval = Random.Range(0.75f, 1.5f);
-        InvokeRepeating("ChangeColor", 0f, randomInterval);
+
+        int color = Random.Range(0, colors.Count); //set the initial color
+        ornamentColor.color = new Color(colors[color].x, colors[color].y, colors[color].z);
+
+        StartCoroutine(IdleTime());
     }
 
-    void Update() {
-        lerpedColor = Color.Lerp(ornamentColor.color, new Color(newR, newG, newB, 1f), 2f * Time.deltaTime);
-        ornamentColor.color = lerpedColor;
+
+    IEnumerator Vector3LerpCoroutine(GameObject obj, Color target, float waitTime) {
+        Color curStartColor = ornamentColor.color;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < waitTime) {
+            
+            ornamentColor.color = Color.Lerp(ornamentColor.color, target, elapsedTime / waitTime);
+
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        StartCoroutine(IdleTime());
     }
 
-    void ChangeColor() {
-        newR = Random.Range(0f, .9f);
-        newG = Random.Range(0f, .9f);
-        newB = Random.Range(0f, .9f);
+    IEnumerator IdleTime() {
+        yield return new WaitForSeconds(Random.Range(2f, 5f));
+
+        int color = Random.Range(0, colors.Count);
+        StartCoroutine(Vector3LerpCoroutine(this.gameObject, new Color(colors[color].x, colors[color].y, colors[color].z), speed));
     }
 }

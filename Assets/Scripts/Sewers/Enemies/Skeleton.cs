@@ -20,6 +20,7 @@ public class Skeleton : MonoBehaviour
 
     public bool idling;
     public bool attacking;
+    public bool dead;
 
     [SerializeField] BoxCollider2D myCollider;
     [SerializeField] BoxCollider2D aggroZone;
@@ -46,6 +47,7 @@ public class Skeleton : MonoBehaviour
 
             idling = true;
             attacking = false;
+            dead = false;
 
             StartCoroutine(IdleTime());
         }
@@ -95,7 +97,7 @@ public class Skeleton : MonoBehaviour
             }
         }
 
-        if (!attacking && aggroZone.IsTouchingLayers(LayerMask.GetMask("Player"))) {
+        if (!attacking && !dead && aggroZone.IsTouchingLayers(LayerMask.GetMask("Player"))) {
             Attack();
         }
 
@@ -177,13 +179,14 @@ public class Skeleton : MonoBehaviour
     void SkeletonDie() {
         myCollider.enabled = false;
         StopAllCoroutines();
+        dead = true;
+        StartCoroutine(TimeOut());
         myAnim.SetTrigger("die");
         myAudio.PlayOneShot(dieSFX);
-        StartCoroutine(TimeOut());
     }
 
     IEnumerator TimeOut() {
         yield return new WaitForSeconds(1.5f);
-        Destroy(gameObject.transform.parent.gameObject);
+        Destroy(gameObject);
     }
 }
