@@ -107,7 +107,7 @@ public class Glimback : MonoBehaviour
     }
 
     IEnumerator TimeOut() {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
 }

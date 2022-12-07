@@ -166,6 +166,7 @@ public class Pause : MonoBehaviour
         PlayerPrefs.SetInt("Room5WestWall", 0);
         PlayerPrefs.SetInt("Room5EastWall", 0);
         PlayerPrefs.SetInt("Room8Gate", 0);
+        PlayerPrefs.SetInt("Room9EnemyGate", 0);
 
         PlayerPrefs.SetInt("BrokeYellowEgg", 0);
         PlayerPrefs.SetInt("BrokeGreenEgg", 0);
