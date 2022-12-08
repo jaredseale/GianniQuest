@@ -156,6 +156,10 @@ public class Pause : MonoBehaviour
 
         PlayerPrefs.SetInt("SewersLocationDisplay", 1);
 
+        PlayerPrefs.SetInt("MaxHealth", 6);
+        PlayerPrefs.SetInt("CollectedHC1", 0);
+        PlayerPrefs.SetInt("CollectedHC2", 0);
+
         PlayerPrefs.SetInt("HasDoubleJump", 0);
         PlayerPrefs.SetInt("HasCloner", 0);
         PlayerPrefs.SetInt("HasBomb", 0);

@@ -134,6 +134,10 @@ public class MainMenu : MonoBehaviour
         //sewers state
         PlayerPrefs.SetInt("SewersLocationDisplay", 1);
 
+        PlayerPrefs.SetInt("MaxHealth", 6);
+        PlayerPrefs.SetInt("CollectedHC1", 0);
+        PlayerPrefs.SetInt("CollectedHC2", 0);
+
         PlayerPrefs.SetInt("HasDoubleJump", 0);
         PlayerPrefs.SetInt("HasCloner", 0);
         PlayerPrefs.SetInt("HasBomb", 0);
@@ -145,6 +149,9 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("Room5EastWall", 0);
         PlayerPrefs.SetInt("Room8Gate", 0);
         PlayerPrefs.SetInt("Room9EnemyGate", 0);
+        PlayerPrefs.SetInt("Room9Target", 0);
+        PlayerPrefs.SetInt("Room14Target1", 0);
+        PlayerPrefs.SetInt("Room14Target2", 0);
 
         PlayerPrefs.SetInt("BrokeYellowEgg", 0);
         PlayerPrefs.SetInt("BrokeGreenEgg", 0);

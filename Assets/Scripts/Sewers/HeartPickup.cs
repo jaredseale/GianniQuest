@@ -20,12 +20,13 @@ public class HeartPickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
             playerHealth.HealPlayer(2);
+            myAudio.Play();
+            myCollider.enabled = false;
+            mySprite.enabled = false;
+            StartCoroutine(DestroyDelay());
         }
 
-        myAudio.Play();
-        myCollider.enabled = false;
-        mySprite.enabled = false;
-        StartCoroutine(DestroyDelay());
+        
     }
 
     IEnumerator DestroyDelay() {

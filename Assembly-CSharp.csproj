@@ -55,6 +55,7 @@
     <Compile Include="Assets\Scripts\Overworld\OverworldPlayer.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\RightToLeftUFO.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldInstructions.cs" />
+    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\GreenLight.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\Parallax.cs" />
     <Compile Include="Assets\Scripts\Sewers\Enemies\Skeleton.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderState.cs" />
@@ -148,7 +149,8 @@
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Rancid Rick&apos;s\GreenLight.cs" />
+    <Compile Include="Assets\Scripts\Sewers\HeartContainer.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Target.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
