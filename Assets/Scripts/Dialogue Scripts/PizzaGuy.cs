@@ -12,7 +12,7 @@ public class PizzaGuy : MonoBehaviour
         "If you want one of our fresh 'zas, it's going to run you around six dollars. Actually, it is going to run you exactly six dollars. To the cent.",
         "It looks like you don't quite have enough dough on you. Come back when you can afford the dough. Do you get the joke there.",
         "Also, in case you forgot, you can press TAB to leave. Our door is only one-way thanks to budget cuts."};
-    string[] HasMoney = new string[] {"Hey little man, welcome back to Pizza Hell. You look like you have just enough money for a premium slice, or eight.",
+    string[] HasMoney = new string[] {"Hey big guy, welcome back to Pizza Hell. You look like you have just enough money for a premium slice, or eight.",
         "One purgaterrific pie, coming right up!" };
 
     private void Start() {

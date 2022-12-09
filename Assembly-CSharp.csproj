@@ -88,10 +88,12 @@
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\Cloud.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\CloudSpawner.cs" />
+    <Compile Include="Assets\Scripts\Sewers\HeartContainer.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
     <Compile Include="Assets\Scripts\Sewers\PressableButton.cs" />
     <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Santa.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Target.cs" />
     <Compile Include="Assets\Scripts\SNICO\SNICOTutorial.cs" />
     <Compile Include="Assets\Scripts\Sewers\HeartPickup.cs" />
     <Compile Include="Assets\Scripts\Player\Gun.cs" />
@@ -149,8 +151,7 @@
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Sewers\HeartContainer.cs" />
-    <Compile Include="Assets\Scripts\Sewers\Target.cs" />
+    <Compile Include="Assets\Scripts\Sewers\CarHorn.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
