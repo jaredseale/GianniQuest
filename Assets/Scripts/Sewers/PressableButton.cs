@@ -21,6 +21,7 @@ public class PressableButton : MonoBehaviour
     BoxCollider2D myCollider;
     Animator myAnim;
     AudioSource myAudio;
+    [SerializeField] AudioSource doorAudio;
     SpriteRenderer mySprite;
 
     void Start() {
@@ -38,6 +39,7 @@ public class PressableButton : MonoBehaviour
             if (isPressed == false) {
                 isPressed = true;
                 myAudio.Play();
+                doorAudio.Play();
                 mySprite.sprite = pressedButtonSprite;
                 StopAllCoroutines();
                 StartCoroutine(OpenDoor());

@@ -24,7 +24,7 @@ public class Bomb : MonoBehaviour
 
     private void Update() {
 
-        if (parentObject.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+        if (parentObject.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Ground"))) { //gonna need to change this so that it can be moved
             parentObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
