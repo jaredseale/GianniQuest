@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -6314,7 +6314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: -193}
+  m_AnchoredPosition: {x: 379, y: -124}
   m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375405999
@@ -6337,7 +6337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Solve the answer below.
+  m_text: Write the answer below!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 60aaf56e1c2d3394fb8600ec87a52039, type: 2}
   m_sharedMaterial: {fileID: -3947674191409100425, guid: 60aaf56e1c2d3394fb8600ec87a52039, type: 2}
@@ -10634,7 +10634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: -64}
+  m_AnchoredPosition: {x: 379, y: -81.00003}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611780245
@@ -15988,7 +15988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -17806,7 +17806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fill in the blanks with appropriate words.
+  m_text: Fill in the blanks with appropriate words!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 60aaf56e1c2d3394fb8600ec87a52039, type: 2}
   m_sharedMaterial: {fileID: -3947674191409100425, guid: 60aaf56e1c2d3394fb8600ec87a52039, type: 2}

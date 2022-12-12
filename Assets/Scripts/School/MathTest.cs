@@ -63,7 +63,7 @@ public class MathTest : MonoBehaviour
         testActive = false;
         pauser.canPause = true;
         int.TryParse(answerTextField.text.Trim(), out answer);
-        if (answer == 0 && answerTextField.text.Trim().Length == 1) {
+        if (answer == 11 && answerTextField.text.Trim().Length == 2) {
             PlayerPrefs.SetString("TeacherDialogueState", "MathTestDone");
         } else {
             PlayerPrefs.SetString("TeacherDialogueState", "MathTestWrong");
