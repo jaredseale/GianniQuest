@@ -35,5 +35,12 @@ public class DestructibleWall : MonoBehaviour
         myAudio.Play();
         myCollider.enabled = false;
         PlayerPrefs.SetInt(playerPrefName, 1);
+
+        if (playerPrefName == "Room11Wall") {
+            PlayerPrefs.SetString("SisterDialogueState", "Sewers");
+            PlayerPrefs.SetString("MomDialogueState", "Sewers");
+            PlayerPrefs.SetString("BrotherDialogueState", "Sewers");
+            PlayerPrefs.SetString("DadDialogueState", "Sewers");
+        }
     }
 }

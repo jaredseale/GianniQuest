@@ -150,6 +150,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("Room8Gate", 0);
         PlayerPrefs.SetInt("Room9EnemyGate", 0);
         PlayerPrefs.SetInt("Room9Target", 0);
+        PlayerPrefs.SetInt("Room11Wall", 0);
         PlayerPrefs.SetInt("Room14Target1", 0);
         PlayerPrefs.SetInt("Room14Target2", 0);
 

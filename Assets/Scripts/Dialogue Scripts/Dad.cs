@@ -16,6 +16,12 @@ public class Dad : MonoBehaviour
     string[] PreDollar = new string[] { "Ascolta patatino, your work check came in the mail. Bravissimo." };
     string[] PostDollar = new string[] { "Mi dispiace, polpetto, you're going to have to wait until your next shift if you want to get paid again." };
     string[] Night = new string[] { "Buona serata, Gianni." };
+    string[] Sewers = new string[] { "Dio mio, Gianni, what's causing all that racket around the house?",
+        "If you're getting up to any trouble, I guess I can't stop you, but I you gotta be safe around these parts.",
+        "Here, take my Tom Gun. It will keep you sano e salvo if you happen to encounter anything pericoloso.",
+        "When you're not near any buildings, right click to fire the Tom Gun. It's as easy as that, signorino."};
+    string[] Sewers2 = new string[] { "Remember, as long as you're not around any buildings, you can use the Tom Gun by right clicking."};
+
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -32,6 +38,10 @@ public class Dad : MonoBehaviour
             currentDialogue.dialogue.sentences = PostDollar;
         } else if (PlayerPrefs.GetString("DadDialogueState") == "Night") {
             currentDialogue.dialogue.sentences = Night;
+        } else if (PlayerPrefs.GetString("DadDialogueState") == "Sewers") {
+            currentDialogue.dialogue.sentences = Sewers;
+        } else if (PlayerPrefs.GetString("DadDialogueState") == "Sewers2") {
+            currentDialogue.dialogue.sentences = Sewers2;
         }
     }
 
@@ -56,6 +66,10 @@ public class Dad : MonoBehaviour
             currentDialogue.dialogue.sentences = PostDollar;
         } else if (PlayerPrefs.GetString("DadDialogueState") == "Night") {
             currentDialogue.dialogue.sentences = Night;
+        } else if (PlayerPrefs.GetString("DadDialogueState") == "Sewers") {
+            currentDialogue.dialogue.sentences = Sewers;
+        } else if (PlayerPrefs.GetString("DadDialogueState") == "Sewers2") {
+            currentDialogue.dialogue.sentences = Sewers2;
         }
     }
 
@@ -68,6 +82,9 @@ public class Dad : MonoBehaviour
             myDollar.CollectDollar();
             PlayerPrefs.SetString("DadDialogueState", "PostDollar");
             PlayerPrefs.SetInt("SNICODataManagement", 0);
+        } else if (PlayerPrefs.GetString("DadDialogueState") == "Sewers") {
+            PlayerPrefs.SetInt("HasGun", 1);
+            PlayerPrefs.SetString("DadDialogueState", "Sewers2");
         }
 
     }

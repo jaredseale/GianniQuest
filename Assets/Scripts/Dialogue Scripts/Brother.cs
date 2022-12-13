@@ -13,6 +13,7 @@ public class Brother : MonoBehaviour
         "...uh..."};
     string[] Init2 = new string[] { "If I were you, which I'm not by the way, I'd go and see what everyone in the house has to say." };
     string[] Night = new string[] { "Hey Gianni. Uhhhh, can you give me a minute, I'm on an insane pace right now." };
+    string[] Sewers = new string[] { "Oh, hey Gianni. There was kind of a loud noise in the house just a second ago, you know anything about that?" };
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -23,6 +24,8 @@ public class Brother : MonoBehaviour
             currentDialogue.dialogue.sentences = Init2;
         } else if (PlayerPrefs.GetString("BrotherDialogueState") == "Night") {
             currentDialogue.dialogue.sentences = Night;
+        } else if (PlayerPrefs.GetString("BrotherDialogueState") == "Sewers") {
+            currentDialogue.dialogue.sentences = Sewers;
         }
     }
 
@@ -41,6 +44,8 @@ public class Brother : MonoBehaviour
             currentDialogue.dialogue.sentences = Init2;
         } else if (PlayerPrefs.GetString("BrotherDialogueState") == "Night") {
             currentDialogue.dialogue.sentences = Night;
+        } else if (PlayerPrefs.GetString("BrotherDialogueState") == "Sewers") {
+            currentDialogue.dialogue.sentences = Sewers;
         }
     }
 

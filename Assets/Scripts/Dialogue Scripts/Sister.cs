@@ -8,23 +8,28 @@ public class Sister : MonoBehaviour
     public DialogueTrigger currentDialogue;
     public DialogueManager dialogueManager;
 
-    string[] Init = new string[] {"Sounds like you forgot it was your turn to make Christmas Eve dinner this year, huh?",
+    string[] Init = new string[] {"Sounds like you forgot it was your turn to make Christmas Eve dinner this year, huh? >:(",
         "It's probably too late now to cook anything, you could probably go grab a pizza or something really quick.",
         "I heard they're doing some kind of discount promotion over at Pizza Hell this week, you should go check that out.",
-        "Before you do that, though, I have a favor to ask.",
+        "Before you do that, though, I have a favor to ask. :3",
         "My friend has a massive crush on you and I kinda already set you up on a blind date with her hehe oops ;-P",
         "I know it's kinda last minute, but if you meet her at the new French restaurant down the street and she has a nice time, I'll give you a buck (one dollar) to start you out.",
         "Don't mess this up :-)" };
     string[] Init2 = new string[] { "Did you already forget what I said...?",
-        "If you go on a date with my friend, I'll give you a dollar for your pizza journey."};
+        "If you go on a date with my friend, I'll give you a dollar for your pizza journey. :-)"};
     string[] PostDate = new string[] { "Anousse sent me a text a few minutes ago saying that she had a pretty good time on the date.",
         "So congratulations! And like I said, here's your pizza dollar I promised you :-D"};
     string[] PostDollar = new string[] { "Sorry Gianni, but if you want another dollar, you're gonna have to go on another date, and there are no more in the game.",
-        "Huh? What am I talking about?"};
+        "Huh? What am I talking about? /:-\\"};
     string[] Night = new string[] { "It's getting pretty late and this belly o' mine is rumblin' and tumblin'.",
-        "Are you close to being able to afford a pizza yet?"};
+        "Are you close to being able to afford a pizza yet? :^$"};
+    string[] Sewers = new string[] { "omgomgomgomgomgomgomgomgomg",
+        "This is the cutest little fella I've ever seen. :O",
+        "He walked in here a couple minutes ago, must be related to that noise I just heard.",
+        "...",
+        "He is now the most important thing in my life. :)))"};
 
-    private void Start() {
+private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
 
         if (PlayerPrefs.GetString("SisterDialogueState") == "Init") {
@@ -37,6 +42,8 @@ public class Sister : MonoBehaviour
             currentDialogue.dialogue.sentences = PostDollar;
         } else if (PlayerPrefs.GetString("SisterDialogueState") == "Night") {
             currentDialogue.dialogue.sentences = Night;
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "Sewers") {
+            currentDialogue.dialogue.sentences = Sewers;
         }
     }
 
@@ -59,6 +66,8 @@ public class Sister : MonoBehaviour
             currentDialogue.dialogue.sentences = PostDollar;
         } else if (PlayerPrefs.GetString("SisterDialogueState") == "Night") {
             currentDialogue.dialogue.sentences = Night;
+        } else if (PlayerPrefs.GetString("SisterDialogueState") == "Sewers") {
+            currentDialogue.dialogue.sentences = Sewers;
         }
     }
 

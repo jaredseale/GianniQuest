@@ -8,24 +8,31 @@ public class Bomb : MonoBehaviour
     [SerializeField] GameObject damageRadius;
     [SerializeField] GameObject explosionAnim;
     [SerializeField] GameObject parentObject;
+    [SerializeField] BoxCollider2D bombCollider;
+    [SerializeField] BoxCollider2D bottomCollider;
+    [SerializeField] CircleCollider2D triggerCollider;
+    Rigidbody2D parentRB;
 
     [SerializeField] AudioClip beep;
     [SerializeField] AudioClip explosionSFX;
     AudioSource myAudio;
     Player myPlayer;
+    bool playerLeftCollider;
 
     //TODO: have the bomb interact with destructible walls when you get to that point in dev
 
     void Start() {
         myAudio = GetComponent<AudioSource>();
         myPlayer = FindObjectOfType<Player>();
-        
+        StartCoroutine(DelayedCollider());
+        parentRB = parentObject.GetComponent<Rigidbody2D>();
+        playerLeftCollider = false;
     }
 
     private void Update() {
 
-        if (parentObject.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Ground"))) { //gonna need to change this so that it can be moved
-            parentObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        if (bottomCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && !playerLeftCollider) {
+            parentRB.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
         if (damageRadius.GetComponent<CircleCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player"))) {
@@ -43,10 +50,23 @@ public class Bomb : MonoBehaviour
         }
     }
 
+    IEnumerator DelayedCollider() {
+        yield return new WaitForSeconds(0.05f);
+
+        while (true) {
+            if (!triggerCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) {
+                playerLeftCollider = true;
+                parentRB.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+                bombCollider.enabled = true;
+            }
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
     public void Explode() { //called from anim
-
-        parentObject.GetComponent<BoxCollider2D>().enabled = false;
-
+        StopAllCoroutines();
+        bombCollider.enabled = false;
+        parentRB.constraints = RigidbodyConstraints2D.FreezeAll;
         myAudio.PlayOneShot(explosionSFX);
         damageRadius.SetActive(true);
         explosionAnim.SetActive(true);

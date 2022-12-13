@@ -18,6 +18,8 @@ public class Mom : MonoBehaviour
         "I'm sure you can use your fully developed Gianni brain to find some other dollars!"};
     string[] Night = new string[] { "Are you having such a good time today, Gianni?",
         "Don't forget, it's your turn to get dinner tonight, so don't dilly dally too long on that!"};
+    string[] Sewers = new string[] { "Gianni, are you staying safe out there?",
+        "We just heard a terribly loud rattle in the house, make sure you're being careful on your way to get dinner!"};
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -32,6 +34,8 @@ public class Mom : MonoBehaviour
             currentDialogue.dialogue.sentences = PostDollar;
         } else if (PlayerPrefs.GetString("MomDialogueState") == "Night") {
             currentDialogue.dialogue.sentences = Night;
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "Sewers") {
+            currentDialogue.dialogue.sentences = Sewers;
         }
     }
 
@@ -54,6 +58,8 @@ public class Mom : MonoBehaviour
             currentDialogue.dialogue.sentences = PostDollar;
         } else if (PlayerPrefs.GetString("MomDialogueState") == "Night") {
             currentDialogue.dialogue.sentences = Night;
+        } else if (PlayerPrefs.GetString("MomDialogueState") == "Sewers") {
+            currentDialogue.dialogue.sentences = Sewers;
         }
     }
 

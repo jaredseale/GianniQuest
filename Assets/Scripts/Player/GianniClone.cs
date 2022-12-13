@@ -28,11 +28,11 @@ public class GianniClone : MonoBehaviour
 
         while (true) {
             if (!triggerCollider.IsTouchingLayers(LayerMask.GetMask("Player"))) {
+                myRB.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
                 bodyCollider.enabled = true;
                 this.enabled = false;
             }
             yield return new WaitForSeconds(0.05f);
         }
-    }   
-
+    }
 }
