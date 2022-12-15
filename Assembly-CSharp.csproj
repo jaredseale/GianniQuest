@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Ethereal Ascent\Parallax.cs" />
     <Compile Include="Assets\Scripts\Sewers\Enemies\Skeleton.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderState.cs" />
+    <Compile Include="Assets\Scripts\House\HallwayManager.cs" />
     <Compile Include="Assets\Scripts\Sewers\Enemies\Glimback.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\LeftToRightUFO.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenuOptions.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Scripts\FadeMixerGroup.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Sister.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkingGameManager.cs" />
+    <Compile Include="Assets\Scripts\House\BrothersRoomManager.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SparkleController.cs" />
     <Compile Include="Assets\Scripts\Overworld\LCPStatus.cs" />
     <Compile Include="Assets\Scripts\LCP\DateManager.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Assets\Scripts\SetVolume.cs" />
     <Compile Include="Assets\Scripts\Sewers\PressableButton.cs" />
     <Compile Include="Assets\Scripts\Sewers\CarHorn.cs" />
+    <Compile Include="Assets\Scripts\Dialogue Scripts\CrypticGrimoire.cs" />
     <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Santa.cs" />
     <Compile Include="Assets\Scripts\Sewers\Target.cs" />
@@ -123,6 +126,7 @@
     <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderManager.cs" />
     <Compile Include="Assets\Scripts\Sewers\BirdHatch.cs" />
+    <Compile Include="Assets\Scripts\House\SistersRoomManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Teacher.cs" />
     <Compile Include="Assets\Scripts\Dollar.cs" />
     <Compile Include="Assets\Scripts\Sewers\Enemies\Keke.cs" />
@@ -152,10 +156,8 @@
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Dialogue Scripts\CrypticGrimoire.cs" />
-    <Compile Include="Assets\Scripts\House\BrothersRoomManager.cs" />
-    <Compile Include="Assets\Scripts\House\SistersRoomManager.cs" />
-    <Compile Include="Assets\Scripts\House\HallwayManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogue Scripts\BombBag.cs" />
+    <Compile Include="Assets\Scripts\Sewers\LCPWall.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

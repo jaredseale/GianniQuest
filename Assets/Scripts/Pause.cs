@@ -175,6 +175,7 @@ public class Pause : MonoBehaviour
         PlayerPrefs.SetInt("Room11Wall", 0);
         PlayerPrefs.SetInt("Room14Target1", 0);
         PlayerPrefs.SetInt("Room14Target2", 0);
+        PlayerPrefs.SetInt("LCPWall", 0);
 
         PlayerPrefs.SetInt("BrokeYellowEgg", 0);
         PlayerPrefs.SetInt("BrokeGreenEgg", 0);
