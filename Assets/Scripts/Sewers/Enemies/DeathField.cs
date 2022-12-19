@@ -10,6 +10,8 @@ public class DeathField : MonoBehaviour
     Player player = null;
     [SerializeField] GameObject crossfade;
     Scene currentScene;
+    [SerializeField] bool hasCheckpoint;
+    [SerializeField] Vector2 checkpointPos;
  
     void Start() {
         myCollider = GetComponent<BoxCollider2D>();
@@ -27,6 +29,11 @@ public class DeathField : MonoBehaviour
             } else {
                 player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
                 player.Hurt();
+
+                if (hasCheckpoint) {
+                    FindObjectOfType<SpawnPosition>().spawnPosition = checkpointPos;
+                }
+
                 crossfade.GetComponent<Animator>().SetTrigger("doorTransition");
                 StartCoroutine(ReloadScene());
             }

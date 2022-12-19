@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 72120754}
   m_Layer: 0
   m_Name: Wall/Ceiling (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 244748910}
   m_Layer: 10
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10991,8 +10991,8 @@ Tilemap:
   - first: {x: 5, y: 16, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 35
-      m_TileSpriteIndex: 35
+      m_TileIndex: 30
+      m_TileSpriteIndex: 30
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11000,8 +11000,8 @@ Tilemap:
   - first: {x: 6, y: 16, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 36
-      m_TileSpriteIndex: 36
+      m_TileIndex: 30
+      m_TileSpriteIndex: 30
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16828,7 +16828,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 46479b3e5b6ddb84e9777fbc6aca5320, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: f55e5c34b3aa2b2429720f661a1b4fd3, type: 2}
-  - m_RefCount: 8
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 53ab5e17b0669034c872ffc54bbc1379, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: a5a756511f70bf846afaac133f213ea9, type: 2}
@@ -16838,9 +16838,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 76a9d195f277d464c8fe0a920085549f, type: 2}
   - m_RefCount: 52
     m_Data: {fileID: 11400000, guid: 50bdea405cb6c694888046e98dc76622, type: 2}
-  - m_RefCount: 119
+  - m_RefCount: 118
     m_Data: {fileID: 11400000, guid: f7edbb4a78996ef4f96da32bc556533a, type: 2}
-  - m_RefCount: 66
+  - m_RefCount: 65
     m_Data: {fileID: 11400000, guid: 3c0bded9cffdd784ca8531e57d0e4064, type: 2}
   - m_RefCount: 120
     m_Data: {fileID: 11400000, guid: b0f7259d47546f249aa74d69c22c4ebf, type: 2}
@@ -16911,7 +16911,7 @@ Tilemap:
     m_Data: {fileID: 1281440011619190713, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 5014181046111876104, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
-  - m_RefCount: 8
+  - m_RefCount: 10
     m_Data: {fileID: -6850786736688866950, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: 7175520883438463860, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
@@ -16921,9 +16921,9 @@ Tilemap:
     m_Data: {fileID: 5442271858762933506, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   - m_RefCount: 52
     m_Data: {fileID: 9039649710130466848, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
-  - m_RefCount: 119
+  - m_RefCount: 118
     m_Data: {fileID: 5992326389220831505, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
-  - m_RefCount: 66
+  - m_RefCount: 65
     m_Data: {fileID: -9002537574882471207, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   - m_RefCount: 120
     m_Data: {fileID: -9137202733848781849, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
@@ -16991,7 +16991,7 @@ GameObject:
   - component: {fileID: 404781161}
   m_Layer: 10
   m_Name: Gate
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17815,7 +17815,7 @@ GameObject:
   - component: {fileID: 669461185}
   m_Layer: 10
   m_Name: Floor (13)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18008,7 +18008,7 @@ GameObject:
   - component: {fileID: 695446749}
   m_Layer: 10
   m_Name: Floor (9)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18259,7 +18259,7 @@ GameObject:
   - component: {fileID: 738639998}
   m_Layer: 0
   m_Name: Wall/Ceiling (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18542,7 +18542,7 @@ GameObject:
   - component: {fileID: 827930645}
   m_Layer: 10
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18599,7 +18599,7 @@ GameObject:
   - component: {fileID: 843132234}
   m_Layer: 0
   m_Name: Wall/Ceiling (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18845,7 +18845,7 @@ GameObject:
   - component: {fileID: 870242335}
   m_Layer: 10
   m_Name: Floor (11)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19129,7 +19129,7 @@ GameObject:
   - component: {fileID: 953534893}
   m_Layer: 0
   m_Name: Wall/Ceiling (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19218,7 +19218,7 @@ GameObject:
   - component: {fileID: 990562387}
   m_Layer: 10
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19413,7 +19413,7 @@ GameObject:
   - component: {fileID: 1015384382}
   m_Layer: 10
   m_Name: Floor (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19677,6 +19677,18 @@ PrefabInstance:
       propertyPath: crossfade
       value: 
       objectReference: {fileID: 2073640050}
+    - target: {fileID: 3849603143182318963, guid: 809b2dbdb4a18d446aeb2cc777df71bf, type: 3}
+      propertyPath: hasCheckpoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849603143182318963, guid: 809b2dbdb4a18d446aeb2cc777df71bf, type: 3}
+      propertyPath: checkpointPos.x
+      value: 13.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849603143182318963, guid: 809b2dbdb4a18d446aeb2cc777df71bf, type: 3}
+      propertyPath: checkpointPos.y
+      value: 3.24
+      objectReference: {fileID: 0}
     - target: {fileID: 3849603143182318988, guid: 809b2dbdb4a18d446aeb2cc777df71bf, type: 3}
       propertyPath: m_Name
       value: Death Field (9)
@@ -19912,7 +19924,7 @@ GameObject:
   - component: {fileID: 1106539030}
   m_Layer: 10
   m_Name: Floor (14)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19969,7 +19981,7 @@ GameObject:
   - component: {fileID: 1146656381}
   m_Layer: 10
   m_Name: Floor (12)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20075,7 +20087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153699818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.118996, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 652228711}
@@ -20606,7 +20618,7 @@ GameObject:
   - component: {fileID: 1245023809}
   m_Layer: 0
   m_Name: Wall/Ceiling (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20832,7 +20844,7 @@ GameObject:
   - component: {fileID: 1305521532}
   m_Layer: 10
   m_Name: Floor (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21183,7 +21195,7 @@ GameObject:
   - component: {fileID: 1418478819}
   m_Layer: 10
   m_Name: Floor (10)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27125,7 +27137,7 @@ GameObject:
   - component: {fileID: 1611225305}
   m_Layer: 0
   m_Name: Wall/Ceiling (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73333,7 +73345,7 @@ GameObject:
   - component: {fileID: 1751281709}
   m_Layer: 10
   m_Name: Floor (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73794,7 +73806,7 @@ GameObject:
   - component: {fileID: 1884835309}
   m_Layer: 10
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73955,11 +73967,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.34
+      value: 13.09
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.26
+      value: 3.24
       objectReference: {fileID: 0}
     - target: {fileID: 7014651134096138490, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -74097,7 +74109,7 @@ GameObject:
   - component: {fileID: 1933201512}
   m_Layer: 0
   m_Name: Wall/Ceiling
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74303,7 +74315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954418383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.16521, y: 27.430998, z: -10}
+  m_LocalPosition: {x: 13.034206, y: 4.410998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153699820}
@@ -74376,7 +74388,7 @@ GameObject:
   - component: {fileID: 1958236401}
   m_Layer: 10
   m_Name: Floor (8)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74935,7 +74947,7 @@ GameObject:
   - component: {fileID: 2041879832}
   m_Layer: 10
   m_Name: Floor (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -16,7 +16,7 @@ public class Randy : MonoBehaviour
         "Yo quiero blow my brains out, know what I'm saying?",
         "Anyways, hows about I follow you around and give you any boosts you need to get around this place?",
         "\"This place\" being the most loosely themed \"sewers\" I've ever floated around in, by the way.",
-        "Oh, and here's my map of this area if you want to check that out too. It's not all the way filled out yet, mind you, that's your job bud.",
+        "Oh, and here's my map of this area if you want to check that out too. Press M to take a looksee at that. It's not all the way filled out yet, mind you, that's your job bud.",
         "Also, if you haven't already, take a look at the controls on your pause screen for reminders on how to uhhh... use me."};
 
     private void Start() {

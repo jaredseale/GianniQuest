@@ -16,6 +16,7 @@ public class Bat : MonoBehaviour
     public List<Vector3> waypoints;
     [SerializeField] Animator myAnim;
     [SerializeField] GameObject mySprite;
+    [SerializeField] GameObject deathTrigger;
 
     public bool attacking;
     public int batHealth = 2;
@@ -140,6 +141,11 @@ public class Bat : MonoBehaviour
     }
 
     void BatDie() {
+
+        if (deathTrigger != null) {
+            Destroy(deathTrigger);
+        }
+
         myAudio.enabled = false;
         myCollider.enabled = false;
         StopAllCoroutines();

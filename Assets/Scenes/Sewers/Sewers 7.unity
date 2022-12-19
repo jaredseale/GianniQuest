@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 85470149}
   m_Layer: 10
   m_Name: Floor (9)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -946,7 +946,7 @@ GameObject:
   - component: {fileID: 279183865}
   m_Layer: 10
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22053,7 +22053,7 @@ GameObject:
   - component: {fileID: 528775877}
   m_Layer: 0
   m_Name: Ceiling (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22121,7 +22121,7 @@ GameObject:
   - component: {fileID: 554362149}
   m_Layer: 10
   m_Name: Floor (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22189,7 +22189,7 @@ GameObject:
   - component: {fileID: 611498554}
   m_Layer: 10
   m_Name: Floor (8)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22732,7 +22732,7 @@ GameObject:
   - component: {fileID: 716617986}
   m_Layer: 10
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22966,7 +22966,7 @@ GameObject:
   - component: {fileID: 823614771}
   m_Layer: 10
   m_Name: Floor (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23023,7 +23023,7 @@ GameObject:
   - component: {fileID: 853657366}
   m_Layer: 0
   m_Name: Ceiling (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23452,7 +23452,7 @@ GameObject:
   - component: {fileID: 935341997}
   m_Layer: 10
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23556,6 +23556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart Container
       objectReference: {fileID: 0}
+    - target: {fileID: 8318846881034968791, guid: 23f8ddc21e79d25498269d78c604edc5, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8717204355028567090, guid: bc10036fb2189114cb34613bbf6a681f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23f8ddc21e79d25498269d78c604edc5, type: 3}
 --- !u!4 &938155184 stripped
@@ -23835,7 +23839,7 @@ GameObject:
   - component: {fileID: 978923449}
   m_Layer: 0
   m_Name: Ceiling (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23892,7 +23896,7 @@ GameObject:
   - component: {fileID: 990562387}
   m_Layer: 10
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24180,7 +24184,7 @@ GameObject:
   - component: {fileID: 1171753008}
   m_Layer: 0
   m_Name: Room 7 Destructible Wall
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24693,7 +24697,7 @@ GameObject:
   - component: {fileID: 1218332925}
   m_Layer: 10
   m_Name: Floor (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24858,7 +24862,7 @@ GameObject:
   - component: {fileID: 1285542723}
   m_Layer: 10
   m_Name: Floor (10)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25571,7 +25575,7 @@ GameObject:
   - component: {fileID: 1507643857}
   m_Layer: 10
   m_Name: Floor (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72184,7 +72188,7 @@ GameObject:
   - component: {fileID: 1762691707}
   m_Layer: 0
   m_Name: Ceiling
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72464,7 +72468,7 @@ GameObject:
   - component: {fileID: 1926113711}
   m_Layer: 0
   m_Name: Ceiling (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72947,7 +72951,7 @@ GameObject:
   - component: {fileID: 2017810320}
   m_Layer: 0
   m_Name: Ceiling (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73004,7 +73008,7 @@ GameObject:
   - component: {fileID: 2019153683}
   m_Layer: 0
   m_Name: Ceiling (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

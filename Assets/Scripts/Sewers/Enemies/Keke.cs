@@ -15,6 +15,7 @@ public class Keke : MonoBehaviour
     private Vector3 endPosition;
     [SerializeField] Animator myAnim;
     [SerializeField] GameObject mySprite;
+    [SerializeField] GameObject deathTrigger;
 
     public bool idling;
 
@@ -116,6 +117,11 @@ public class Keke : MonoBehaviour
     }
 
     void KekeDie() {
+
+        if (deathTrigger != null) {
+            Destroy(deathTrigger);
+        }
+
         if (isRedKeke) {
             Instantiate(healthDrop, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1f, 0f), Quaternion.identity);
         }

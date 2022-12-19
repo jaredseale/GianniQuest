@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &47648846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 47648847}
+  m_Layer: 16
+  m_Name: Red Keke 1 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &47648847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47648846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1262575051}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &75979850 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898184259832045188, guid: 3ef4b3204691d1b4cad8ab17c6ccadc2, type: 3}
@@ -323,6 +353,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &141134607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141134608}
+  m_Layer: 16
+  m_Name: Keke 4 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &141134608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141134607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 921544807}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &169570637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169570638}
+  m_Layer: 16
+  m_Name: Red Keke 2 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169570638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169570637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 795582183}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &190989287
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +425,7 @@ GameObject:
   - component: {fileID: 190989289}
   m_Layer: 10
   m_Name: Floor (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -424,7 +514,7 @@ GameObject:
   - component: {fileID: 214760671}
   m_Layer: 0
   m_Name: Ceiling (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,7 +571,7 @@ GameObject:
   - component: {fileID: 215419264}
   m_Layer: 10
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,7 +795,7 @@ GameObject:
   - component: {fileID: 281542003}
   m_Layer: 0
   m_Name: Ceiling (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15036,11 +15126,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &416869261 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1517297039984016856, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
-  m_PrefabInstance: {fileID: 1262575050}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &425171329
 GameObject:
   m_ObjectHideFlags: 0
@@ -15053,7 +15138,7 @@ GameObject:
   - component: {fileID: 425171331}
   m_Layer: 0
   m_Name: Ceiling (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15124,6 +15209,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eadf7591d5b667a44bc552963191a446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &560780403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560780404}
+  m_Layer: 16
+  m_Name: Keke 3 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560780404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560780403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068092454}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &573480407 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1402089518590331775, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
@@ -15392,7 +15507,7 @@ GameObject:
   - component: {fileID: 724560347}
   m_Layer: 10
   m_Name: Floor (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15454,7 +15569,7 @@ GameObject:
   - component: {fileID: 745714283}
   m_Layer: 0
   m_Name: Ceiling (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15499,11 +15614,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.064092, y: 7.12831}
   m_EdgeRadius: 0
---- !u!1 &754391319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3203470185833267692, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
-  m_PrefabInstance: {fileID: 921544806}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &766224811
 GameObject:
   m_ObjectHideFlags: 0
@@ -15640,6 +15750,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1517297039984016853, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 169570637}
     - target: {fileID: 1517297039984016856, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
       propertyPath: m_Name
       value: Red Keke (1)
@@ -15710,7 +15824,7 @@ GameObject:
   - component: {fileID: 811381080}
   m_Layer: 10
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15912,6 +16026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keke (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3203470185833267695, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 1031910144}
     - target: {fileID: 3203470186172629651, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.76
@@ -15978,6 +16096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keke (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3203470185833267695, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 141134607}
     - target: {fileID: 3203470186172629651, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.51
@@ -16459,7 +16581,7 @@ GameObject:
   - component: {fileID: 1018951267}
   m_Layer: 10
   m_Name: Floor (9)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16504,6 +16626,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.9822607, y: 1.9844751}
   m_EdgeRadius: 0
+--- !u!1 &1031910144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031910145}
+  m_Layer: 16
+  m_Name: Keke 2 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031910145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031910144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 857928551}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1058960702
 GameObject:
   m_ObjectHideFlags: 0
@@ -16516,7 +16668,7 @@ GameObject:
   - component: {fileID: 1058960704}
   m_Layer: 0
   m_Name: Ceiling (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16616,6 +16768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keke (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3203470185833267695, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 560780403}
     - target: {fileID: 3203470186172629651, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.25
@@ -16769,6 +16925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keke
       objectReference: {fileID: 0}
+    - target: {fileID: 3203470185833267695, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 1466734533}
     - target: {fileID: 3203470186172629651, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.59
@@ -16779,11 +16939,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203470185833267689, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
   m_PrefabInstance: {fileID: 1106663276}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1119350260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1517297039984016856, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
-  m_PrefabInstance: {fileID: 795582182}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1153699818
 GameObject:
@@ -16846,7 +17001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153699818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.711761, y: 0.00000047683716, z: 0}
+  m_LocalPosition: {x: 9.718998, y: 0.00000047683716, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 652228711}
@@ -16882,7 +17037,7 @@ GameObject:
   - component: {fileID: 1165180950}
   m_Layer: 0
   m_Name: Ceiling
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17004,11 +17159,6 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e3ae4feda4b537749ac9fd0b9ede714e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27ce2207de0c15343911e54f848d059f, type: 3}
---- !u!1 &1183562691 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3203470185833267692, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
-  m_PrefabInstance: {fileID: 1106663276}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196854886
 GameObject:
   m_ObjectHideFlags: 0
@@ -17268,6 +17418,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1517297039984016853, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 47648846}
     - target: {fileID: 1517297039984016856, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
       propertyPath: m_Name
       value: Red Keke
@@ -17278,11 +17432,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1517297039984016852, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
   m_PrefabInstance: {fileID: 1262575050}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1267805327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3203470185833267692, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
-  m_PrefabInstance: {fileID: 857928550}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1277095997 stripped
 RectTransform:
@@ -17496,6 +17645,36 @@ Transform:
   - {fileID: 931277429}
   m_Father: {fileID: 0}
   m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1466734533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466734534}
+  m_Layer: 16
+  m_Name: Keke 1 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466734534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466734533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1106663277}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1472687696
 GameObject:
@@ -17733,7 +17912,7 @@ GameObject:
   - component: {fileID: 1504515394}
   m_Layer: 10
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18292,7 +18471,7 @@ GameObject:
   - component: {fileID: 1544062346}
   m_Layer: 10
   m_Name: Floor (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18552,7 +18731,7 @@ GameObject:
   - component: {fileID: 1572274320}
   m_Layer: 10
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18614,7 +18793,7 @@ GameObject:
   - component: {fileID: 1624315286}
   m_Layer: 10
   m_Name: Floor (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60921,11 +61100,6 @@ MonoBehaviour:
   cam: {fileID: 1954418386}
   horizontalParallax: 1
   verticalParallax: 1
---- !u!1 &1762789410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3203470185833267692, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
-  m_PrefabInstance: {fileID: 1068092453}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1772103201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 296087628311214373, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
@@ -60943,7 +61117,7 @@ GameObject:
   - component: {fileID: 1776302074}
   m_Layer: 10
   m_Name: Floor (8)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61214,7 +61388,7 @@ GameObject:
   - component: {fileID: 1952028138}
   m_Layer: 0
   m_Name: Ceiling (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61338,7 +61512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954418383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.172476, y: 0.42099738, z: -10}
+  m_LocalPosition: {x: 11.165209, y: 0.42099738, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153699820}
@@ -61949,30 +62123,34 @@ PrefabInstance:
     - target: {fileID: 3668446993020053488, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 416869261}
+      objectReference: {fileID: 47648846}
     - target: {fileID: 3668446993020053488, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
       propertyPath: enemies.Array.data[1]
       value: 
-      objectReference: {fileID: 1183562691}
+      objectReference: {fileID: 1466734533}
     - target: {fileID: 3668446993020053488, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
       propertyPath: enemies.Array.data[2]
       value: 
-      objectReference: {fileID: 1267805327}
+      objectReference: {fileID: 1031910144}
     - target: {fileID: 3668446993020053488, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
       propertyPath: enemies.Array.data[3]
       value: 
-      objectReference: {fileID: 1762789410}
+      objectReference: {fileID: 560780403}
     - target: {fileID: 3668446993020053488, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
       propertyPath: enemies.Array.data[4]
       value: 
-      objectReference: {fileID: 1119350260}
+      objectReference: {fileID: 169570637}
     - target: {fileID: 3668446993020053488, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
       propertyPath: enemies.Array.data[5]
       value: 
-      objectReference: {fileID: 754391319}
+      objectReference: {fileID: 141134607}
     - target: {fileID: 3668446993020053493, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
       propertyPath: m_Name
       value: Enemy Death Trigger Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668446993020053493, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 3668446993020053494, guid: a093c7d9a52e80d468c7cfe1d0a84df8, type: 3}
       propertyPath: m_LocalPosition.x

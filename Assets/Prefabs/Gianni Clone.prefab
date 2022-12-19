@@ -4883,7 +4883,7 @@ GameObject:
   - component: {fileID: 5518080303649415405}
   - component: {fileID: -9089155283661423601}
   - component: {fileID: 7112510294065871492}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Gianni Clone
   m_TagString: GianniClone
   m_Icon: {fileID: 0}
@@ -5029,7 +5029,7 @@ AudioSource:
   m_GameObject: {fileID: 3300334536645839389}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8717204355028567090, guid: bc10036fb2189114cb34613bbf6a681f, type: 2}
   m_audioClip: {fileID: 8300000, guid: df53857e08ebe3648af6364b13afc9c1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.649

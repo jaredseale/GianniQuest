@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - PlayerFeet
+  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - Explosion
   - Bullet
   - Enemy
-  - 
-  - 
+  - GianniClone
+  - Bomb
   - 
   - 
   - 

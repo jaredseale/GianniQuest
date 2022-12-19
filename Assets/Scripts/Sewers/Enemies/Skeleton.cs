@@ -14,6 +14,7 @@ public class Skeleton : MonoBehaviour
     [SerializeField] Animator myAnim;
     [SerializeField] GameObject mySprite;
     [SerializeField] GameObject skeleton;
+    [SerializeField] GameObject deathTrigger;
 
     [SerializeField] AudioClip shootSFX;
     [SerializeField] AudioClip dieSFX;
@@ -177,6 +178,11 @@ public class Skeleton : MonoBehaviour
     }
 
     void SkeletonDie() {
+
+        if (deathTrigger != null) {
+            Destroy(deathTrigger);
+        }
+
         myCollider.enabled = false;
         StopAllCoroutines();
         dead = true;

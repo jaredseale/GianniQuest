@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17869934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17869935}
+  m_Layer: 16
+  m_Name: Red Keke DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17869935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17869934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 485787141}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &29085502
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +165,7 @@ GameObject:
   - component: {fileID: 29085504}
   m_Layer: 0
   m_Name: Ceiling (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,6 +351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart Container
       objectReference: {fileID: 0}
+    - target: {fileID: 8318846881034968791, guid: 23f8ddc21e79d25498269d78c604edc5, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8717204355028567090, guid: bc10036fb2189114cb34613bbf6a681f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23f8ddc21e79d25498269d78c604edc5, type: 3}
 --- !u!4 &63570401 stripped
@@ -453,7 +487,7 @@ GameObject:
   - component: {fileID: 102324867}
   m_Layer: 10
   m_Name: Floor (14)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,11 +563,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &202197301 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1517297039984016856, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
-  m_PrefabInstance: {fileID: 485787140}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217290987
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +967,7 @@ GameObject:
   - component: {fileID: 316089308}
   m_Layer: 0
   m_Name: Ceiling (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -983,11 +1012,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 35.932148, y: 8.715355}
   m_EdgeRadius: 0
---- !u!1 &329928550 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4765266969145553885, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
-  m_PrefabInstance: {fileID: 1682159099}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &339235891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +1024,7 @@ GameObject:
   - component: {fileID: 339235893}
   m_Layer: 0
   m_Name: Ceiling (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1057,7 +1081,7 @@ GameObject:
   - component: {fileID: 357129805}
   m_Layer: 10
   m_Name: Target Gate
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1202,7 +1226,7 @@ GameObject:
   - component: {fileID: 394389386}
   m_Layer: 10
   m_Name: Floor (20)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1247,11 +1271,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.008835, y: 1.9872055}
   m_EdgeRadius: 0
---- !u!1 &394615959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4765266969145553885, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
-  m_PrefabInstance: {fileID: 1887409893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &396086319
 GameObject:
   m_ObjectHideFlags: 0
@@ -11217,6 +11236,15 @@ Tilemap:
   - first: {x: 14, y: -8, z: 0}
     second:
       serializedVersion: 2
+      m_TileIndex: 38
+      m_TileSpriteIndex: 38
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 15, y: -8, z: 0}
+    second:
+      serializedVersion: 2
       m_TileIndex: 37
       m_TileSpriteIndex: 37
       m_TileMatrixIndex: 0
@@ -11685,6 +11713,15 @@ Tilemap:
   - first: {x: 14, y: -7, z: 0}
     second:
       serializedVersion: 2
+      m_TileIndex: 39
+      m_TileSpriteIndex: 39
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 15, y: -7, z: 0}
+    second:
+      serializedVersion: 2
       m_TileIndex: 33
       m_TileSpriteIndex: 33
       m_TileMatrixIndex: 0
@@ -11966,6 +12003,15 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 36
       m_TileSpriteIndex: 36
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 15, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19989,8 +20035,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 05e4a30d04e02ff46b36003eaab8b168, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 614b8ceaa1993dd40bf4b5cc9e98ca48, type: 2}
   - m_RefCount: 28
@@ -20049,9 +20095,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 3c0bded9cffdd784ca8531e57d0e4064, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 53ab5e17b0669034c872ffc54bbc1379, type: 2}
-  - m_RefCount: 95
+  - m_RefCount: 96
     m_Data: {fileID: 11400000, guid: f7edbb4a78996ef4f96da32bc556533a, type: 2}
-  - m_RefCount: 97
+  - m_RefCount: 98
     m_Data: {fileID: 11400000, guid: b0f7259d47546f249aa74d69c22c4ebf, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 4067292b8dadb9c449821b3f9cf9f641, type: 2}
@@ -20072,8 +20118,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -5866470876088802194, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 473072096595021964, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   - m_RefCount: 28
@@ -20132,14 +20178,14 @@ Tilemap:
     m_Data: {fileID: -9002537574882471207, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -6850786736688866950, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
-  - m_RefCount: 95
+  - m_RefCount: 96
     m_Data: {fileID: 5992326389220831505, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
-  - m_RefCount: 97
+  - m_RefCount: 98
     m_Data: {fileID: -9137202733848781849, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 2821915465494016920, guid: d2907c0a7752de54ca03912ce287744e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2070
+  - m_RefCount: 2073
     m_Data:
       e00: 1
       e01: 0
@@ -20158,7 +20204,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2070
+  - m_RefCount: 2073
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -20196,7 +20242,7 @@ GameObject:
   - component: {fileID: 410275843}
   m_Layer: 10
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20311,6 +20357,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1517297039984016853, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 17869934}
     - target: {fileID: 1517297039984016856, guid: d2064fc6db4af9f4f9de987691ec798d, type: 3}
       propertyPath: m_Name
       value: Red Keke
@@ -20334,7 +20384,7 @@ GameObject:
   - component: {fileID: 496749006}
   m_Layer: 10
   m_Name: Floor (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20391,7 +20441,7 @@ GameObject:
   - component: {fileID: 500693169}
   m_Layer: 10
   m_Name: Floor (22)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20436,11 +20486,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.964794, y: 1.9872055}
   m_EdgeRadius: 0
---- !u!1 &549703714 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3203470185833267692, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
-  m_PrefabInstance: {fileID: 730581317}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &554079588 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2083337905996763717, guid: e03d1dc3de9c6014aa414c03abbacbd1, type: 3}
@@ -20464,7 +20509,7 @@ GameObject:
   - component: {fileID: 570304240}
   m_Layer: 10
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20568,7 +20613,7 @@ GameObject:
   - component: {fileID: 604142160}
   m_Layer: 10
   m_Name: Floor (13)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20600,7 +20645,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -27.59259, y: 2.2464206}
+  m_Offset: {x: -27.082405, y: 2.2464206}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -20611,7 +20656,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.298317, y: 1.9852357}
+  m_Size: {x: 4.3186874, y: 1.9852357}
   m_EdgeRadius: 0
 --- !u!1 &617171321
 GameObject:
@@ -20626,7 +20671,7 @@ GameObject:
   - component: {fileID: 617171324}
   m_Layer: 10
   m_Name: Enemy Death Trigger Gate
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20687,13 +20732,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 1412964745}
-  - {fileID: 394615959}
-  - {fileID: 549703714}
-  - {fileID: 1595579136}
-  - {fileID: 1241577394}
-  - {fileID: 202197301}
-  - {fileID: 329928550}
+  - {fileID: 1251193277}
+  - {fileID: 1761287705}
+  - {fileID: 1371430768}
+  - {fileID: 1928157007}
+  - {fileID: 1923088109}
+  - {fileID: 17869934}
+  - {fileID: 829298290}
   gateOpen: 0
   gatePlayerPrefName: Room9EnemyGate
   openPosition: {x: -21.41, y: -9.28, z: 0}
@@ -21044,7 +21089,7 @@ GameObject:
   - component: {fileID: 725742893}
   m_Layer: 10
   m_Name: Floor (11)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21144,6 +21189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keke
       objectReference: {fileID: 0}
+    - target: {fileID: 3203470185833267695, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 1371430768}
     - target: {fileID: 3203470186172629651, guid: cd774a29ef2f5e34a930797d21db9857, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.41
@@ -21172,7 +21221,7 @@ GameObject:
   - component: {fileID: 757455220}
   m_Layer: 0
   m_Name: Ceiling (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21229,7 +21278,7 @@ GameObject:
   - component: {fileID: 759051684}
   m_Layer: 10
   m_Name: Floor (21)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21291,7 +21340,7 @@ GameObject:
   - component: {fileID: 777055185}
   m_Layer: 10
   m_Name: Floor (12)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21398,6 +21447,7 @@ Transform:
   - {fileID: 757455219}
   - {fileID: 1372538101}
   - {fileID: 339235892}
+  - {fileID: 1880206023}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21488,6 +21538,36 @@ RectTransform:
   m_AnchoredPosition: {x: -594.42004, y: 391.4}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &829298290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829298291}
+  m_Layer: 16
+  m_Name: Glimback 4 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &829298291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829298290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1682159100}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &835074398
 GameObject:
   m_ObjectHideFlags: 0
@@ -21500,7 +21580,7 @@ GameObject:
   - component: {fileID: 835074400}
   m_Layer: 10
   m_Name: Floor (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22536,7 +22616,7 @@ GameObject:
   - component: {fileID: 1131225707}
   m_Layer: 10
   m_Name: Floor (16)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23107,11 +23187,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1241577394 stripped
+--- !u!1 &1251193277
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4765266969145553885, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
-  m_PrefabInstance: {fileID: 1348300871}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251193278}
+  m_Layer: 16
+  m_Name: Skeleton DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251193278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251193277}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1865175743}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1277095997 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 938696092214856371, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
@@ -23129,7 +23234,7 @@ GameObject:
   - component: {fileID: 1317803548}
   m_Layer: 10
   m_Name: Floor (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23450,6 +23555,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1344028236}
     m_Modifications:
+    - target: {fileID: 4765266969145553887, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 1923088109}
     - target: {fileID: 4765266969278142205, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
       propertyPath: m_Name
       value: Glimback (2)
@@ -23509,6 +23618,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4765266969278142206, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
   m_PrefabInstance: {fileID: 1348300871}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1371430768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371430769}
+  m_Layer: 16
+  m_Name: Keke DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371430769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371430768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 730581318}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372538100
 GameObject:
   m_ObjectHideFlags: 0
@@ -23521,7 +23660,7 @@ GameObject:
   - component: {fileID: 1372538102}
   m_Layer: 10
   m_Name: Floor (23)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23578,7 +23717,7 @@ GameObject:
   - component: {fileID: 1376903956}
   m_Layer: 10
   m_Name: Floor (18)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23635,7 +23774,7 @@ GameObject:
   - component: {fileID: 1379492514}
   m_Layer: 10
   m_Name: Floor (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23680,11 +23819,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.987688, y: 3.5665913}
   m_EdgeRadius: 0
---- !u!1 &1412964745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7226353366133282566, guid: 0903f52dc88e18d44890d968a992459f, type: 3}
-  m_PrefabInstance: {fileID: 1865175742}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1444236605
 GameObject:
   m_ObjectHideFlags: 0
@@ -24731,7 +24865,7 @@ GameObject:
   - component: {fileID: 1572274320}
   m_Layer: 10
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24945,11 +25079,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1595579136 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4765266969145553885, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
-  m_PrefabInstance: {fileID: 2129561814}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1648122738
 GameObject:
   m_ObjectHideFlags: 0
@@ -24962,7 +25091,7 @@ GameObject:
   - component: {fileID: 1648122740}
   m_Layer: 10
   m_Name: Floor (9)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25014,6 +25143,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1344028236}
     m_Modifications:
+    - target: {fileID: 4765266969145553887, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 829298290}
     - target: {fileID: 4765266969278142205, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
       propertyPath: m_Name
       value: Glimback (3)
@@ -68279,6 +68412,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5279649713811360079, guid: 6a636627fde6a374383f7df1997ab9f2, type: 3}
   m_PrefabInstance: {fileID: 1754778981}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1761287705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761287706}
+  m_Layer: 16
+  m_Name: Glimback 1 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1761287706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761287705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1887409894}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772103201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 296087628311214373, guid: 503330aba3f57d742b86d97dc3a30818, type: 3}
@@ -68296,7 +68459,7 @@ GameObject:
   - component: {fileID: 1797008968}
   m_Layer: 10
   m_Name: Floor (10)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68472,6 +68635,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1344028236}
     m_Modifications:
+    - target: {fileID: 7226353366133282618, guid: 0903f52dc88e18d44890d968a992459f, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 1251193277}
     - target: {fileID: 7226353367093362017, guid: 0903f52dc88e18d44890d968a992459f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.36
@@ -68531,6 +68698,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7226353367093362017, guid: 0903f52dc88e18d44890d968a992459f, type: 3}
   m_PrefabInstance: {fileID: 1865175742}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1880206022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1880206023}
+  - component: {fileID: 1880206024}
+  m_Layer: 10
+  m_Name: Floor (24)
+  m_TagString: Terrain
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1880206023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880206022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.47, y: -13.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 799805903}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1880206024
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880206022}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -25.424305, y: 2.7424328}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0024872, y: 2.97726}
+  m_EdgeRadius: 0
 --- !u!1001 &1887409893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68538,6 +68762,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1344028236}
     m_Modifications:
+    - target: {fileID: 4765266969145553887, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 1761287705}
     - target: {fileID: 4765266969278142205, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
       propertyPath: m_Name
       value: Glimback
@@ -68678,6 +68906,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+--- !u!1 &1923088109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923088110}
+  m_Layer: 16
+  m_Name: Glimback 3 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923088110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923088109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1348300872}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1928157007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928157008}
+  m_Layer: 16
+  m_Name: Glimback 2 DT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928157008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928157007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2129561815}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1935923952
 GameObject:
   m_ObjectHideFlags: 0
@@ -68690,7 +68978,7 @@ GameObject:
   - component: {fileID: 1935923954}
   m_Layer: 10
   m_Name: Floor (17)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68747,7 +69035,7 @@ GameObject:
   - component: {fileID: 1945952481}
   m_Layer: 0
   m_Name: Ceiling
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68804,7 +69092,7 @@ GameObject:
   - component: {fileID: 1948466311}
   m_Layer: 10
   m_Name: Floor (19)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69374,7 +69662,7 @@ GameObject:
   - component: {fileID: 1998981725}
   m_Layer: 10
   m_Name: Floor (8)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69518,7 +69806,7 @@ GameObject:
   - component: {fileID: 2029916410}
   m_Layer: 10
   m_Name: Floor (15)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69702,7 +69990,7 @@ GameObject:
   - component: {fileID: 2080135077}
   m_Layer: 10
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69836,6 +70124,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1344028236}
     m_Modifications:
+    - target: {fileID: 4765266969145553887, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
+      propertyPath: deathTrigger
+      value: 
+      objectReference: {fileID: 1928157007}
     - target: {fileID: 4765266969278142205, guid: d964271d3dd6bb44fa2d02a0704f5fdf, type: 3}
       propertyPath: m_Name
       value: Glimback (1)

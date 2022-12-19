@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Wake Up Cutscene.unity
+    path: Assets/Scenes/Credits.unity
     guid: 13e4e333e0250d54d8cb1c11ade85c23
+  - enabled: 1
+    path: Assets/Scenes/Wake Up Cutscene.unity
+    guid: b897ebb585d1538438ce36d74dd7fd27
   - enabled: 1
     path: Assets/Scenes/Gianni's Room.unity
     guid: 9b5426bc1e2d8b44ba927ee3ff34c0d3
@@ -107,4 +110,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sewers/Sewers 14.unity
     guid: 72319a4357375a64daa93298b76879a9
+  - enabled: 1
+    path: Assets/Scenes/Sewers/Sewers 15.unity
+    guid: 59bd408e83f70cb438b7cf81db346f1f
   m_configObjects: {}

@@ -7,6 +7,7 @@ public class PizzaGuy : MonoBehaviour
 
     public DialogueTrigger currentDialogue;
     public DialogueManager dialogueManager;
+    public GameObject pizza;
 
     string[] Init = new string[] {"Happy holidays and welcome to Pizza Hell, home of the sinfully delicious, brimstone-fired Infernal Deep Dish.",
         "If you want one of our fresh 'zas, it's going to run you around six dollars. Actually, it is going to run you exactly six dollars. To the cent.",
@@ -44,7 +45,7 @@ public class PizzaGuy : MonoBehaviour
     void PlayAction() {
 
         if (PlayerPrefs.GetInt("Dollars") >= 6) {
-            //trigger end of game
+            pizza.SetActive(true); //everything kicks off when the pizza is enabled
         }
     }
 }

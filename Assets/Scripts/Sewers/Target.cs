@@ -28,29 +28,19 @@ public class Target : MonoBehaviour
         myAudio = GetComponent<AudioSource>();
         mySprite = GetComponent<SpriteRenderer>();
 
-        if (PlayerPrefs.GetInt(targetPlayerPrefName) == 0) {
-            isActivated = false;
-            mySprite.sprite = unactivatedButtonSprite;
-            correspondingDoor.gameObject.transform.position = doorStartPos;
-        } else {
-            isActivated = true;
-            mySprite.sprite = activatedTargetSprite;
-            correspondingDoor.gameObject.transform.position = doorEndPos;
+        if (targetPlayerPrefName != "") {
+            if (PlayerPrefs.GetInt(targetPlayerPrefName) == 0) {
+                isActivated = false;
+                mySprite.sprite = unactivatedButtonSprite;
+                correspondingDoor.gameObject.transform.position = doorStartPos;
+            } else {
+                isActivated = true;
+                mySprite.sprite = activatedTargetSprite;
+                correspondingDoor.gameObject.transform.position = doorEndPos;
+            } 
         }
         
     }
-
-
-    /*private void Update() {
-        if (myCollider.IsTouchingLayers(LayerMask.GetMask("Bullet")) && !isActivated) {
-            isActivated = true;
-            PlayerPrefs.SetInt(targetPlayerPrefName, 1);
-            myAudio.Play();
-            gateAudio.Play();
-            mySprite.sprite = activatedTargetSprite;
-            StartCoroutine(MoveDoor());
-        }
-    }*/
 
     IEnumerator MoveDoor() {
         Vector3 startPosition = correspondingDoor.transform.position;
@@ -76,7 +66,11 @@ public class Target : MonoBehaviour
 
             Destroy(other.gameObject);
             isActivated = true;
-            PlayerPrefs.SetInt(targetPlayerPrefName, 1);
+
+            if (targetPlayerPrefName != "") {
+                PlayerPrefs.SetInt(targetPlayerPrefName, 1);
+            }
+            
             myAudio.Play();
             gateAudio.Play();
             mySprite.sprite = activatedTargetSprite;

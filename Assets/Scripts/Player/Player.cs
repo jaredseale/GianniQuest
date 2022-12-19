@@ -201,7 +201,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown("e") || Input.GetKeyDown("c")) {
             if (canMove && PlayerPrefs.GetInt("HasBomb") == 1 && FindObjectOfType<Bomb>() == null 
                 && SceneManager.GetActiveScene().name.Contains("Sewers")) {
-                Instantiate(bomb, gameObject.transform.position, Quaternion.identity);
+                Instantiate(bomb, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.5f), Quaternion.identity);
             }
         }
     }

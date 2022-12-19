@@ -12,6 +12,7 @@ public class Glimback : MonoBehaviour
     private Vector3 endPosition;
     [SerializeField] Animator myAnim;
     [SerializeField] GameObject mySprite;
+    [SerializeField] GameObject deathTrigger;
 
     public bool idling;
 
@@ -99,6 +100,11 @@ public class Glimback : MonoBehaviour
     }
 
     void GlimbackDie() {
+
+        if (deathTrigger != null) {
+            Destroy(deathTrigger);
+        }
+
         myCollider.enabled = false;
         StopAllCoroutines();
         myAnim.SetTrigger("die");
