@@ -14,6 +14,7 @@ public class PizzaGuy : MonoBehaviour
         "It looks like you don't quite have enough dough on you. Come back when you can afford the dough. Do you get the joke there.",
         "Also, in case you forgot, you can press TAB to leave. Our door is only one-way thanks to budget cuts."};
     string[] HasMoney = new string[] {"Hey big guy, welcome back to Pizza Hell. You look like you have just enough money for a premium slice, or eight.",
+        "Congrats man, what a journey that must have been.",
         "One purgaterrific pie, coming right up!" };
 
     private void Start() {

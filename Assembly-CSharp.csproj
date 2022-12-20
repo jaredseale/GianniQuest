@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Sewers\Enemies\Skeleton.cs" />
     <Compile Include="Assets\Scripts\SNICO\OrderState.cs" />
     <Compile Include="Assets\Scripts\House\HallwayManager.cs" />
+    <Compile Include="Assets\Scripts\Sewers\MovingTarget.cs" />
     <Compile Include="Assets\Scripts\Sewers\Enemies\Glimback.cs" />
     <Compile Include="Assets\Scripts\Ethereal Ascent\LeftToRightUFO.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenuOptions.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\PizzaCutscene.cs" />
     <Compile Include="Assets\Scripts\Sewers\LightGates.cs" />
     <Compile Include="Assets\Scripts\Rancid Rick&apos;s\DrinkBounce.cs" />
     <Compile Include="Assets\Scripts\House\LucySpawn.cs" />
@@ -158,8 +160,8 @@
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Sewers\MovingTarget.cs" />
-    <Compile Include="Assets\Scripts\PizzaCutscene.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Enemies\Boss.cs" />
+    <Compile Include="Assets\Scripts\Sewers\Enemies\HomingBird.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
