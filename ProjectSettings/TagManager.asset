@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - PlayerFeet
   - Terrain
+  - BossEnemies
   layers:
   - Default
   - TransparentFX
