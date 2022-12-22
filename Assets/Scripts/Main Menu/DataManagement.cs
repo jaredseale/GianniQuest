@@ -176,10 +176,20 @@ public class DataManagement : MonoBehaviour
     }
 
     public void CompleteSewers() {
-        //close ricks, EA, sewers
-        //increase dollar
         //give gianni all the equipment(?)
-        
+
+        PlayerPrefs.SetInt("Dollars", PlayerPrefs.GetInt("Dollars") + 1);
+        PlayerPrefs.SetString("SisterDialogueState", "Sewers");
+        PlayerPrefs.SetString("BrotherDialogueState", "Sewers");
+        PlayerPrefs.SetString("MomDialogueState", "Sewers");
+        PlayerPrefs.SetString("DadDialogueState", "Sewers2");
+        PlayerPrefs.SetInt("SewersDataManagement", 0);
+        PlayerPrefs.SetString("RicksEntry", "Done");
+        PlayerPrefs.SetString("EtherealAscentEntry", "Done");
+        PlayerPrefs.SetString("SewersEntry", "Done");
+
+        SewersToggle.interactable = false;
+
     }
 
 }

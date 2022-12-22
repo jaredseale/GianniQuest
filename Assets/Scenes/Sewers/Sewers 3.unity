@@ -17001,7 +17001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153699818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.718998, y: 0.00000047683716, z: 0}
+  m_LocalPosition: {x: 9.711761, y: 0.00000047683716, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 652228711}
@@ -17607,7 +17607,6 @@ MonoBehaviour:
   fullTrack: {fileID: 1007209141}
   loopTrack: {fileID: 1472687698}
   destroyable: 0
-  beat: 1
 --- !u!1 &1344028235
 GameObject:
   m_ObjectHideFlags: 0
@@ -61326,6 +61325,10 @@ PrefabInstance:
       propertyPath: crossfade
       value: 
       objectReference: {fileID: 706151064}
+    - target: {fileID: 5733843448713875648, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1954418385}
     - target: {fileID: 7014651134096138484, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
       propertyPath: m_Name
       value: Gianni
@@ -61374,8 +61377,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7014651134096138494, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 1889240876}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+--- !u!1 &1889240876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7548470040441580658, guid: 6d743997a9faee44396cd273dc4d1ab5, type: 3}
+  m_PrefabInstance: {fileID: 1889240875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1952028136
 GameObject:
   m_ObjectHideFlags: 0
@@ -61512,7 +61524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954418383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.165209, y: 0.42099738, z: -10}
+  m_LocalPosition: {x: 11.172476, y: 0.42099738, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153699820}

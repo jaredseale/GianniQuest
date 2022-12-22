@@ -162,6 +162,14 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("BrokeOrangeEgg", 0);
         PlayerPrefs.SetInt("BrokePurpleEgg", 0);
 
+        PlayerPrefs.SetInt("SMRoom9", 0);
+        PlayerPrefs.SetInt("SMRoom10", 0);
+        PlayerPrefs.SetInt("SMRoom11", 0);
+        PlayerPrefs.SetInt("SMRoom12", 0);
+        PlayerPrefs.SetInt("SMRoom1314", 0);
+        PlayerPrefs.SetInt("SMRoom15", 0);
+        PlayerPrefs.SetInt("SMRoom16", 0);
+
         //pizza guy state
         PlayerPrefs.SetString("PizzaGuyState", "Init");
     }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//most of the methods below are called by the animator
+
 public class Boss : MonoBehaviour
 {
 
@@ -15,6 +17,7 @@ public class Boss : MonoBehaviour
     [SerializeField] GameObject attack5;
     [SerializeField] Image healthBar;
     [SerializeField] GameObject healthBarUI;
+    [SerializeField] GameObject bossDialogue;
 
     [Space(20)]
 
@@ -27,17 +30,19 @@ public class Boss : MonoBehaviour
     [SerializeField] AudioClip attack4Tele;
 
     int attackTurnNumber;
-    int attackID;
+    public int attackID;
     int lastAttackID;
 
     CircleCollider2D myCollider;
     Player player;
     Animator myAnim;
     AudioSource myAudio;
+    Pause pause;
 
-    void Start() {
+    void OnEnable() {
         myCollider = GetComponent<CircleCollider2D>();
         player = FindObjectOfType<Player>();
+        pause = FindObjectOfType<Pause>();
         myAnim = GetComponent<Animator>();
         myAudio = GetComponent<AudioSource>();
         attackTurnNumber = 1;
@@ -72,13 +77,18 @@ public class Boss : MonoBehaviour
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("Explosion"))) {
             TakeDamage(3);
         }
+
+        if (bossHealth <= 0) {
+            attackID = 99;
+            myAnim.SetInteger("Attack", attackID);
+        }
     }
 
     public void TakeDamage(int damage) {
         bossHealth -= damage;
 
         if (bossHealth <= 0) {
-            //EndFight();
+            attackID = 99;
         } else {
             StartCoroutine(HurtBoss());
         }
@@ -182,6 +192,33 @@ public class Boss : MonoBehaviour
     }
 
     public void HealthBarExit() {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("BossEnemies");
+        foreach (GameObject enemy in enemies)
+            GameObject.Destroy(enemy);
         healthBarUI.GetComponent<Animator>().SetTrigger("healthBarExit");
+    }
+
+    public void EndFlapping() {
+        bossSprite.GetComponent<Animator>().SetTrigger("endFight");
+    }
+
+    public void EnableDialogue() {
+        bossDialogue.SetActive(true);
+    }
+
+    public void BlackenSprite() {
+        bossSprite.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f);
+    }
+
+    public void UnblackenSprite() {
+        bossSprite.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+    }
+
+    public void EnablePause() {
+        pause.canPause = true;
+    }
+
+    public void DisablePause() {
+        pause.canPause = false;
     }
 }

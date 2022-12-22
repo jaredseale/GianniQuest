@@ -153,6 +153,7 @@ public class Pause : MonoBehaviour
 
     private void SewersStateReset() {
         PlayerPrefs.SetString("EtherealAscentEntry", "Open");
+        PlayerPrefs.SetString("SewersEntry", "Open");
 
         PlayerPrefs.SetInt("SewersLocationDisplay", 1);
 
@@ -183,6 +184,14 @@ public class Pause : MonoBehaviour
         PlayerPrefs.SetInt("BrokeBlueEgg", 0);
         PlayerPrefs.SetInt("BrokeOrangeEgg", 0);
         PlayerPrefs.SetInt("BrokePurpleEgg", 0);
+
+        PlayerPrefs.SetInt("SMRoom9", 0);
+        PlayerPrefs.SetInt("SMRoom10", 0);
+        PlayerPrefs.SetInt("SMRoom11", 0);
+        PlayerPrefs.SetInt("SMRoom12", 0);
+        PlayerPrefs.SetInt("SMRoom1314", 0);
+        PlayerPrefs.SetInt("SMRoom15", 0);
+        PlayerPrefs.SetInt("SMRoom16", 0);
     }
 
 }

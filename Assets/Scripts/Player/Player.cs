@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     public bool takingDamage;
     public float iframeTime = 0.5f;
     [SerializeField] SewersDeathManager deathManager;
+    [SerializeField] GameObject map;
+    public bool mapOpen;
     public bool inLoadingZone;
 
 
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
         canMove = true;
         takingDamage = false;
         inLoadingZone = false;
+        mapOpen = false;
 
         if (PlayerPrefs.GetInt("HasDoubleJump") == 1) {
             hasDoubleJump = true;
@@ -55,9 +58,14 @@ public class Player : MonoBehaviour
         Vector2 playerPos = new Vector2(spawnXPos, spawnYPos);
         gameObject.transform.position = playerPos;
 
+        LogSewerMap();
+
     }
 
     void Update() {
+
+        Map();
+
         if (canMove && pause.gamePaused == false) { //currently used by loading zones to prevent movement while loading is happening
             Run();
             Jump();
@@ -202,6 +210,59 @@ public class Player : MonoBehaviour
             if (canMove && PlayerPrefs.GetInt("HasBomb") == 1 && FindObjectOfType<Bomb>() == null 
                 && SceneManager.GetActiveScene().name.Contains("Sewers")) {
                 Instantiate(bomb, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.5f), Quaternion.identity);
+            }
+        }
+    }
+
+    public void Map() {
+        if (Input.GetKeyDown("m")) {
+            if (canMove && PlayerPrefs.GetInt("HasDoubleJump") == 1 && mapOpen == false
+                && SceneManager.GetActiveScene().name.Contains("Sewers")) {
+                map.SetActive(true);
+                pause.canPause = false;
+                mapOpen = true;
+            } else if (mapOpen) {
+                map.SetActive(false);
+                pause.canPause = true;
+                mapOpen = false;
+            }
+        }
+    }
+
+    private void LogSewerMap() {
+        if (SceneManager.GetActiveScene().name.Contains("Sewers")) {
+            string sceneName = SceneManager.GetActiveScene().name;
+            switch (sceneName) {
+                case "Sewers 9":
+                    PlayerPrefs.SetInt("SMRoom9", 1);
+                    break;
+
+                case "Sewers 10":
+                    PlayerPrefs.SetInt("SMRoom10", 1);
+                    break;
+
+                case "Sewers 11":
+                    PlayerPrefs.SetInt("SMRoom11", 1);
+                    break;
+
+                case "Sewers 12":
+                    PlayerPrefs.SetInt("SMRoom12", 1);
+                    break;
+
+                case "Sewers 13":
+                    PlayerPrefs.SetInt("SMRoom1314", 1);
+                    break;
+
+                case "Sewers 15":
+                    PlayerPrefs.SetInt("SMRoom15", 1);
+                    break;
+
+                case "Sewers 16":
+                    PlayerPrefs.SetInt("SMRoom16", 1);
+                    break;
+
+                default:
+                    break;
             }
         }
     }

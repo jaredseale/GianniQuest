@@ -21,10 +21,12 @@ public class OverworldDialogue : MonoBehaviour
     public bool inDialogue;
     [SerializeField] string currentWaypoint;
     [SerializeField] OverworldPlayer player;
+    Pause pause;
 
     [SerializeField] int sentenceQueueLength;
 
     void Start() {
+        pause = FindObjectOfType<Pause>();
         sentences = new Queue<string>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -46,6 +48,7 @@ public class OverworldDialogue : MonoBehaviour
 
     public void StartDialogue() {
         inDialogue = true;
+        pause.canPause = false;
         player.canMove = false;
         dialogueBox.SetActive(true);
         animator.SetBool("isOpen", true);
@@ -86,6 +89,7 @@ public class OverworldDialogue : MonoBehaviour
     void EndDialogue() {
         animator.SetBool("isOpen", false);
         player.canMove = true;
+        pause.canPause = true;
         actionTrigger = true;
         inDialogue = false;
         StartCoroutine(WaitForDialogueBoxToScrollOffscreen());
@@ -135,6 +139,8 @@ public class OverworldDialogue : MonoBehaviour
                 case "J": //Rancid Rick's
                     if (PlayerPrefs.GetString("RicksEntry") == "Closed") {
                         sentences.Enqueue("It looks closed. There's a sign on the door that reads \"OPEN AT NIGHT\".");
+                    } else if (PlayerPrefs.GetString("RicksEntry") == "Done") {
+                        sentences.Enqueue("Guess Rick closed up shop for the night. Seems like Pizza Hell is the only thing open.");
                     }
                     break;
 

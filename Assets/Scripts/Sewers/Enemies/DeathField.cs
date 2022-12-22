@@ -22,7 +22,7 @@ public class DeathField : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
-            playerHealth.HurtPlayer(2);
+            playerHealth.HurtPlayer(1);
 
             if (playerHealth.health <= 0) {
                 FindObjectOfType<SewersDeathManager>().PlayerDie();
