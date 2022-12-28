@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     AudioSource audioSource;
     [SerializeField] GameObject optionsWindow = null;
     [SerializeField] GameObject dataWindow = null;
+    [SerializeField] GameObject speedrunWindow = null;
     [SerializeField] GameObject mainButtons = null;
     [SerializeField] Button dataManagementButton;
     [SerializeField] GameObject title;
@@ -23,6 +24,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI startText;
     [SerializeField] TextMeshProUGUI titleText;
     [SerializeField] AudioMixer mixer;
+    [SerializeField] Button speedrunButton;
+    [SerializeField] TextMeshProUGUI speedrunText;
+    [SerializeField] Button creditsButton;
+    [SerializeField] TextMeshProUGUI creditsText;
+
 
     void Start() {
         audioSource = GetComponent<AudioSource>();
@@ -34,6 +40,13 @@ public class MainMenu : MonoBehaviour
         } else {
             startText.SetText("begin your journey");
             dataManagementButton.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("GameBeaten") != 1) {
+            speedrunButton.interactable = false;
+            creditsButton.interactable = false;
+            speedrunText.text = "???";
+            creditsText.text = "???";
         }
     }
 
@@ -69,6 +82,12 @@ public class MainMenu : MonoBehaviour
         dataWindow.SetActive(true);
     }
 
+    public void DisplaySpeedrunMode() {
+        mainButtons.SetActive(false);
+        titleText.SetText("");
+        speedrunWindow.SetActive(true);
+    }
+
     public void PlayButtonHoverSound() {
         audioSource.PlayOneShot(buttonHoverSound);
     }
@@ -77,6 +96,11 @@ public class MainMenu : MonoBehaviour
         mixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat("MasterVolume"));
         mixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("SFXVolume"));
         mixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
+    }
+
+    public void PlayCredits() {
+        transition.SetTrigger("gameStart");
+        levelLoader.LoadSceneWithDelay("Credits", true);
     }
 
     public void InitializeSave()

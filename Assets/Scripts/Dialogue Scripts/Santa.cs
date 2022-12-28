@@ -50,6 +50,11 @@ public class Santa : MonoBehaviour
                 PlayerPrefs.SetInt("EADataManagement", 0);
                 Dollar myDollar = FindObjectOfType<Dollar>();
                 myDollar.CollectDollar();
+
+                if (FindObjectsOfType<SpeedrunManager>() != null && FindObjectOfType<SpeedrunManager>().speedrunType == "ea") {
+                    FindObjectOfType<SpeedrunManager>().runGoing = false;
+                    FindObjectOfType<SpeedrunManager>().destroyable = true;
+                }
             }
         }
     }

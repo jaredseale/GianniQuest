@@ -12,12 +12,14 @@ public class NPC : MonoBehaviour
     public float textSpeed = 1f;
     public DialogueManager dialogueManager;
     public AudioClip voiceSFX;
+    Pause pause;
     
 
     private void Start() {
         myCollider = GetComponent<BoxCollider2D>();
         playerController = FindObjectOfType<Player>();
         dialogueManager = FindObjectOfType<DialogueManager>();
+        pause = FindObjectOfType<Pause>();
     }
 
     void Update() {
@@ -28,7 +30,8 @@ public class NPC : MonoBehaviour
             && myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))
             && GameObject.Find("Game Manager").GetComponent<Pause>().gamePaused == false
             && dialogueManager.inDialogue == false
-            && playerController.isOnGround) {
+            && playerController.isOnGround
+            && pause.exiting == false) {
             dialogueManager.dialogueTarget = this.gameObject;
             playerController.canMove = false;
             FindObjectOfType<DialogueManager>().speakerPitch = thisSpeakerPitch;

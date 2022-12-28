@@ -46,7 +46,13 @@ public class PizzaGuy : MonoBehaviour
     void PlayAction() {
 
         if (PlayerPrefs.GetInt("Dollars") >= 6) {
+            if (FindObjectOfType<SpeedrunManager>()) {
+                if (FindObjectOfType<SpeedrunManager>().speedrunType == "fullgame") {
+                    FindObjectOfType<SpeedrunManager>().runGoing = false;
+                }
+            }
             pizza.SetActive(true); //everything kicks off when the pizza is enabled
+            PlayerPrefs.SetInt("GameBeaten", 1);
         }
     }
 }

@@ -26,8 +26,10 @@ public class Pause : MonoBehaviour
     [SerializeField] GameObject gunControls;
     [SerializeField] GameObject mapControls;
 
+    public bool exiting = false;
+
     //DISABLE BEFORE RELEASE
-    private bool debugMode = true;
+    private bool debugMode = false;
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
@@ -53,9 +55,9 @@ public class Pause : MonoBehaviour
             }
 
             mixer.SetFloat("MusicEQ", 0.05f); //gives the underwater effect
-        } /*else if (Input.GetButtonDown("Pause") && gamePaused == true && controlsMenu.activeSelf == false) {
+        } else if (Input.GetButtonDown("Pause") && gamePaused && controlsMenu.activeSelf == false && !exiting) {
             ClosePauseMenu();
-        }*/
+        }
     }
 
     public void ClosePauseMenu() {
@@ -70,6 +72,7 @@ public class Pause : MonoBehaviour
         mixer.SetFloat("MusicEQ", 1f);
     }
     public void ExitToMap() {
+        exiting = true;
         pauseMenu.SetActive(false);
         if (FindObjectOfType<Player>()) {
             FindObjectOfType<Player>().canMove = false;
@@ -79,11 +82,16 @@ public class Pause : MonoBehaviour
         FindObjectOfType<LevelLoader>().loadSceneDelay = 4f;
         transition.SetTrigger("levelTransition");
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Overworld", true);
+
+        if (SceneManager.GetActiveScene().name == "Ethereal Ascent") { // only comes into play if for some reason the player wants to leave EA during an EA speedrun
+            FindObjectOfType<SpawnPosition>().overworldSpawnPosition = "ascent";
+        }
     }
 
     public void ExitToMainMenu()
     {
         ClosePauseMenu();
+        exiting = true;
         if (FindObjectOfType<Player>()) {
             FindObjectOfType<Player>().canMove = false;
         }
