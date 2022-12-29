@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C5a
   m_EditorClassIdentifier: 
   dialogueText: A few silent moments pass, and then Anousse scoots closer to you
-    and starts whispering with a sneaky expression on her face,
+    and starts whispering with a sneaky expression on her face.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

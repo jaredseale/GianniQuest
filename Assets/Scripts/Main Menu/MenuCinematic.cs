@@ -5,9 +5,9 @@ using UnityEngine;
 public class MenuCinematic : MonoBehaviour
 {
     [SerializeField] GameObject delayedTitles = null;
-    [SerializeField] float titleDelayTime = 19.5f;
+    [SerializeField] float titleDelayTime;
     [SerializeField] GameObject delayedButtons = null;
-    [SerializeField] float buttonDelayTime = 25.1f;
+    [SerializeField] float buttonDelayTime;
     [SerializeField] AudioSource audioSource;
     [SerializeField] Camera camera;
     [SerializeField] Animator cameraAnimator;
@@ -15,6 +15,9 @@ public class MenuCinematic : MonoBehaviour
     float skipThreshold = 1f;
     bool cutsceneSkipped = false;
     [SerializeField] GameObject skipText;
+    [SerializeField] GameObject introCSText;
+    [SerializeField] GameObject sparkles;
+    [SerializeField] Animator openingCinematicAnim;
  
 
     private void Awake() {
@@ -44,12 +47,15 @@ public class MenuCinematic : MonoBehaviour
     void StopIntroCutscene() {
             StopAllCoroutines();
             cameraAnimator.enabled = false;
+            openingCinematicAnim.enabled = false;
+            introCSText.SetActive(false);
+            sparkles.SetActive(true);
             camera.transform.position = new Vector3(0f, 0f, -10f);
             camera.orthographicSize = 5f;
             delayedButtons.SetActive(true);
             delayedTitles.SetActive(true);
             audioSource.Stop();
-            audioSource.time = 25.3f;
+            audioSource.time = buttonDelayTime + 0.3f;
             audioSource.Play();
             cutsceneSkipped = true;
             skipText.SetActive(false);
@@ -74,5 +80,16 @@ public class MenuCinematic : MonoBehaviour
         yield return new WaitForSeconds(titleDelayTime);
         delayedTitles.SetActive(true);
 
+    }
+
+    public void ShowIntroCSText() {
+        introCSText.SetActive(true);
+    }
+
+    public void HideIntroCSText() {
+        introCSText.SetActive(false);
+    }
+    public void EnableSparkles() {
+        sparkles.SetActive(true);
     }
 }

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: Appreciating Anousse's apparent knack for wartime strategy, you simultaneously
     storm the room, preparing for the fight of your lives. Smornstein takes notice
-    of you first, and begins a counter attack, but having the jump on him, you throw
-    out your Giant Punch.
+    of you and begins a counter attack, but having the jump on him, you throw out
+    your Giant Punch.
   characterName: 
   characterSprite: {fileID: 0}
   characterVoice: {fileID: 8300000, guid: a28cda84eda4d40478f24f6725c0987d, type: 3}

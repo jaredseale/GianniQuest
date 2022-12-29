@@ -4210,7 +4210,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu Art - @starlight_soft
+  m_text: 'Main Menu Art - @starlight_soft
+
+
+    Based on art from Firewatch'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5951fbe04a4a684479795aa2cc3bd676, type: 2}
   m_sharedMaterial: {fileID: 2954005772961816821, guid: 5951fbe04a4a684479795aa2cc3bd676, type: 2}
