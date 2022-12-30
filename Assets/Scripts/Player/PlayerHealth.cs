@@ -47,22 +47,25 @@ public class PlayerHealth : MonoBehaviour
         if (canvas.worldCamera == null && SceneManager.GetActiveScene().name != "Overworld") { //this re-hooks up the health to the screen when the current scene is reloaded
             canvas.worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         }
+
     }
 
     public void HurtPlayer(int hurtAmount) {
-        myAnim.SetTrigger("shakeHealth"); 
-        health -= hurtAmount;
+        if (!FindObjectOfType<Player>().isInvulnerable) {
+            myAnim.SetTrigger("shakeHealth");
+            health -= hurtAmount;
 
-        UpdateHealth();
+            UpdateHealth();
 
-        if (health < 0) {
-            health = 0;
-        }
+            if (health < 0) {
+                health = 0;
+            }
 
-        if (health <= 0) {
-            //die
-            FindObjectOfType<SewersDeathManager>().PlayerDie();
-            Destroy(gameObject); //forces it to come back upon respawning
+            if (health <= 0) {
+                //die
+                FindObjectOfType<SewersDeathManager>().PlayerDie();
+                Destroy(gameObject); //forces it to come back upon respawning
+            }
         }
     }
 
@@ -72,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealth();
 
         if (health > maxHealth) {
-            health = 6;
+            health = maxHealth;
         }
     }
 

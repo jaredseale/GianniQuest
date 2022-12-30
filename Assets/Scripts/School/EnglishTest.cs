@@ -87,12 +87,12 @@ public class EnglishTest : MonoBehaviour
 
         if (PlayerPrefs.GetString("TeacherDialogueState") == "Init2" ||
                 PlayerPrefs.GetString("TeacherDialogueState") == "MathTestWrong" ||
-                PlayerPrefs.GetString("TeacherDialogueState") == "EnglishTestWrong" ||
-                PlayerPrefs.GetString("TeacherDialogueState") == "MathTestDone" ||
-                PlayerPrefs.GetString("TeacherDialogueState") == "EnglishTestDone") {
+                PlayerPrefs.GetString("TeacherDialogueState") == "EnglishTestWrong") {
             GetComponent<Interactable>().enabled = true;
+            GetComponent<BoxCollider2D>().enabled = true;
         } else {
             GetComponent<Interactable>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
             interactableArrow.SetActive(false);
         }
     }

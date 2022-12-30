@@ -51,7 +51,7 @@ public class Santa : MonoBehaviour
                 Dollar myDollar = FindObjectOfType<Dollar>();
                 myDollar.CollectDollar();
 
-                if (FindObjectsOfType<SpeedrunManager>() != null && FindObjectOfType<SpeedrunManager>().speedrunType == "ea") {
+                if (FindObjectOfType<SpeedrunManager>() != null && FindObjectOfType<SpeedrunManager>().speedrunType == "ea") {
                     FindObjectOfType<SpeedrunManager>().runGoing = false;
                     FindObjectOfType<SpeedrunManager>().destroyable = true;
                 }

@@ -93,6 +93,7 @@ ScriptsOnlyBuild:
     - RightToLeftUFO
     - SNICOTutorial
     - Santa
+    - SaveInitializer
     - SetVolume
     - SetVolumeSliders
     - SewersDeathManager
@@ -1618,6 +1619,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15816}
     - Class: 114
       Script: {instanceID: 15858}
+    - Class: 114
+      Script: {instanceID: 32716}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1890,6 +1893,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15824}
     - Class: 114
       Script: {instanceID: 15872}
+    - Class: 114
+      Script: {instanceID: 32716}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -5790,7 +5795,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 114761c5f59dbfa1cea15269966b8258
+      Hash: 20d40ce62a9e6046367ffcd9cb6ddeee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -5946,7 +5951,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: 762d78628770d9beeb8eb013d7da37bb
+      Hash: fd8293dddcb727d817418a578df31b73
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BrothersRoomManager
@@ -7026,7 +7031,7 @@ ScriptsOnlyBuild:
     className: Door
   - hash:
       serializedVersion: 2
-      Hash: c6c856652502bd195a411e2254df6757
+      Hash: 4a4de219c31bcf51e60879b66dc42786
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Credits
@@ -7078,6 +7083,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SaveInitializer
   platform: 19
   scenePathNames:
   - Assets/Scenes/Splash Screen.unity

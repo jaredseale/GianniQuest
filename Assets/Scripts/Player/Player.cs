@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject map;
     public bool mapOpen;
     public bool inLoadingZone;
+    public bool isInvulnerable;
 
 
     void Start() {
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
         takingDamage = false;
         inLoadingZone = false;
         mapOpen = false;
+        isInvulnerable = false;
 
         if (PlayerPrefs.GetInt("HasDoubleJump") == 1) {
             hasDoubleJump = true;
@@ -89,6 +91,11 @@ public class Player : MonoBehaviour
 
         if (PlayerPrefs.GetInt("HasDoubleJump") == 1) { //for the moment when you get the cloud
             hasDoubleJump = true;
+        }
+
+        if (gameObject.transform.position.y < -500f) {
+            gameObject.transform.position = FindObjectOfType<SpawnPosition>().spawnPosition;
+            playerRigidbody.velocity = new Vector2(0f, 0f);
         }
     }
 
@@ -172,9 +179,11 @@ public class Player : MonoBehaviour
     }
 
     public void Hurt() {
-        audioSource.PlayOneShot(hurtSound);
-        StartCoroutine(IFrames());
-        StartCoroutine(DamageBlink());
+        if (!isInvulnerable) {
+            audioSource.PlayOneShot(hurtSound);
+            StartCoroutine(IFrames());
+            StartCoroutine(DamageBlink());
+        }
     }
 
     public IEnumerator IFrames() {

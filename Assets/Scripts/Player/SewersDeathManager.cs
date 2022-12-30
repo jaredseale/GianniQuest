@@ -14,14 +14,17 @@ public class SewersDeathManager : MonoBehaviour
     [SerializeField] Animator crossfade;
 
     Pause pause = null;
+    Player player;
  
     void Start() {
         pause = FindObjectOfType<Pause>();
+        player = FindObjectOfType<Player>();
     }
 
     public void PlayerDie() {
         playerRB.constraints = RigidbodyConstraints2D.FreezeAll;
         playerCollider.enabled = false;
+        player.canMove = false;
         pause.canPause = false;
         playerAudio.PlayOneShot(deathSFX);
         StartCoroutine(DeathLerp());

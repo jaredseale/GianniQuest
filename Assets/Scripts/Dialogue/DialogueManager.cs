@@ -22,8 +22,12 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueTarget;
     public bool inDialogue;
     Pause myPause;
+    Player player;
 
     void Start() {
+        if (FindObjectOfType<Player>()) {
+            player = FindObjectOfType<Player>();
+        }
         myPause = FindObjectOfType<Pause>();
         sentences = new Queue<string>();
         audioSource = GetComponent<AudioSource>();
@@ -37,6 +41,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue) {
         myPause.canPause = false;
+        player.isInvulnerable = true;
         inDialogue = true;
         dialogueBox.SetActive(true);
         animator.SetBool("isOpen", true);
@@ -87,6 +92,7 @@ public class DialogueManager : MonoBehaviour
         actionTrigger = true;
         inDialogue = false;
         myPause.canPause = true;
+        player.isInvulnerable = false;
         StartCoroutine(WaitForDialogueBoxToScrollOffscreen());
     }
 

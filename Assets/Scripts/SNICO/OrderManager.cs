@@ -376,7 +376,7 @@ public class OrderManager : MonoBehaviour
 
     public void RepeatOrder() {
         if (inProgressOrder) {
-            health -= 3;
+            health -= 2;
             if (health < 0) {
                 health = 0;
             }
@@ -403,7 +403,7 @@ public class OrderManager : MonoBehaviour
             } else {
                 Debug.Log("Order was NOT correct!");
                 healthBarAnimator.SetTrigger("healthDown");
-                health -= 20;
+                health -= 15;
                 if (health < 0) {
                     health = 0;
                 }

@@ -92,7 +92,7 @@ public class BossDialogue : MonoBehaviour
             Dollar myDollar = FindObjectOfType<Dollar>();
             myDollar.CollectDollar();
             currentState = "End";
-            if (FindObjectsOfType<SpeedrunManager>() != null && FindObjectOfType<SpeedrunManager>().speedrunType == "sewers") {
+            if (FindObjectOfType<SpeedrunManager>() != null && FindObjectOfType<SpeedrunManager>().speedrunType == "sewers") {
                 FindObjectOfType<SpeedrunManager>().runGoing = false;
                 FindObjectOfType<SpeedrunManager>().destroyable = true;
             }

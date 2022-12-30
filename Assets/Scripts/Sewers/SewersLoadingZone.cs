@@ -42,6 +42,7 @@ public class SewersLoadingZone : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !isEnteringRoom) {
 
             pause.canPause = false;
+            player.isInvulnerable = true;
             FindObjectOfType<SpawnPosition>().setNextSpawn(nextScenePos.x, nextScenePos.y);
             
             player.inLoadingZone = true;
@@ -116,12 +117,14 @@ public class SewersLoadingZone : MonoBehaviour
                     foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
                         loadingZone.playerVelo = new Vector2(-8f, -10f);
                     }
+                    player.facingRight = false;
                     break;
 
                 case "left":
                     foreach (SewersLoadingZone loadingZone in areaLoadingZones) {
                         loadingZone.playerVelo = new Vector2(8f, -10f);
                     }
+                    player.facingRight = true;
                     break;
 
                 case "up":

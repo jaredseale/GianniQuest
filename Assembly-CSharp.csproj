@@ -125,6 +125,7 @@
     <Compile Include="Assets\Scripts\Overworld\RancidRicksAnim.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\Brother.cs" />
     <Compile Include="Assets\Scripts\Dialogue Scripts\PizzaGuy.cs" />
+    <Compile Include="Assets\Scripts\SpeedrunManager.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldDialogue.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Sewers\Enemies\Bat.cs" />
@@ -165,12 +166,12 @@
     <Compile Include="Assets\Scripts\Ethereal Ascent\EAMusicManager.cs" />
     <Compile Include="Assets\Scripts\Overworld\OverworldWaypoints.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\Credits.cs" />
     <Compile Include="Assets\Scripts\SetVolumeSliders.cs" />
     <Compile Include="Assets\Scripts\Player\GianniClone.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SpeedrunMode.cs" />
-    <Compile Include="Assets\Scripts\SpeedrunManager.cs" />
-    <Compile Include="Assets\Scripts\Credits.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
+    <Compile Include="Assets\Scripts\SaveInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

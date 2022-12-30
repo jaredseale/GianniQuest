@@ -16,6 +16,10 @@ public class Credits : MonoBehaviour
     [SerializeField] GameObject scrollingCredits;
     [SerializeField] TextMeshProUGUI playerName;
 
+    public float holdTimer = 0f;
+    public float skipThreshold = 1f;
+    bool skipping;
+
     void Start() {
         levelLoader = FindObjectOfType<LevelLoader>();
 
@@ -24,6 +28,18 @@ public class Credits : MonoBehaviour
         }
 
         playerName.text = PlayerPrefs.GetString("PlayerName");
+
+    }
+    private void Update() {
+        if (Input.GetButton("Jump")) {
+            holdTimer -= Time.deltaTime;
+            if (holdTimer < 0f && skipping == false) {
+                skipping = true;
+                StopAllCoroutines();
+                crossfade.SetTrigger("gameStart");
+                levelLoader.LoadSceneWithDelay("Main Menu", true);
+            }
+        }
     }
 
     public void EnableText1() {

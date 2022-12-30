@@ -6424,8 +6424,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.32156864, g: 0.48235297, b: 0.64705884, a: 1}
+    m_PressedColor: {r: 0.25992346, g: 0.40647638, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -15160,8 +15160,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.32156864, g: 0.48235297, b: 0.64705884, a: 1}
+    m_PressedColor: {r: 0.25992346, g: 0.40647638, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -16159,8 +16159,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.32156864, g: 0.48235297, b: 0.64705884, a: 1}
+    m_PressedColor: {r: 0.25992346, g: 0.40647638, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -21744,9 +21744,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
+    m_PressedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
+    m_SelectedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -22573,9 +22573,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
+    m_PressedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
+    m_SelectedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -23188,9 +23188,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
+    m_PressedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
+    m_SelectedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -33187,9 +33187,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
+    m_PressedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
+    m_SelectedColor: {r: 0.31764707, g: 0.48235297, b: 0.64705884, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -36303,8 +36303,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.32156864, g: 0.48235297, b: 0.64705884, a: 1}
+    m_PressedColor: {r: 0.25992346, g: 0.40647638, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -38443,8 +38443,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Note which toppings are on by default in the item menus. If the customers
-    don't mention the default toppings in their order (like buns on a burger), then
-    it's safe to assume that they do want them.
+    don't mention the default toppings in their order (like buns on a burger, or
+    salt on cheese fries), then it's safe to assume that they DO want them.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52bb2897b47186a44a6a671fae725704, type: 2}
   m_sharedMaterial: {fileID: -6722734297164590298, guid: 52bb2897b47186a44a6a671fae725704, type: 2}

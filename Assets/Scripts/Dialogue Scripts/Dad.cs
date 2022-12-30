@@ -17,9 +17,9 @@ public class Dad : MonoBehaviour
     string[] PostDollar = new string[] { "Mi dispiace, polpetto, you're going to have to wait until your next shift if you want to get paid again." };
     string[] Night = new string[] { "Buona serata, Gianni." };
     string[] Sewers = new string[] { "Dio mio, Gianni, what's causing all that racket around the house?",
-        "If you're getting up to any trouble, I guess I can't stop you, but I you gotta be safe around these parts.",
+        "You're going to need something to get you out of harm's way if you're getting into any trouble.",
         "Here, take my Tom Gun. It will keep you sano e salvo if you happen to encounter anything pericoloso.",
-        "When you're not near any buildings, right click to fire the Tom Gun. It's as easy as that, signorino."};
+        "When you're not in a building, right click to fire the Tom Gun. It's as easy as that, signorino."};
     string[] Sewers2 = new string[] { "Remember, as long as you're not around any buildings, you can use the Tom Gun by right clicking."};
 
 

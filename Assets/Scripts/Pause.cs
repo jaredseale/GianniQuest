@@ -27,6 +27,7 @@ public class Pause : MonoBehaviour
     [SerializeField] GameObject mapControls;
 
     public bool exiting = false;
+    Vector2 tempVelo;
 
     //DISABLE BEFORE RELEASE
     private bool debugMode = false;
@@ -48,6 +49,10 @@ public class Pause : MonoBehaviour
             gamePaused = true;
             pauseMenu.SetActive(true);
             locationTitle.SetActive(false);
+
+            if (FindObjectOfType<Player>()) {
+                tempVelo = player.GetComponent<Rigidbody2D>().velocity;
+            }
             Time.timeScale = 0f; //prevent player movement
 
             if (player != null) { //prevents an error on the overworld
@@ -63,6 +68,11 @@ public class Pause : MonoBehaviour
     public void ClosePauseMenu() {
         gamePaused = false;
         pauseMenu.SetActive(false);
+
+        if (FindObjectOfType<Player>()) {
+            player.GetComponent<Rigidbody2D>().velocity = tempVelo;
+        }
+        
         Time.timeScale = 1f; //return player movement
 
         if (player != null) { //prevents an error on the overworld

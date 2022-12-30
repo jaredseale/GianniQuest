@@ -25,10 +25,12 @@ public class SpeedrunMode : MonoBehaviour
 
     LevelLoader levelLoader;
     AudioSource myAudio;
+    SaveInitializer saveInitializer;
 
     private void Start() {
         levelLoader = FindObjectOfType<LevelLoader>();
         myAudio = GetComponent<AudioSource>();
+        saveInitializer = FindObjectOfType<SaveInitializer>();
     }
 
     public void Update() {
@@ -84,7 +86,7 @@ public class SpeedrunMode : MonoBehaviour
 
     public void StartEASpeedrun() {
         SpawnSpeedrunManager("ea");
-        mainMenu.InitializeSave();
+        saveInitializer.InitializeSave();
 
         //data management
         PlayerPrefs.SetInt("SchoolDataManagement", 0);
@@ -125,7 +127,7 @@ public class SpeedrunMode : MonoBehaviour
 
     public void StartSewersSpeedrun() {
         SpawnSpeedrunManager("sewers");
-        mainMenu.InitializeSave();
+        saveInitializer.InitializeSave();
 
         //data management
         PlayerPrefs.SetInt("SchoolDataManagement", 0);
@@ -170,7 +172,7 @@ public class SpeedrunMode : MonoBehaviour
 
     public void StartFullGameSpeedrun() {
         SpawnSpeedrunManager("fullgame");
-        mainMenu.InitializeSave();
+        saveInitializer.InitializeSave();
 
         PlayerPrefs.SetString("IntroCutsceneStatus", "Watched");
         PlayerPrefs.SetInt("DisplayMenuCutsceneSkipText", 1);

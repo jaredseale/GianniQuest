@@ -101,7 +101,7 @@ public class DataManagement : MonoBehaviour
 
     public void ResetSave() {
         crossfade.SetTrigger("gameStart");
-        FindObjectOfType<MainMenu>().InitializeSave();
+        FindObjectOfType<SaveInitializer>().InitializeSave();
         PlayerPrefs.DeleteKey("PlayerName");
         PlayerPrefs.SetInt("DisplayMenuCutsceneSkipText", 0);
         FindObjectOfType<LevelLoader>().LoadSceneWithDelay("Splash Screen", true);
