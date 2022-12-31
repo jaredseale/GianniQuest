@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 29128383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -736, y: -261.92, z: 0}
-  m_LocalScale: {x: 92.48458, y: 351.86682, z: 70.5134}
+  m_LocalScale: {x: 60.9, y: 351.86682, z: 70.5134}
   m_Children: []
   m_Father: {fileID: 1233293104}
   m_RootOrder: 0
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Sir Flippy Bord
+    name: Sir Flippe Bourd
     sentences: []
 --- !u!114 &382860760
 MonoBehaviour:
@@ -22730,7 +22730,7 @@ GameObject:
   - component: {fileID: 1233293104}
   - component: {fileID: 1233293105}
   m_Layer: 5
-  m_Name: Satisfaction Meter
+  m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23758,7 +23758,7 @@ RectTransform:
   m_GameObject: {fileID: 1658464297}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.0375, z: 1}
+  m_LocalScale: {x: 0.6, y: 1.0375, z: 1}
   m_Children: []
   m_Father: {fileID: 1233293104}
   m_RootOrder: 1
@@ -69862,6 +69862,7 @@ MonoBehaviour:
   bombControls: {fileID: 429824455}
   gunControls: {fileID: 1582247271}
   mapControls: {fileID: 1474840414}
+  exiting: 0
 --- !u!82 &2083337906695881030
 AudioSource:
   m_ObjectHideFlags: 0

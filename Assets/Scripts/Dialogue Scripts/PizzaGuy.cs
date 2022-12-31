@@ -54,6 +54,7 @@ public class PizzaGuy : MonoBehaviour
             pizza.SetActive(true); //everything kicks off when the pizza is enabled
             FindObjectOfType<SaveInitializer>().InitializeSave();
             PlayerPrefs.SetInt("GameBeaten", 1);
+            PlayerPrefs.SetInt("DisplayMenuCutsceneSkipText", 1);
         }
     }
 }

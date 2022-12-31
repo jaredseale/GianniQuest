@@ -19,6 +19,7 @@ public class SewersLadder : MonoBehaviour
     [SerializeField] string overworldSpawnPos;
     [SerializeField] float ladderLoadSceneDelay = 4f;
     bool transitionInProgress;
+    Player player;
 
     void Start() {
         levelLoader = FindObjectOfType<LevelLoader>();
@@ -26,6 +27,7 @@ public class SewersLadder : MonoBehaviour
         playerController = FindObjectOfType<Player>();
         myCollider = GetComponent<BoxCollider2D>();
         transitionInProgress = false;
+        player = FindObjectOfType<Player>();
     }
 
     void Update() {
@@ -41,6 +43,7 @@ public class SewersLadder : MonoBehaviour
             && playerController.isOnGround) {
             playerController.canMove = false;
             transitionInProgress = true;
+            player.isInvulnerable = true;
 
             levelLoader.loadSceneDelay = ladderLoadSceneDelay;
             FindObjectOfType<SpawnPosition>().setNextSpawn(nextSpawnPos.x, nextSpawnPos.y);
