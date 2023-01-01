@@ -183,6 +183,17 @@ public class SpeedrunMode : MonoBehaviour
     }
 
     public void SpawnSpeedrunManager(string type) {
+
+        if (FindObjectOfType<SpawnPosition>()) { //if starting from credits
+            var spawnPos = FindObjectOfType<SpawnPosition>();
+            Destroy(spawnPos.gameObject);
+        }
+
+        if (FindObjectOfType<SpeedrunManager>()) {
+            var speedRunManager = FindObjectOfType<SpeedrunManager>();
+            Destroy(speedRunManager.gameObject);
+        }
+
         Instantiate(speedrunObject);
         FindObjectOfType<SpeedrunManager>().speedrunType = type;
     }

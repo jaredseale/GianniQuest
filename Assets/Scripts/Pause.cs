@@ -109,6 +109,12 @@ public class Pause : MonoBehaviour
         if (FindObjectOfType<OverworldPlayer>()) {
             FindObjectOfType<OverworldPlayer>().canMove = false;
         }
+
+        if (FindObjectOfType<SpeedrunManager>()) {
+            var speedRunManager = FindObjectOfType<SpeedrunManager>();
+            Destroy(speedRunManager.gameObject);
+        }
+
         Destroy(FindObjectOfType<SpawnPosition>().gameObject);
         transition.SetTrigger("levelTransition");
         FindObjectOfType<LevelLoader>().loadSceneDelay = 4f;

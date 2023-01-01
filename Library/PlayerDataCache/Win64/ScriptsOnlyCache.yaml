@@ -169,10 +169,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -7128,4 +7126,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Sewers/Sewers 14.unity
   - Assets/Scenes/Sewers/Sewers 15.unity
   - Assets/Scenes/Sewers/Sewers 16.unity
-  playerPath: D:/Unity Projects/GianniQuest/Builds/Release Build/GianniQuest.exe
+  playerPath: D:/Unity Projects/GianniQuest/Builds/Version 1.1/GianniQuest.exe

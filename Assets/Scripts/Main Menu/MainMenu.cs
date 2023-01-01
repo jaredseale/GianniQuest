@@ -69,6 +69,11 @@ public class MainMenu : MonoBehaviour
             Destroy(spawnPos.gameObject);
         }
 
+        if (FindObjectOfType<SpeedrunManager>()) {
+            var speedRunManager = FindObjectOfType<SpeedrunManager>();
+            Destroy(speedRunManager.gameObject);
+        }
+
         if (PlayerPrefs.GetString("IntroCutsceneStatus") != "Watched") {
             PlayerPrefs.SetString("IntroCutsceneStatus", "Watched");
             levelLoader.LoadSceneWithDelay("Wake Up Cutscene", true);

@@ -100,6 +100,10 @@ public class DataManagement : MonoBehaviour
     }
 
     public void ResetSave() {
+        if (FindObjectOfType<SpeedrunManager>()) {
+            var speedRunManager = FindObjectOfType<SpeedrunManager>();
+            Destroy(speedRunManager.gameObject);
+        }
         crossfade.SetTrigger("gameStart");
         FindObjectOfType<SaveInitializer>().InitializeSave();
         PlayerPrefs.DeleteKey("PlayerName");
