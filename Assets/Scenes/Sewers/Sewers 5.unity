@@ -75131,7 +75131,7 @@ MonoBehaviour:
   correspondingDoor: {fileID: 7525515141811963819}
   doorStartPos: {x: -3.79, y: 13.36, z: 0}
   doorEndPos: {x: -3.79, y: 8.35, z: 0}
-  moveSpeed: 3
+  moveSpeed: 5
   pressedButtonSprite: {fileID: 21300000, guid: 9f799df20f5a66e468c68b84dc8e31c8, type: 3}
   unpressedButtonSprite: {fileID: 21300000, guid: a6ec1fa104f9b2a4d92b61c397ded035, type: 3}
   gateAudio: {fileID: 7525515142111334978}

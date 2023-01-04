@@ -1840,7 +1840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yorozuya Theme -  Gintama OST
+  m_text: Before The Sundown - The Tap Room
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5951fbe04a4a684479795aa2cc3bd676, type: 2}
   m_sharedMaterial: {fileID: 2954005772961816821, guid: 5951fbe04a4a684479795aa2cc3bd676, type: 2}
