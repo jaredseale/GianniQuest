@@ -94,6 +94,8 @@ public class SaveInitializer : MonoBehaviour
         PlayerPrefs.SetInt("SMRoom15", 0);
         PlayerPrefs.SetInt("SMRoom16", 0);
 
+        PlayerPrefs.SetInt("BossCheckpoint", 0);
+
         //pizza guy state
         PlayerPrefs.SetString("PizzaGuyState", "Init");
     }

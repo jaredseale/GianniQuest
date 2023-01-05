@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1007
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 749, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 1424
+  controlID: 179
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 473, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 1461
+  controlID: 72
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 1462
+  controlID: 73
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 473, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 1430
+  controlID: 147
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -455,7 +455,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 4447ffff6a47ffff224bffff164fffff0652fffff654ffff8258ffff1a5cffff0a5fffffba62ffffa865ffff4869ffffa46cffff926fffffe872ffff3476ffffc279ffffd47cffff5080ffff8289ffffb88bffff2090ffff2690ffff9a90ffff6493ffffb293fffffa93ffff1296ffff6296ffff349affff109dffff08a0fffff8a2ffff36a6ffff3ea9ffff64abffff82adffff96adffffceadffff3ab1ffffd2b6ffff2cb7ffff9cc4ffffe8c8ffff28daffffe8deffff80e3ffff0ae8ffff1efaffff5afbffff5ca200007ea3000000ab000066ad00001ed5000042e0000062e000004ae10000
+      m_ExpandedIDs: ea6dffff106effffc871ffffbc75ffffac78ffff9c7bffff287fffffc082ffffb085ffff6089ffff4e8cffffee8fffff4a93ffff3896ffff8e99ffffda9cffff68a0ffff7aa3fffff6a6ffff28b0ffff5eb2ffffc6b6ffffccb6ffff40b7ffff0abaffff58baffffa0baffffb8bcffff08bdffffdac0ffffb6c3ffffaec6ffff9ec9ffffdcccffffe4cfffff0ad2ffff28d4ffff3cd4ffff74d4ffff70d7ffff96efffff00faffff5afbffffae93000096940000fe95000006960000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -515,9 +515,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.512208, y: -2.2122962, z: -13.695958}
+    m_Target: {x: 6.736694, y: -1.5265677, z: -18.066128}
     speed: 2
-    m_Value: {x: -4.512208, y: -2.2122962, z: -13.695958}
+    m_Value: {x: 6.6823945, y: -1.4564172, z: -18.050955}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -568,9 +568,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 20.341152
+    m_Target: 4.0224915
     speed: 2
-    m_Value: 20.341152
+    m_Value: 4.212033
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -633,18 +633,18 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scenes/Sewers
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 58
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scenes/Sewers
   m_LastFoldersGridSize: 58
   m_LastProjectPath: D:\Unity Projects\GianniQuest\GianniQuest
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 798.3282}
+    scrollPos: {x: 0, y: 678.3282}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 00000000824d0000844d0000864d0000884d00008a4d00008c4d00008e4d0000904d0000924d0000944d0000964d0000984d00009a4d00009c4d00009e4d0000a04d0000a24d0000a44d0000a64d0000a84d0000aa4d0000ac4d0000ae4d0000b04d0000b24d0000b44d0000b64d0000b84d0000ba4d0000bc4d0000be4d0000c04d0000
@@ -2462,7 +2462,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 35086
+  m_LastSelectedObjectID: 24744
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52

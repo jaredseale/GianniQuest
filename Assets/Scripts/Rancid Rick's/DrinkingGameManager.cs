@@ -185,7 +185,7 @@ public class DrinkingGameManager : MonoBehaviour
 
     IEnumerator IncreaseLairryScore() {
         while (inGame && timer > 4) {
-            yield return new WaitForSeconds(Random.Range(3f, 3.8f));
+            yield return new WaitForSeconds(4f);
             lairryScore += 1;
             lairryScoreText.text = lairryScore.ToString();
         }

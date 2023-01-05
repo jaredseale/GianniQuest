@@ -47,7 +47,12 @@ public class Boss : MonoBehaviour
         myAudio = GetComponent<AudioSource>();
         attackTurnNumber = 1;
 
-        bossHealth = bossMaxHealth;
+        if (PlayerPrefs.GetInt("BossCheckpoint") == 0) {
+            bossHealth = bossMaxHealth;
+        } else {
+            bossHealth = bossMaxHealth / 2;
+        }
+        
         healthBar.fillAmount = 1f;
     }
 
@@ -86,6 +91,10 @@ public class Boss : MonoBehaviour
 
     public void TakeDamage(int damage) {
         bossHealth -= damage;
+
+        if (bossHealth < bossMaxHealth / 2) {
+            PlayerPrefs.SetInt("BossCheckpoint", 1);
+        }
 
         if (bossHealth <= 0) {
             attackID = 99;
